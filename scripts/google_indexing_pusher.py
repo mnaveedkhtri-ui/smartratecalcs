@@ -14,11 +14,23 @@ URLS_TO_INDEX = [
     "https://smartratecalcs.com/about",
     "https://smartratecalcs.com/privacy",
     "https://smartratecalcs.com/terms",
+    "https://smartratecalcs.com/disclaimer",
     "https://smartratecalcs.com/calculators/wise-to-pkr-fee-calculator",
     "https://smartratecalcs.com/calculators/payoneer-to-jazzcash-fee-calculator",
     "https://smartratecalcs.com/calculators/shopify-break-even-roas-calculator",
-    "https://smartratecalcs.com/calculators/paypal-to-pakistan-bank-transfer-fee",
-    "https://smartratecalcs.com/calculators/freelance-hourly-rate-calculator-pakistan"
+    "https://smartratecalcs.com/calculators/upwork-service-fee-payout-calculator",
+    "https://smartratecalcs.com/calculators/fiverr-commission-fee-calculator",
+    "https://smartratecalcs.com/calculators/freelance-hourly-rate-calculator-pakistan",
+    "https://smartratecalcs.com/calculators/stripe-vs-paypal-international-fee-calculator",
+    "https://smartratecalcs.com/calculators/wise-to-inr-fee-calculator",
+    "https://smartratecalcs.com/calculators/payoneer-to-inr-withdrawal-calculator",
+    "https://smartratecalcs.com/calculators/wise-to-bdt-fee-calculator",
+    "https://smartratecalcs.com/calculators/payoneer-to-bkash-fee-calculator",
+    "https://smartratecalcs.com/calculators/wise-to-php-fee-calculator",
+    "https://smartratecalcs.com/calculators/paypal-to-gcash-fee-calculator",
+    "https://smartratecalcs.com/calculators/wise-to-ngn-fee-calculator",
+    "https://smartratecalcs.com/calculators/paypal-goods-and-services-fee-calculator",
+    "https://smartratecalcs.com/calculators/etsy-seller-fee-and-profit-calculator",
 ]
 
 def print_status():
