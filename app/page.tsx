@@ -20,6 +20,7 @@ const RATES: RatesMap = {
 export default function HomePage() {
   const [currentPage, setCurrentPage] = useState<'home' | 'matrix' | 'methodology' | 'faq' | 'about' | 'contact' | 'privacy' | 'terms'>('home');
   const [activeTab, setActiveTab] = useState<'payout' | 'ecom' | 'freelance'>('payout');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   // Calculator 1 state
   const [grossAmount, setGrossAmount] = useState<number>(2000);
@@ -90,6 +91,7 @@ export default function HomePage() {
 
   const navigateTo = (page: typeof currentPage) => {
     setCurrentPage(page);
+    setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -97,19 +99,19 @@ export default function HomePage() {
     <div className="min-h-screen bg-[#f8fafc] text-slate-800">
       {/* Header */}
       <header className="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <button onClick={() => navigateTo('home')} className="flex items-center gap-3.5 text-left group">
-            <div className="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-lg shadow-sm group-hover:scale-105 transition-transform">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+          <button onClick={() => navigateTo('home')} className="flex items-center gap-2.5 sm:gap-3.5 text-left group">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-base sm:text-lg shadow-sm group-hover:scale-105 transition-transform">
               <i className="fa-solid fa-calculator text-emerald-400"></i>
             </div>
             <div>
-              <div className="font-heading font-extrabold text-[19px] tracking-tight text-slate-900 flex items-center gap-2">
+              <div className="font-heading font-extrabold text-[17px] sm:text-[19px] tracking-tight text-slate-900 flex items-center gap-1.5 sm:gap-2">
                 SmartRate<span className="text-emerald-600">Calcs</span>
-                <span className="text-[10px] uppercase font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+                <span className="text-[9px] sm:text-[10px] uppercase font-mono font-bold px-1.5 sm:px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
                   v3.0 PRO
                 </span>
               </div>
-              <p className="text-[11px] text-slate-500 font-medium">Independent Financial &amp; Payout Intelligence</p>
+              <p className="hidden sm:block text-[11px] text-slate-500 font-medium">Independent Financial &amp; Payout Intelligence</p>
             </div>
           </button>
 
@@ -131,17 +133,46 @@ export default function HomePage() {
             </button>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               <span className="font-bold text-slate-900">USD/PKR:</span>
               <span className="text-emerald-600 font-bold">278.40</span>
             </div>
-            <button onClick={() => navigateTo('contact')} className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[13px] font-bold shadow-sm transition-all active:scale-95">
+            <button onClick={() => navigateTo('contact')} className="hidden sm:inline-flex px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[13px] font-bold shadow-sm transition-all active:scale-95">
               Contact
+            </button>
+
+            {/* Mobile Menu Toggle Button */}
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden w-9 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center border border-slate-200 focus:outline-none" aria-label="Toggle Menu">
+              <i className={`fa-solid ${mobileMenuOpen ? 'fa-xmark' : 'fa-bars'} text-sm`}></i>
             </button>
           </div>
         </div>
+
+        {/* Mobile Slide-Down Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden border-t border-slate-200 bg-white px-4 py-3 space-y-1.5 shadow-lg">
+            <button onClick={() => navigateTo('home')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-emerald-600 bg-emerald-50 flex items-center gap-2.5">
+              <i className="fa-solid fa-calculator text-xs"></i> Calculators Suite
+            </button>
+            <button onClick={() => navigateTo('matrix')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2.5">
+              <i className="fa-solid fa-table-cells text-xs text-slate-400"></i> Fee Matrix 2026
+            </button>
+            <button onClick={() => navigateTo('methodology')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2.5">
+              <i className="fa-solid fa-square-root-variable text-xs text-slate-400"></i> Calculation Methodology
+            </button>
+            <button onClick={() => navigateTo('faq')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2.5">
+              <i className="fa-solid fa-circle-question text-xs text-slate-400"></i> Frequently Asked Questions
+            </button>
+            <button onClick={() => navigateTo('about')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2.5">
+              <i className="fa-solid fa-user-shield text-xs text-slate-400"></i> About Muhammad Naveed
+            </button>
+            <button onClick={() => navigateTo('contact')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-white bg-emerald-600 hover:bg-emerald-700 flex items-center gap-2.5 shadow-sm">
+              <i className="fa-solid fa-envelope text-xs"></i> Contact &amp; Bug Bounty
+            </button>
+          </div>
+        )}
       </header>
 
       {/* ================= PAGE VIEW 1: HOME CALCULATORS ================= */}
@@ -152,21 +183,21 @@ export default function HomePage() {
               <i className="fa-solid fa-shield-check text-emerald-600"></i>
               <span>Open Financial Intelligence &bull; Zero Sponsored Bias &bull; Real Math</span>
             </div>
-            <h1 className="font-heading font-extrabold text-3xl sm:text-5xl text-slate-900 tracking-tight leading-[1.15] mb-4">
+            <h1 className="font-heading font-extrabold text-2xl sm:text-5xl text-slate-900 tracking-tight leading-[1.2] sm:leading-[1.15] mb-4">
               Radical fee transparency for global contractors &amp; founders.
             </h1>
-            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
               Payment gateways silently shave <strong className="text-slate-900 font-semibold">2% to 4% off international payouts</strong> through padded exchange spreads. See your exact take-home pay before you withdraw.
             </p>
 
-            <div className="mt-8 inline-flex p-1.5 bg-slate-200/80 rounded-2xl border border-slate-300/70">
-              <button onClick={() => setActiveTab('payout')} className={`py-2.5 px-5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${activeTab === 'payout' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
+            <div className="mt-6 flex flex-col sm:inline-flex sm:flex-row p-1.5 bg-slate-200/80 rounded-2xl border border-slate-300/70 gap-1.5 w-full sm:w-auto">
+              <button onClick={() => setActiveTab('payout')} className={`py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'payout' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
                 <i className="fa-solid fa-money-bill-transfer text-emerald-600"></i> Global Payouts &amp; FX
               </button>
-              <button onClick={() => setActiveTab('ecom')} className={`py-2.5 px-5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${activeTab === 'ecom' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
+              <button onClick={() => setActiveTab('ecom')} className={`py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'ecom' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
                 <i className="fa-solid fa-cart-shopping"></i> Shopify &amp; Stripe Profit
               </button>
-              <button onClick={() => setActiveTab('freelance')} className={`py-2.5 px-5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${activeTab === 'freelance' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
+              <button onClick={() => setActiveTab('freelance')} className={`py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'freelance' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
                 <i className="fa-solid fa-user-clock"></i> Freelance Rate Architect
               </button>
             </div>
@@ -175,7 +206,7 @@ export default function HomePage() {
           {/* TAB 1: Global Payouts */}
           {activeTab === 'payout' && (
             <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-              <div className="bg-white rounded-3xl p-6 sm:p-9 border border-slate-200 shadow-md">
+              <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-9 border border-slate-200 shadow-md">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pb-8 border-b border-slate-100">
                   <div className="md:col-span-7 space-y-3">
                     <div className="flex items-center justify-between">
@@ -186,7 +217,7 @@ export default function HomePage() {
                     </div>
 
                     <div className="relative flex items-center">
-                      <span className="absolute left-4 text-xl font-bold text-slate-400 font-mono">$</span>
+                      <span className="absolute left-3.5 text-lg sm:text-xl font-bold text-slate-400 font-mono">$</span>
                       <input
                         type="number"
                         value={grossAmount}
@@ -194,7 +225,7 @@ export default function HomePage() {
                         max={50000}
                         step={50}
                         onChange={(e) => setGrossAmount(Number(e.target.value) || 0)}
-                        className="w-full pl-10 pr-32 py-3.5 rounded-2xl border-2 border-slate-200 bg-slate-50 text-2xl font-bold font-mono text-slate-900 focus:outline-none focus:border-emerald-500 transition-colors"
+                        className="w-full pl-8 sm:pl-10 pr-28 sm:pr-32 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl border-2 border-slate-200 bg-slate-50 text-xl sm:text-2xl font-bold font-mono text-slate-900 focus:outline-none focus:border-emerald-500 transition-colors"
                       />
                       <select
                         value={currency}
