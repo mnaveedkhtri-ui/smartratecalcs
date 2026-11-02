@@ -66,6 +66,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://smartratecalcs.com/',
   },
+  verification: {
+    google: 'FzC73kAndsqrqsza438VtUdn49KmQZfgQm61v9-ukls',
+  },
 };
 
 export default function RootLayout({
@@ -124,6 +127,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="light scroll-smooth">
       <head>
+        <meta name="google-site-verification" content="FzC73kAndsqrqsza438VtUdn49KmQZfgQm61v9-ukls" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
