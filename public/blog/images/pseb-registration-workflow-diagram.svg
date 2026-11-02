@@ -1,54 +1,54 @@
 <svg width="1000" height="480" viewBox="0 0 1000 480" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg5" x1="0" y1="0" x2="1000" y2="480" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#090d16" />
-      <stop offset="100%" stop-color="#0f172a" />
+    <linearGradient id="bgCanvas5" x1="0" y1="0" x2="1000" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#1e293b" />
     </linearGradient>
   </defs>
 
-  <rect width="1000" height="480" fill="url(#bg5)" />
+  <rect width="1000" height="480" fill="url(#bgCanvas5)" />
 
   <g transform="translate(50, 40)">
-    <rect width="32" height="32" rx="8" fill="#10b981" />
-    <text x="16" y="21" fill="#022c22" font-family="-apple-system, sans-serif" font-size="14" font-weight="900" text-anchor="middle">PSEB</text>
-    <text x="50" y="22" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="18" font-weight="800">Registration Protocol</text>
-    <text x="0" y="55" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900">Step-by-Step PSEB Freelancer Fast-Track Registration</text>
-    <text x="0" y="75" fill="#94a3b8" font-family="monospace" font-size="11" font-weight="600">OFFICIAL PROCEDURE VIA PAKISTAN SOFTWARE EXPORT BOARD &#8226; 2026</text>
+    <rect width="36" height="36" rx="10" fill="#10b981" />
+    <text x="18" y="24" fill="#022c22" font-family="sans-serif" font-size="12" font-weight="900" text-anchor="middle">PSEB</text>
+    <text x="48" y="22" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800">Registration Protocol</text>
+    <text x="0" y="58" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900">Step-by-Step PSEB Freelancer Fast-Track Registration</text>
+    <text x="0" y="80" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">OFFICIAL PROCEDURE VIA PAKISTAN SOFTWARE EXPORT BOARD &#8226; 2026</text>
   </g>
 
   <!-- Step 1 -->
   <g transform="translate(50, 135)">
-    <rect width="900" height="65" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" />
-    <circle cx="35" cy="32" r="16" fill="#10b981" />
-    <text x="35" y="37" fill="#022c22" font-family="monospace" font-size="13" font-weight="900" text-anchor="middle">1</text>
-    <text x="68" y="27" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="14" font-weight="700">Gather Required KYC Documents</text>
-    <text x="68" y="48" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="12">Original CNIC (front/back), active NTN certificate from FBR Iris, utility bill for address proof, and Upwork/Fiverr profile URL.</text>
+    <rect width="900" height="65" rx="14" fill="#ffffff" />
+    <circle cx="36" cy="32" r="16" fill="#059669" />
+    <text x="36" y="38" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" text-anchor="middle">1</text>
+    <text x="70" y="28" fill="#0f172a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800">Gather Required KYC Documents</text>
+    <text x="70" y="48" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Original CNIC (front/back), active NTN certificate from FBR Iris, utility bill for address proof, and Upwork/Fiverr profile URL.</text>
   </g>
 
   <!-- Step 2 -->
   <g transform="translate(50, 215)">
-    <rect width="900" height="65" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" />
-    <circle cx="35" cy="32" r="16" fill="#10b981" />
-    <text x="35" y="37" fill="#022c22" font-family="monospace" font-size="13" font-weight="900" text-anchor="middle">2</text>
-    <text x="68" y="27" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="14" font-weight="700">Submit Application on Official PSEB Portal (pseb.org.pk)</text>
-    <text x="68" y="48" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="12">Create an account under "Freelancer" category (do not select Call Center or IT Company). Enter business activity and banking details.</text>
+    <rect width="900" height="65" rx="14" fill="#ffffff" />
+    <circle cx="36" cy="32" r="16" fill="#059669" />
+    <text x="36" y="38" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" text-anchor="middle">2</text>
+    <text x="70" y="28" fill="#0f172a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800">Submit Application on Official PSEB Portal (pseb.org.pk)</text>
+    <text x="70" y="48" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Create an account under "Freelancer" category (do not select Call Center or IT Company). Enter business activity and banking details.</text>
   </g>
 
   <!-- Step 3 -->
   <g transform="translate(50, 295)">
-    <rect width="900" height="65" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" />
-    <circle cx="35" cy="32" r="16" fill="#10b981" />
-    <text x="35" y="37" fill="#022c22" font-family="monospace" font-size="13" font-weight="900" text-anchor="middle">3</text>
-    <text x="68" y="27" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="14" font-weight="700">Pay Rs. 2,000 Registration Fee Online via 1Bill / Kuickpay</text>
-    <text x="68" y="48" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="12">Generate electronic PSID challan and pay through any Pakistani mobile banking app (Meezan, Nayapay, SadaPay). Instant verification.</text>
+    <rect width="900" height="65" rx="14" fill="#ffffff" />
+    <circle cx="36" cy="32" r="16" fill="#059669" />
+    <text x="36" y="38" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" text-anchor="middle">3</text>
+    <text x="70" y="28" fill="#0f172a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800">Pay Rs. 2,000 Registration Fee Online via 1Bill / Kuickpay</text>
+    <text x="70" y="48" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Generate electronic PSID challan and pay through any Pakistani mobile banking app (Meezan, Nayapay, SadaPay). Instant verification.</text>
   </g>
 
   <!-- Step 4 -->
   <g transform="translate(50, 375)">
-    <rect width="900" height="65" rx="12" fill="#10b981" fill-opacity="0.08" stroke="#10b981" stroke-opacity="0.4" />
-    <circle cx="35" cy="32" r="16" fill="#10b981" />
-    <text x="35" y="37" fill="#022c22" font-family="monospace" font-size="13" font-weight="900" text-anchor="middle">4</text>
-    <text x="68" y="27" fill="#34d399" font-family="-apple-system, sans-serif" font-size="14" font-weight="700">Download PSEB Digital Certificate &amp; Notify Commercial Bank</text>
-    <text x="68" y="48" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">Download verifiable certificate (valid for 3 years) and email to bank remittance department to enable automated 0.25% deductions.</text>
+    <rect width="900" height="65" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="2" />
+    <circle cx="36" cy="32" r="16" fill="#16a34a" />
+    <text x="36" y="38" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" text-anchor="middle">4</text>
+    <text x="70" y="28" fill="#15803d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800">Download PSEB Digital Certificate &amp; Notify Commercial Bank</text>
+    <text x="70" y="48" fill="#166534" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Download verifiable certificate (valid for 3 years) and email to bank remittance department to enable automated 0.25% deductions.</text>
   </g>
 </svg>

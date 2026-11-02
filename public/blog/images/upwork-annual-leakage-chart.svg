@@ -1,65 +1,51 @@
 <svg width="1000" height="480" viewBox="0 0 1000 480" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg2" x1="0" y1="0" x2="1000" y2="480" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#090d16" />
-      <stop offset="100%" stop-color="#0f172a" />
-    </linearGradient>
-    <linearGradient id="barRed" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ef4444" />
-      <stop offset="100%" stop-color="#dc2626" />
-    </linearGradient>
-    <linearGradient id="barGreen" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#10b981" />
-      <stop offset="100%" stop-color="#059669" />
+    <linearGradient id="bgCanvas2" x1="0" y1="0" x2="1000" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#1e293b" />
     </linearGradient>
   </defs>
 
-  <rect width="1000" height="480" fill="url(#bg2)" />
+  <rect width="1000" height="480" fill="url(#bgCanvas2)" />
 
   <g transform="translate(50, 40)">
-    <rect width="32" height="32" rx="8" fill="#059669" />
-    <text x="16" y="21" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="14" font-weight="900" text-anchor="middle">SC</text>
-    <text x="44" y="22" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="18" font-weight="800">Annual Friction Audit</text>
-    <text x="0" y="55" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900">Total PKR Drained by Spread Markup Over 1 Year</text>
-    <text x="0" y="75" fill="#94a3b8" font-family="monospace" font-size="11" font-weight="600">DIRECT LOCAL BANK VS OPTIMAL US ACH CHECKING ROUTE</text>
+    <rect width="36" height="36" rx="10" fill="#059669" />
+    <text x="18" y="24" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" text-anchor="middle">SC</text>
+    <text x="48" y="22" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800">Annual Friction Audit</text>
+    <text x="0" y="58" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900">Total PKR Drained by Spread Markup Over 1 Full Year</text>
+    <text x="0" y="80" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">DIRECT LOCAL BANK VS OPTIMAL US ACH CHECKING ROUTE</text>
   </g>
 
   <!-- Row 1: Junior Tier $12,000 / yr -->
   <g transform="translate(50, 145)">
-    <text x="0" y="16" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="14" font-weight="800">Tier 1: $12,000 / Year <tspan fill="#64748b" font-weight="400">($1,000/mo Junior Contractor)</tspan></text>
+    <text x="0" y="16" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800">Tier 1: $12,000 / Year <tspan fill="#94a3b8" font-weight="400">($1,000/mo Junior Contractor)</tspan></text>
     
-    <!-- Direct Bank Bar -->
-    <rect y="28" width="550" height="26" rx="6" fill="#ef4444" fill-opacity="0.85" />
-    <text x="15" y="46" fill="#ffffff" font-family="monospace" font-size="11" font-weight="700">Direct Bank Loss: -Rs. 92,400 PKR</text>
+    <rect y="28" width="550" height="28" rx="8" fill="#ef4444" fill-opacity="0.9" />
+    <text x="16" y="47" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Direct Bank Loss: -Rs. 92,400 PKR</text>
 
-    <!-- Optimal US Route Bar -->
-    <rect y="60" width="100" height="26" rx="6" fill="#10b981" fill-opacity="0.9" />
-    <text x="115" y="78" fill="#34d399" font-family="monospace" font-size="11" font-weight="800">US Route: -Rs. 16,800 PKR (Saved: +Rs. 75,600 PKR / yr)</text>
+    <rect y="64" width="130" height="28" rx="8" fill="#10b981" />
+    <text x="145" y="83" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800">US Route Loss: Only -Rs. 16,800 PKR (Saved: +Rs. 75,600 PKR / yr)</text>
   </g>
 
   <!-- Row 2: Mid Engineer $30,000 / yr -->
-  <g transform="translate(50, 245)">
-    <text x="0" y="16" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="14" font-weight="800">Tier 2: $30,000 / Year <tspan fill="#64748b" font-weight="400">($2,500/mo Mid-Level Engineer)</tspan></text>
+  <g transform="translate(50, 250)">
+    <text x="0" y="16" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800">Tier 2: $30,000 / Year <tspan fill="#94a3b8" font-weight="400">($2,500/mo Mid-Level Engineer)</tspan></text>
     
-    <!-- Direct Bank Bar -->
-    <rect y="28" width="700" height="26" rx="6" fill="#ef4444" fill-opacity="0.85" />
-    <text x="15" y="46" fill="#ffffff" font-family="monospace" font-size="11" font-weight="700">Direct Bank Loss: -Rs. 231,000 PKR</text>
+    <rect y="28" width="700" height="28" rx="8" fill="#ef4444" fill-opacity="0.9" />
+    <text x="16" y="47" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Direct Bank Loss: -Rs. 231,000 PKR</text>
 
-    <!-- Optimal US Route Bar -->
-    <rect y="60" width="130" height="26" rx="6" fill="#10b981" fill-opacity="0.9" />
-    <text x="145" y="78" fill="#34d399" font-family="monospace" font-size="11" font-weight="800">US Route: -Rs. 42,000 PKR (Saved: +Rs. 189,000 PKR / yr)</text>
+    <rect y="64" width="160" height="28" rx="8" fill="#10b981" />
+    <text x="175" y="83" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800">US Route Loss: Only -Rs. 42,000 PKR (Saved: +Rs. 189,000 PKR / yr)</text>
   </g>
 
   <!-- Row 3: Senior Contractor $60,000 / yr -->
-  <g transform="translate(50, 345)">
-    <text x="0" y="16" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="14" font-weight="800">Tier 3: $60,000 / Year <tspan fill="#64748b" font-weight="400">($5,000/mo Senior Dev / Agency)</tspan></text>
+  <g transform="translate(50, 355)">
+    <text x="0" y="16" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800">Tier 3: $60,000 / Year <tspan fill="#94a3b8" font-weight="400">($5,000/mo Senior Dev / Agency)</tspan></text>
     
-    <!-- Direct Bank Bar -->
-    <rect y="28" width="900" height="26" rx="6" fill="#ef4444" fill-opacity="0.85" />
-    <text x="15" y="46" fill="#ffffff" font-family="monospace" font-size="11" font-weight="700">Direct Bank Loss: -Rs. 462,000 PKR in Spread Markup</text>
+    <rect y="28" width="900" height="28" rx="8" fill="#ef4444" fill-opacity="0.9" />
+    <text x="16" y="47" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Direct Bank Loss: -Rs. 462,000 PKR in Spread Markup</text>
 
-    <!-- Optimal US Route Bar -->
-    <rect y="60" width="165" height="26" rx="6" fill="#10b981" fill-opacity="0.9" />
-    <text x="180" y="78" fill="#34d399" font-family="monospace" font-size="11" font-weight="800">US Route: -Rs. 84,000 PKR (Saved: +Rs. 378,000 PKR / yr)</text>
+    <rect y="64" width="200" height="28" rx="8" fill="#10b981" />
+    <text x="215" y="83" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800">US Route Loss: Only -Rs. 84,000 PKR (Saved: +Rs. 378,000 PKR / yr)</text>
   </g>
 </svg>
