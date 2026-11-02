@@ -150,7 +150,7 @@ export default function RootLayout({
       <body className="bg-[#f8fafc] text-slate-800 antialiased min-h-screen">
         {/* Google Analytics 4 (GA4) */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-FW05YVLPDM"
+          src="https://www.googletagmanager.com/gtag/js?id=G-8JV66TTPEW"
           strategy="afterInteractive"
         />
         <Script id="google-analytics-init" strategy="afterInteractive">
@@ -158,7 +158,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-FW05YVLPDM', {
+            gtag('config', 'G-8JV66TTPEW', {
               page_path: window.location.pathname,
             });
           `}
