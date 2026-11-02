@@ -128,6 +128,9 @@ export default function RootLayout({
     <html lang="en" className="light scroll-smooth">
       <head>
         <meta name="google-site-verification" content="FzC73kAndsqrqsza438VtUdn49KmQZfgQm61v9-ukls" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
