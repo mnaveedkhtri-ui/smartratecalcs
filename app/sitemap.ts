@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { PROGRAMMATIC_CALCULATORS } from '../data/programmatic-calculators';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://smartratecalcs.com';
+  const baseUrl = 'https://www.smartratecalcs.com';
 
   // Core static pages
   const staticPages: MetadataRoute.Sitemap = [

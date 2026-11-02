@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/'],
       },
     ],
-    sitemap: 'https://smartratecalcs.com/sitemap.xml',
-    host: 'https://smartratecalcs.com',
+    sitemap: 'https://www.smartratecalcs.com/sitemap.xml',
+    host: 'https://www.smartratecalcs.com',
   };
 }

@@ -9,7 +9,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://smartratecalcs.com'),
+  metadataBase: new URL('https://www.smartratecalcs.com'),
   title: {
     default: 'SmartRateCalcs | Independent Financial & Payout Intelligence Platform',
     template: '%s | SmartRateCalcs',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     creator: '@naveed_engineer',
   },
   alternates: {
-    canonical: 'https://smartratecalcs.com/',
+    canonical: 'https://www.smartratecalcs.com/',
   },
   verification: {
     google: 'FzC73kAndsqrqsza438VtUdn49KmQZfgQm61v9-ukls',
