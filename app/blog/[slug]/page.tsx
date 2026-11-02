@@ -339,7 +339,7 @@ export default function BlogPostPage({ params }: Props) {
         {relatedPosts.length > 0 && (
           <div className="space-y-4 mb-12">
             <h3 className="text-lg font-bold text-slate-900">Recommended Reading</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {relatedPosts.map((rel) => (
                 <Link
                   key={rel.slug}
