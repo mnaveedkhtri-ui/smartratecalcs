@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+import { PROGRAMMATIC_CALCULATORS } from '../data/programmatic-calculators';
 
 interface RatesMap {
   [currency: string]: {
@@ -21,6 +22,8 @@ export default function HomePage() {
   const [currentPage, setCurrentPage] = useState<'home' | 'matrix' | 'methodology' | 'faq' | 'about' | 'contact' | 'privacy' | 'terms'>('home');
   const [activeTab, setActiveTab] = useState<'payout' | 'ecom' | 'freelance'>('payout');
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [calcFilter, setCalcFilter] = useState<string>('all');
+  const [calcSearch, setCalcSearch] = useState<string>('');
 
   // Calculator 1 state
   const [grossAmount, setGrossAmount] = useState<number>(2000);
@@ -94,6 +97,27 @@ export default function HomePage() {
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const filteredCalculators = useMemo(() => {
+    return PROGRAMMATIC_CALCULATORS.filter((c) => {
+      const matchesSearch =
+        calcSearch === '' ||
+        c.title.toLowerCase().includes(calcSearch.toLowerCase()) ||
+        c.primaryKeyword.toLowerCase().includes(calcSearch.toLowerCase()) ||
+        c.description.toLowerCase().includes(calcSearch.toLowerCase());
+
+      if (!matchesSearch) return false;
+
+      if (calcFilter === 'all') return true;
+      if (calcFilter === 'pk') return c.targetCurrency === 'PKR';
+      if (calcFilter === 'in') return c.targetCurrency === 'INR';
+      if (calcFilter === 'sea') return c.targetCurrency === 'BDT' || c.targetCurrency === 'PHP';
+      if (calcFilter === 'freelance') return c.category === 'freelance';
+      if (calcFilter === 'ecom') return c.category === 'ecommerce';
+
+      return true;
+    });
+  }, [calcFilter, calcSearch]);
 
   return (
     <div className="min-h-screen bg-[#f8fafc] text-slate-800">
@@ -493,6 +517,98 @@ export default function HomePage() {
               </div>
             </section>
           )}
+
+          {/* ================= PROGRAMMATIC CALCULATORS DIRECTORY (53 Dedicated Engines) ================= */}
+          <section id="calculators" className="mt-16 pt-12 border-t border-slate-200">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold mb-2 font-mono">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  53 Programmatic Financial Tools &bull; Live 2026 Interbank Models
+                </div>
+                <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+                  Dedicated Corridors &amp; Platform Calculators
+                </h2>
+                <p className="text-xs sm:text-sm text-slate-500 mt-1 max-w-xl">
+                  Engineered for high-intent search queries. Direct take-home models with zero hidden spreads.
+                </p>
+              </div>
+
+              {/* Instant Search Box */}
+              <div className="w-full md:w-72 relative">
+                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs">
+                  <i className="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input
+                  type="text"
+                  placeholder="Search JazzCash, Meezan, Upwork..."
+                  value={calcSearch}
+                  onChange={(e) => setCalcSearch(e.target.value)}
+                  className="w-full pl-9 pr-3 py-2.5 rounded-xl bg-white border border-slate-200 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-500 shadow-sm"
+                />
+              </div>
+            </div>
+
+            {/* Category Filter Pills */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {[
+                { id: 'all', label: `All Calculators (${PROGRAMMATIC_CALCULATORS.length})` },
+                { id: 'pk', label: 'Pakistan (PKR)' },
+                { id: 'in', label: 'India (INR)' },
+                { id: 'sea', label: 'Bangladesh & Philippines' },
+                { id: 'freelance', label: 'Upwork & Fiverr' },
+                { id: 'ecom', label: 'Shopify & Stripe' },
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setCalcFilter(tab.id)}
+                  className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                    calcFilter === tab.id
+                      ? 'bg-slate-900 text-white shadow-sm'
+                      : 'bg-white hover:bg-slate-100 text-slate-600 border border-slate-200'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Calculators Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredCalculators.map((calc) => (
+                <Link
+                  key={calc.slug}
+                  href={`/calculators/${calc.slug}`}
+                  className="p-5 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-lg transition-all group flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between text-[10px] font-mono font-bold uppercase mb-2">
+                      <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                        {calc.targetCurrency ? `${calc.sourceCurrency || 'USD'} → ${calc.targetCurrency}` : calc.category}
+                      </span>
+                      <span className="text-slate-400">2026 Spec</span>
+                    </div>
+                    <h3 className="font-heading font-bold text-sm text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2 mb-2">
+                      {calc.title}
+                    </h3>
+                    <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">
+                      {calc.description}
+                    </p>
+                  </div>
+                  <div className="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between text-xs text-emerald-600 font-bold">
+                    <span>Launch Calculator</span>
+                    <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            {filteredCalculators.length === 0 && (
+              <div className="text-center py-12 bg-white rounded-2xl border border-slate-200">
+                <p className="text-xs text-slate-500">No calculators found matching &quot;{calcSearch}&quot;.</p>
+              </div>
+            )}
+          </section>
         </div>
       )}
 

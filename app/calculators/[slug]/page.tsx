@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { PROGRAMMATIC_CALCULATORS } from '../../../data/programmatic-calculators';
+import ProgrammaticCalculatorWidget from '../../../components/ProgrammaticCalculatorWidget';
 
 interface Props {
   params: {
@@ -19,22 +20,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const calc = PROGRAMMATIC_CALCULATORS.find((c) => c.slug === params.slug);
   if (!calc) return {};
 
+  const url = `https://www.smartratecalcs.com/calculators/${calc.slug}`;
+
   return {
     title: calc.metaTitle,
     description: calc.metaDesc,
     alternates: {
-      canonical: `https://smartratecalcs.com/calculators/${calc.slug}`,
+      canonical: url,
     },
     openGraph: {
       title: calc.metaTitle,
       description: calc.metaDesc,
-      url: `https://smartratecalcs.com/calculators/${calc.slug}`,
+      url,
       type: 'article',
+      images: [
+        {
+          url: 'https://www.smartratecalcs.com/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: calc.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: calc.metaTitle,
       description: calc.metaDesc,
+      images: ['https://www.smartratecalcs.com/og-image.png'],
     },
   };
 }
@@ -43,7 +55,9 @@ export default function CalculatorPage({ params }: Props) {
   const calc = PROGRAMMATIC_CALCULATORS.find((c) => c.slug === params.slug);
   if (!calc) notFound();
 
-  // 1. FAQ Schema for Rich Snippets
+  const currentUrl = `https://www.smartratecalcs.com/calculators/${calc.slug}`;
+
+  // 1. FAQ Schema for Google Rich Snippets
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -57,13 +71,39 @@ export default function CalculatorPage({ params }: Props) {
     })),
   };
 
-  // 2. WebPage with Semantic Entity Grounding for AI Overviews
+  // 2. BreadcrumbList Schema for Google SERP Navigation Trail
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.smartratecalcs.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Calculators',
+        item: 'https://www.smartratecalcs.com/#calculators',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: calc.title,
+        item: currentUrl,
+      },
+    ],
+  };
+
+  // 3. WebPage with Semantic Entity Grounding for Google AI Overviews
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: calc.title,
     description: calc.description,
-    url: `https://smartratecalcs.com/calculators/${calc.slug}`,
+    url: currentUrl,
     about: calc.wikidataEntities
       ? calc.wikidataEntities.map((uri) => ({
           '@type': 'Thing',
@@ -73,10 +113,38 @@ export default function CalculatorPage({ params }: Props) {
     author: {
       '@type': 'Person',
       name: 'Muhammad Naveed',
+      jobTitle: 'Lead Software & Financial Systems Engineer',
       url: 'https://naveed-portfolio-kappa.vercel.app/',
     },
-    dateModified: '2026-11-01',
+    dateModified: '2026-11-02',
   };
+
+  // 4. SoftwareApplication Schema for Rich Snippets
+  const appSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: calc.title,
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'All',
+    url: currentUrl,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    author: {
+      '@type': 'Person',
+      name: 'Muhammad Naveed',
+      url: 'https://naveed-portfolio-kappa.vercel.app/',
+    },
+  };
+
+  // Related calculators (prefer same category or target currency, exclude current)
+  const relatedCalculators = PROGRAMMATIC_CALCULATORS.filter(
+    (c) =>
+      c.slug !== calc.slug &&
+      (c.targetCurrency === calc.targetCurrency || c.category === calc.category)
+  ).slice(0, 6);
 
   return (
     <div className="min-h-screen bg-[#f8fafc] text-slate-800">
@@ -86,7 +154,15 @@ export default function CalculatorPage({ params }: Props) {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }}
       />
 
       {/* Header */}
@@ -98,31 +174,48 @@ export default function CalculatorPage({ params }: Props) {
             </span>
             SmartRate<span className="text-emerald-600">Calcs</span>
           </Link>
-          <Link
-            href="/"
-            className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors"
-          >
-            &larr; View All Calculators
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/"
+              className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors"
+            >
+              &larr; All 53 Calculators
+            </Link>
+          </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        
+      <main className="max-w-4xl mx-auto px-4 py-10">
+        {/* Breadcrumb Trail (Navboost Signal) */}
+        <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6 font-mono">
+          <Link href="/" className="hover:text-emerald-600">
+            Home
+          </Link>
+          <span>/</span>
+          <span className="capitalize">{calc.category}</span>
+          <span>/</span>
+          <span className="text-slate-800 font-bold truncate max-w-[200px] sm:max-w-none">
+            {calc.primaryKeyword}
+          </span>
+        </nav>
+
         {/* Title & Meta Info */}
         <div className="mb-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold mb-3 font-mono">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             Verified 2026 Financial Specification &bull; Q4 Interbank Rates
           </div>
-          <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+          <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight mb-3">
             {calc.title}
           </h1>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
             {calc.description}
           </p>
         </div>
+
+        {/* INTERACTIVE CLIENT CALCULATOR WIDGET */}
+        <ProgrammaticCalculatorWidget calc={calc} />
 
         {/* AI OVERVIEW DIRECT ANSWER BOX (Engineered specifically for Google AI Overviews / SGE citation) */}
         <section className="mb-10 p-6 sm:p-7 rounded-3xl bg-emerald-50/80 border-2 border-emerald-500/80 shadow-sm relative">
@@ -143,43 +236,107 @@ export default function CalculatorPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Embedded Interactive Engine Banner */}
-        <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-md text-center space-y-4 mb-12">
-          <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mx-auto">
-            <i className="fa-solid fa-bolt"></i>
-          </div>
-          <h2 className="text-xl font-bold text-slate-900">Launch Live Calculation Engine</h2>
-          <p className="text-xs text-slate-500 max-w-md mx-auto">
-            Input custom invoice values, compare Wise vs Payoneer vs SWIFT live, and compute real net take-home earnings.
-          </p>
-          <div>
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-sm"
-            >
-              Open Full Interactive Suite &rarr;
-            </Link>
-          </div>
-        </div>
-
         {/* FAQ Schema Section for Google Ranking */}
         <div className="space-y-4 mb-12">
-          <h2 className="text-xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+          <div className="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider font-mono">
+            <i className="fa-solid fa-circle-question text-emerald-600"></i>
+            <span>Knowledge Base &amp; FAQs</span>
+          </div>
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">
+            Frequently Asked Questions
+          </h2>
           <div className="grid grid-cols-1 gap-4">
             {calc.faqs.map((faq, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <h3 className="font-bold text-sm text-slate-900 mb-2">{faq.q}</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">{faq.a}</p>
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm"
+              >
+                <h3 className="font-bold text-sm sm:text-base text-slate-900 mb-2">
+                  {faq.q}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {faq.a}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
+        {/* Related Calculators Internal Linking Grid (PageRank Distribution) */}
+        {relatedCalculators.length > 0 && (
+          <div className="space-y-4 mb-12">
+            <div className="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider font-mono">
+              <i className="fa-solid fa-sitemap text-emerald-600"></i>
+              <span>Related Financial Tools</span>
+            </div>
+            <h2 className="text-xl font-bold text-slate-900 mb-4">
+              Explore More Cross-Border Calculators
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {relatedCalculators.map((rel) => (
+                <Link
+                  key={rel.slug}
+                  href={`/calculators/${rel.slug}`}
+                  className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-md transition-all group flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="text-[10px] font-bold text-emerald-600 uppercase font-mono mb-1">
+                      {rel.targetCurrency ? `${rel.sourceCurrency || 'USD'} → ${rel.targetCurrency}` : rel.category}
+                    </div>
+                    <div className="text-xs font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2">
+                      {rel.title}
+                    </div>
+                  </div>
+                  <div className="text-[11px] text-slate-400 mt-2 font-mono flex items-center justify-between">
+                    <span>Calculate &rarr;</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Author Bio Box for E-E-A-T Ranking Signals */}
+        <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-5">
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-700 text-white font-extrabold text-2xl flex items-center justify-center shrink-0 shadow-md">
+            MN
+          </div>
+          <div className="space-y-1 text-center sm:text-left">
+            <div className="text-xs font-bold text-emerald-600 uppercase font-mono">
+              Lead Systems Engineer &bull; Verified Spec
+            </div>
+            <h4 className="text-base font-extrabold text-slate-900">
+              Muhammad Naveed
+            </h4>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Full-Stack &amp; Automation Engineer specializing in cross-border financial architectures, automated forex routing, and developer payout infrastructure.
+            </p>
+            <div className="pt-1 flex flex-wrap gap-3 justify-center sm:justify-start text-xs text-slate-500 font-mono">
+              <a
+                href="https://naveed-portfolio-kappa.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-emerald-600 underline font-semibold"
+              >
+                Portfolio &rarr;
+              </a>
+              <a
+                href="https://github.com/mnaveedkhtri-ui"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-emerald-600 underline"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
       </main>
 
       {/* Footer */}
       <footer className="border-t border-slate-200 py-8 text-center text-xs text-slate-500">
-        &copy; 2026 SmartRateCalcs. Built with mathematical precision by <strong>Muhammad Naveed</strong>. All rights reserved.
+        &copy; 2026 SmartRateCalcs. Built with mathematical precision by{' '}
+        <strong className="text-slate-700">Muhammad Naveed</strong>. All rights reserved.
       </footer>
     </div>
   );
