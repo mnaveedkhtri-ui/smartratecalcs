@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       authors: ['Muhammad Naveed'],
       images: [
         {
-          url: 'https://www.smartratecalcs.com/og-image.png',
+          url: `https://www.smartratecalcs.com/blog/${post.slug}.png`,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: post.metaTitle,
       description: post.metaDesc,
-      images: ['https://www.smartratecalcs.com/og-image.png'],
+      images: [`https://www.smartratecalcs.com/blog/${post.slug}.png`],
     },
   };
 }
@@ -87,7 +87,7 @@ export default function BlogPostPage({ params }: Props) {
         url: 'https://www.smartratecalcs.com/icon.png',
       },
     },
-    image: 'https://www.smartratecalcs.com/og-image.png',
+    image: `https://www.smartratecalcs.com/blog/${post.slug}.png`,
   };
 
   // 2. BreadcrumbList Schema
@@ -209,6 +209,16 @@ export default function BlogPostPage({ params }: Props) {
               <span className="font-bold text-slate-900">Muhammad Naveed</span> &bull; Lead Systems Engineer
             </div>
           </div>
+        </div>
+
+        {/* Featured Hero Banner Image */}
+        <div className="mb-10 rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-950">
+          <img
+            src={`/blog/${post.slug}.svg`}
+            alt={post.title}
+            className="w-full h-auto object-cover"
+            loading="eager"
+          />
         </div>
 
         {/* AI OVERVIEW DIRECT ANSWER BOX (For Google SGE / Gemini citation) */}

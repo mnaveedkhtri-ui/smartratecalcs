@@ -645,9 +645,17 @@ export default function HomePage() {
               {BLOG_POSTS.slice(0, 3).map((post) => (
                 <article
                   key={post.slug}
-                  className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-lg transition-all group flex flex-col justify-between"
+                  className="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-lg transition-all group flex flex-col justify-between"
                 >
                   <div>
+                    <Link href={`/blog/${post.slug}`} className="block mb-3.5 rounded-xl overflow-hidden border border-slate-100 bg-slate-950 aspect-[1200/630]">
+                      <img
+                        src={`/blog/${post.slug}.svg`}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </Link>
                     <div className="flex items-center justify-between text-[11px] font-mono mb-2.5">
                       <span className="px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 font-bold">
                         {post.category}
