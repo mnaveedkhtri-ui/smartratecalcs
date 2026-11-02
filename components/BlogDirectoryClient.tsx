@@ -82,8 +82,10 @@ export default function BlogDirectoryClient({ posts }: Props) {
               className="block overflow-hidden bg-slate-950 aspect-[1200/630] lg:aspect-auto"
             >
               <img
-                src={`/blog/${featuredPost.slug}.svg`}
+                src={`/blog/${featuredPost.slug}.png`}
                 alt={featuredPost.title}
+                width={1200}
+                height={630}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="eager"
               />
@@ -137,8 +139,10 @@ export default function BlogDirectoryClient({ posts }: Props) {
                 className="block mb-4 rounded-2xl overflow-hidden border border-slate-100 bg-slate-950 aspect-[1200/630]"
               >
                 <img
-                  src={`/blog/${post.slug}.svg`}
+                  src={`/blog/${post.slug}.png`}
                   alt={post.title}
+                  width={1200}
+                  height={630}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
                 />

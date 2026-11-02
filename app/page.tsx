@@ -650,8 +650,10 @@ export default function HomePage() {
                   <div>
                     <Link href={`/blog/${post.slug}`} className="block mb-3.5 rounded-xl overflow-hidden border border-slate-100 bg-slate-950 aspect-[1200/630]">
                       <img
-                        src={`/blog/${post.slug}.svg`}
+                        src={`/blog/${post.slug}.png`}
                         alt={post.title}
+                        width={1200}
+                        height={630}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                       />

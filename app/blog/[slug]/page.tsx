@@ -212,10 +212,12 @@ export default function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Featured Hero Banner Image */}
-        <div className="mb-10 rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-950">
+        <div className="mb-10 rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-950 aspect-[1200/630]">
           <img
-            src={`/blog/${post.slug}.svg`}
+            src={`/blog/${post.slug}.png`}
             alt={post.title}
+            width={1200}
+            height={630}
             className="w-full h-auto object-cover"
             loading="eager"
           />
