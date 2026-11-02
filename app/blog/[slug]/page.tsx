@@ -87,7 +87,19 @@ export default function BlogPostPage({ params }: Props) {
         url: 'https://www.smartratecalcs.com/icon.png',
       },
     },
-    image: `https://www.smartratecalcs.com/blog/${post.slug}.png`,
+    image: post.slug === 'upwork-pakistan-lowest-withdrawal-fee-guide'
+      ? [
+          `https://www.smartratecalcs.com/blog/${post.slug}.png`,
+          'https://www.smartratecalcs.com/blog/images/upwork-withdrawal-routes-flowchart.png',
+          'https://www.smartratecalcs.com/blog/images/upwork-annual-leakage-chart.png',
+          'https://www.smartratecalcs.com/blog/images/upwork-setup-checklist.png',
+        ]
+      : [
+          `https://www.smartratecalcs.com/blog/${post.slug}.png`,
+          'https://www.smartratecalcs.com/blog/images/fbr-section-154a-tax-brackets.png',
+          'https://www.smartratecalcs.com/blog/images/pseb-registration-workflow-diagram.png',
+          'https://www.smartratecalcs.com/blog/images/digital-prc-compliance-checklist.png',
+        ],
   };
 
   // 2. BreadcrumbList Schema
