@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { BLOG_POSTS } from '../../data/blog-posts';
+import BlogDirectoryClient from '../../components/BlogDirectoryClient';
 
 export const metadata: Metadata = {
   title: 'Financial & Cross-Border Payout Guides (2026)',
@@ -57,50 +58,8 @@ export default function BlogIndexPage() {
           </p>
         </div>
 
-        {/* Guides Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {BLOG_POSTS.map((post) => (
-            <article
-              key={post.slug}
-              className="bg-white rounded-3xl border border-slate-200 hover:border-emerald-500 hover:shadow-xl transition-all p-5 sm:p-6 flex flex-col justify-between group"
-            >
-              <div>
-                <Link href={`/blog/${post.slug}`} className="block mb-4 rounded-2xl overflow-hidden border border-slate-100 bg-slate-950 aspect-[1200/630]">
-                  <img
-                    src={`/blog/${post.slug}.svg`}
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                </Link>
-                <div className="flex items-center justify-between text-xs font-mono mb-3">
-                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-bold text-[11px]">
-                    {post.category}
-                  </span>
-                  <span className="text-slate-400">{post.readTime}</span>
-                </div>
-                <h2 className="font-bold text-lg text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug mb-3">
-                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                </h2>
-                <p className="text-xs text-slate-500 line-clamp-3 leading-relaxed mb-4">
-                  {post.metaDesc}
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-[11px] text-slate-400 font-mono">
-                  {post.publishedDate}
-                </span>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="text-xs font-bold text-emerald-600 group-hover:text-emerald-700 flex items-center gap-1"
-                >
-                  Read Full Guide &rarr;
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
+        {/* Client-Side Interactive Directory (Search & Categories) */}
+        <BlogDirectoryClient posts={BLOG_POSTS} />
 
         {/* Author Bio Box */}
         <div className="p-8 rounded-3xl bg-slate-900 text-white shadow-xl flex flex-col sm:flex-row items-center gap-6">

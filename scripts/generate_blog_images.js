@@ -68,6 +68,26 @@ const posts = [
     statValue: '₨ 0 (Free)',
     icon: 'fa-bolt',
     color: '#10b981'
+  },
+  {
+    slug: 'meezan-vs-hbl-vs-ubl-freelance-remittance-rates-audit',
+    badge: 'PAKISTAN BANKING BENCHMARK',
+    title: 'Meezan vs HBL vs UBL: 2026 Audit',
+    highlight: 'USD Conversion Rates & Raast Speeds',
+    statLabel: 'Meezan Raast Settlement:',
+    statValue: '< 60 Seconds',
+    icon: 'fa-building-columns',
+    color: '#059669'
+  },
+  {
+    slug: 'stripe-vs-sadabiz-pakistan-freelancer-payment-guide',
+    badge: 'GLOBAL CLIENT INVOICING',
+    title: 'Stripe vs SadaBiz: 2026 Client Guide',
+    highlight: 'Charge US Clients via Apple Pay',
+    statLabel: 'SadaBiz Clean Flat Fee:',
+    statValue: '1.5% Flat',
+    icon: 'fa-credit-card',
+    color: '#10b981'
   }
 ];
 
