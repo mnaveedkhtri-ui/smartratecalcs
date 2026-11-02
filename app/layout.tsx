@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -147,6 +148,21 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-[#f8fafc] text-slate-800 antialiased min-h-screen">
+        {/* Google Analytics 4 (GA4) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-FW05YVLPDM"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FW05YVLPDM', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         {children}
       </body>
     </html>
