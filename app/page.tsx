@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { PROGRAMMATIC_CALCULATORS } from '../data/programmatic-calculators';
+import { BLOG_POSTS } from '../data/blog-posts';
 
 interface RatesMap {
   [currency: string]: {
@@ -155,6 +156,10 @@ export default function HomePage() {
             <button onClick={() => navigateTo('about')} className={`hover:text-slate-900 transition-colors py-2 ${currentPage === 'about' ? 'text-emerald-600 font-bold' : ''}`}>
               About Creator
             </button>
+            <Link href="/blog" className="hover:text-emerald-600 font-bold text-slate-800 transition-colors py-2 flex items-center gap-1.5">
+              <span>Guides</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            </Link>
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
@@ -192,6 +197,9 @@ export default function HomePage() {
             <button onClick={() => navigateTo('about')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2.5">
               <i className="fa-solid fa-user-shield text-xs text-slate-400"></i> About Muhammad Naveed
             </button>
+            <Link href="/blog" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-emerald-800 bg-emerald-50/60 hover:bg-emerald-50 flex items-center gap-2.5">
+              <i className="fa-solid fa-book-open text-xs text-emerald-600"></i> Financial Guides &amp; Research
+            </Link>
             <button onClick={() => navigateTo('contact')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-white bg-emerald-600 hover:bg-emerald-700 flex items-center gap-2.5 shadow-sm">
               <i className="fa-solid fa-envelope text-xs"></i> Contact &amp; Bug Bounty
             </button>
@@ -609,6 +617,59 @@ export default function HomePage() {
               </div>
             )}
           </section>
+
+          {/* ================= HIGH-AUTHORITY GUIDES SECTION ================= */}
+          <section id="guides" className="mt-16 pt-12 border-t border-slate-200">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold mb-2 font-mono">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  Financial Research &amp; Regulatory Guides
+                </div>
+                <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
+                  Latest Payout &amp; Tax Guides
+                </h2>
+                <p className="text-xs sm:text-sm text-slate-500 mt-1 max-w-xl">
+                  In-depth empirical research on bank clearing spreads, FBR tax compliance, and payment gateway unit economics.
+                </p>
+              </div>
+              <Link
+                href="/blog"
+                className="text-xs font-bold text-emerald-600 hover:text-emerald-700 flex items-center gap-1.5 self-start sm:self-auto"
+              >
+                View All {BLOG_POSTS.length} Guides &rarr;
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {BLOG_POSTS.slice(0, 3).map((post) => (
+                <article
+                  key={post.slug}
+                  className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-lg transition-all group flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between text-[11px] font-mono mb-2.5">
+                      <span className="px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 font-bold">
+                        {post.category}
+                      </span>
+                      <span className="text-slate-400">{post.readTime}</span>
+                    </div>
+                    <h3 className="font-heading font-bold text-sm sm:text-base text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug mb-2">
+                      <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                    </h3>
+                    <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">
+                      {post.metaDesc}
+                    </p>
+                  </div>
+                  <div className="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between text-xs text-emerald-600 font-bold">
+                    <Link href={`/blog/${post.slug}`} className="hover:underline flex items-center gap-1">
+                      Read Guide &rarr;
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
         </div>
       )}
 
@@ -966,6 +1027,7 @@ export default function HomePage() {
             <div>
               <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 mb-4">Legal &amp; Trust</h4>
               <ul className="space-y-2.5 text-xs text-slate-600">
+                <li><Link href="/blog" className="text-emerald-700 font-bold hover:underline flex items-center gap-1.5"><i className="fa-solid fa-book-open text-xs text-emerald-600"></i> Payout Guides &amp; Research</Link></li>
                 <li><button onClick={() => navigateTo('methodology')} className="hover:text-emerald-600 transition-colors">Calculation Methodology</button></li>
                 <li><button onClick={() => navigateTo('matrix')} className="hover:text-emerald-600 transition-colors">Interbank Fee Matrix 2026</button></li>
                 <li><button onClick={() => navigateTo('privacy')} className="hover:text-emerald-600 transition-colors">Privacy Policy (0 Cookies)</button></li>

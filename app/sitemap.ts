@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { PROGRAMMATIC_CALCULATORS } from '../data/programmatic-calculators';
+import { BLOG_POSTS } from '../data/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.smartratecalcs.com';
@@ -11,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/about`,
@@ -38,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic Programmatic SEO Calculator Pages
+  // Dynamic Programmatic SEO Calculator Pages (53 URLs)
   const dynamicCalculatorPages: MetadataRoute.Sitemap = PROGRAMMATIC_CALCULATORS.map((calc) => ({
     url: `${baseUrl}/calculators/${calc.slug}`,
     lastModified: new Date(),
@@ -46,5 +53,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  return [...staticPages, ...dynamicCalculatorPages];
+  // Dynamic High-Authority Blog Guides (6 URLs)
+  const dynamicBlogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }));
+
+  return [...staticPages, ...dynamicCalculatorPages, ...dynamicBlogPages];
 }
