@@ -1988,5 +1988,506 @@ export const PROGRAMMATIC_CALCULATORS: ProgrammaticCalculator[] = [
         "a": "Biometrically verified Easypaisa accounts can receive up to Rs. 500,000 PKR per month."
       }
     ]
+  },
+  {
+    "slug": "deel-to-wise-payout-calculator",
+    "title": "Deel to Wise Contractor Payout Fee & Spread Calculator (2026)",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "USD",
+    "defaultAmount": 3000,
+    "fixedFee": 0,
+    "percentFee": 0,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 1.0,
+    "description": "Calculate exact take-home contractor salary when withdrawing from Deel to your Wise USD/EUR account with zero intermediary cuts.",
+    "metaTitle": "Deel to Wise Fee Calculator (2026 Contractor Rates)",
+    "metaDesc": "Calculate exact deductions on Deel withdrawals to Wise. Compare $0 ACH transfer fee against expensive local bank clearing spreads.",
+    "primaryKeyword": "deel to wise payout calculator",
+    "quickAnswer": "Withdrawing USD from Deel to Wise via local US ACH transfer is 100% free with zero fees ($0). Deel deposits the full $3,000 to Wise, saving you $25 to $50 compared to international SWIFT bank wires.",
+    "formula": "Net Payout = Deel Balance - $0 ACH Fee",
+    "recommendation": {
+      "platform": "Wise ACH Transfer",
+      "savingPct": "100%",
+      "ctaText": "Link Wise ACH to Deel",
+      "badge": "Zero Fee Route"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q105658686",
+      "https://www.wikidata.org/wiki/Q16958465"
+    ],
+    "faqs": [
+      {
+        "q": "How much does Deel charge to withdraw to Wise?",
+        "a": "Deel charges $0 for USD withdrawals routed via US ACH directly to your Wise account details."
+      },
+      {
+        "q": "How fast does Deel settle to Wise?",
+        "a": "Most Deel ACH withdrawals to Wise arrive within 1 business day."
+      }
+    ]
+  },
+  {
+    "slug": "remote-com-contractor-fee-calculator",
+    "title": "Remote.com Contractor Withdrawal Fee & FX Spread Calculator",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "PKR",
+    "defaultAmount": 2500,
+    "fixedFee": 0,
+    "percentFee": 0.012,
+    "exchangeRateSpread": 0.015,
+    "baseExchangeRate": 278.4,
+    "description": "Calculate net take-home salary from Remote.com international contractor invoices into local bank accounts.",
+    "metaTitle": "Remote.com Contractor Fee Calculator: Real 2026 Payouts",
+    "metaDesc": "Calculate exact deductions from Remote.com contractor payouts. Factor in platform clearing costs and local currency conversion margins.",
+    "primaryKeyword": "remote com contractor fee calculator",
+    "quickAnswer": "On a $2,500 contractor invoice: Remote.com charges approx 1.2% processing plus a 1.5% currency conversion margin on local bank payouts, netting approx Rs. 677,900 PKR.",
+    "formula": "Net PKR = (USD Amount * 0.988) * (278.4 * 0.985)",
+    "recommendation": {
+      "platform": "Elevate / Wise USD",
+      "savingPct": "1.8%",
+      "ctaText": "Withdraw in USD to Elevate",
+      "badge": "Avoid Currency Markup"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q105658686"
+    ],
+    "faqs": [
+      {
+        "q": "Does Remote.com support direct USD bank deposits?",
+        "a": "Yes, Remote.com supports domestic USD accounts via routing number and account number."
+      }
+    ]
+  },
+  {
+    "slug": "binance-p2p-usdt-to-pkr-spread-calculator",
+    "title": "Binance P2P USDT to PKR Cashout Spread & Real Rate Calculator",
+    "category": "payout",
+    "sourceCurrency": "USDT",
+    "targetCurrency": "PKR",
+    "defaultAmount": 1000,
+    "fixedFee": 0,
+    "percentFee": 0.003,
+    "exchangeRateSpread": -0.018,
+    "baseExchangeRate": 278.4,
+    "description": "Calculate true take-home PKR from Binance P2P USDT sales against official State Bank interbank rates.",
+    "metaTitle": "Binance P2P USDT to PKR Calculator (2026 Live Spread)",
+    "metaDesc": "Compare Binance P2P USDT cashout rates against SBP interbank rates. Calculate bank account proceeds via Raast, Meezan, and Nayapay.",
+    "primaryKeyword": "binance p2p usdt to pkr calculator",
+    "quickAnswer": "Binance P2P USDT typically trades at a +1.5% to +2.0% premium above official interbank rates in Pakistan. Selling 1,000 USDT nets approx Rs. 283,500 PKR in your local bank account.",
+    "formula": "Net PKR = USDT Amount * P2P Market Rate (Interbank + 1.8% Premium)",
+    "recommendation": {
+      "platform": "Verified Merchant P2P",
+      "savingPct": "+1.8% Premium",
+      "ctaText": "Compare P2P vs Bank Transfer",
+      "badge": "Above Interbank"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q56348615"
+    ],
+    "faqs": [
+      {
+        "q": "Why does Binance P2P trade higher than Google dollar rate in Pakistan?",
+        "a": "High local demand for foreign digital assets creates a persistent 1% to 2.5% market premium over the official interbank rate."
+      }
+    ]
+  },
+  {
+    "slug": "crypto-usdt-to-inr-tds-tax-calculator",
+    "title": "Crypto USDT to INR 1% TDS & 30% Capital Gains Tax Calculator (2026)",
+    "category": "payout",
+    "sourceCurrency": "USDT",
+    "targetCurrency": "INR",
+    "defaultAmount": 1000,
+    "fixedFee": 0,
+    "percentFee": 0.01,
+    "exchangeRateSpread": 0.008,
+    "baseExchangeRate": 86.75,
+    "description": "Calculate exact take-home INR from crypto withdrawals after Section 194S 1% TDS deduction and 30% VDA taxation.",
+    "metaTitle": "USDT to INR Tax & TDS Calculator (2026 Section 194S Rates)",
+    "metaDesc": "Calculate exact tax deductions on Indian crypto P2P cashouts. Factor in 1% mandatory TDS and 30% flat tax on cryptocurrency gains.",
+    "primaryKeyword": "crypto usdt to inr tds tax calculator",
+    "quickAnswer": "Under Indian tax law: P2P and exchange crypto sales incur a mandatory 1% Section 194S TDS deduction. A 1,000 USDT cashout at ₹87 INR nets approx ₹86,130 INR immediately, with profits subject to 30% flat tax.",
+    "formula": "Net Payout = (USDT * INR Rate) * (1 - 0.01 TDS)",
+    "recommendation": {
+      "platform": "Direct Exporter Stripe/Skydo",
+      "savingPct": "30%",
+      "ctaText": "Invoice via Skydo (0% Crypto Tax)",
+      "badge": "100% Tax Compliant"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q111953"
+    ],
+    "faqs": [
+      {
+        "q": "What is Section 194S TDS on crypto in India?",
+        "a": "Section 194S mandates a 1% tax deducted at source on all Virtual Digital Asset (VDA) transactions exceeding ₹50,000 yearly."
+      }
+    ]
+  },
+  {
+    "slug": "paypal-to-mpesa-kenya-fee-calculator",
+    "title": "PayPal to M-Pesa Kenya Transfer Fee & FX Spread Calculator (2026)",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "KES",
+    "defaultAmount": 500,
+    "fixedFee": 0,
+    "percentFee": 0.03,
+    "exchangeRateSpread": 0.025,
+    "baseExchangeRate": 129.5,
+    "description": "Calculate exact net KES received in Safaricom M-Pesa wallet from PayPal withdrawals via Equity Bank rail.",
+    "metaTitle": "PayPal to M-Pesa Fee Calculator: 2026 Kenya Rates",
+    "metaDesc": "Calculate total cost of withdrawing from PayPal to M-Pesa in Kenya. Account for 3% service fee and internal currency conversion margin.",
+    "primaryKeyword": "paypal to mpesa kenya fee calculator",
+    "quickAnswer": "PayPal to M-Pesa withdrawals via Equity Bank incur a 3.0% service fee plus an approx 2.5% currency exchange spread. On a $500 payout, you lose approx $27.50, receiving approx 61,200 KES in your Safaricom M-Pesa wallet.",
+    "formula": "Net KES = (USD Amount * 0.97) * (129.5 * 0.975)",
+    "recommendation": {
+      "platform": "Wise to M-Pesa",
+      "savingPct": "3.5%",
+      "ctaText": "Send via Wise to M-Pesa",
+      "badge": "Interbank Rate"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q1144026",
+      "https://www.wikidata.org/wiki/Q48340"
+    ],
+    "faqs": [
+      {
+        "q": "How long does PayPal to M-Pesa take in Kenya?",
+        "a": "Standard withdrawals take between 2 hours and 3 calendar days depending on account history."
+      }
+    ]
+  },
+  {
+    "slug": "wise-to-mpesa-kenya-calculator",
+    "title": "Wise to M-Pesa Kenya Real Exchange Rate & Fee Calculator (2026)",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "KES",
+    "defaultAmount": 500,
+    "fixedFee": 0.45,
+    "percentFee": 0.0055,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 129.5,
+    "description": "Calculate exact KES received in your Safaricom M-Pesa account via Wise using the mid-market interbank exchange rate.",
+    "metaTitle": "Wise to M-Pesa Calculator: Live 2026 Mid-Market Rate",
+    "metaDesc": "Calculate exact KES payout from Wise to M-Pesa mobile wallet. Zero hidden currency spread compared to PayPal Equity Bank link.",
+    "primaryKeyword": "wise to mpesa kenya calculator",
+    "quickAnswer": "Wise uses the zero-markup interbank exchange rate (129.5 KES) and charges approx $3.20 on a $500 transfer. The recipient receives approx 64,330 KES (saving over 3,100 KES compared to PayPal).",
+    "formula": "Net KES = (USD Amount - Wise Fee) * Interbank Mid-Market Rate (129.5)",
+    "recommendation": {
+      "platform": "Wise Mobile Money",
+      "savingPct": "4.8%",
+      "ctaText": "Transfer to M-Pesa via Wise",
+      "badge": "Best for Kenya"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q1144026"
+    ],
+    "faqs": [
+      {
+        "q": "Does Wise transfer instantly to M-Pesa in Kenya?",
+        "a": "Yes, Wise delivers directly to Safaricom M-Pesa mobile numbers within minutes."
+      }
+    ]
+  },
+  {
+    "slug": "payoneer-to-easypaisa-fee-calculator",
+    "title": "Payoneer to Easypaisa PKR Withdrawal Fee & Rate Calculator (2026)",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "PKR",
+    "defaultAmount": 300,
+    "fixedFee": 1.5,
+    "percentFee": 0,
+    "exchangeRateSpread": 0.02,
+    "baseExchangeRate": 278.4,
+    "description": "Calculate exact net PKR credited into your Easypaisa mobile wallet when withdrawing from Payoneer balance.",
+    "metaTitle": "Payoneer to Easypaisa Calculator: 2026 Raast Payout",
+    "metaDesc": "Calculate total deductions on Payoneer to Easypaisa transfers. Factoring $1.50 fixed fee and 2% foreign exchange spread.",
+    "primaryKeyword": "payoneer to easypaisa fee calculator",
+    "quickAnswer": "Withdrawing $300 USD from Payoneer to Easypaisa costs $1.50 in transaction fees plus a 2% exchange rate spread. You receive approx Rs. 81,440 PKR in your Easypaisa wallet via Raast instant transfer.",
+    "formula": "Net PKR = (USD Amount - $1.50) * (278.4 * 0.98)",
+    "recommendation": {
+      "platform": "Wise to Raast",
+      "savingPct": "1.8%",
+      "ctaText": "Switch to Wise Raast",
+      "badge": "Lower FX Spread"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q5456380"
+    ],
+    "faqs": [
+      {
+        "q": "Can I transfer directly from Payoneer to Easypaisa IBAN?",
+        "a": "Yes, enter your 24-character Telenor Microfinance Bank / Easypaisa IBAN in Payoneer Bank Accounts."
+      }
+    ]
+  },
+  {
+    "slug": "upwork-to-revolut-fee-calculator",
+    "title": "Upwork to Revolut Withdrawal Fee & FX Spread Calculator",
+    "category": "freelance",
+    "sourceCurrency": "USD",
+    "targetCurrency": "EUR",
+    "defaultAmount": 2000,
+    "fixedFee": 0,
+    "percentFee": 0,
+    "exchangeRateSpread": 0.005,
+    "baseExchangeRate": 0.92,
+    "description": "Calculate exact EUR take-home when routing Upwork earnings to Revolut via US ACH details.",
+    "metaTitle": "Upwork to Revolut Fee Calculator (2026 European Rates)",
+    "metaDesc": "Compare Upwork to Revolut withdrawal fees. Bypassing $30 wire charges using free US ACH routing into Revolut accounts.",
+    "primaryKeyword": "upwork to revolut fee calculator",
+    "quickAnswer": "Withdrawing USD from Upwork to Revolut via US ACH routing is 100% free ($0). Converting $2,000 USD to EUR inside Revolut on weekdays incurs near-zero exchange markup, netting approx €1,830 EUR.",
+    "formula": "Net EUR = USD Amount * Revolut Interbank Rate",
+    "recommendation": {
+      "platform": "Revolut ACH",
+      "savingPct": "95%",
+      "ctaText": "Connect Revolut to Upwork",
+      "badge": "Zero Upwork Fee"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q28407421"
+    ],
+    "faqs": [
+      {
+        "q": "Does Upwork charge for ACH transfers to Revolut?",
+        "a": "No, Upwork ACH direct deposits to US bank details are completely free ($0.00)."
+      }
+    ]
+  },
+  {
+    "slug": "fiverr-to-wise-payout-calculator",
+    "title": "Fiverr to Wise Direct Payout Fee & Savings Calculator (2026)",
+    "category": "freelance",
+    "sourceCurrency": "USD",
+    "targetCurrency": "PKR",
+    "defaultAmount": 1000,
+    "fixedFee": 0,
+    "percentFee": 0.2,
+    "exchangeRateSpread": 0.0048,
+    "baseExchangeRate": 278.4,
+    "description": "Calculate exact net take-home earnings when withdrawing from Fiverr to Wise USD details to bypass expensive bank wire rates.",
+    "metaTitle": "Fiverr to Wise Payout Calculator: Avoid 3% Bank Spread",
+    "metaDesc": "Calculate exact deductions from Fiverr earnings to Wise balance. Keep 2% to 3% more compared to direct Fiverr bank withdrawals.",
+    "primaryKeyword": "fiverr to wise payout calculator",
+    "quickAnswer": "After Fiverr 20% platform cut on $1,000 ($800 net): Withdrawing to Wise USD account costs $0. Converting $800 to PKR via Wise nets approx Rs. 221,650 PKR (saving Rs. 5,000+ over direct bank transfer).",
+    "formula": "Net PKR = (Order * 0.80) * (278.4 * 0.9952)",
+    "recommendation": {
+      "platform": "Wise ACH",
+      "savingPct": "2.4%",
+      "ctaText": "Link Wise USD to Fiverr",
+      "badge": "Top Freelancer Choice"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q5456380"
+    ],
+    "faqs": [
+      {
+        "q": "Can I link Wise directly to Fiverr?",
+        "a": "Yes, choose 'Bank Transfer' on Fiverr and provide your Wise USD checking account routing number."
+      }
+    ]
+  },
+  {
+    "slug": "stripe-atlas-us-llc-tax-calculator",
+    "title": "Stripe Atlas US LLC Tax & Annual Maintenance Fee Calculator (2026)",
+    "category": "ecommerce",
+    "sourceCurrency": "USD",
+    "targetCurrency": "USD",
+    "defaultAmount": 50000,
+    "fixedFee": 850,
+    "percentFee": 0,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 1.0,
+    "description": "Calculate the total annual compliance and state maintenance costs for non-US founders running a Delaware or Wyoming LLC via Stripe Atlas.",
+    "metaTitle": "Stripe Atlas US LLC Annual Cost & Tax Calculator (2026)",
+    "metaDesc": "Calculate exact annual expenses for Stripe Atlas US LLCs: Delaware Franchise Tax ($300), Registered Agent ($100), and Form 5472 tax filing.",
+    "primaryKeyword": "stripe atlas us llc tax calculator",
+    "quickAnswer": "A Stripe Atlas Delaware LLC requires approx $850 to $1,500/year in fixed upkeep: $300 Delaware Annual Franchise Tax, $100 Registered Agent fee, and $450-$1,000 for mandatory IRS Form 5472/1120 non-resident filing.",
+    "formula": "Annual Maintenance = $300 DE Tax + $100 Agent + $450 CPA Compliance",
+    "recommendation": {
+      "platform": "Wyoming LLC Option",
+      "savingPct": "$240/yr",
+      "ctaText": "Compare Wyoming vs Delaware",
+      "badge": "Lower Annual Tax"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q307616"
+    ],
+    "faqs": [
+      {
+        "q": "Do non-US residents pay US income tax on Stripe Atlas LLCs?",
+        "a": "Single-member foreign-owned LLCs with no US employees or physical presence are generally not subject to US federal income tax (ETBUS rules), but must file Form 5472."
+      }
+    ]
+  },
+  {
+    "slug": "toptal-to-bank-wire-fee-calculator",
+    "title": "Toptal Contractor Payout & Bank Wire Fee Calculator (2026)",
+    "category": "freelance",
+    "sourceCurrency": "USD",
+    "targetCurrency": "PKR",
+    "defaultAmount": 5000,
+    "fixedFee": 25,
+    "percentFee": 0,
+    "exchangeRateSpread": 0.026,
+    "baseExchangeRate": 278.4,
+    "description": "Calculate exact net salary from Toptal engineering payouts after SWIFT intermediary charges and local bank foreign exchange markups.",
+    "metaTitle": "Toptal Payout Calculator: 2026 Senior Developer Net",
+    "metaDesc": "Calculate exact take-home pay on Toptal software engineer payouts. Compare SWIFT wire costs against Payoneer and Wise routing.",
+    "primaryKeyword": "toptal to bank wire fee calculator",
+    "quickAnswer": "On a $5,000 Toptal monthly payout: Direct SWIFT wire deducts $25 intermediary fee plus approx 2.6% bank FX spread, crediting approx Rs. 1,350,000 PKR (eating approx Rs. 42,000 PKR in hidden margins).",
+    "formula": "Net PKR = (USD Amount - $25) * (278.4 * 0.974)",
+    "recommendation": {
+      "platform": "Elevate Pay Direct ACH",
+      "savingPct": "2.5%",
+      "ctaText": "Receive Toptal via Elevate",
+      "badge": "Saves $130/month"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q7825127"
+    ],
+    "faqs": [
+      {
+        "q": "What payout options does Toptal support?",
+        "a": "Toptal supports Direct Deposit (US ACH), international SWIFT wire transfers, and Payoneer."
+      }
+    ]
+  },
+  {
+    "slug": "payoneer-to-gcash-philippines-calculator",
+    "title": "Payoneer to GCash Instant Cash-In Fee & Rate Calculator (2026)",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "PHP",
+    "defaultAmount": 400,
+    "fixedFee": 0,
+    "percentFee": 0.015,
+    "exchangeRateSpread": 0.02,
+    "baseExchangeRate": 58.2,
+    "description": "Calculate exact net Philippine Pesos received in GCash from Payoneer earnings with zero delay.",
+    "metaTitle": "Payoneer to GCash Calculator: 2026 Philippines Payout",
+    "metaDesc": "Calculate exact net PHP from Payoneer to GCash transfers. Accurately model 2% currency conversion spread and instant wallet cash-in.",
+    "primaryKeyword": "payoneer to gcash philippines calculator",
+    "quickAnswer": "Withdrawing $400 USD from Payoneer to GCash incurs an approx 2.0% currency spread. You receive approx 22,810 PHP instantly in your GCash wallet.",
+    "formula": "Net PHP = USD Amount * (58.2 * 0.98)",
+    "recommendation": {
+      "platform": "Direct GCash Cash-In",
+      "savingPct": "Instant Access",
+      "ctaText": "Link Payoneer to GCash",
+      "badge": "Zero Bank Wait"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q1144026"
+    ],
+    "faqs": [
+      {
+        "q": "Is Payoneer to GCash cash-in instant?",
+        "a": "Yes, linked Payoneer accounts deposit funds into GCash balances in real time 24/7."
+      }
+    ]
+  },
+  {
+    "slug": "wise-to-bdo-philippines-calculator",
+    "title": "Wise to BDO Unibank Direct PHP Transfer Rate Calculator (2026)",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "PHP",
+    "defaultAmount": 800,
+    "fixedFee": 0.65,
+    "percentFee": 0.0048,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 58.2,
+    "description": "Calculate exact net PHP credited to Banco de Oro (BDO) accounts via Wise mid-market interbank exchange rates.",
+    "metaTitle": "Wise to BDO Philippines Calculator (2026 Mid-Market)",
+    "metaDesc": "Calculate exact Philippine Pesos delivered to BDO Unibank via Wise. Compare against PayPal and Western Union hidden bank markups.",
+    "primaryKeyword": "wise to bdo philippines calculator",
+    "quickAnswer": "Wise sends $800 USD to BDO Unibank at the official mid-market rate (58.2 PHP) with approx $4.50 upfront fee, crediting approx 46,300 PHP with zero hidden bank deductions.",
+    "formula": "Net PHP = (USD Amount - Wise Fee) * 58.2",
+    "recommendation": {
+      "platform": "Wise BDO Rail",
+      "savingPct": "3.2%",
+      "ctaText": "Transfer to BDO via Wise",
+      "badge": "Zero FX Markup"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q806190"
+    ],
+    "faqs": [
+      {
+        "q": "Does Wise transfer directly to BDO Unibank in the Philippines?",
+        "a": "Yes, Wise transfers directly to BDO peso accounts with real-time InstaPay and PESONet clearing."
+      }
+    ]
+  },
+  {
+    "slug": "skrill-to-pkr-jazzcash-fee-calculator",
+    "title": "Skrill to JazzCash PKR Withdrawal Fee & Rate Calculator",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "PKR",
+    "defaultAmount": 200,
+    "fixedFee": 5.5,
+    "percentFee": 0,
+    "exchangeRateSpread": 0.0399,
+    "baseExchangeRate": 278.4,
+    "description": "Calculate the true cost of withdrawing funds from Skrill to JazzCash or Pakistani bank accounts: 3.99% currency markup + fixed wire fee.",
+    "metaTitle": "Skrill to JazzCash Fee Calculator: 2026 Total Loss",
+    "metaDesc": "Expose total deductions on Skrill withdrawals to Pakistan. 3.99% currency exchange markup and fixed withdrawal fee breakdown.",
+    "primaryKeyword": "skrill to pkr jazzcash fee calculator",
+    "quickAnswer": "Skrill is one of the most expensive withdrawal methods in Pakistan: it charges $5.50 fixed fee plus an aggressive 3.99% currency spread. On $200, you lose approx $13.50 (Rs. 3,750 PKR), netting approx Rs. 52,000 PKR.",
+    "formula": "Net PKR = (USD Amount - $5.50) * (278.4 * 0.9601)",
+    "recommendation": {
+      "platform": "Wise or SadaBiz",
+      "savingPct": "4.5%",
+      "ctaText": "Avoid Skrill 4% Markup",
+      "badge": "High Fee Warning"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q1417539"
+    ],
+    "faqs": [
+      {
+        "q": "Why is Skrill exchange rate so low in Pakistan?",
+        "a": "Skrill adds an internal 3.99% wholesale foreign exchange fee on top of the interbank currency rate."
+      }
+    ]
+  },
+  {
+    "slug": "elevate-pay-vs-wise-usd-payout-calculator",
+    "title": "Elevate Pay vs Wise USD Contractor Payout Fee Calculator (2026)",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "PKR",
+    "defaultAmount": 2000,
+    "fixedFee": 0,
+    "percentFee": 0.005,
+    "exchangeRateSpread": 0.005,
+    "baseExchangeRate": 278.4,
+    "description": "Compare net take-home earnings between Elevate Pay (Bangor Savings Bank US account) and Wise for Pakistani software engineers.",
+    "metaTitle": "Elevate Pay vs Wise Calculator (2026 Contractor Rates)",
+    "metaDesc": "Compare exact fees between Elevate Pay and Wise for receiving Upwork, Deel, and US client contractor salaries into Pakistani banks.",
+    "primaryKeyword": "elevate pay vs wise usd payout calculator",
+    "quickAnswer": "Both Elevate Pay and Wise offer near-identical low fees (approx 0.5% total deduction). On a $2,000 Upwork payout, both platforms deliver approx Rs. 553,000 PKR, saving over Rs. 15,000 PKR compared to direct bank wires.",
+    "formula": "Net Payout = USD Amount * (278.4 * 0.995)",
+    "recommendation": {
+      "platform": "Elevate Pay / Wise",
+      "savingPct": "2.8%",
+      "ctaText": "Open Free US Account",
+      "badge": "Top Rated 2026"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q16958465"
+    ],
+    "faqs": [
+      {
+        "q": "Is Elevate Pay FDIC insured for Pakistani users?",
+        "a": "Yes, customer deposits in Elevate Pay are held at Bangor Savings Bank (Member FDIC) insured up to $250,000."
+      }
+    ]
   }
 ];
