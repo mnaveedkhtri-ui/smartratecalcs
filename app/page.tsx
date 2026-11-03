@@ -4,6 +4,8 @@ import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { PROGRAMMATIC_CALCULATORS } from '../data/programmatic-calculators';
 import { BLOG_POSTS } from '../data/blog-posts';
+import PayPalCalculatorWidget from '../components/PayPalCalculatorWidget';
+import StripeCalculatorWidget from '../components/StripeCalculatorWidget';
 
 interface RatesMap {
   [currency: string]: {
@@ -21,7 +23,8 @@ const RATES: RatesMap = {
 
 export default function HomePage() {
   const [currentPage, setCurrentPage] = useState<'home' | 'matrix' | 'methodology' | 'faq' | 'about' | 'contact' | 'privacy' | 'terms'>('home');
-  const [activeTab, setActiveTab] = useState<'payout' | 'ecom' | 'freelance'>('payout');
+  const [activeTab, setActiveTab] = useState<'payout' | 'gateway' | 'ecom' | 'freelance'>('payout');
+  const [gatewayVendor, setGatewayVendor] = useState<'paypal' | 'stripe'>('paypal');
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const [calcFilter, setCalcFilter] = useState<string>('all');
   const [calcSearch, setCalcSearch] = useState<string>('');
@@ -140,10 +143,18 @@ export default function HomePage() {
             </div>
           </button>
 
-          <nav className="hidden lg:flex items-center gap-8 text-[14px] font-semibold text-slate-600">
+          <nav className="hidden lg:flex items-center gap-7 text-[14px] font-semibold text-slate-600">
             <button onClick={() => navigateTo('home')} className={`hover:text-slate-900 transition-colors py-2 ${currentPage === 'home' ? 'text-emerald-600 font-bold' : ''}`}>
               Calculators
             </button>
+            <Link href="/paypal-fee-calculator" className="hover:text-blue-600 transition-colors py-2 flex items-center gap-1">
+              <i className="fa-brands fa-paypal text-blue-500 text-xs"></i>
+              <span>PayPal</span>
+            </Link>
+            <Link href="/stripe-fee-calculator" className="hover:text-indigo-600 transition-colors py-2 flex items-center gap-1">
+              <i className="fa-brands fa-stripe text-indigo-500 text-xs"></i>
+              <span>Stripe</span>
+            </Link>
             <button onClick={() => navigateTo('matrix')} className={`hover:text-slate-900 transition-colors py-2 ${currentPage === 'matrix' ? 'text-emerald-600 font-bold' : ''}`}>
               Fee Matrix 2026
             </button>
@@ -185,6 +196,12 @@ export default function HomePage() {
             <button onClick={() => navigateTo('home')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-emerald-600 bg-emerald-50 flex items-center gap-2.5">
               <i className="fa-solid fa-calculator text-xs"></i> Calculators Suite
             </button>
+            <Link href="/paypal-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-blue-700 bg-blue-50/50 hover:bg-blue-50 flex items-center gap-2.5">
+              <i className="fa-brands fa-paypal text-xs text-blue-600"></i> PayPal Fee Calculator
+            </Link>
+            <Link href="/stripe-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-indigo-700 bg-indigo-50/50 hover:bg-indigo-50 flex items-center gap-2.5">
+              <i className="fa-brands fa-stripe text-xs text-indigo-600"></i> Stripe Fee Calculator
+            </Link>
             <button onClick={() => navigateTo('matrix')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2.5">
               <i className="fa-solid fa-table-cells text-xs text-slate-400"></i> Fee Matrix 2026
             </button>
@@ -225,6 +242,10 @@ export default function HomePage() {
             <div className="mt-6 flex flex-col sm:inline-flex sm:flex-row p-1.5 bg-slate-200/80 rounded-2xl border border-slate-300/70 gap-1.5 w-full sm:w-auto">
               <button onClick={() => setActiveTab('payout')} className={`py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'payout' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
                 <i className="fa-solid fa-money-bill-transfer text-emerald-600"></i> Global Payouts &amp; FX
+              </button>
+              <button onClick={() => setActiveTab('gateway')} className={`py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'gateway' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
+                <i className="fa-brands fa-paypal text-blue-600"></i> PayPal &amp; Stripe Fees
+                <span className="px-1.5 py-0.2 rounded bg-blue-100 text-blue-700 text-[10px] font-mono">NEW</span>
               </button>
               <button onClick={() => setActiveTab('ecom')} className={`py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'ecom' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
                 <i className="fa-solid fa-cart-shopping"></i> Shopify &amp; Stripe Profit
@@ -443,6 +464,43 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+            </section>
+          )}
+
+          {/* TAB: PayPal & Stripe Gateway Fees */}
+          {activeTab === 'gateway' && (
+            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+              {/* Gateway Sub-Toggle */}
+              <div className="flex justify-center mb-6">
+                <div className="inline-flex p-1.5 bg-slate-200/80 rounded-2xl border border-slate-300/70 gap-2">
+                  <button
+                    onClick={() => setGatewayVendor('paypal')}
+                    className={`py-2 px-5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+                      gatewayVendor === 'paypal'
+                        ? 'bg-blue-600 text-white shadow-sm'
+                        : 'text-slate-700 hover:text-slate-900'
+                    }`}
+                  >
+                    <i className="fa-brands fa-paypal text-sm"></i> PayPal Calculator
+                  </button>
+                  <button
+                    onClick={() => setGatewayVendor('stripe')}
+                    className={`py-2 px-5 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+                      gatewayVendor === 'stripe'
+                        ? 'bg-indigo-600 text-white shadow-sm'
+                        : 'text-slate-700 hover:text-slate-900'
+                    }`}
+                  >
+                    <i className="fa-brands fa-stripe text-sm"></i> Stripe Calculator
+                  </button>
+                </div>
+              </div>
+
+              {gatewayVendor === 'paypal' ? (
+                <PayPalCalculatorWidget />
+              ) : (
+                <StripeCalculatorWidget />
+              )}
             </section>
           )}
 
