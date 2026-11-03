@@ -143,43 +143,43 @@ export default function HomePage() {
             </div>
           </button>
 
-          <nav className="hidden lg:flex items-center gap-7 text-[14px] font-semibold text-slate-600">
-            <button onClick={() => navigateTo('home')} className={`hover:text-slate-900 transition-colors py-2 ${currentPage === 'home' ? 'text-emerald-600 font-bold' : ''}`}>
+          <nav className="hidden lg:flex items-center gap-2 xl:gap-4.5 text-[12.5px] xl:text-[13.5px] font-semibold text-slate-600">
+            <button onClick={() => navigateTo('home')} className={`hover:text-slate-900 transition-colors py-2 whitespace-nowrap ${currentPage === 'home' ? 'text-emerald-600 font-bold' : ''}`}>
               Calculators
             </button>
-            <Link href="/paypal-fee-calculator" className="hover:text-blue-600 transition-colors py-2 flex items-center gap-1">
+            <Link href="/paypal-fee-calculator" className="hover:text-blue-600 transition-colors py-2 flex items-center gap-1 whitespace-nowrap">
               <i className="fa-brands fa-paypal text-blue-500 text-xs"></i>
               <span>PayPal</span>
             </Link>
-            <Link href="/stripe-fee-calculator" className="hover:text-indigo-600 transition-colors py-2 flex items-center gap-1">
+            <Link href="/stripe-fee-calculator" className="hover:text-indigo-600 transition-colors py-2 flex items-center gap-1 whitespace-nowrap">
               <i className="fa-brands fa-stripe text-indigo-500 text-xs"></i>
               <span>Stripe</span>
             </Link>
-            <button onClick={() => navigateTo('matrix')} className={`hover:text-slate-900 transition-colors py-2 ${currentPage === 'matrix' ? 'text-emerald-600 font-bold' : ''}`}>
-              Fee Matrix 2026
+            <button onClick={() => navigateTo('matrix')} className={`hover:text-slate-900 transition-colors py-2 whitespace-nowrap ${currentPage === 'matrix' ? 'text-emerald-600 font-bold' : ''}`}>
+              Fee Matrix
             </button>
-            <button onClick={() => navigateTo('methodology')} className={`hover:text-slate-900 transition-colors py-2 ${currentPage === 'methodology' ? 'text-emerald-600 font-bold' : ''}`}>
+            <button onClick={() => navigateTo('methodology')} className={`hover:text-slate-900 transition-colors py-2 whitespace-nowrap ${currentPage === 'methodology' ? 'text-emerald-600 font-bold' : ''}`}>
               Methodology
             </button>
-            <button onClick={() => navigateTo('faq')} className={`hover:text-slate-900 transition-colors py-2 ${currentPage === 'faq' ? 'text-emerald-600 font-bold' : ''}`}>
+            <button onClick={() => navigateTo('faq')} className={`hover:text-slate-900 transition-colors py-2 whitespace-nowrap ${currentPage === 'faq' ? 'text-emerald-600 font-bold' : ''}`}>
               FAQ
             </button>
-            <button onClick={() => navigateTo('about')} className={`hover:text-slate-900 transition-colors py-2 ${currentPage === 'about' ? 'text-emerald-600 font-bold' : ''}`}>
-              About Creator
+            <button onClick={() => navigateTo('about')} className={`hover:text-slate-900 transition-colors py-2 whitespace-nowrap ${currentPage === 'about' ? 'text-emerald-600 font-bold' : ''}`}>
+              About
             </button>
-            <Link href="/blog" className="hover:text-emerald-600 font-bold text-slate-800 transition-colors py-2 flex items-center gap-1.5">
+            <Link href="/blog" className="hover:text-emerald-600 font-bold text-slate-800 transition-colors py-2 flex items-center gap-1.5 whitespace-nowrap">
               <span>Guides</span>
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
             </Link>
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono">
+            <div className="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono whitespace-nowrap">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               <span className="font-bold text-slate-900">USD/PKR:</span>
               <span className="text-emerald-600 font-bold">278.40</span>
             </div>
-            <button onClick={() => navigateTo('contact')} className="hidden sm:inline-flex px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[13px] font-bold shadow-sm transition-all active:scale-95">
+            <button onClick={() => navigateTo('contact')} className="hidden sm:inline-flex px-3.5 xl:px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[12.5px] xl:text-[13px] font-bold shadow-sm transition-all active:scale-95 whitespace-nowrap">
               Contact
             </button>
 
@@ -239,19 +239,23 @@ export default function HomePage() {
               Payment gateways silently shave <strong className="text-slate-900 font-semibold">2% to 4% off international payouts</strong> through padded exchange spreads. See your exact take-home pay before you withdraw.
             </p>
 
-            <div className="mt-6 flex flex-col sm:inline-flex sm:flex-row p-1.5 bg-slate-200/80 rounded-2xl border border-slate-300/70 gap-1.5 w-full sm:w-auto">
-              <button onClick={() => setActiveTab('payout')} className={`py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'payout' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
-                <i className="fa-solid fa-money-bill-transfer text-emerald-600"></i> Global Payouts &amp; FX
+            <div className="mt-6 grid grid-cols-2 lg:inline-flex lg:flex-row p-1.5 bg-slate-200/80 rounded-2xl border border-slate-300/70 gap-1.5 w-full sm:w-auto">
+              <button onClick={() => setActiveTab('payout')} className={`py-2.5 px-3 sm:px-4 rounded-xl text-[11px] sm:text-xs font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 ${activeTab === 'payout' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
+                <i className="fa-solid fa-money-bill-transfer text-emerald-600"></i>
+                <span className="truncate">Global Payouts</span>
               </button>
-              <button onClick={() => setActiveTab('gateway')} className={`py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'gateway' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
-                <i className="fa-brands fa-paypal text-blue-600"></i> PayPal &amp; Stripe Fees
-                <span className="px-1.5 py-0.2 rounded bg-blue-100 text-blue-700 text-[10px] font-mono">NEW</span>
+              <button onClick={() => setActiveTab('gateway')} className={`py-2.5 px-3 sm:px-4 rounded-xl text-[11px] sm:text-xs font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 ${activeTab === 'gateway' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
+                <i className="fa-brands fa-paypal text-blue-600"></i>
+                <span className="truncate">PayPal &amp; Stripe</span>
+                <span className="hidden sm:inline px-1.5 py-0.2 rounded bg-blue-100 text-blue-700 text-[9px] font-mono">NEW</span>
               </button>
-              <button onClick={() => setActiveTab('ecom')} className={`py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'ecom' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
-                <i className="fa-solid fa-cart-shopping"></i> Shopify &amp; Stripe Profit
+              <button onClick={() => setActiveTab('ecom')} className={`py-2.5 px-3 sm:px-4 rounded-xl text-[11px] sm:text-xs font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 ${activeTab === 'ecom' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
+                <i className="fa-solid fa-cart-shopping"></i>
+                <span className="truncate">E-Com Profit</span>
               </button>
-              <button onClick={() => setActiveTab('freelance')} className={`py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${activeTab === 'freelance' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
-                <i className="fa-solid fa-user-clock"></i> Freelance Rate Architect
+              <button onClick={() => setActiveTab('freelance')} className={`py-2.5 px-3 sm:px-4 rounded-xl text-[11px] sm:text-xs font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 ${activeTab === 'freelance' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600 hover:text-slate-900'}`}>
+                <i className="fa-solid fa-user-clock"></i>
+                <span className="truncate">Rate Architect</span>
               </button>
             </div>
           </section>
@@ -585,7 +589,7 @@ export default function HomePage() {
           )}
 
           {/* ================= PROGRAMMATIC CALCULATORS DIRECTORY (53 Dedicated Engines) ================= */}
-          <section id="calculators" className="mt-16 pt-12 border-t border-slate-200">
+          <section id="calculators" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-12 border-t border-slate-200">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold mb-2 font-mono">
@@ -677,7 +681,7 @@ export default function HomePage() {
           </section>
 
           {/* ================= HIGH-AUTHORITY GUIDES SECTION ================= */}
-          <section id="guides" className="mt-16 pt-12 border-t border-slate-200">
+          <section id="guides" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-12 border-t border-slate-200 pb-16">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold mb-2 font-mono">
@@ -1071,11 +1075,12 @@ export default function HomePage() {
             <div>
               <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 mb-4">Calculators</h4>
               <ul className="space-y-2.5 text-xs text-slate-600">
+                <li><Link href="/paypal-fee-calculator" className="hover:text-blue-600 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-paypal text-blue-500 text-xs"></i> PayPal Fee Calculator</Link></li>
+                <li><Link href="/stripe-fee-calculator" className="hover:text-indigo-600 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-stripe text-indigo-500 text-xs"></i> Stripe Fee Calculator</Link></li>
                 <li><button onClick={() => { navigateTo('home'); setActiveTab('payout'); }} className="hover:text-emerald-600 transition-colors">Wise vs Payoneer Fee Calculator</button></li>
                 <li><button onClick={() => { navigateTo('home'); setActiveTab('payout'); }} className="hover:text-emerald-600 transition-colors">Upwork to JazzCash Net Payout</button></li>
                 <li><button onClick={() => { navigateTo('home'); setActiveTab('payout'); }} className="hover:text-emerald-600 transition-colors">Fiverr Pro to Bank Wire</button></li>
                 <li><button onClick={() => { navigateTo('home'); setActiveTab('ecom'); }} className="hover:text-emerald-600 transition-colors">Shopify Break-Even ROAS</button></li>
-                <li><button onClick={() => { navigateTo('home'); setActiveTab('ecom'); }} className="hover:text-emerald-600 transition-colors">Stripe Fee &amp; Margin Calculator</button></li>
                 <li><button onClick={() => { navigateTo('home'); setActiveTab('freelance'); }} className="hover:text-emerald-600 transition-colors">Freelance Sustainable Hourly Rate</button></li>
               </ul>
             </div>
