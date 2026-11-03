@@ -143,18 +143,10 @@ export default function HomePage() {
             </div>
           </button>
 
-          <nav className="hidden lg:flex items-center gap-2 xl:gap-4.5 text-[12.5px] xl:text-[13.5px] font-semibold text-slate-600">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-8 text-[13.5px] xl:text-[14px] font-semibold text-slate-600">
             <button onClick={() => navigateTo('home')} className={`hover:text-slate-900 transition-colors py-2 whitespace-nowrap ${currentPage === 'home' ? 'text-emerald-600 font-bold' : ''}`}>
               Calculators
             </button>
-            <Link href="/paypal-fee-calculator" className="hover:text-blue-600 transition-colors py-2 flex items-center gap-1 whitespace-nowrap">
-              <i className="fa-brands fa-paypal text-blue-500 text-xs"></i>
-              <span>PayPal</span>
-            </Link>
-            <Link href="/stripe-fee-calculator" className="hover:text-indigo-600 transition-colors py-2 flex items-center gap-1 whitespace-nowrap">
-              <i className="fa-brands fa-stripe text-indigo-500 text-xs"></i>
-              <span>Stripe</span>
-            </Link>
             <button onClick={() => navigateTo('matrix')} className={`hover:text-slate-900 transition-colors py-2 whitespace-nowrap ${currentPage === 'matrix' ? 'text-emerald-600 font-bold' : ''}`}>
               Fee Matrix
             </button>
