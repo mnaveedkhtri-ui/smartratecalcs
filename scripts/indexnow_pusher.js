@@ -27,8 +27,7 @@ const staticRoutes = [
   'about',
   'privacy',
   'terms',
-  'disclaimer',
-  'demo'
+  'disclaimer'
 ];
 
 const allUrls = [
