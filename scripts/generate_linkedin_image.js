@@ -1,0 +1,224 @@
+// scripts/generate_linkedin_image.js
+const fs = require('fs');
+const path = require('path');
+const { execFileSync } = require('child_process');
+
+const outDir = path.join(__dirname, '..', 'public');
+const chromePath = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+
+const svg = `<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Deep Gradient Background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#060a14" />
+      <stop offset="50%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#111c38" />
+    </linearGradient>
+
+    <!-- Ambient Glow Orbs -->
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 160) rotate(90) scale(320 320)">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1000 450) rotate(90) scale(320 320)">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glass Cards -->
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <rect width="1200" height="675" fill="url(#glow1)" />
+  <rect width="1200" height="675" fill="url(#glow2)" />
+
+  <!-- Technical Grid Pattern -->
+  <g stroke="#ffffff" stroke-opacity="0.035" stroke-width="1">
+    <line x1="70" y1="0" x2="70" y2="675" />
+    <line x1="300" y1="0" x2="300" y2="675" />
+    <line x1="560" y1="0" x2="560" y2="675" />
+    <line x1="840" y1="0" x2="840" y2="675" />
+    <line x1="1130" y1="0" x2="1130" y2="675" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="480" x2="1200" y2="480" />
+  </g>
+
+  <!-- ================= LEFT COLUMN: HERO HEADLINE (x=70, max width 470) ================= -->
+  <!-- Top Category Pill -->
+  <g transform="translate(70, 60)">
+    <rect width="250" height="32" rx="16" fill="#10b981" fill-opacity="0.16" stroke="#10b981" stroke-width="1.5" />
+    <circle cx="18" cy="16" r="4" fill="#10b981" />
+    <text x="32" y="21" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" letter-spacing="1">AUTONOMOUS DEV CASE STUDY</text>
+  </g>
+
+  <!-- Main Headline (Tightened font size to 36px, clean 3 lines) -->
+  <text x="70" y="145" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="36" font-weight="900" letter-spacing="-0.8">
+    <tspan x="70" dy="0">Building an</tspan>
+    <tspan x="70" dy="46">Autonomous Fintech</tspan>
+    <tspan x="70" dy="46">Engine with <tspan fill="#34d399">AI</tspan></tspan>
+  </text>
+
+  <!-- Subtitle Paragraph -->
+  <text x="70" y="300" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" letter-spacing="-0.2">
+    <tspan x="70" dy="0">How I engineered SmartRateCalcs.com: 53 programmatic</tspan>
+    <tspan x="70" dy="22">calculators, automated visuals, and Day-1 Google indexing.</tspan>
+  </text>
+
+  <!-- Tech Stack Badges -->
+  <g transform="translate(70, 360)">
+    <!-- Badge 1: Next.js 14 -->
+    <rect width="105" height="30" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" />
+    <text x="52" y="19" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle">&#9670; Next.js 14</text>
+
+    <!-- Badge 2: TypeScript -->
+    <rect x="115" width="110" height="30" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" />
+    <text x="170" y="19" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle">&#9670; TypeScript</text>
+
+    <!-- Badge 3: Headless Chrome -->
+    <rect x="235" width="125" height="30" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" />
+    <text x="297" y="19" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle">&#9670; Headless Engine</text>
+
+    <!-- Badge 4: Edge SSG -->
+    <rect x="370" width="95" height="30" rx="8" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.4" />
+    <text x="417" y="19" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" text-anchor="middle">&#10003; 100% SSG</text>
+  </g>
+
+  <!-- Live Metric Highlight Card (Cleaned without overlap) -->
+  <g transform="translate(70, 415)">
+    <rect width="470" height="115" rx="16" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5" />
+    <circle cx="38" cy="38" r="18" fill="#10b981" fill-opacity="0.2" />
+    <text x="38" y="44" fill="#34d399" font-family="sans-serif" font-size="18" font-weight="900" text-anchor="middle">&#10003;</text>
+    <text x="68" y="34" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800">Day-1 Google Search Indexing</text>
+    <text x="68" y="54" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500">Live search impressions &amp; 33.3% organic CTR in &lt;24 hours</text>
+    
+    <line x1="20" y1="75" x2="450" y2="75" stroke="#ffffff" stroke-opacity="0.08" />
+    <text x="20" y="98" fill="#34d399" font-family="monospace" font-size="11" font-weight="700">&#9679; 53 Live Calculators</text>
+    <text x="200" y="98" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="700">&#9679; Zero CLS (100% Score)</text>
+    <text x="440" y="98" fill="#a78bfa" font-family="monospace" font-size="11" font-weight="700" text-anchor="end">&#9679; 100% Edge Fast</text>
+  </g>
+
+  <!-- Author Signature -->
+  <g transform="translate(70, 565)">
+    <circle cx="24" cy="24" r="24" fill="#10b981" />
+    <text x="24" y="31" fill="#022c22" font-family="sans-serif" font-size="16" font-weight="900" text-anchor="middle">MN</text>
+    <text x="60" y="24" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800">Muhammad Naveed</text>
+    <text x="60" y="44" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500">17-Year-Old Full-Stack &amp; AI Systems Automation Engineer</text>
+  </g>
+
+  <!-- ================= RIGHT COLUMN: INTERACTIVE PIPELINE ARCHITECTURE (x=570, width 560) ================= -->
+  <g transform="translate(570, 60)">
+    <!-- Main Terminal Container -->
+    <rect width="560" height="555" rx="24" fill="#0d1527" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Top Bar -->
+    <rect width="560" height="52" rx="24" fill="#090e1a" />
+    <rect y="32" width="560" height="20" fill="#090e1a" />
+    <line x1="0" y1="52" x2="560" y2="52" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
+    
+    <!-- Window Controls -->
+    <circle cx="28" cy="26" r="6" fill="#ef4444" />
+    <circle cx="48" cy="26" r="6" fill="#f59e0b" />
+    <circle cx="68" cy="26" r="6" fill="#10b981" />
+
+    <text x="94" y="31" fill="#94a3b8" font-family="monospace" font-size="12" font-weight="700" letter-spacing="0.5">AUTONOMOUS DEV PIPELINE</text>
+    
+    <!-- Live Status Pill -->
+    <rect x="445" y="15" width="90" height="22" rx="11" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1" />
+    <circle cx="459" cy="26" r="3.5" fill="#10b981" />
+    <text x="469" y="30" fill="#34d399" font-family="monospace" font-size="10" font-weight="800">RUNNING</text>
+
+    <!-- Pipeline Step 1 -->
+    <g transform="translate(24, 75)">
+      <rect width="512" height="94" rx="14" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.08" />
+      <circle cx="34" cy="47" r="16" fill="#10b981" fill-opacity="0.2" />
+      <text x="34" y="53" fill="#34d399" font-family="monospace" font-size="13" font-weight="900" text-anchor="middle">01</text>
+      
+      <text x="68" y="36" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800">Programmatic Data &amp; Calculation Models</text>
+      <text x="68" y="58" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">53 financial calculators (Wise, Upwork, Payoneer, Stripe, PayPal)</text>
+      <text x="68" y="77" fill="#34d399" font-family="monospace" font-size="11" font-weight="700">&#8594; Dynamic SBP / Interbank conversion models</text>
+    </g>
+
+    <!-- Pipeline Step 2 -->
+    <g transform="translate(24, 185)">
+      <rect width="512" height="94" rx="14" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.08" />
+      <circle cx="34" cy="47" r="16" fill="#0284c7" fill-opacity="0.2" />
+      <text x="34" y="53" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="900" text-anchor="middle">02</text>
+      
+      <text x="68" y="36" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800">Headless Chrome Visual Generation Engine</text>
+      <text x="68" y="58" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Zero human designer hours. Automated 1200x630 high-res cards</text>
+      <text x="68" y="77" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="700">&#8594; Vector SVG to PNG rendering with explicit CLS sizing</text>
+    </g>
+
+    <!-- Pipeline Step 3 -->
+    <g transform="translate(24, 295)">
+      <rect width="512" height="94" rx="14" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.08" />
+      <circle cx="34" cy="47" r="16" fill="#f59e0b" fill-opacity="0.2" />
+      <text x="34" y="53" fill="#fbbf24" font-family="monospace" font-size="13" font-weight="900" text-anchor="middle">03</text>
+      
+      <text x="68" y="36" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800">Autonomous AEO / SGE Structured Data</text>
+      <text x="68" y="58" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">JSON-LD BlogPosting, SoftwareApplication, and FAQPage schemas</text>
+      <text x="68" y="77" fill="#fbbf24" font-family="monospace" font-size="11" font-weight="700">&#8594; Targeted for Google Gemini direct search citations</text>
+    </g>
+
+    <!-- Pipeline Step 4 -->
+    <g transform="translate(24, 405)">
+      <rect width="512" height="94" rx="14" fill="#10b981" fill-opacity="0.08" stroke="#10b981" stroke-opacity="0.3" />
+      <circle cx="34" cy="47" r="16" fill="#10b981" />
+      <text x="34" y="53" fill="#022c22" font-family="monospace" font-size="13" font-weight="900" text-anchor="middle">&#10003;</text>
+      
+      <text x="68" y="36" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900">Instant Static Edge Build &amp; Live Deployment</text>
+      <text x="68" y="58" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Vercel automated deployment. Sub-second global response</text>
+      <text x="68" y="77" fill="#34d399" font-family="monospace" font-size="11" font-weight="800">&#8594; Live production URL: smartratecalcs.com</text>
+    </g>
+
+    <!-- Footer Stats Row -->
+    <g transform="translate(24, 515)">
+      <text x="0" y="16" fill="#64748b" font-family="monospace" font-size="11" font-weight="600">SMARTRATECALCS.COM</text>
+      <text x="512" y="16" fill="#10b981" font-family="monospace" font-size="11" font-weight="700" text-anchor="end">&#9679; AUTONOMOUS PIPELINE ACTIVE</text>
+    </g>
+  </g>
+</svg>`;
+
+const svgPath = path.join(outDir, 'linkedin-showcase.svg');
+fs.writeFileSync(svgPath, svg, 'utf-8');
+console.log('Saved SVG: linkedin-showcase.svg');
+
+const htmlTemp = path.join(outDir, 'temp_linkedin.html');
+const htmlContent = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { width: 1200px; height: 675px; overflow: hidden; background: #060a14; }
+  svg { display: block; width: 1200px; height: 675px; }
+</style>
+</head>
+<body>
+${svg}
+</body>
+</html>`;
+fs.writeFileSync(htmlTemp, htmlContent, 'utf-8');
+
+const pngPath = path.join(outDir, 'linkedin-showcase.png');
+try {
+  execFileSync(chromePath, [
+    '--headless=new',
+    `--screenshot=${pngPath}`,
+    '--window-size=1200,675',
+    '--hide-scrollbars',
+    `file:///${htmlTemp.replace(/\\/g, '/')}`
+  ]);
+  const stats = fs.statSync(pngPath);
+  console.log(`Rendered PNG: linkedin-showcase.png (${stats.size} bytes)`);
+} catch (err) {
+  console.error('Render failed:', err.message);
+} finally {
+  if (fs.existsSync(htmlTemp)) fs.unlinkSync(htmlTemp);
+}
