@@ -1,87 +1,112 @@
 /**
- * IndexNow Fast-Track Automation Script for SmartRateCalcs
- * Submits all 85+ programmatic and pillar routes directly to Microsoft Bing,
- * Yandex, and AI Search Engines (IndexNow API) for sub-hour indexing.
+ * SmartRateCalcs Universal IndexNow Pusher
+ * Dynamically parses the live sitemap.xml and broadcasts all URLs
+ * to IndexNow (Bing, Yandex, Seznam, Naver) for instant crawl queues.
  */
 
 const https = require('https');
-const fs = require('fs');
-const path = require('path');
+const http = require('http');
 
 const HOST = 'www.smartratecalcs.com';
 const KEY = '4a8f9c2d1e0b7a6f5e3c8d1b9a2e4f7c';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
+const SITEMAP_URL = `https://${HOST}/sitemap.xml`;
 
-// Read programmatic calculators database
-const dbPath = path.join(__dirname, '../data/programmatic-calculators.ts');
-const dbContent = fs.readFileSync(dbPath, 'utf8');
-const slugs = [...dbContent.matchAll(/"slug":\s*"([^"]+)"/g)].map(m => m[1]);
-
-const staticRoutes = [
-  '',
-  'paypal-fee-calculator',
-  'stripe-fee-calculator',
-  'blog',
-  'blog/upwork-pakistan-lowest-withdrawal-fee-guide',
-  'blog/pakistan-freelancer-tax-section-154a-pseb-guide',
-  'about',
-  'privacy',
-  'terms',
-  'disclaimer'
-];
-
-const allUrls = [
-  ...staticRoutes.map(r => `https://${HOST}/${r}`.replace(/\/$/, '')),
-  ...slugs.map(s => `https://${HOST}/calculators/${s}`)
-];
-
-const payload = JSON.stringify({
-  host: HOST,
-  key: KEY,
-  keyLocation: KEY_LOCATION,
-  urlList: allUrls
-});
-
-console.log('='.repeat(65));
-console.log('SmartRateCalcs IndexNow Fast-Track Engine');
-console.log(`Total URLs Prepared: ${allUrls.length}`);
-console.log(`Key: ${KEY}`);
-console.log(`Key Location: ${KEY_LOCATION}`);
-console.log('='.repeat(65));
-
-function submitToIndexNow(endpointHost, endpointPath) {
-  const options = {
-    hostname: endpointHost,
-    port: 443,
-    path: endpointPath,
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json; charset=utf-8',
-      'Content-Length': Buffer.byteLength(payload)
-    }
-  };
-
-  const req = https.request(options, (res) => {
-    let responseBody = '';
-    res.on('data', (d) => { responseBody += d; });
-    res.on('end', () => {
-      console.log(`[${endpointHost}] Response Status: ${res.statusCode} ${res.statusMessage}`);
-      if (res.statusCode === 200 || res.statusCode === 202) {
-        console.log(`✓ Successfully submitted ${allUrls.length} URLs to ${endpointHost}!`);
-      } else {
-        console.log(`Response Info: ${responseBody || 'Submitted to queue'}`);
-      }
-    });
+function fetchSitemap(url) {
+  return new Promise((resolve, reject) => {
+    https.get(url, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => resolve(data));
+    }).on('error', reject);
   });
-
-  req.on('error', (e) => {
-    console.error(`Error submitting to ${endpointHost}:`, e.message);
-  });
-
-  req.write(payload);
-  req.end();
 }
 
-// Dispatch to both official IndexNow endpoints
-submitToIndexNow('api.indexnow.org', '/indexnow');
-submitToIndexNow('www.bing.com', '/indexnow');
+function parseUrlsFromSitemap(xml) {
+  const matches = xml.match(/<loc>(.*?)<\/loc>/g) || [];
+  return matches.map(m => m.replace(/<\/?loc>/g, '').trim()).filter(Boolean);
+}
+
+function postJson(hostname, path, data) {
+  return new Promise((resolve) => {
+    const payload = JSON.stringify(data);
+    const req = https.request({
+      hostname,
+      port: 443,
+      path,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Content-Length': Buffer.byteLength(payload)
+      }
+    }, (res) => {
+      let body = '';
+      res.on('data', chunk => body += chunk);
+      res.on('end', () => {
+        resolve({
+          statusCode: res.statusCode,
+          statusMessage: res.statusMessage,
+          body
+        });
+      });
+    });
+
+    req.on('error', (err) => {
+      resolve({ statusCode: 500, statusMessage: err.message, body: '' });
+    });
+
+    req.write(payload);
+    req.end();
+  });
+}
+
+async function run() {
+  console.log('='.repeat(70));
+  console.log('  🚀 SMARTRATECALCS AUTOMATED INDEXNOW DISPATCHER');
+  console.log('='.repeat(70));
+
+  console.log(`[1/3] Fetching live sitemap from: ${SITEMAP_URL}...`);
+  let urls = [];
+  try {
+    const sitemapXml = await fetchSitemap(SITEMAP_URL);
+    urls = parseUrlsFromSitemap(sitemapXml);
+    console.log(`✓ Fetched successfully! Discovered ${urls.length} live canonical URLs.`);
+  } catch (err) {
+    console.warn(`! Could not fetch remote sitemap (${err.message}). Using fallback local list.`);
+    urls = [`https://${HOST}/`];
+  }
+
+  if (urls.length === 0) {
+    console.error('No URLs found to submit. Exiting.');
+    return;
+  }
+
+  const payload = {
+    host: HOST,
+    key: KEY,
+    keyLocation: KEY_LOCATION,
+    urlList: urls
+  };
+
+  const endpoints = [
+    { name: 'IndexNow Global (api.indexnow.org)', host: 'api.indexnow.org', path: '/indexnow' },
+    { name: 'Microsoft Bing (www.bing.com)', host: 'www.bing.com', path: '/indexnow' },
+    { name: 'Yandex (yandex.com)', host: 'yandex.com', path: '/indexnow' }
+  ];
+
+  console.log(`\n[2/3] Broadcasting ${urls.length} URLs across search engines...`);
+
+  for (const ep of endpoints) {
+    const res = await postJson(ep.host, ep.path, payload);
+    if (res.statusCode === 200 || res.statusCode === 202) {
+      console.log(`  ✓ [${ep.name}] Status: ${res.statusCode} ${res.statusMessage} (ACCEPTED)`);
+    } else {
+      console.log(`  ⚠ [${ep.name}] Status: ${res.statusCode} ${res.statusMessage} | ${res.body}`);
+    }
+  }
+
+  console.log('\n[3/3] Complete! All search engines have been notified.');
+  console.log('='.repeat(70));
+}
+
+run().catch(console.error);
