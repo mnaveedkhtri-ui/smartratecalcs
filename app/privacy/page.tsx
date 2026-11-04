@@ -5,7 +5,13 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | Zero-Tracking Guarantee',
   description: 'SmartRateCalcs privacy policy: zero tracking cookies, 100% client-side financial calculations.',
   alternates: {
-    canonical: 'https://smartratecalcs.com/privacy',
+    canonical: 'https://www.smartratecalcs.com/privacy',
+  },
+  openGraph: {
+    title: 'Privacy Policy | Zero-Tracking Guarantee',
+    description: 'SmartRateCalcs privacy policy: zero tracking cookies, 100% client-side financial calculations.',
+    url: 'https://www.smartratecalcs.com/privacy',
+    type: 'website',
   },
 };
 

@@ -5,7 +5,13 @@ export const metadata: Metadata = {
   title: 'Financial Disclaimer | Educational Modeling Notice',
   description: 'SmartRateCalcs financial disclaimer and data sources transparency.',
   alternates: {
-    canonical: 'https://smartratecalcs.com/disclaimer',
+    canonical: 'https://www.smartratecalcs.com/disclaimer',
+  },
+  openGraph: {
+    title: 'Financial Disclaimer | Educational Modeling Notice',
+    description: 'SmartRateCalcs financial disclaimer and data sources transparency.',
+    url: 'https://www.smartratecalcs.com/disclaimer',
+    type: 'website',
   },
 };
 

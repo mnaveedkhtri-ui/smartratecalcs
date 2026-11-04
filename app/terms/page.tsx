@@ -5,7 +5,13 @@ export const metadata: Metadata = {
   title: 'Terms of Service | User Agreement',
   description: 'Terms of service for SmartRateCalcs independent financial calculation platform.',
   alternates: {
-    canonical: 'https://smartratecalcs.com/terms',
+    canonical: 'https://www.smartratecalcs.com/terms',
+  },
+  openGraph: {
+    title: 'Terms of Service | User Agreement',
+    description: 'Terms of service for SmartRateCalcs independent financial calculation platform.',
+    url: 'https://www.smartratecalcs.com/terms',
+    type: 'website',
   },
 };
 

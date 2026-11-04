@@ -5,7 +5,13 @@ export const metadata: Metadata = {
   title: 'About Muhammad Naveed | Founder of SmartRateCalcs',
   description: 'Learn about the engineering mission behind SmartRateCalcs, founded by full-stack and automation software engineer Muhammad Naveed.',
   alternates: {
-    canonical: 'https://smartratecalcs.com/about',
+    canonical: 'https://www.smartratecalcs.com/about',
+  },
+  openGraph: {
+    title: 'About Muhammad Naveed | Founder of SmartRateCalcs',
+    description: 'Learn about the engineering mission behind SmartRateCalcs, founded by full-stack and automation software engineer Muhammad Naveed.',
+    url: 'https://www.smartratecalcs.com/about',
+    type: 'website',
   },
 };
 
