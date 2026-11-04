@@ -42,14 +42,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://smartratecalcs.com/',
+    url: 'https://www.smartratecalcs.com/',
     siteName: 'SmartRateCalcs',
     title: 'SmartRateCalcs | 2026 Freelance Fee & Net Payout Calculator',
     description:
       'Calculate exact net payouts and compare fees for PayPal, Stripe, Wise, Payoneer & Upwork. Free 2026 conversion rates with zero hidden spreads.',
     images: [
       {
-        url: 'https://smartratecalcs.com/og-image.png',
+        url: 'https://www.smartratecalcs.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'SmartRateCalcs Financial Intelligence Engine',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: 'SmartRateCalcs | Real Take-Home Payout Calculator',
     description:
       'Eliminate hidden FX markups and calculate exact bank payouts across Wise, Payoneer, and SWIFT wires.',
-    images: ['https://smartratecalcs.com/og-image.png'],
+    images: ['https://www.smartratecalcs.com/og-image.png'],
     creator: '@naveed_engineer',
   },
   alternates: {
@@ -81,20 +81,31 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@graph': [
       {
+        '@type': 'Organization',
+        '@id': 'https://www.smartratecalcs.com/#organization',
+        name: 'SmartRateCalcs',
+        url: 'https://www.smartratecalcs.com/',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.smartratecalcs.com/icon.png',
+        },
+        description: 'Independent Financial Calculation & Payout Engine',
+      },
+      {
         '@type': 'WebSite',
-        '@id': 'https://smartratecalcs.com/#website',
-        url: 'https://smartratecalcs.com/',
+        '@id': 'https://www.smartratecalcs.com/#website',
+        url: 'https://www.smartratecalcs.com/',
         name: 'SmartRateCalcs',
         description: 'Independent Financial Calculation & Payout Engine',
         publisher: {
-          '@id': 'https://smartratecalcs.com/#author',
+          '@id': 'https://www.smartratecalcs.com/#organization',
         },
       },
       {
         '@type': 'SoftwareApplication',
-        '@id': 'https://smartratecalcs.com/#app',
+        '@id': 'https://www.smartratecalcs.com/#app',
         name: 'SmartRateCalcs Financial Intelligence Engine',
-        url: 'https://smartratecalcs.com/',
+        url: 'https://www.smartratecalcs.com/',
         applicationCategory: 'FinanceApplication',
         operatingSystem: 'All',
         offers: {
@@ -103,12 +114,12 @@ export default function RootLayout({
           priceCurrency: 'USD',
         },
         author: {
-          '@id': 'https://smartratecalcs.com/#author',
+          '@id': 'https://www.smartratecalcs.com/#author',
         },
       },
       {
         '@type': 'Person',
-        '@id': 'https://smartratecalcs.com/#author',
+        '@id': 'https://www.smartratecalcs.com/#author',
         name: 'Muhammad Naveed',
         jobTitle: 'Lead Software & Automation Engineer',
         url: 'https://naveed-portfolio-kappa.vercel.app/',
@@ -117,9 +128,7 @@ export default function RootLayout({
           'https://naveed-portfolio-kappa.vercel.app/',
         ],
         worksFor: {
-          '@type': 'Organization',
-          name: 'SmartRateCalcs',
-          url: 'https://smartratecalcs.com/',
+          '@id': 'https://www.smartratecalcs.com/#organization',
         },
       },
     ],
