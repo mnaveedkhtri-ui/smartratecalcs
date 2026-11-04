@@ -12,11 +12,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.smartratecalcs.com'),
   title: {
-    default: 'SmartRateCalcs | Independent Financial & Payout Intelligence Platform',
-    template: '%s | SmartRateCalcs',
+    default: 'SmartRateCalcs | 2026 Freelance Fee & Net Payout Calculator',
+    template: '%s',
   },
   description:
-    'Sub-second payout and fee calculation engine for remote software engineers, global contractors, and e-commerce founders. Zero hidden spreads.',
+    'Calculate exact net payouts and compare fees for PayPal, Stripe, Wise, Payoneer & Upwork. Free 2026 currency conversion rates with zero hidden spreads.',
   keywords: [
     'wise vs payoneer fee calculator',
     'upwork to jazzcash payout calculator',
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://smartratecalcs.com/',
     siteName: 'SmartRateCalcs',
-    title: 'SmartRateCalcs | Independent Cross-Border Fee & Payout Calculator',
+    title: 'SmartRateCalcs | 2026 Freelance Fee & Net Payout Calculator',
     description:
-      'Compare exact net payouts across Wise, Payoneer, Upwork, and international wire transfers with real-time interbank rates.',
+      'Calculate exact net payouts and compare fees for PayPal, Stripe, Wise, Payoneer & Upwork. Free 2026 conversion rates with zero hidden spreads.',
     images: [
       {
         url: 'https://smartratecalcs.com/og-image.png',

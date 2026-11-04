@@ -23,7 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `https://www.smartratecalcs.com/calculators/${calc.slug}`;
 
   return {
-    title: calc.metaTitle,
+    title: {
+      absolute: calc.metaTitle,
+    },
     description: calc.metaDesc,
     alternates: {
       canonical: url,

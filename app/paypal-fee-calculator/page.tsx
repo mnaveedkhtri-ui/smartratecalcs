@@ -3,9 +3,9 @@ import Link from 'next/link';
 import PayPalCalculatorWidget from '../../components/PayPalCalculatorWidget';
 
 export const metadata: Metadata = {
-  title: 'PayPal Fee Calculator 2026 | Goods & Services, Merchant & Reverse Fee Tool',
+  title: 'PayPal Fee Calculator 2026 | Goods, Services & Reverse',
   description:
-    'Free real-time PayPal fee calculator. Calculate exact deductions on Goods and Services, domestic (2.99% + $0.49), international cross-border (4.49%), and reverse-calculate how much to invoice.',
+    'Free 2026 PayPal fee calculator. Calculate exact deductions on Goods and Services (2.99% + $0.49), international sales (4.49%), and reverse invoice totals.',
   alternates: {
     canonical: 'https://www.smartratecalcs.com/paypal-fee-calculator',
   },

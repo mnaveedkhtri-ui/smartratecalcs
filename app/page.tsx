@@ -1069,23 +1069,23 @@ export default function HomePage() {
               <ul className="space-y-2.5 text-xs text-slate-600">
                 <li><Link href="/paypal-fee-calculator" className="hover:text-blue-600 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-paypal text-blue-500 text-xs"></i> PayPal Fee Calculator</Link></li>
                 <li><Link href="/stripe-fee-calculator" className="hover:text-indigo-600 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-stripe text-indigo-500 text-xs"></i> Stripe Fee Calculator</Link></li>
-                <li><button onClick={() => { navigateTo('home'); setActiveTab('payout'); }} className="hover:text-emerald-600 transition-colors">Wise vs Payoneer Fee Calculator</button></li>
-                <li><button onClick={() => { navigateTo('home'); setActiveTab('payout'); }} className="hover:text-emerald-600 transition-colors">Upwork to JazzCash Net Payout</button></li>
-                <li><button onClick={() => { navigateTo('home'); setActiveTab('payout'); }} className="hover:text-emerald-600 transition-colors">Fiverr Pro to Bank Wire</button></li>
-                <li><button onClick={() => { navigateTo('home'); setActiveTab('ecom'); }} className="hover:text-emerald-600 transition-colors">Shopify Break-Even ROAS</button></li>
-                <li><button onClick={() => { navigateTo('home'); setActiveTab('freelance'); }} className="hover:text-emerald-600 transition-colors">Freelance Sustainable Hourly Rate</button></li>
+                <li><Link href="/calculators/wise-vs-payoneer-fee-calculator" className="hover:text-emerald-600 transition-colors">Wise vs Payoneer Fee Calculator</Link></li>
+                <li><Link href="/calculators/sadabiz-vs-payoneer-calculator" className="hover:text-emerald-600 transition-colors">SadaBiz vs Payoneer Calculator</Link></li>
+                <li><Link href="/calculators/upwork-to-jazzcash-payout-calculator" className="hover:text-emerald-600 transition-colors">Upwork to JazzCash Net Payout</Link></li>
+                <li><Link href="/calculators/deel-to-wise-payout-calculator" className="hover:text-emerald-600 transition-colors">Deel to Wise Payout Calculator</Link></li>
+                <li><Link href="/calculators/binance-p2p-usdt-to-pkr-spread-calculator" className="hover:text-emerald-600 transition-colors">Binance P2P USDT to PKR</Link></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 mb-4">Corridors</h4>
+              <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 mb-4">Top Corridors</h4>
               <ul className="space-y-2.5 text-xs text-slate-600">
-                <li>USD to PKR (Pakistan Raast/IBAN)</li>
-                <li>USD to INR (India UPI / NEFT)</li>
-                <li>USD to BDT (Bangladesh BEFTN)</li>
-                <li>EUR to Global Wire Clearing</li>
-                <li>GBP to Multi-Currency Swift</li>
-                <li>AED to South Asian Commercial Banks</li>
+                <li><Link href="/calculators/wise-to-meezan-bank-transfer-fee-calculator" className="hover:text-emerald-600 transition-colors">USD to PKR (Meezan Bank Raast)</Link></li>
+                <li><Link href="/calculators/wise-to-inr-transfer-fee-calculator" className="hover:text-emerald-600 transition-colors">USD to INR (India UPI / NEFT)</Link></li>
+                <li><Link href="/calculators/wise-to-bdt-transfer-fee-calculator" className="hover:text-emerald-600 transition-colors">USD to BDT (Bangladesh BEFTN)</Link></li>
+                <li><Link href="/calculators/payoneer-to-gcash-philippines-calculator" className="hover:text-emerald-600 transition-colors">USD to PHP (GCash Philippines)</Link></li>
+                <li><Link href="/calculators/paypal-to-mpesa-kenya-fee-calculator" className="hover:text-emerald-600 transition-colors">USD to KES (M-Pesa Kenya)</Link></li>
+                <li><Link href="/calculators/crypto-usdt-to-inr-tds-tax-calculator" className="hover:text-emerald-600 transition-colors">Crypto USDT to INR (1% TDS Tax)</Link></li>
               </ul>
             </div>
 

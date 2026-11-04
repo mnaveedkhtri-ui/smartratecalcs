@@ -3,9 +3,9 @@ import Link from 'next/link';
 import StripeCalculatorWidget from '../../components/StripeCalculatorWidget';
 
 export const metadata: Metadata = {
-  title: 'Stripe Fee Calculator 2026 | Card Processing, FX & Reverse Tool',
+  title: 'Stripe Fee Calculator 2026 | Card Processing & Net Payout',
   description:
-    'Free real-time Stripe fee calculator. Calculate exact card processing deductions (2.9% + $0.30), international cross-border surcharges (+1.5%), currency conversion (+1.0%), and reverse invoice totals.',
+    'Free 2026 Stripe fee calculator. Calculate exact card processing fees (2.9% + $0.30), international surcharges (+1.5%), and reverse invoice charges.',
   alternates: {
     canonical: 'https://www.smartratecalcs.com/stripe-fee-calculator',
   },
