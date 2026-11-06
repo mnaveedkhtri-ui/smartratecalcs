@@ -135,8 +135,13 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="light scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=localStorage.getItem('smartrate_theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&d)){document.documentElement.classList.add('dark');document.documentElement.classList.remove('light');}else{document.documentElement.classList.remove('dark');document.documentElement.classList.add('light');}}catch(e){}})();`,
+          }}
+        />
         <meta name="google-site-verification" content="FzC73kAndsqrqsza438VtUdn49KmQZfgQm61v9-ukls" />
         <script
           src="https://analytics.ahrefs.com/analytics.js"
@@ -161,7 +166,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-[#f8fafc] text-slate-800 antialiased min-h-screen">
+      <body className="bg-[#f8fafc] dark:bg-[#070d17] text-slate-800 dark:text-slate-100 antialiased min-h-screen transition-colors duration-200">
         {/* Google Analytics 4 (GA4) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-8JV66TTPEW"

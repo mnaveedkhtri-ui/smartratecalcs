@@ -6,6 +6,7 @@ import { PROGRAMMATIC_CALCULATORS } from '../data/programmatic-calculators';
 import { BLOG_POSTS } from '../data/blog-posts';
 import PayPalCalculatorWidget from '../components/PayPalCalculatorWidget';
 import StripeCalculatorWidget from '../components/StripeCalculatorWidget';
+import ThemeToggle from '../components/ThemeToggle';
 
 interface RatesMap {
   [currency: string]: {
@@ -124,59 +125,63 @@ export default function HomePage() {
   }, [calcFilter, calcSearch]);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#070d17] text-slate-800 dark:text-slate-100 transition-colors duration-200">
       {/* Header */}
-      <header className="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+      <header className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
           <button onClick={() => navigateTo('home')} className="flex items-center gap-2.5 sm:gap-3.5 text-left group">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-base sm:text-lg shadow-sm group-hover:scale-105 transition-transform">
-              <i className="fa-solid fa-calculator text-emerald-400"></i>
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-900 dark:bg-emerald-600 text-white flex items-center justify-center font-bold text-base sm:text-lg shadow-sm group-hover:scale-105 transition-transform">
+              <i className="fa-solid fa-calculator text-emerald-400 dark:text-white"></i>
             </div>
             <div>
-              <div className="font-heading font-extrabold text-[17px] sm:text-[19px] tracking-tight text-slate-900 flex items-center gap-1.5 sm:gap-2">
-                SmartRate<span className="text-emerald-600">Calcs</span>
-                <span className="text-[9px] sm:text-[10px] uppercase font-mono font-bold px-1.5 sm:px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+              <div className="font-heading font-extrabold text-[17px] sm:text-[19px] tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5 sm:gap-2">
+                SmartRate<span className="text-emerald-600 dark:text-emerald-400">Calcs</span>
+                <span className="text-[9px] sm:text-[10px] uppercase font-mono font-bold px-1.5 sm:px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
                   v3.0 PRO
                 </span>
               </div>
-              <p className="hidden sm:block text-[11px] text-slate-500 font-medium">Independent Financial &amp; Payout Intelligence</p>
+              <p className="hidden sm:block text-[11px] text-slate-500 dark:text-slate-400 font-medium">Independent Financial &amp; Payout Intelligence</p>
             </div>
           </button>
 
-          <nav className="hidden lg:flex items-center gap-5 xl:gap-8 text-[13.5px] xl:text-[14px] font-semibold text-slate-600">
-            <button onClick={() => navigateTo('home')} className={`hover:text-slate-900 transition-colors py-2 whitespace-nowrap ${currentPage === 'home' ? 'text-emerald-600 font-bold' : ''}`}>
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-8 text-[13.5px] xl:text-[14px] font-semibold text-slate-600 dark:text-slate-300">
+            <button onClick={() => navigateTo('home')} className={`hover:text-slate-900 dark:hover:text-white transition-colors py-2 whitespace-nowrap ${currentPage === 'home' ? 'text-emerald-600 dark:text-emerald-400 font-bold' : ''}`}>
               Calculators
             </button>
-            <button onClick={() => navigateTo('matrix')} className={`hover:text-slate-900 transition-colors py-2 whitespace-nowrap ${currentPage === 'matrix' ? 'text-emerald-600 font-bold' : ''}`}>
+            <button onClick={() => navigateTo('matrix')} className={`hover:text-slate-900 dark:hover:text-white transition-colors py-2 whitespace-nowrap ${currentPage === 'matrix' ? 'text-emerald-600 dark:text-emerald-400 font-bold' : ''}`}>
               Fee Matrix
             </button>
-            <button onClick={() => navigateTo('methodology')} className={`hover:text-slate-900 transition-colors py-2 whitespace-nowrap ${currentPage === 'methodology' ? 'text-emerald-600 font-bold' : ''}`}>
+            <button onClick={() => navigateTo('methodology')} className={`hover:text-slate-900 dark:hover:text-white transition-colors py-2 whitespace-nowrap ${currentPage === 'methodology' ? 'text-emerald-600 dark:text-emerald-400 font-bold' : ''}`}>
               Methodology
             </button>
-            <button onClick={() => navigateTo('faq')} className={`hover:text-slate-900 transition-colors py-2 whitespace-nowrap ${currentPage === 'faq' ? 'text-emerald-600 font-bold' : ''}`}>
+            <button onClick={() => navigateTo('faq')} className={`hover:text-slate-900 dark:hover:text-white transition-colors py-2 whitespace-nowrap ${currentPage === 'faq' ? 'text-emerald-600 dark:text-emerald-400 font-bold' : ''}`}>
               FAQ
             </button>
-            <button onClick={() => navigateTo('about')} className={`hover:text-slate-900 transition-colors py-2 whitespace-nowrap ${currentPage === 'about' ? 'text-emerald-600 font-bold' : ''}`}>
+            <button onClick={() => navigateTo('about')} className={`hover:text-slate-900 dark:hover:text-white transition-colors py-2 whitespace-nowrap ${currentPage === 'about' ? 'text-emerald-600 dark:text-emerald-400 font-bold' : ''}`}>
               About
             </button>
-            <Link href="/blog" className="hover:text-emerald-600 font-bold text-slate-800 transition-colors py-2 flex items-center gap-1.5 whitespace-nowrap">
+            <Link href="/blog" className="hover:text-emerald-600 dark:hover:text-emerald-400 font-bold text-slate-800 dark:text-slate-200 transition-colors py-2 flex items-center gap-1.5 whitespace-nowrap">
               <span>Guides</span>
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
             </Link>
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <div className="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono whitespace-nowrap">
+            <div className="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-mono whitespace-nowrap">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span className="font-bold text-slate-900">USD/PKR:</span>
-              <span className="text-emerald-600 font-bold">278.40</span>
+              <span className="font-bold text-slate-900 dark:text-white">USD/PKR:</span>
+              <span className="text-emerald-600 dark:text-emerald-400 font-bold">278.40</span>
             </div>
+
+            {/* Mobile & Desktop Dark Mode Toggle */}
+            <ThemeToggle />
+
             <button onClick={() => navigateTo('contact')} className="hidden sm:inline-flex px-3.5 xl:px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[12.5px] xl:text-[13px] font-bold shadow-sm transition-all active:scale-95 whitespace-nowrap">
               Contact
             </button>
 
             {/* Mobile Menu Toggle Button */}
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden w-9 h-9 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center border border-slate-200 focus:outline-none" aria-label="Toggle Menu">
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center border border-slate-200 dark:border-slate-700 focus:outline-none" aria-label="Toggle Menu">
               <i className={`fa-solid ${mobileMenuOpen ? 'fa-xmark' : 'fa-bars'} text-sm`}></i>
             </button>
           </div>
@@ -184,34 +189,38 @@ export default function HomePage() {
 
         {/* Mobile Slide-Down Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-slate-200 bg-white px-4 py-3 space-y-1.5 shadow-lg">
-            <button onClick={() => navigateTo('home')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-emerald-600 bg-emerald-50 flex items-center gap-2.5">
+          <div className="lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-3 space-y-1.5 shadow-lg">
+            <button onClick={() => navigateTo('home')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 flex items-center gap-2.5">
               <i className="fa-solid fa-calculator text-xs"></i> Calculators Suite
             </button>
-            <Link href="/paypal-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-blue-700 bg-blue-50/50 hover:bg-blue-50 flex items-center gap-2.5">
-              <i className="fa-brands fa-paypal text-xs text-blue-600"></i> PayPal Fee Calculator
+            <Link href="/paypal-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-blue-700 dark:text-blue-300 bg-blue-50/50 dark:bg-blue-950/40 hover:bg-blue-50 flex items-center gap-2.5">
+              <i className="fa-brands fa-paypal text-xs text-blue-600 dark:text-blue-400"></i> PayPal Fee Calculator
             </Link>
-            <Link href="/stripe-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-indigo-700 bg-indigo-50/50 hover:bg-indigo-50 flex items-center gap-2.5">
-              <i className="fa-brands fa-stripe text-xs text-indigo-600"></i> Stripe Fee Calculator
+            <Link href="/stripe-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-indigo-700 dark:text-indigo-300 bg-indigo-50/50 dark:bg-indigo-950/40 hover:bg-indigo-50 flex items-center gap-2.5">
+              <i className="fa-brands fa-stripe text-xs text-indigo-600 dark:text-indigo-400"></i> Stripe Fee Calculator
             </Link>
-            <button onClick={() => navigateTo('matrix')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2.5">
+            <button onClick={() => navigateTo('matrix')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 flex items-center gap-2.5">
               <i className="fa-solid fa-table-cells text-xs text-slate-400"></i> Fee Matrix 2026
             </button>
-            <button onClick={() => navigateTo('methodology')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2.5">
+            <button onClick={() => navigateTo('methodology')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 flex items-center gap-2.5">
               <i className="fa-solid fa-square-root-variable text-xs text-slate-400"></i> Calculation Methodology
             </button>
-            <button onClick={() => navigateTo('faq')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2.5">
+            <button onClick={() => navigateTo('faq')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 flex items-center gap-2.5">
               <i className="fa-solid fa-circle-question text-xs text-slate-400"></i> Frequently Asked Questions
             </button>
-            <button onClick={() => navigateTo('about')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2.5">
+            <button onClick={() => navigateTo('about')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 flex items-center gap-2.5">
               <i className="fa-solid fa-user-shield text-xs text-slate-400"></i> About Muhammad Naveed
             </button>
-            <Link href="/blog" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-emerald-800 bg-emerald-50/60 hover:bg-emerald-50 flex items-center gap-2.5">
-              <i className="fa-solid fa-book-open text-xs text-emerald-600"></i> Financial Guides &amp; Research
+            <Link href="/blog" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-emerald-800 dark:text-emerald-300 bg-emerald-50/60 dark:bg-emerald-950/50 hover:bg-emerald-50 flex items-center gap-2.5">
+              <i className="fa-solid fa-book-open text-xs text-emerald-600 dark:text-emerald-400"></i> Financial Guides &amp; Research
             </Link>
             <button onClick={() => navigateTo('contact')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-white bg-emerald-600 hover:bg-emerald-700 flex items-center gap-2.5 shadow-sm">
               <i className="fa-solid fa-envelope text-xs"></i> Contact &amp; Bug Bounty
             </button>
+            <div className="pt-2 pb-1 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between px-3.5">
+              <span className="text-xs font-mono text-slate-500 dark:text-slate-400">Appearance:</span>
+              <ThemeToggle showLabel={true} />
+            </div>
           </div>
         )}
       </header>

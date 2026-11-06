@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import StripeCalculatorWidget from '../../components/StripeCalculatorWidget';
+import ThemeToggle from '../../components/ThemeToggle';
 
 export const metadata: Metadata = {
   title: 'Stripe Fee Calculator 2026 | Card Processing & Net Payout',
@@ -105,24 +106,27 @@ export default function StripeCalculatorPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 
-      <div className="min-h-screen bg-[#f8fafc]">
+      <div className="min-h-screen bg-[#f8fafc] dark:bg-[#070d17] text-slate-800 dark:text-slate-100 transition-colors duration-200">
         {/* Navigation Breadcrumb */}
-        <div className="border-b border-slate-200 bg-white">
+        <div className="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 sticky top-0 z-40">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
-            <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
-              <Link href="/" className="hover:text-emerald-600 transition-colors">
+            <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400">
+              <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                 Home
               </Link>
               <span>/</span>
-              <span className="text-slate-800 font-bold">Stripe Fee Calculator</span>
+              <span className="text-slate-800 dark:text-slate-200 font-bold">Stripe Fee Calculator</span>
             </div>
-            <Link
-              href="/paypal-fee-calculator"
-              className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5"
-            >
-              <span>Compare PayPal Fees</span>
-              <i className="fa-solid fa-arrow-right text-[10px]"></i>
-            </Link>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <ThemeToggle />
+              <Link
+                href="/paypal-fee-calculator"
+                className="text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/60 transition-all"
+              >
+                <span>Compare PayPal</span>
+                <i className="fa-solid fa-arrow-right text-[10px]"></i>
+              </Link>
+            </div>
           </div>
         </div>
 

@@ -115,36 +115,36 @@ export default function PayPalCalculatorWidget({ isStandalone = false }: { isSta
   };
 
   return (
-    <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-slate-200 shadow-md">
+    <div className="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-md transition-colors duration-200">
       {/* Top Banner / Mode Switcher */}
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pb-6 border-b border-slate-100">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pb-6 border-b border-slate-100 dark:border-slate-800">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 font-bold text-xl">
+          <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/60 flex items-center justify-center text-blue-600 dark:text-blue-400 font-bold text-xl">
             <i className="fa-brands fa-paypal"></i>
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h2 className="font-heading font-extrabold text-slate-900 text-lg sm:text-xl">
+              <h2 className="font-heading font-extrabold text-slate-900 dark:text-white text-lg sm:text-xl">
                 PayPal Fee Calculator (2026 Live Rates)
               </h2>
-              <span className="px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[10px] font-bold font-mono">
+              <span className="px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-300 text-[10px] font-bold font-mono">
                 Verified Rates
               </span>
             </div>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-slate-500 dark:text-slate-400">
               Calculate exact merchant deductions or reverse-calculate invoice amounts.
             </p>
           </div>
         </div>
 
         {/* Mode Selector Toggle */}
-        <div className="flex p-1 bg-slate-100 rounded-xl border border-slate-200 text-xs font-bold">
+        <div className="flex p-1 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold">
           <button
             onClick={() => setCalcMode('forward')}
             className={`flex-1 sm:flex-none px-3.5 py-1.5 rounded-lg transition-all ${
               calcMode === 'forward'
-                ? 'bg-white text-slate-900 shadow-sm'
-                : 'text-slate-600 hover:text-slate-900'
+                ? 'bg-white dark:bg-slate-950 text-slate-900 dark:text-white shadow-sm'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             }`}
           >
             I am receiving money
@@ -153,8 +153,8 @@ export default function PayPalCalculatorWidget({ isStandalone = false }: { isSta
             onClick={() => setCalcMode('reverse')}
             className={`flex-1 sm:flex-none px-3.5 py-1.5 rounded-lg transition-all ${
               calcMode === 'reverse'
-                ? 'bg-white text-slate-900 shadow-sm'
-                : 'text-slate-600 hover:text-slate-900'
+                ? 'bg-white dark:bg-slate-950 text-slate-900 dark:text-white shadow-sm'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             }`}
           >
             I want to receive $X
@@ -168,10 +168,10 @@ export default function PayPalCalculatorWidget({ isStandalone = false }: { isSta
         <div className="md:col-span-6 space-y-4">
           <div>
             <div className="flex items-center justify-between mb-2">
-              <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+              <label className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
                 {calcMode === 'forward' ? 'Payment Amount (You Receive)' : 'Net Target In Pocket (You Want)'}
               </label>
-              <span className="text-xs font-mono font-bold text-blue-600">
+              <span className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">
                 {currSym}{amount.toLocaleString()} {currency}
               </span>
             </div>
@@ -187,12 +187,12 @@ export default function PayPalCalculatorWidget({ isStandalone = false }: { isSta
                 max={100000}
                 step={25}
                 onChange={(e) => setAmount(Number(e.target.value) || 0)}
-                className="w-full pl-9 pr-24 py-3 rounded-xl border-2 border-slate-200 bg-slate-50 text-xl font-bold font-mono text-slate-900 focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full pl-9 pr-24 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xl font-bold font-mono text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors"
               />
               <select
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value)}
-                className="absolute right-2 px-2.5 py-1.5 rounded-lg bg-white border border-slate-200 text-xs font-bold text-slate-800 cursor-pointer focus:outline-none"
+                className="absolute right-2 px-2.5 py-1.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-800 dark:text-slate-200 cursor-pointer focus:outline-none"
               >
                 <option value="USD">USD ($)</option>
                 <option value="EUR">EUR (€)</option>
@@ -211,7 +211,7 @@ export default function PayPalCalculatorWidget({ isStandalone = false }: { isSta
                   className={`px-2.5 py-1 rounded-lg text-[11px] font-mono font-bold transition-all ${
                     amount === val
                       ? 'bg-blue-600 text-white'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
                   }`}
                 >
                   {currSym}{val}
@@ -222,7 +222,7 @@ export default function PayPalCalculatorWidget({ isStandalone = false }: { isSta
 
           {/* Transaction Type Radio Selector */}
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+            <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
               PayPal Transaction Type
             </label>
             <div className="space-y-2">
@@ -231,8 +231,8 @@ export default function PayPalCalculatorWidget({ isStandalone = false }: { isSta
                   key={key}
                   className={`flex items-start gap-3 p-3 rounded-xl border transition-all cursor-pointer ${
                     rateType === key
-                      ? 'bg-blue-50/50 border-blue-400 ring-1 ring-blue-400'
-                      : 'bg-slate-50 border-slate-200 hover:bg-slate-100'
+                      ? 'bg-blue-50/50 dark:bg-blue-950/40 border-blue-400 dark:border-blue-500 ring-1 ring-blue-400'
+                      : 'bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800'
                   }`}
                 >
                   <input
@@ -244,12 +244,12 @@ export default function PayPalCalculatorWidget({ isStandalone = false }: { isSta
                   />
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-slate-900">{item.name}</span>
-                      <span className="text-xs font-mono font-bold text-blue-700">
+                      <span className="text-xs font-bold text-slate-900 dark:text-white">{item.name}</span>
+                      <span className="text-xs font-mono font-bold text-blue-700 dark:text-blue-400">
                         {item.percent}% + {currSym}{item.fixed.toFixed(2)}
                       </span>
                     </div>
-                    <p className="text-[11px] text-slate-500 mt-0.5">{item.description}</p>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">{item.description}</p>
                   </div>
                 </label>
               ))}

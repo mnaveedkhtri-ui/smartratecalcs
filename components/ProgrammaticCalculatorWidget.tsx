@@ -117,9 +117,9 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
   ].filter((v, i, a) => v > 0 && a.indexOf(v) === i);
 
   return (
-    <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden mb-12">
+    <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden mb-12 transition-colors duration-200">
       {/* Widget Header */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-6 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-slate-900 to-slate-800 dark:from-slate-950 dark:to-slate-900 p-6 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800">
         <div>
           <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400 font-mono tracking-wider uppercase mb-1">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -152,16 +152,16 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
       </div>
 
       {/* DUAL MODE SELECTOR TABS */}
-      <div className="bg-slate-100/80 p-2 border-b border-slate-200 flex rounded-t-none">
+      <div className="bg-slate-100/80 dark:bg-slate-950/80 p-2 border-b border-slate-200 dark:border-slate-800 flex rounded-t-none">
         <button
           onClick={() => setMode('payout')}
           className={`flex-1 py-3 px-4 rounded-2xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2 ${
             mode === 'payout'
-              ? 'bg-white text-slate-950 shadow-sm border border-slate-200'
-              : 'text-slate-600 hover:text-slate-900'
+              ? 'bg-white dark:bg-slate-800 text-slate-950 dark:text-white shadow-sm border border-slate-200 dark:border-slate-700'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
           }`}
         >
-          <i className="fa-solid fa-money-bill-transfer text-emerald-600"></i>
+          <i className="fa-solid fa-money-bill-transfer text-emerald-600 dark:text-emerald-400"></i>
           <span>Payout Mode (Withdraw &rarr; Take-Home)</span>
         </button>
 
@@ -169,13 +169,13 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
           onClick={() => setMode('reverse')}
           className={`flex-1 py-3 px-4 rounded-2xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2 ${
             mode === 'reverse'
-              ? 'bg-white text-slate-950 shadow-sm border border-slate-200'
-              : 'text-slate-600 hover:text-slate-900'
+              ? 'bg-white dark:bg-slate-800 text-slate-950 dark:text-white shadow-sm border border-slate-200 dark:border-slate-700'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
           }`}
         >
-          <i className="fa-solid fa-file-invoice-dollar text-indigo-600"></i>
+          <i className="fa-solid fa-file-invoice-dollar text-indigo-600 dark:text-indigo-400"></i>
           <span>Reverse Invoicing (Goal &rarr; Bill Client)</span>
-          <span className="hidden sm:inline-block px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700 text-[10px] font-mono">
+          <span className="hidden sm:inline-block px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 text-[10px] font-mono">
             New
           </span>
         </button>
@@ -187,7 +187,7 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
           <div className="space-y-8">
             {/* Amount Input */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2 font-mono">
+              <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2 font-mono">
                 Enter Amount ({calc.sourceCurrency || 'USD'}):
               </label>
               <div className="relative">
@@ -200,13 +200,13 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
                   max="500000"
                   value={payoutAmount}
                   onChange={(e) => setPayoutAmount(Math.max(0, Number(e.target.value)))}
-                  className="w-full pl-9 pr-4 py-3.5 rounded-2xl bg-slate-50 border-2 border-slate-200 focus:border-emerald-500 focus:bg-white text-slate-900 text-xl font-extrabold transition-all outline-none"
+                  className="w-full pl-9 pr-4 py-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 focus:border-emerald-500 dark:focus:border-emerald-400 focus:bg-white dark:focus:bg-slate-800 text-slate-900 dark:text-white text-xl font-extrabold transition-all outline-none"
                 />
               </div>
 
               {/* Quick Preset Buttons */}
               <div className="flex flex-wrap gap-2 mt-3">
-                <span className="text-[11px] text-slate-400 self-center mr-1 font-mono">Quick:</span>
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 self-center mr-1 font-mono">Quick:</span>
                 {payoutPresets.map((p) => (
                   <button
                     key={p}
@@ -214,7 +214,7 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
                     className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
                       payoutAmount === p
                         ? 'bg-emerald-600 text-white shadow-sm'
-                        : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                        : 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300'
                     }`}
                   >
                     ${p.toLocaleString()}
@@ -226,29 +226,29 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
             {/* Dynamic Result Card */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Box 1: Platform Fee */}
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200">
-                <div className="text-xs text-slate-500 font-semibold mb-1">
+              <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+                <div className="text-xs text-slate-500 dark:text-slate-400 font-semibold mb-1">
                   Platform &amp; Service Fee
                 </div>
-                <div className="text-2xl font-extrabold text-slate-800">
+                <div className="text-2xl font-extrabold text-slate-800 dark:text-white">
                   {sourceSymbol}{calculatedFee.toFixed(2)}
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1">
+                <div className="text-[11px] text-slate-400 dark:text-slate-500 mt-1">
                   {percentFee > 0 ? `${(percentFee * 100).toFixed(1)}%` : ''}{' '}
                   {fixedFee > 0 ? `+ $${fixedFee.toFixed(2)} fixed` : ''}
                 </div>
               </div>
 
               {/* Box 2: Hidden FX Spread */}
-              <div className="p-5 rounded-2xl bg-amber-50/80 border border-amber-200">
-                <div className="text-xs text-amber-900 font-semibold mb-1 flex items-center justify-between">
+              <div className="p-5 rounded-2xl bg-amber-50/80 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60">
+                <div className="text-xs text-amber-900 dark:text-amber-300 font-semibold mb-1 flex items-center justify-between">
                   <span>Hidden FX Spread Loss</span>
-                  <i className="fa-solid fa-triangle-exclamation text-amber-600 text-xs"></i>
+                  <i className="fa-solid fa-triangle-exclamation text-amber-600 dark:text-amber-400 text-xs"></i>
                 </div>
-                <div className="text-2xl font-extrabold text-amber-700">
+                <div className="text-2xl font-extrabold text-amber-700 dark:text-amber-400">
                   {spread > 0 ? `-${(spread * 100).toFixed(1)}%` : '0% (Zero Spread)'}
                 </div>
-                <div className="text-[11px] text-amber-800 mt-1">
+                <div className="text-[11px] text-amber-800 dark:text-amber-300/80 mt-1">
                   {hiddenSpreadLoss > 0
                     ? `You lose ~${targetSymbol}${hiddenSpreadLoss.toLocaleString()} below market rate`
                     : 'Mid-market interbank rate applied'}
@@ -256,16 +256,16 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
               </div>
 
               {/* Box 3: Net Take-Home Payout */}
-              <div className="p-5 rounded-2xl bg-emerald-50 border-2 border-emerald-500 shadow-sm">
-                <div className="text-xs text-emerald-900 font-bold uppercase tracking-wider mb-1 flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
+              <div className="p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border-2 border-emerald-500 dark:border-emerald-500 shadow-sm">
+                <div className="text-xs text-emerald-900 dark:text-emerald-300 font-bold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
                   Net Amount Received
                 </div>
-                <div className="text-2xl sm:text-3xl font-black text-emerald-800">
+                <div className="text-2xl sm:text-3xl font-black text-emerald-800 dark:text-emerald-300">
                   {targetSymbol}
                   {finalLocalAmount.toLocaleString()}
                 </div>
-                <div className="text-[11px] text-emerald-700 font-semibold mt-1">
+                <div className="text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold mt-1">
                   Effective Net Rate: 1 USD = {effectiveRate.toFixed(2)} {calc.targetCurrency || 'USD'}
                 </div>
               </div>
@@ -278,7 +278,7 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
           <div className="space-y-8">
             {/* Target Goal Input */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2 font-mono">
+              <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2 font-mono">
                 Enter Desired In-Hand Payout ({calc.targetCurrency || 'PKR'}):
               </label>
               <div className="relative">
@@ -291,13 +291,13 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
                   max="100000000"
                   value={reverseGoalAmount}
                   onChange={(e) => setReverseGoalAmount(Math.max(0, Number(e.target.value)))}
-                  className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-slate-50 border-2 border-indigo-200 focus:border-indigo-600 focus:bg-white text-slate-900 text-xl font-extrabold transition-all outline-none"
+                  className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border-2 border-indigo-200 dark:border-indigo-900/60 focus:border-indigo-600 dark:focus:border-indigo-400 focus:bg-white dark:focus:bg-slate-800 text-slate-900 dark:text-white text-xl font-extrabold transition-all outline-none"
                 />
               </div>
 
               {/* Quick Goal Presets */}
               <div className="flex flex-wrap gap-2 mt-3">
-                <span className="text-[11px] text-slate-400 self-center mr-1 font-mono">Goal:</span>
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 self-center mr-1 font-mono">Goal:</span>
                 {reversePresets.map((p) => (
                   <button
                     key={p}
@@ -305,7 +305,7 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
                     className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
                       reverseGoalAmount === p
                         ? 'bg-indigo-600 text-white shadow-sm'
-                        : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                        : 'bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300'
                     }`}
                   >
                     {targetSymbol}{p.toLocaleString()}
@@ -317,49 +317,49 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
             {/* Reverse Invoicing Result Card */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Box 1: Exact Gross Invoice to Bill Client (Hero) */}
-              <div className="p-5 rounded-2xl bg-indigo-50 border-2 border-indigo-600 shadow-sm md:col-span-1">
-                <div className="text-xs text-indigo-950 font-bold uppercase tracking-wider mb-1 flex items-center gap-1.5">
-                  <i className="fa-solid fa-file-invoice text-indigo-600"></i>
+              <div className="p-5 rounded-2xl bg-indigo-50 dark:bg-indigo-950/40 border-2 border-indigo-600 dark:border-indigo-500 shadow-sm md:col-span-1">
+                <div className="text-xs text-indigo-950 dark:text-indigo-300 font-bold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <i className="fa-solid fa-file-invoice text-indigo-600 dark:text-indigo-400"></i>
                   Exact Invoice to Bill Client
                 </div>
-                <div className="text-2xl sm:text-3xl font-black text-indigo-900">
+                <div className="text-2xl sm:text-3xl font-black text-indigo-900 dark:text-indigo-200">
                   ${grossToInvoiceUSD.toFixed(2)}
                 </div>
-                <div className="text-[11px] text-indigo-700 font-semibold mt-1">
+                <div className="text-[11px] text-indigo-700 dark:text-indigo-400 font-semibold mt-1">
                   Bill this amount to cover all fees
                 </div>
               </div>
 
               {/* Box 2: Total Deductions Covered */}
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200">
-                <div className="text-xs text-slate-500 font-semibold mb-1">
+              <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+                <div className="text-xs text-slate-500 dark:text-slate-400 font-semibold mb-1">
                   Estimated Fee &amp; Spread Cushion
                 </div>
-                <div className="text-2xl font-extrabold text-slate-800">
+                <div className="text-2xl font-extrabold text-slate-800 dark:text-white">
                   ${totalPlatformCutUSD.toFixed(2)}
                 </div>
-                <div className="text-[11px] text-slate-500 mt-1">
+                <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1">
                   ~{targetSymbol}{totalPlatformCutLocal.toLocaleString()} absorbed by client invoice
                 </div>
               </div>
 
               {/* Box 3: Guaranteed Target Bank Credit */}
-              <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-300">
-                <div className="text-xs text-emerald-900 font-bold uppercase tracking-wider mb-1 flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
+              <div className="p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800/60">
+                <div className="text-xs text-emerald-900 dark:text-emerald-300 font-bold uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
                   Guaranteed Bank Credit
                 </div>
-                <div className="text-2xl font-extrabold text-emerald-800">
+                <div className="text-2xl font-extrabold text-emerald-800 dark:text-emerald-300">
                   {targetSymbol}{reverseGoalAmount.toLocaleString()}
                 </div>
-                <div className="text-[11px] text-emerald-700 font-semibold mt-1">
+                <div className="text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold mt-1">
                   Exact net cash credited into your account
                 </div>
               </div>
             </div>
 
             {/* Copy Client Invoice Message Button */}
-            <div className="p-4 rounded-2xl bg-indigo-950 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="p-4 rounded-2xl bg-indigo-950 text-white flex flex-col sm:flex-row items-center justify-between gap-4 border border-indigo-900">
               <div className="text-xs text-indigo-200 text-center sm:text-left">
                 <span className="font-bold text-white">Need to email your client?</span> Copy a verified invoice payment note with transparent calculations.
               </div>
@@ -376,7 +376,7 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
 
         {/* High-Converting Affiliate & Recommendation Card */}
         {calc.recommendation && (
-          <div className="p-6 rounded-2xl bg-gradient-to-r from-emerald-900 to-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="p-6 rounded-2xl bg-gradient-to-r from-emerald-900 to-slate-900 dark:from-emerald-950 dark:to-slate-950 text-white flex flex-col sm:flex-row items-center justify-between gap-4 border border-emerald-800/40">
             <div className="space-y-1 text-center sm:text-left">
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-bold font-mono">
                 <i className="fa-solid fa-shield-halved text-emerald-400"></i>
@@ -402,26 +402,26 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
       {/* EMBED CODE MODAL */}
       {showEmbedModal && (
         <div className="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 space-y-4 animate-in fade-in zoom-in-95 duration-200">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div className="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800 space-y-4 animate-in fade-in zoom-in-95 duration-200">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-sm font-bold">
+                <div className="w-8 h-8 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-400 flex items-center justify-center text-sm font-bold">
                   <i className="fa-solid fa-code"></i>
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-slate-900">Embed This Calculator</h3>
-                  <p className="text-[11px] text-slate-500 font-mono">Free responsive widget for bloggers &amp; media</p>
+                  <h3 className="text-base font-bold text-slate-900 dark:text-white">Embed This Calculator</h3>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 font-mono">Free responsive widget for bloggers &amp; media</p>
                 </div>
               </div>
               <button
                 onClick={() => setShowEmbedModal(false)}
-                className="w-8 h-8 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-700 flex items-center justify-center text-sm transition"
+                className="w-8 h-8 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 flex items-center justify-center text-sm transition"
               >
                 &times;
               </button>
             </div>
 
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
               Paste this responsive HTML code into your WordPress, Ghost, Webflow, or custom website. The widget automatically recalculates live exchange rates.
             </p>
 
@@ -430,12 +430,12 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
                 readOnly
                 value={embedCode}
                 rows={4}
-                className="w-full p-3 rounded-xl bg-slate-900 text-emerald-400 font-mono text-[11px] leading-relaxed resize-none outline-none border border-slate-800 selection:bg-emerald-500 selection:text-black"
+                className="w-full p-3 rounded-xl bg-slate-900 dark:bg-slate-950 text-emerald-400 font-mono text-[11px] leading-relaxed resize-none outline-none border border-slate-800 selection:bg-emerald-500 selection:text-black"
               />
             </div>
 
             <div className="flex items-center justify-between pt-2">
-              <span className="text-[11px] text-slate-400 font-mono">
+              <span className="text-[11px] text-slate-400 dark:text-slate-500 font-mono">
                 100% Free &bull; No API Key Needed
               </span>
               <button

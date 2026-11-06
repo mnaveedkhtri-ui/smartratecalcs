@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { PROGRAMMATIC_CALCULATORS } from '../../../data/programmatic-calculators';
 import ProgrammaticCalculatorWidget from '../../../components/ProgrammaticCalculatorWidget';
+import ThemeToggle from '../../../components/ThemeToggle';
 
 interface Props {
   params: {
@@ -149,7 +150,7 @@ export default function CalculatorPage({ params }: Props) {
   ).slice(0, 6);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800">
+    <div className="min-h-screen bg-[#f8fafc] dark:bg-[#070d17] text-slate-800 dark:text-slate-100 transition-colors duration-200">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -168,20 +169,21 @@ export default function CalculatorPage({ params }: Props) {
       />
 
       {/* Header */}
-      <header className="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40">
+      <header className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 z-40">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 font-bold text-lg text-slate-900">
+          <Link href="/" className="flex items-center gap-2 font-bold text-lg text-slate-900 dark:text-white">
             <span className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-sm">
               <i className="fa-solid fa-calculator"></i>
             </span>
-            SmartRate<span className="text-emerald-600">Calcs</span>
+            SmartRate<span className="text-emerald-600 dark:text-emerald-400">Calcs</span>
           </Link>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <ThemeToggle />
             <Link
               href="/"
-              className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors"
+              className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors"
             >
-              &larr; All 53 Calculators
+              &larr; <span className="hidden sm:inline">All</span> Calculators
             </Link>
           </div>
         </div>
@@ -190,28 +192,28 @@ export default function CalculatorPage({ params }: Props) {
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 py-10">
         {/* Breadcrumb Trail (Navboost Signal) */}
-        <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6 font-mono">
-          <Link href="/" className="hover:text-emerald-600">
+        <nav className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-6 font-mono">
+          <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400">
             Home
           </Link>
           <span>/</span>
           <span className="capitalize">{calc.category}</span>
           <span>/</span>
-          <span className="text-slate-800 font-bold truncate max-w-[200px] sm:max-w-none">
+          <span className="text-slate-800 dark:text-slate-200 font-bold truncate max-w-[200px] sm:max-w-none">
             {calc.primaryKeyword}
           </span>
         </nav>
 
         {/* Title & Meta Info */}
         <div className="mb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold mb-3 font-mono">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 text-emerald-800 dark:text-emerald-300 text-[11px] font-bold mb-3 font-mono">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             Verified 2026 Financial Specification &bull; Q4 Interbank Rates
           </div>
-          <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight mb-3">
+          <h1 className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight mb-3">
             {calc.title}
           </h1>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
             {calc.description}
           </p>
         </div>
@@ -220,19 +222,19 @@ export default function CalculatorPage({ params }: Props) {
         <ProgrammaticCalculatorWidget calc={calc} />
 
         {/* AI OVERVIEW DIRECT ANSWER BOX (Engineered specifically for Google AI Overviews / SGE citation) */}
-        <section className="mb-10 p-6 sm:p-7 rounded-3xl bg-emerald-50/80 border-2 border-emerald-500/80 shadow-sm relative">
-          <div className="flex items-center gap-2 text-xs font-bold text-emerald-900 uppercase tracking-wider mb-2 font-mono">
-            <i className="fa-solid fa-sparkles text-emerald-600"></i>
+        <section className="mb-10 p-6 sm:p-7 rounded-3xl bg-emerald-50/80 dark:bg-emerald-950/40 border-2 border-emerald-500/80 dark:border-emerald-500/60 shadow-sm relative">
+          <div className="flex items-center gap-2 text-xs font-bold text-emerald-900 dark:text-emerald-300 uppercase tracking-wider mb-2 font-mono">
+            <i className="fa-solid fa-sparkles text-emerald-600 dark:text-emerald-400"></i>
             <span>Key Takeaway &amp; Summary (Direct Answer)</span>
           </div>
-          <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-medium mb-4">
+          <p className="text-sm sm:text-base text-slate-800 dark:text-slate-100 leading-relaxed font-medium mb-4">
             {calc.quickAnswer}
           </p>
-          <div className="pt-3 border-t border-emerald-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-600 font-mono">
+          <div className="pt-3 border-t border-emerald-200/80 dark:border-emerald-800/60 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-600 dark:text-slate-300 font-mono">
             <div>
-              <strong className="text-slate-900">Formula:</strong> {calc.formula}
+              <strong className="text-slate-900 dark:text-white">Formula:</strong> {calc.formula}
             </div>
-            <div className="text-emerald-700 font-semibold">
+            <div className="text-emerald-700 dark:text-emerald-400 font-semibold">
               Verified by Muhammad Naveed
             </div>
           </div>
@@ -240,23 +242,23 @@ export default function CalculatorPage({ params }: Props) {
 
         {/* FAQ Schema Section for Google Ranking */}
         <div className="space-y-4 mb-12">
-          <div className="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider font-mono">
-            <i className="fa-solid fa-circle-question text-emerald-600"></i>
+          <div className="flex items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider font-mono">
+            <i className="fa-solid fa-circle-question text-emerald-600 dark:text-emerald-400"></i>
             <span>Knowledge Base &amp; FAQs</span>
           </div>
-          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-4">
             Frequently Asked Questions
           </h2>
           <div className="grid grid-cols-1 gap-4">
             {calc.faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm"
+                className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm"
               >
-                <h3 className="font-bold text-sm sm:text-base text-slate-900 mb-2">
+                <h3 className="font-bold text-sm sm:text-base text-slate-900 dark:text-white mb-2">
                   {faq.q}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   {faq.a}
                 </p>
               </div>
@@ -267,11 +269,11 @@ export default function CalculatorPage({ params }: Props) {
         {/* Related Calculators Internal Linking Grid (PageRank Distribution) */}
         {relatedCalculators.length > 0 && (
           <div className="space-y-4 mb-12">
-            <div className="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider font-mono">
-              <i className="fa-solid fa-sitemap text-emerald-600"></i>
+            <div className="flex items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider font-mono">
+              <i className="fa-solid fa-sitemap text-emerald-600 dark:text-emerald-400"></i>
               <span>Related Financial Tools</span>
             </div>
-            <h2 className="text-xl font-bold text-slate-900 mb-4">
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
               Explore More Cross-Border Calculators
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -279,17 +281,17 @@ export default function CalculatorPage({ params }: Props) {
                 <Link
                   key={rel.slug}
                   href={`/calculators/${rel.slug}`}
-                  className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div>
-                    <div className="text-[10px] font-bold text-emerald-600 uppercase font-mono mb-1">
+                    <div className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase font-mono mb-1">
                       {rel.targetCurrency ? `${rel.sourceCurrency || 'USD'} → ${rel.targetCurrency}` : rel.category}
                     </div>
-                    <div className="text-xs font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2">
+                    <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2">
                       {rel.title}
                     </div>
                   </div>
-                  <div className="text-[11px] text-slate-400 mt-2 font-mono flex items-center justify-between">
+                  <div className="text-[11px] text-slate-400 dark:text-slate-500 mt-2 font-mono flex items-center justify-between">
                     <span>Calculate &rarr;</span>
                   </div>
                 </Link>
@@ -299,26 +301,26 @@ export default function CalculatorPage({ params }: Props) {
         )}
 
         {/* Author Bio Box for E-E-A-T Ranking Signals */}
-        <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-5">
+        <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row items-center gap-5">
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-700 text-white font-extrabold text-2xl flex items-center justify-center shrink-0 shadow-md">
             MN
           </div>
           <div className="space-y-1 text-center sm:text-left">
-            <div className="text-xs font-bold text-emerald-600 uppercase font-mono">
+            <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase font-mono">
               Lead Systems Engineer &bull; Verified Spec
             </div>
-            <h4 className="text-base font-extrabold text-slate-900">
+            <h4 className="text-base font-extrabold text-slate-900 dark:text-white">
               Muhammad Naveed
             </h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
               Full-Stack &amp; Automation Engineer specializing in cross-border financial architectures, automated forex routing, and developer payout infrastructure.
             </p>
-            <div className="pt-1 flex flex-wrap gap-3 justify-center sm:justify-start text-xs text-slate-500 font-mono">
+            <div className="pt-1 flex flex-wrap gap-3 justify-center sm:justify-start text-xs text-slate-500 dark:text-slate-400 font-mono">
               <a
                 href="https://naveed-portfolio-kappa.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-emerald-600 underline font-semibold"
+                className="hover:text-emerald-600 dark:hover:text-emerald-400 underline font-semibold"
               >
                 Portfolio &rarr;
               </a>
@@ -326,7 +328,7 @@ export default function CalculatorPage({ params }: Props) {
                 href="https://github.com/mnaveedkhtri-ui"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-emerald-600 underline"
+                className="hover:text-emerald-600 dark:hover:text-emerald-400 underline"
               >
                 GitHub
               </a>
@@ -336,9 +338,9 @@ export default function CalculatorPage({ params }: Props) {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200 py-8 text-center text-xs text-slate-500">
+      <footer className="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400">
         &copy; 2026 SmartRateCalcs. Built with mathematical precision by{' '}
-        <strong className="text-slate-700">Muhammad Naveed</strong>. All rights reserved.
+        <strong className="text-slate-700 dark:text-slate-200">Muhammad Naveed</strong>. All rights reserved.
       </footer>
     </div>
   );
