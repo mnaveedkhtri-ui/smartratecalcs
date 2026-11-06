@@ -250,6 +250,94 @@ export default function BlogPostPage({ params }: Props) {
           </div>
         </section>
 
+        {/* HIGH-INTENT INTERNAL CALCULATOR LINKING CLUSTER */}
+        {post.slug === 'upwork-pakistan-lowest-withdrawal-fee-guide' && (
+          <div className="mb-10 p-6 rounded-3xl bg-slate-900 border border-slate-800 text-white shadow-xl">
+            <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-400">
+                  Instant Payout Calculators (2026 Rates)
+                </span>
+              </div>
+              <span className="text-[11px] text-slate-400 font-mono">Live PKR Conversion</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link
+                href="/calculators/upwork-to-jazzcash-payout-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>Upwork to JazzCash Calculator</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Compare Upwork Direct ($0.99 + 2.75%) vs Payoneer to JazzCash payout.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  Zero Hidden Fees Check &bull; 100% Free
+                </div>
+              </Link>
+
+              <Link
+                href="/calculators/payoneer-to-jazzcash-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>Payoneer to JazzCash Calculator</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Calculate exact PKR received after Payoneer 2% conversion spread.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  Real-time Interbank Rate &bull; Instant
+                </div>
+              </Link>
+
+              <Link
+                href="/calculators/upwork-direct-to-local-bank-pakistan-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>Upwork Direct to Local Bank</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Calculate HBL, Meezan, UBL, and MCB direct wire deduction losses.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  Bank Spread Audit &bull; 2026
+                </div>
+              </Link>
+
+              <Link
+                href="/calculators/wise-to-meezan-bank-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>Wise to Meezan Bank IBAN</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Calculate USD to PKR Islamic IBAN transfer at Google mid-market rate.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  Zero Hidden Markup &bull; Fast Payout
+                </div>
+              </Link>
+            </div>
+          </div>
+        )}
+
         {/* Table of Contents */}
         <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm mb-10">
           <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 mb-3">

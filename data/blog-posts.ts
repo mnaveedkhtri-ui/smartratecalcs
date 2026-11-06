@@ -30,8 +30,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'upwork-pakistan-lowest-withdrawal-fee-guide',
     title: 'Upwork to Pakistan Withdrawal: Lowest Fee Guide (2026)',
-    metaTitle: 'Upwork to Pakistan Withdrawal: Lowest Fee Guide (2026)',
-    metaDesc: 'Stop losing 3% on Upwork withdrawals. Compare local bank, Payoneer, and US ACH routes to save Rs 19,000 monthly on contractor payouts.',
+    metaTitle: 'Upwork Pakistan Payment & Lowest Fee Withdrawal Guide (2026)',
+    metaDesc: 'Compare Upwork direct local bank vs Payoneer vs US ACH withdrawal methods in Pakistan. Discover the cheapest payment route and save up to Rs 19,000 monthly.',
     category: 'Freelancing',
     readTime: '9 min read',
     publishedDate: '2026-11-02',
