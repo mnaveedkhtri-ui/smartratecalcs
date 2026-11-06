@@ -132,14 +132,14 @@ export default function StripeCalculatorPage() {
 
         {/* Hero Section */}
         <section className="pt-10 pb-6 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-800 text-xs font-bold mb-3">
-            <i className="fa-brands fa-stripe text-indigo-600"></i>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/60 text-indigo-800 dark:text-indigo-300 text-xs font-bold mb-3">
+            <i className="fa-brands fa-stripe text-indigo-600 dark:text-indigo-400"></i>
             <span>Updated for 2026 Stripe Official Processing Schedule</span>
           </div>
-          <h1 className="font-heading font-extrabold text-2xl sm:text-4xl text-slate-900 tracking-tight leading-tight mb-3">
+          <h1 className="font-heading font-extrabold text-2xl sm:text-4xl text-slate-900 dark:text-white tracking-tight leading-tight mb-3">
             Stripe Fee Calculator (2026 Live Rates)
           </h1>
-          <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Calculate exact processing fees for domestic cards, cross-border payments, currency conversions, and reverse-calculate how much to bill clients to cover merchant costs.
           </p>
         </section>
@@ -151,16 +151,16 @@ export default function StripeCalculatorPage() {
 
         {/* Educational Content & Fee Reference Table */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-8">
+          <div className="bg-white dark:bg-slate-900/90 rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm space-y-8">
             {/* Rates Table */}
             <div>
-              <h2 className="font-heading font-bold text-xl text-slate-900 mb-4">
+              <h2 className="font-heading font-bold text-xl text-slate-900 dark:text-white mb-4">
                 2026 Stripe Official Fee Schedule
               </h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
-                    <tr className="border-b border-slate-200 bg-slate-50 text-slate-700 uppercase font-mono">
+                    <tr className="border-b border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 uppercase font-mono">
                       <th className="py-3 px-4">Processing Tier</th>
                       <th className="py-3 px-4">Percentage Fee</th>
                       <th className="py-3 px-4">Fixed Fee</th>
@@ -168,34 +168,34 @@ export default function StripeCalculatorPage() {
                       <th className="py-3 px-4">Net Payout</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-slate-100 font-mono">
-                    <tr className="hover:bg-slate-50">
-                      <td className="py-3 px-4 font-bold text-slate-900">Standard Domestic Card</td>
-                      <td className="py-3 px-4 text-indigo-600 font-semibold">2.90%</td>
-                      <td className="py-3 px-4 text-slate-600">$0.30</td>
-                      <td className="py-3 px-4 text-rose-600">-$3.20</td>
-                      <td className="py-3 px-4 text-emerald-600 font-bold">$96.80</td>
+                  <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-mono">
+                    <tr className="hover:bg-slate-50/50 dark:hover:bg-slate-800/40">
+                      <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">Standard Domestic Card</td>
+                      <td className="py-3 px-4 text-indigo-600 dark:text-indigo-400 font-semibold">2.90%</td>
+                      <td className="py-3 px-4 text-slate-600 dark:text-slate-400">$0.30</td>
+                      <td className="py-3 px-4 text-rose-600 dark:text-rose-400">-$3.20</td>
+                      <td className="py-3 px-4 text-emerald-600 dark:text-emerald-400 font-bold">$96.80</td>
                     </tr>
-                    <tr className="hover:bg-slate-50">
-                      <td className="py-3 px-4 font-bold text-slate-900">International Card (+1.50%)</td>
-                      <td className="py-3 px-4 text-indigo-600 font-semibold">4.40%</td>
-                      <td className="py-3 px-4 text-slate-600">$0.30</td>
-                      <td className="py-3 px-4 text-rose-600">-$4.70</td>
-                      <td className="py-3 px-4 text-emerald-600 font-bold">$95.30</td>
+                    <tr className="hover:bg-slate-50/50 dark:hover:bg-slate-800/40">
+                      <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">International Card (+1.50%)</td>
+                      <td className="py-3 px-4 text-indigo-600 dark:text-indigo-400 font-semibold">4.40%</td>
+                      <td className="py-3 px-4 text-slate-600 dark:text-slate-400">$0.30</td>
+                      <td className="py-3 px-4 text-rose-600 dark:text-rose-400">-$4.70</td>
+                      <td className="py-3 px-4 text-emerald-600 dark:text-emerald-400 font-bold">$95.30</td>
                     </tr>
-                    <tr className="hover:bg-slate-50">
-                      <td className="py-3 px-4 font-bold text-slate-900">International + Currency Conversion</td>
-                      <td className="py-3 px-4 text-indigo-600 font-semibold">5.40%</td>
-                      <td className="py-3 px-4 text-slate-600">$0.30</td>
-                      <td className="py-3 px-4 text-rose-600">-$5.70</td>
-                      <td className="py-3 px-4 text-emerald-600 font-bold">$94.30</td>
+                    <tr className="hover:bg-slate-50/50 dark:hover:bg-slate-800/40">
+                      <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">International + Currency Conversion</td>
+                      <td className="py-3 px-4 text-indigo-600 dark:text-indigo-400 font-semibold">5.40%</td>
+                      <td className="py-3 px-4 text-slate-600 dark:text-slate-400">$0.30</td>
+                      <td className="py-3 px-4 text-rose-600 dark:text-rose-400">-$5.70</td>
+                      <td className="py-3 px-4 text-emerald-600 dark:text-emerald-400 font-bold">$94.30</td>
                     </tr>
-                    <tr className="hover:bg-slate-50">
-                      <td className="py-3 px-4 font-bold text-slate-900">Stripe Billing &amp; Invoices (+0.50%)</td>
-                      <td className="py-3 px-4 text-indigo-600 font-semibold">3.40%</td>
-                      <td className="py-3 px-4 text-slate-600">$0.30</td>
-                      <td className="py-3 px-4 text-rose-600">-$3.70</td>
-                      <td className="py-3 px-4 text-emerald-600 font-bold">$96.30</td>
+                    <tr className="hover:bg-slate-50/50 dark:hover:bg-slate-800/40">
+                      <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">Stripe Billing &amp; Invoices (+0.50%)</td>
+                      <td className="py-3 px-4 text-indigo-600 dark:text-indigo-400 font-semibold">3.40%</td>
+                      <td className="py-3 px-4 text-slate-600 dark:text-slate-400">$0.30</td>
+                      <td className="py-3 px-4 text-rose-600 dark:text-rose-400">-$3.70</td>
+                      <td className="py-3 px-4 text-emerald-600 dark:text-emerald-400 font-bold">$96.30</td>
                     </tr>
                   </tbody>
                 </table>
@@ -203,46 +203,46 @@ export default function StripeCalculatorPage() {
             </div>
 
             {/* Reverse Calculation Formula Section */}
-            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200">
-              <h3 className="font-heading font-bold text-base text-slate-900 mb-2">
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700">
+              <h3 className="font-heading font-bold text-base text-slate-900 dark:text-white mb-2">
                 Reverse Fee Formula: How to Bill Customers on Stripe
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed mb-3">
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
                 To guarantee your bank account receives an exact target amount after Stripe deductions, use the algebraic reverse equation:
               </p>
-              <div className="p-3 bg-white rounded-xl border border-slate-200 font-mono text-xs text-slate-800 font-bold">
+              <div className="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 font-mono text-xs text-slate-800 dark:text-slate-200 font-bold">
                 Customer Charge = (Target Net Amount + Fixed Fee) / (1 - Percentage Fee / 100)
               </div>
-              <p className="text-[11px] text-slate-500 mt-2">
-                Example for $500 target on domestic cards: ($500 + $0.30) / (1 - 0.029) = <strong>$515.24</strong>. Stripe will deduct $15.24 in processing fees, leaving you with exactly $500.00.
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-2">
+                Example for $500 target on domestic cards: ($500 + $0.30) / (1 - 0.029) = <strong className="text-slate-900 dark:text-white">$515.24</strong>. Stripe will deduct $15.24 in processing fees, leaving you with exactly $500.00.
               </p>
             </div>
 
             {/* Related Tools */}
             <div>
-              <h3 className="font-heading font-bold text-base text-slate-900 mb-3">
+              <h3 className="font-heading font-bold text-base text-slate-900 dark:text-white mb-3">
                 Explore More Real-Time Payout Calculators
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <Link
                   href="/paypal-fee-calculator"
-                  className="p-3.5 rounded-xl border border-slate-200 hover:border-blue-400 hover:bg-blue-50/30 transition-all flex items-center justify-between text-xs"
+                  className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-blue-400 dark:hover:border-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-950/30 transition-all flex items-center justify-between text-xs"
                 >
-                  <span className="font-bold text-slate-800">PayPal Fee Calculator</span>
+                  <span className="font-bold text-slate-800 dark:text-slate-200">PayPal Fee Calculator</span>
                   <i className="fa-solid fa-arrow-right text-blue-500"></i>
                 </Link>
                 <Link
                   href="/calculators/stripe-vs-paypal-international-fee-calculator"
-                  className="p-3.5 rounded-xl border border-slate-200 hover:border-indigo-400 hover:bg-indigo-50/30 transition-all flex items-center justify-between text-xs"
+                  className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-indigo-400 dark:hover:border-indigo-500 hover:bg-indigo-50/30 dark:hover:bg-indigo-950/30 transition-all flex items-center justify-between text-xs"
                 >
-                  <span className="font-bold text-slate-800">Stripe vs PayPal Comparison</span>
+                  <span className="font-bold text-slate-800 dark:text-slate-200">Stripe vs PayPal Comparison</span>
                   <i className="fa-solid fa-arrow-right text-indigo-500"></i>
                 </Link>
                 <Link
                   href="/calculators/stripe-cross-border-fee-calculator"
-                  className="p-3.5 rounded-xl border border-slate-200 hover:border-emerald-400 hover:bg-emerald-50/30 transition-all flex items-center justify-between text-xs"
+                  className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-emerald-400 dark:hover:border-emerald-500 hover:bg-emerald-50/30 dark:hover:bg-emerald-950/30 transition-all flex items-center justify-between text-xs"
                 >
-                  <span className="font-bold text-slate-800">Stripe Cross-Border Deep Dive</span>
+                  <span className="font-bold text-slate-800 dark:text-slate-200">Stripe Cross-Border Deep Dive</span>
                   <i className="fa-solid fa-arrow-right text-emerald-500"></i>
                 </Link>
               </div>

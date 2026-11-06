@@ -131,14 +131,14 @@ export default function PayPalCalculatorPage() {
 
         {/* Hero Section */}
         <section className="pt-10 pb-6 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold mb-3">
-            <i className="fa-brands fa-paypal text-blue-600"></i>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/60 text-blue-800 dark:text-blue-300 text-xs font-bold mb-3">
+            <i className="fa-brands fa-paypal text-blue-600 dark:text-blue-400"></i>
             <span>Updated for 2026 Official PayPal Merchant Schedule</span>
           </div>
-          <h1 className="font-heading font-extrabold text-2xl sm:text-4xl text-slate-900 tracking-tight leading-tight mb-3">
+          <h1 className="font-heading font-extrabold text-2xl sm:text-4xl text-slate-900 dark:text-white tracking-tight leading-tight mb-3">
             PayPal Fee Calculator (2026 Live Rates)
           </h1>
-          <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Calculate exact merchant deductions for Goods and Services, cross-border payments, and reverse-calculate how much to invoice your clients so you receive the full amount.
           </p>
         </section>
@@ -150,16 +150,16 @@ export default function PayPalCalculatorPage() {
 
         {/* Educational Content & Fee Reference Table */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-8">
+          <div className="bg-white dark:bg-slate-900/90 rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm space-y-8">
             {/* Rates Table */}
             <div>
-              <h2 className="font-heading font-bold text-xl text-slate-900 mb-4">
+              <h2 className="font-heading font-bold text-xl text-slate-900 dark:text-white mb-4">
                 2026 PayPal Merchant Fee Breakdown Table
               </h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
-                    <tr className="border-b border-slate-200 bg-slate-50 text-slate-700 uppercase font-mono">
+                    <tr className="border-b border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 uppercase font-mono">
                       <th className="py-3 px-4">Transaction Type</th>
                       <th className="py-3 px-4">Percentage Fee</th>
                       <th className="py-3 px-4">Fixed Fee</th>
@@ -167,34 +167,34 @@ export default function PayPalCalculatorPage() {
                       <th className="py-3 px-4">Net Take-Home</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-slate-100 font-mono">
-                    <tr className="hover:bg-slate-50">
-                      <td className="py-3 px-4 font-bold text-slate-900">US Domestic Goods &amp; Services</td>
-                      <td className="py-3 px-4 text-blue-600 font-semibold">2.99%</td>
-                      <td className="py-3 px-4 text-slate-600">$0.49</td>
-                      <td className="py-3 px-4 text-rose-600">-$3.48</td>
-                      <td className="py-3 px-4 text-emerald-600 font-bold">$96.52</td>
+                  <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-mono">
+                    <tr className="hover:bg-slate-50/50 dark:hover:bg-slate-800/40">
+                      <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">US Domestic Goods &amp; Services</td>
+                      <td className="py-3 px-4 text-blue-600 dark:text-blue-400 font-semibold">2.99%</td>
+                      <td className="py-3 px-4 text-slate-600 dark:text-slate-400">$0.49</td>
+                      <td className="py-3 px-4 text-rose-600 dark:text-rose-400">-$3.48</td>
+                      <td className="py-3 px-4 text-emerald-600 dark:text-emerald-400 font-bold">$96.52</td>
                     </tr>
-                    <tr className="hover:bg-slate-50">
-                      <td className="py-3 px-4 font-bold text-slate-900">International Cross-Border</td>
-                      <td className="py-3 px-4 text-blue-600 font-semibold">4.49%</td>
-                      <td className="py-3 px-4 text-slate-600">$0.49</td>
-                      <td className="py-3 px-4 text-rose-600">-$4.98</td>
-                      <td className="py-3 px-4 text-emerald-600 font-bold">$95.02</td>
+                    <tr className="hover:bg-slate-50/50 dark:hover:bg-slate-800/40">
+                      <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">International Cross-Border</td>
+                      <td className="py-3 px-4 text-blue-600 dark:text-blue-400 font-semibold">4.49%</td>
+                      <td className="py-3 px-4 text-slate-600 dark:text-slate-400">$0.49</td>
+                      <td className="py-3 px-4 text-rose-600 dark:text-rose-400">-$4.98</td>
+                      <td className="py-3 px-4 text-emerald-600 dark:text-emerald-400 font-bold">$95.02</td>
                     </tr>
-                    <tr className="hover:bg-slate-50">
-                      <td className="py-3 px-4 font-bold text-slate-900">Donations / 501(c)(3) Non-Profit</td>
-                      <td className="py-3 px-4 text-blue-600 font-semibold">1.99%</td>
-                      <td className="py-3 px-4 text-slate-600">$0.49</td>
-                      <td className="py-3 px-4 text-rose-600">-$2.48</td>
-                      <td className="py-3 px-4 text-emerald-600 font-bold">$97.52</td>
+                    <tr className="hover:bg-slate-50/50 dark:hover:bg-slate-800/40">
+                      <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">Donations / 501(c)(3) Non-Profit</td>
+                      <td className="py-3 px-4 text-blue-600 dark:text-blue-400 font-semibold">1.99%</td>
+                      <td className="py-3 px-4 text-slate-600 dark:text-slate-400">$0.49</td>
+                      <td className="py-3 px-4 text-rose-600 dark:text-rose-400">-$2.48</td>
+                      <td className="py-3 px-4 text-emerald-600 dark:text-emerald-400 font-bold">$97.52</td>
                     </tr>
-                    <tr className="hover:bg-slate-50">
-                      <td className="py-3 px-4 font-bold text-slate-900">QR Code / In-Person (&gt; $10)</td>
-                      <td className="py-3 px-4 text-blue-600 font-semibold">1.90%</td>
-                      <td className="py-3 px-4 text-slate-600">$0.10</td>
-                      <td className="py-3 px-4 text-rose-600">-$2.00</td>
-                      <td className="py-3 px-4 text-emerald-600 font-bold">$98.00</td>
+                    <tr className="hover:bg-slate-50/50 dark:hover:bg-slate-800/40">
+                      <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">QR Code / In-Person (&gt; $10)</td>
+                      <td className="py-3 px-4 text-blue-600 dark:text-blue-400 font-semibold">1.90%</td>
+                      <td className="py-3 px-4 text-slate-600 dark:text-slate-400">$0.10</td>
+                      <td className="py-3 px-4 text-rose-600 dark:text-rose-400">-$2.00</td>
+                      <td className="py-3 px-4 text-emerald-600 dark:text-emerald-400 font-bold">$98.00</td>
                     </tr>
                   </tbody>
                 </table>
@@ -202,46 +202,46 @@ export default function PayPalCalculatorPage() {
             </div>
 
             {/* Reverse Calculation Formula Section */}
-            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200">
-              <h3 className="font-heading font-bold text-base text-slate-900 mb-2">
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700">
+              <h3 className="font-heading font-bold text-base text-slate-900 dark:text-white mb-2">
                 Reverse Fee Formula: How to Invoice Clients for Exact Amounts
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed mb-3">
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
                 If you simply add 2.99% to your invoice, you will still end up short because PayPal takes 2.99% of the newly increased total. Use the verified algebraic formula below:
               </p>
-              <div className="p-3 bg-white rounded-xl border border-slate-200 font-mono text-xs text-slate-800 font-bold">
+              <div className="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 font-mono text-xs text-slate-800 dark:text-slate-200 font-bold">
                 Invoice Amount = (Target Net Amount + Fixed Fee) / (1 - Fee Percentage / 100)
               </div>
-              <p className="text-[11px] text-slate-500 mt-2">
-                Example for $1,000 domestic payout: ($1,000 + $0.49) / (1 - 0.0299) = <strong>$1,031.33</strong>. When your client pays $1,031.33, PayPal deducts $31.33, leaving you with exactly $1,000.00.
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-2">
+                Example for $1,000 domestic payout: ($1,000 + $0.49) / (1 - 0.0299) = <strong className="text-slate-900 dark:text-white">$1,031.33</strong>. When your client pays $1,031.33, PayPal deducts $31.33, leaving you with exactly $1,000.00.
               </p>
             </div>
 
             {/* Related Tools */}
             <div>
-              <h3 className="font-heading font-bold text-base text-slate-900 mb-3">
+              <h3 className="font-heading font-bold text-base text-slate-900 dark:text-white mb-3">
                 Explore More Real-Time Payout Calculators
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <Link
                   href="/stripe-fee-calculator"
-                  className="p-3.5 rounded-xl border border-slate-200 hover:border-indigo-400 hover:bg-indigo-50/30 transition-all flex items-center justify-between text-xs"
+                  className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-indigo-400 dark:hover:border-indigo-500 hover:bg-indigo-50/30 dark:hover:bg-indigo-950/30 transition-all flex items-center justify-between text-xs"
                 >
-                  <span className="font-bold text-slate-800">Stripe Fee Calculator</span>
+                  <span className="font-bold text-slate-800 dark:text-slate-200">Stripe Fee Calculator</span>
                   <i className="fa-solid fa-arrow-right text-indigo-500"></i>
                 </Link>
                 <Link
                   href="/calculators/stripe-vs-paypal-international-fee-calculator"
-                  className="p-3.5 rounded-xl border border-slate-200 hover:border-blue-400 hover:bg-blue-50/30 transition-all flex items-center justify-between text-xs"
+                  className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-blue-400 dark:hover:border-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-950/30 transition-all flex items-center justify-between text-xs"
                 >
-                  <span className="font-bold text-slate-800">Stripe vs PayPal Comparison</span>
+                  <span className="font-bold text-slate-800 dark:text-slate-200">Stripe vs PayPal Comparison</span>
                   <i className="fa-solid fa-arrow-right text-blue-500"></i>
                 </Link>
                 <Link
                   href="/calculators/wise-to-pkr-fee-calculator"
-                  className="p-3.5 rounded-xl border border-slate-200 hover:border-emerald-400 hover:bg-emerald-50/30 transition-all flex items-center justify-between text-xs"
+                  className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-emerald-400 dark:hover:border-emerald-500 hover:bg-emerald-50/30 dark:hover:bg-emerald-950/30 transition-all flex items-center justify-between text-xs"
                 >
-                  <span className="font-bold text-slate-800">Wise Payout Calculator</span>
+                  <span className="font-bold text-slate-800 dark:text-slate-200">Wise Payout Calculator</span>
                   <i className="fa-solid fa-arrow-right text-emerald-500"></i>
                 </Link>
               </div>

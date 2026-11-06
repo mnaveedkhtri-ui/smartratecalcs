@@ -13,11 +13,10 @@ export default function ThemeToggle({ className = '', showLabel = false }: Props
 
   useEffect(() => {
     setMounted(true);
+    const saved = localStorage.getItem('smartrate_theme');
     const isDark =
-      document.documentElement.classList.contains('dark') ||
-      (!('smartrate_theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches) ||
-      localStorage.getItem('smartrate_theme') === 'dark';
+      saved === 'dark' ||
+      (!saved && document.documentElement.classList.contains('dark'));
 
     if (isDark) {
       document.documentElement.classList.add('dark');
