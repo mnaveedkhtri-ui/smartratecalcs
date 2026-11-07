@@ -26,6 +26,8 @@ export async function GET(request: Request) {
     baseUrl,
     `${baseUrl}/paypal-fee-calculator`,
     `${baseUrl}/stripe-fee-calculator`,
+    `${baseUrl}/upwork-fee-calculator`,
+    `${baseUrl}/fiverr-fee-calculator`,
     `${baseUrl}/blog`,
     `${baseUrl}/about`,
     `${baseUrl}/privacy`,
