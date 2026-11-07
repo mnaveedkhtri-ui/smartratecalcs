@@ -120,6 +120,12 @@ export default function StripeCalculatorPage() {
             <div className="flex items-center gap-2 sm:gap-3">
               <ThemeToggle />
               <Link
+                href="/upwork-fee-calculator"
+                className="hidden sm:flex text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 transition-all"
+              >
+                <span>Upwork Fee</span>
+              </Link>
+              <Link
                 href="/paypal-fee-calculator"
                 className="text-xs font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/60 transition-all"
               >

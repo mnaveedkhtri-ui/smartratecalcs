@@ -119,6 +119,12 @@ export default function PayPalCalculatorPage() {
             <div className="flex items-center gap-2 sm:gap-3">
               <ThemeToggle />
               <Link
+                href="/upwork-fee-calculator"
+                className="hidden sm:flex text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 transition-all"
+              >
+                <span>Upwork Fee</span>
+              </Link>
+              <Link
                 href="/stripe-fee-calculator"
                 className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/60 transition-all"
               >
