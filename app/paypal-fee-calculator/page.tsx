@@ -228,26 +228,47 @@ export default function PayPalCalculatorPage() {
               <h3 className="font-heading font-bold text-base text-slate-900 dark:text-white mb-3">
                 Explore More Real-Time Payout Calculators
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 <Link
                   href="/stripe-fee-calculator"
                   className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-indigo-400 dark:hover:border-indigo-500 hover:bg-indigo-50/30 dark:hover:bg-indigo-950/30 transition-all flex items-center justify-between text-xs"
                 >
-                  <span className="font-bold text-slate-800 dark:text-slate-200">Stripe Fee Calculator</span>
+                  <span className="font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5"><i className="fa-brands fa-stripe text-indigo-500"></i> Stripe Fee Calculator</span>
                   <i className="fa-solid fa-arrow-right text-indigo-500"></i>
                 </Link>
                 <Link
-                  href="/calculators/stripe-vs-paypal-international-fee-calculator"
-                  className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-blue-400 dark:hover:border-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-950/30 transition-all flex items-center justify-between text-xs"
+                  href="/upwork-fee-calculator"
+                  className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-emerald-400 dark:hover:border-emerald-500 hover:bg-emerald-50/30 dark:hover:bg-emerald-950/30 transition-all flex items-center justify-between text-xs"
                 >
-                  <span className="font-bold text-slate-800 dark:text-slate-200">Stripe vs PayPal Comparison</span>
-                  <i className="fa-solid fa-arrow-right text-blue-500"></i>
+                  <span className="font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5"><i className="fa-solid fa-briefcase text-emerald-500"></i> Upwork Fee Calculator</span>
+                  <i className="fa-solid fa-arrow-right text-emerald-500"></i>
+                </Link>
+                <Link
+                  href="/fiverr-fee-calculator"
+                  className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-[#1dbf73] hover:bg-emerald-50/30 dark:hover:bg-emerald-950/30 transition-all flex items-center justify-between text-xs"
+                >
+                  <span className="font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5"><i className="fa-solid fa-tag text-[#1dbf73]"></i> Fiverr Fee Calculator</span>
+                  <i className="fa-solid fa-arrow-right text-[#1dbf73]"></i>
+                </Link>
+                <Link
+                  href="/payoneer-fee-calculator"
+                  className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-orange-400 dark:hover:border-orange-500 hover:bg-orange-50/30 dark:hover:bg-orange-950/30 transition-all flex items-center justify-between text-xs"
+                >
+                  <span className="font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5"><i className="fa-solid fa-coins text-orange-500"></i> Payoneer Fee Calculator</span>
+                  <i className="fa-solid fa-arrow-right text-orange-500"></i>
+                </Link>
+                <Link
+                  href="/freelance-hourly-rate-calculator"
+                  className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-teal-400 dark:hover:border-teal-500 hover:bg-teal-50/30 dark:hover:bg-teal-950/30 transition-all flex items-center justify-between text-xs"
+                >
+                  <span className="font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5"><i className="fa-solid fa-business-time text-teal-500"></i> Freelance Hourly Rate</span>
+                  <i className="fa-solid fa-arrow-right text-teal-500"></i>
                 </Link>
                 <Link
                   href="/calculators/wise-to-pkr-fee-calculator"
                   className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-emerald-400 dark:hover:border-emerald-500 hover:bg-emerald-50/30 dark:hover:bg-emerald-950/30 transition-all flex items-center justify-between text-xs"
                 >
-                  <span className="font-bold text-slate-800 dark:text-slate-200">Wise Payout Calculator</span>
+                  <span className="font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5"><i className="fa-solid fa-money-bill-transfer text-emerald-500"></i> Wise Payout Calculator</span>
                   <i className="fa-solid fa-arrow-right text-emerald-500"></i>
                 </Link>
               </div>

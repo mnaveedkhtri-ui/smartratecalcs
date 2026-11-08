@@ -205,6 +205,12 @@ export default function HomePage() {
             <Link href="/fiverr-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-[#1dbf73] dark:text-[#1dbf73] bg-emerald-50/30 dark:bg-emerald-950/30 hover:bg-emerald-50 flex items-center gap-2.5">
               <i className="fa-solid fa-tag text-xs text-[#1dbf73]"></i> Fiverr Fee Calculator
             </Link>
+            <Link href="/payoneer-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-orange-700 dark:text-orange-300 bg-orange-50/50 dark:bg-orange-950/40 hover:bg-orange-50 flex items-center gap-2.5">
+              <i className="fa-solid fa-coins text-xs text-orange-600 dark:text-orange-400"></i> Payoneer Fee Calculator
+            </Link>
+            <Link href="/freelance-hourly-rate-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-teal-700 dark:text-teal-300 bg-teal-50/50 dark:bg-teal-950/40 hover:bg-teal-50 flex items-center gap-2.5">
+              <i className="fa-solid fa-business-time text-xs text-teal-600 dark:text-teal-400"></i> Freelance Hourly Rate Architect
+            </Link>
             <button onClick={() => navigateTo('matrix')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 flex items-center gap-2.5">
               <i className="fa-solid fa-table-cells text-xs text-slate-400"></i> Fee Matrix 2026
             </button>
@@ -264,6 +270,46 @@ export default function HomePage() {
                 <i className="fa-solid fa-user-clock"></i>
                 <span className="truncate">Rate Architect</span>
               </button>
+            </div>
+
+            {/* Flagship Engines Quick-Launcher */}
+            <div className="mt-8 max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-left">
+              <Link href="/upwork-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 flex items-center gap-1.5">
+                  <i className="fa-solid fa-briefcase text-emerald-500 text-[10px]"></i> Upwork
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">10% Cut &amp; Bid</div>
+              </Link>
+              <Link href="/fiverr-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-[#1dbf73] hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-[#1dbf73] flex items-center gap-1.5">
+                  <i className="fa-solid fa-tag text-[#1dbf73] text-[10px]"></i> Fiverr
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">20% Seller Cut</div>
+              </Link>
+              <Link href="/payoneer-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-orange-500 hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-orange-600 dark:group-hover:text-orange-400 flex items-center gap-1.5">
+                  <i className="fa-solid fa-coins text-orange-500 text-[10px]"></i> Payoneer
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">2% FX Spread</div>
+              </Link>
+              <Link href="/freelance-hourly-rate-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-teal-500 hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-teal-600 dark:group-hover:text-teal-400 flex items-center gap-1.5">
+                  <i className="fa-solid fa-business-time text-teal-500 text-[10px]"></i> Hourly Rate
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">Pricing Architect</div>
+              </Link>
+              <Link href="/paypal-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-blue-500 hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 flex items-center gap-1.5">
+                  <i className="fa-brands fa-paypal text-blue-500 text-[10px]"></i> PayPal
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">3.49% + $0.49</div>
+              </Link>
+              <Link href="/stripe-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-indigo-500 hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 flex items-center gap-1.5">
+                  <i className="fa-brands fa-stripe text-indigo-500 text-[10px]"></i> Stripe
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">2.9% + $0.30</div>
+              </Link>
             </div>
           </section>
 
@@ -1090,6 +1136,8 @@ export default function HomePage() {
                 <li><Link href="/stripe-fee-calculator" className="hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-stripe text-indigo-500 text-xs"></i> Stripe Fee Calculator</Link></li>
                 <li><Link href="/upwork-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-briefcase text-emerald-500 text-xs"></i> Upwork Fee Calculator</Link></li>
                 <li><Link href="/fiverr-fee-calculator" className="hover:text-[#1dbf73] dark:hover:text-[#1dbf73] font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-tag text-[#1dbf73] text-xs"></i> Fiverr Fee Calculator</Link></li>
+                <li><Link href="/payoneer-fee-calculator" className="hover:text-orange-600 dark:hover:text-orange-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-coins text-orange-500 text-xs"></i> Payoneer Fee Calculator</Link></li>
+                <li><Link href="/freelance-hourly-rate-calculator" className="hover:text-teal-600 dark:hover:text-teal-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-business-time text-teal-500 text-xs"></i> Freelance Rate Calculator</Link></li>
                 <li><Link href="/calculators/wise-vs-payoneer-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Wise vs Payoneer Fee Calculator</Link></li>
                 <li><Link href="/calculators/sadabiz-vs-payoneer-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">SadaBiz vs Payoneer Calculator</Link></li>
                 <li><Link href="/calculators/upwork-to-jazzcash-payout-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Upwork to JazzCash Net Payout</Link></li>

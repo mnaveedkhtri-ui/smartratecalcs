@@ -259,6 +259,65 @@ export default function UpworkCalculatorPage() {
                 ))}
               </div>
             </div>
+            {/* Ecosystem Cross-Links Mesh */}
+            <div className="pt-8 border-t border-slate-200 dark:border-slate-800">
+              <h2 className="font-heading font-bold text-lg text-slate-900 dark:text-white mb-4">
+                Explore More Freelance &amp; Payout Tools
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <Link
+                  href="/fiverr-fee-calculator"
+                  className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-[#1dbf73] transition-all group"
+                >
+                  <div className="text-[10px] font-bold text-[#1dbf73] uppercase font-mono mb-1">
+                    Freelance Marketplace
+                  </div>
+                  <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-[#1dbf73] transition-colors">
+                    Fiverr Fee Calculator &rarr;
+                  </div>
+                  <p className="text-[11px] text-slate-500 mt-1">20% cut and reverse gig pricing.</p>
+                </Link>
+
+                <Link
+                  href="/payoneer-fee-calculator"
+                  className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-orange-500 transition-all group"
+                >
+                  <div className="text-[10px] font-bold text-orange-600 dark:text-orange-400 uppercase font-mono mb-1">
+                    Payout Engine
+                  </div>
+                  <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-orange-600 transition-colors">
+                    Payoneer Fee Calculator &rarr;
+                  </div>
+                  <p className="text-[11px] text-slate-500 mt-1">Unmask 2% hidden bank FX spread and card costs.</p>
+                </Link>
+
+                <Link
+                  href="/freelance-hourly-rate-calculator"
+                  className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-teal-500 transition-all group"
+                >
+                  <div className="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase font-mono mb-1">
+                    Pricing Architect
+                  </div>
+                  <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 transition-colors">
+                    Hourly Rate Calculator &rarr;
+                  </div>
+                  <p className="text-[11px] text-slate-500 mt-1">Factor non-billable hours, taxes, overhead.</p>
+                </Link>
+
+                <Link
+                  href="/calculators/wise-vs-payoneer-fee-calculator"
+                  className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-all group"
+                >
+                  <div className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase font-mono mb-1">
+                    Comparative
+                  </div>
+                  <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors">
+                    Wise vs Payoneer Fee Calculator &rarr;
+                  </div>
+                  <p className="text-[11px] text-slate-500 mt-1">Compare net local bank conversion.</p>
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
       </div>

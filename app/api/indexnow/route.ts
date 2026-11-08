@@ -28,6 +28,8 @@ export async function GET(request: Request) {
     `${baseUrl}/stripe-fee-calculator`,
     `${baseUrl}/upwork-fee-calculator`,
     `${baseUrl}/fiverr-fee-calculator`,
+    `${baseUrl}/payoneer-fee-calculator`,
+    `${baseUrl}/freelance-hourly-rate-calculator`,
     `${baseUrl}/blog`,
     `${baseUrl}/about`,
     `${baseUrl}/privacy`,

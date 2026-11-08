@@ -266,6 +266,78 @@ export default function CalculatorPage({ params }: Props) {
           </div>
         </div>
 
+        {/* Core Flagship Calculators Mesh (PageRank Amplifier across 52 programmatic pages) */}
+        <div className="space-y-4 mb-12">
+          <div className="flex items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider font-mono">
+            <i className="fa-solid fa-layer-group text-emerald-600 dark:text-emerald-400"></i>
+            <span>Flagship Freelance &amp; Gateway Engines</span>
+          </div>
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
+            Essential Contractor Fee Calculators
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
+            <Link
+              href="/upwork-fee-calculator"
+              className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 hover:shadow-sm transition-all group flex flex-col justify-between"
+            >
+              <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 flex items-center gap-1.5">
+                <i className="fa-solid fa-briefcase text-emerald-500 text-xs"></i> Upwork
+              </div>
+              <div className="text-[10px] text-slate-400 dark:text-slate-500 font-mono mt-1">10% Cut &amp; Bid</div>
+            </Link>
+
+            <Link
+              href="/fiverr-fee-calculator"
+              className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-[#1dbf73] hover:shadow-sm transition-all group flex flex-col justify-between"
+            >
+              <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-[#1dbf73] flex items-center gap-1.5">
+                <i className="fa-solid fa-tag text-[#1dbf73] text-xs"></i> Fiverr
+              </div>
+              <div className="text-[10px] text-slate-400 dark:text-slate-500 font-mono mt-1">20% Seller Cut</div>
+            </Link>
+
+            <Link
+              href="/payoneer-fee-calculator"
+              className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-orange-500 hover:shadow-sm transition-all group flex flex-col justify-between"
+            >
+              <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 flex items-center gap-1.5">
+                <i className="fa-solid fa-coins text-orange-500 text-xs"></i> Payoneer
+              </div>
+              <div className="text-[10px] text-slate-400 dark:text-slate-500 font-mono mt-1">2% FX Spread</div>
+            </Link>
+
+            <Link
+              href="/freelance-hourly-rate-calculator"
+              className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-teal-500 hover:shadow-sm transition-all group flex flex-col justify-between"
+            >
+              <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 flex items-center gap-1.5">
+                <i className="fa-solid fa-business-time text-teal-500 text-xs"></i> Hourly Rate
+              </div>
+              <div className="text-[10px] text-slate-400 dark:text-slate-500 font-mono mt-1">Pricing Architect</div>
+            </Link>
+
+            <Link
+              href="/paypal-fee-calculator"
+              className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 hover:shadow-sm transition-all group flex flex-col justify-between"
+            >
+              <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 flex items-center gap-1.5">
+                <i className="fa-brands fa-paypal text-blue-500 text-xs"></i> PayPal
+              </div>
+              <div className="text-[10px] text-slate-400 dark:text-slate-500 font-mono mt-1">3.49% + $0.49</div>
+            </Link>
+
+            <Link
+              href="/stripe-fee-calculator"
+              className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 hover:shadow-sm transition-all group flex flex-col justify-between"
+            >
+              <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 flex items-center gap-1.5">
+                <i className="fa-brands fa-stripe text-indigo-500 text-xs"></i> Stripe
+              </div>
+              <div className="text-[10px] text-slate-400 dark:text-slate-500 font-mono mt-1">2.9% + $0.30</div>
+            </Link>
+          </div>
+        </div>
+
         {/* Related Calculators Internal Linking Grid (PageRank Distribution) */}
         {relatedCalculators.length > 0 && (
           <div className="space-y-4 mb-12">
