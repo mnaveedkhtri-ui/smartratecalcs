@@ -31,6 +31,43 @@ export interface ProgrammaticCalculator {
 
 export const PROGRAMMATIC_CALCULATORS: ProgrammaticCalculator[] = [
   {
+    "slug": "wise-vs-payoneer-fee-calculator",
+    "title": "Wise vs Payoneer Fee & Net Payout Comparison Calculator (2026)",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "PKR",
+    "defaultAmount": 1000,
+    "fixedFee": 0,
+    "percentFee": 0.0048,
+    "exchangeRateSpread": 0.0045,
+    "baseExchangeRate": 278.4,
+    "description": "Compare Wise vs Payoneer transfer fees, mid-market exchange rates, and net local bank payouts for global freelancers.",
+    "metaTitle": "Wise vs Payoneer Calculator 2026 | Global Freelancer Fee Comparison",
+    "metaDesc": "Compare Wise and Payoneer fees side-by-side. Calculate exact conversion spreads, bank withdrawal costs, and net payouts for international client payments.",
+    "primaryKeyword": "wise vs payoneer fee calculator",
+    "quickAnswer": "For sending and receiving international client payments, Wise charges a transparent mid-market exchange rate with ~0.45% transfer fee, saving freelancers between 1.5% and 2.5% compared to Payoneer's 2% currency conversion spread.",
+    "formula": "Wise Net = (USD * 0.9952) * 278.4 | Payoneer Net = (USD - $1.50) * (278.4 * 0.98)",
+    "recommendation": {
+      "platform": "Wise",
+      "savingPct": "1.8%",
+      "ctaText": "Compare Detailed Breakdown",
+      "badge": "True Mid-Market Rate"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q188289"
+    ],
+    "faqs": [
+      {
+        "q": "Which is cheaper for freelancers: Wise or Payoneer?",
+        "a": "Wise is generally cheaper for direct client payments and bank transfers because it uses the real mid-market exchange rate without a hidden spread. Payoneer charges a 2% spread on currency conversion plus potential withdrawal fees."
+      },
+      {
+        "q": "Can I use Wise to withdraw from Upwork and Fiverr?",
+        "a": "Yes, you can link your Wise US routing and account numbers to Upwork and Fiverr as direct ACH bank withdrawals to save on currency conversion fees."
+      }
+    ]
+  },
+  {
     "slug": "wise-to-pkr-fee-calculator",
     "title": "Wise to PKR Exchange Rate & Real Fee Calculator (2026)",
     "category": "payout",

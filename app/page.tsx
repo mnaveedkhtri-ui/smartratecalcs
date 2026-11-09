@@ -1139,7 +1139,7 @@ export default function HomePage() {
                 <li><Link href="/payoneer-fee-calculator" className="hover:text-orange-600 dark:hover:text-orange-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-coins text-orange-500 text-xs"></i> Payoneer Fee Calculator</Link></li>
                 <li><Link href="/freelance-hourly-rate-calculator" className="hover:text-teal-600 dark:hover:text-teal-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-business-time text-teal-500 text-xs"></i> Freelance Rate Calculator</Link></li>
                 <li><Link href="/calculators/wise-vs-payoneer-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Wise vs Payoneer Fee Calculator</Link></li>
-                <li><Link href="/calculators/sadabiz-vs-payoneer-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">SadaBiz vs Payoneer Calculator</Link></li>
+                <li><Link href="/calculators/sadabiz-vs-payoneer-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">SadaBiz vs Payoneer Fee Calculator</Link></li>
                 <li><Link href="/calculators/upwork-to-jazzcash-payout-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Upwork to JazzCash Net Payout</Link></li>
                 <li><Link href="/calculators/deel-to-wise-payout-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Deel to Wise Payout Calculator</Link></li>
                 <li><Link href="/calculators/binance-p2p-usdt-to-pkr-spread-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Binance P2P USDT to PKR</Link></li>
@@ -1149,9 +1149,9 @@ export default function HomePage() {
             <div>
               <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white mb-4">Top Corridors</h4>
               <ul className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
-                <li><Link href="/calculators/wise-to-meezan-bank-transfer-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">USD to PKR (Meezan Bank Raast)</Link></li>
-                <li><Link href="/calculators/wise-to-inr-transfer-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">USD to INR (India UPI / NEFT)</Link></li>
-                <li><Link href="/calculators/wise-to-bdt-transfer-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">USD to BDT (Bangladesh BEFTN)</Link></li>
+                <li><Link href="/calculators/wise-to-meezan-bank-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">USD to PKR (Meezan Bank Raast)</Link></li>
+                <li><Link href="/calculators/wise-to-inr-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">USD to INR (India UPI / NEFT)</Link></li>
+                <li><Link href="/calculators/wise-to-bdt-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">USD to BDT (Bangladesh BEFTN)</Link></li>
                 <li><Link href="/calculators/payoneer-to-gcash-philippines-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">USD to PHP (GCash Philippines)</Link></li>
                 <li><Link href="/calculators/paypal-to-mpesa-kenya-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">USD to KES (M-Pesa Kenya)</Link></li>
                 <li><Link href="/calculators/crypto-usdt-to-inr-tds-tax-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Crypto USDT to INR (1% TDS Tax)</Link></li>
