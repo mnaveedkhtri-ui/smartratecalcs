@@ -4,16 +4,16 @@ import PayoneerCalculatorWidget from '../../components/PayoneerCalculatorWidget'
 import ThemeToggle from '../../components/ThemeToggle';
 
 export const metadata: Metadata = {
-  title: 'Payoneer Fee Calculator (2026) | Bank Withdrawal FX Spread & Card Fees',
+  title: 'Payoneer USD Withdrawal Fee & Currency Conversion Calculator (2026)',
   description:
-    'Free 2026 Payoneer fee calculator. Calculate exact deductions on Payoneer receiving fees (credit card 3%, ACH 1%), local bank withdrawal spreads (2%), ATM fees ($3.15), and reverse invoice pricing.',
+    'Free 2026 Payoneer USD withdrawal fee calculator. Calculate exact deductions on Payoneer receiving fees (credit card 3%, ACH 1%), local bank 2% currency conversion FX spreads, ATM fees ($3.15), and net payouts.',
   alternates: {
     canonical: 'https://www.smartratecalcs.com/payoneer-fee-calculator',
   },
   openGraph: {
-    title: 'Payoneer Fee Calculator 2026 | Local Bank FX Spread & Receiving Tool',
+    title: 'Payoneer USD Withdrawal Fee & Currency Conversion Calculator (2026)',
     description:
-      'Unmask hidden exchange rate markups and receiving costs on Payoneer payouts to Pakistan (PKR), India (INR), Bangladesh (BDT), Philippines (PHP), and Europe.',
+      'Unmask hidden exchange rate markups and USD withdrawal costs on Payoneer payouts to Pakistan (PKR), India (INR), Bangladesh (BDT), Philippines (PHP), and Europe.',
     url: 'https://www.smartratecalcs.com/payoneer-fee-calculator',
     type: 'website',
     images: [
@@ -41,6 +41,14 @@ export default function PayoneerCalculatorPage() {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the Payoneer USD withdrawal fee and currency conversion fee in 2026?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The Payoneer USD withdrawal fee consists of a flat $1.50 USD transfer charge per withdrawal to your local bank account, plus an embedded 2.0% currency conversion fee (exchange rate spread) below the mid-market rate. Withdrawing $1,000 USD incurs $1.50 flat plus approximately $20.00 USD in currency spread, leaving roughly $978.50 USD net value delivered in local currency (PKR, INR, BDT, PHP).',
+        },
+      },
       {
         '@type': 'Question',
         name: 'What are Payoneer fees for withdrawing to a local bank in 2026?',

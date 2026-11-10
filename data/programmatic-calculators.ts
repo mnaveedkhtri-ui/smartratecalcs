@@ -487,7 +487,7 @@ export const PROGRAMMATIC_CALCULATORS: ProgrammaticCalculator[] = [
   },
   {
     "slug": "remitly-to-pakistan-fee-calculator",
-    "title": "Remitly to Pakistan USD to PKR Fee & Exchange Rate Calculator",
+    "title": "Remitly Pakistan Rate Today: USD to PKR Fee & Exchange Rate Calculator (2026)",
     "category": "payout",
     "sourceCurrency": "USD",
     "targetCurrency": "PKR",
@@ -496,11 +496,11 @@ export const PROGRAMMATIC_CALCULATORS: ProgrammaticCalculator[] = [
     "percentFee": 0,
     "exchangeRateSpread": 0.015,
     "baseExchangeRate": 278.4,
-    "description": "Calculate exact PKR delivered to Pakistan bank accounts or cash pickup via Remitly Economy vs Express.",
-    "metaTitle": "Remitly to Pakistan Fee & Exchange Rate Calculator (2026)",
-    "metaDesc": "Compare Remitly promotional vs everyday exchange rates to Pakistan. Uncover transfer fees and bank deposit arrival times.",
-    "primaryKeyword": "remitly to pakistan fee calculator",
-    "quickAnswer": "Remitly offers zero transfer fees on amounts of $1,000+ for Economy transfers, but applies a 1.2% to 1.8% currency spread below mid-market rate. A $1,000 USD transfer delivers approx Rs. 273,800 PKR.",
+    "description": "Calculate exact PKR delivered to Pakistan bank accounts, JazzCash, or Easypaisa via Remitly Economy vs Express rates today.",
+    "metaTitle": "Remitly Pakistan Rate Today (2026) | USD to PKR Fee & Rate Calculator",
+    "metaDesc": "Check live Remitly Pakistan exchange rates today (USD to PKR). Calculate exact PKR received in bank accounts, JazzCash, or Easypaisa with zero-fee thresholds.",
+    "primaryKeyword": "remitly pakistan rate",
+    "quickAnswer": "Remitly offers zero transfer fees on amounts of $1,000+ for Economy transfers, with exchange rates typically 1.2% to 1.8% below mid-market. A $1,000 USD transfer delivers approximately Rs. 273,800 to Rs. 275,000 PKR directly into Pakistani bank accounts or JazzCash.",
     "formula": "Net PKR = (USD - Fee) * (278.4 * 0.985)",
     "recommendation": {
       "platform": "Wise",
@@ -513,6 +513,10 @@ export const PROGRAMMATIC_CALCULATORS: ProgrammaticCalculator[] = [
       "https://www.wikidata.org/wiki/Q188289"
     ],
     "faqs": [
+      {
+        "q": "What is the Remitly Pakistan rate today for USD to PKR?",
+        "a": "Remitly everyday exchange rates for Pakistan typically trade 1.2% to 1.8% below the interbank mid-market rate. Transfers of $1,000+ USD qualify for zero transfer fees on the Economy tier with direct deposit to Pakistani banks, JazzCash, or Easypaisa."
+      },
       {
         "q": "Is Remitly free to send money to Pakistan?",
         "a": "Economy transfers over $1,000 are fee-free, but a small FX margin is included in the conversion rate."
