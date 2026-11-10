@@ -215,6 +215,27 @@ export default function PayoneerCalculatorPage() {
           </div>
         </section>
 
+        {/* Hire Naveed Services Callout */}
+        <div className="mb-12 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white border border-indigo-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-2xl bg-orange-500/20 text-orange-400 flex items-center justify-center font-bold text-xl border border-orange-500/40 shrink-0">
+              <i className="fa-solid fa-code"></i>
+            </div>
+            <div>
+              <h3 className="font-bold text-base sm:text-lg text-white">Need Custom Fintech, Python, or API Automation?</h3>
+              <p className="text-xs sm:text-sm text-slate-300">Automate your store, invoicing, payments, or data scrapers with custom production engineering.</p>
+            </div>
+          </div>
+          <a
+            href="https://naveed-portfolio-kappa.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs sm:text-sm font-bold transition-all shadow-md shrink-0 flex items-center gap-2"
+          >
+            Hire Muhammad Naveed &rarr;
+          </a>
+        </div>
+
         {/* Complete 2026 Payoneer Fee Matrix Table */}
         <section className="mb-12">
           <div className="flex items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider font-mono mb-2">
