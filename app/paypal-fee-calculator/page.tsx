@@ -66,6 +66,14 @@ export default function PayPalCalculatorPage() {
       },
       {
         '@type': 'Question',
+        name: 'What are PayPal merchant fees in the UK and Europe?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'In the UK, PayPal charges 2.90% + 30p for domestic commercial transactions. Cross-border fees to the EU add 1.29%, while international payments outside Europe incur an extra 1.99% fee plus currency conversion spreads.',
+        },
+      },
+      {
+        '@type': 'Question',
         name: 'Who pays the PayPal transaction fee, buyer or seller?',
         acceptedAnswer: {
           '@type': 'Answer',
@@ -152,6 +160,29 @@ export default function PayPalCalculatorPage() {
         {/* Calculator Widget */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
           <PayPalCalculatorWidget isStandalone={true} />
+        </section>
+
+        {/* Hire Naveed Systems Engineering Callout */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          <div className="p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white border border-blue-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xl border border-blue-500/40 shrink-0">
+                <i className="fa-brands fa-paypal"></i>
+              </div>
+              <div>
+                <h3 className="font-bold text-base sm:text-lg text-white">Need Custom Payment Gateway, Python, or API Automations?</h3>
+                <p className="text-xs sm:text-sm text-slate-300">Automate your invoicing, multi-currency payouts, or custom e-commerce checkout pipelines.</p>
+              </div>
+            </div>
+            <a
+              href="https://naveed-portfolio-kappa.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-bold transition-all shadow-md shrink-0 flex items-center gap-2"
+            >
+              Hire Muhammad Naveed &rarr;
+            </a>
+          </div>
         </section>
 
         {/* Educational Content & Fee Reference Table */}
