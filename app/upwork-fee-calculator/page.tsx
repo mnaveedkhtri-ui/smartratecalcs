@@ -157,6 +157,29 @@ export default function UpworkCalculatorPage() {
           <UpworkCalculatorWidget isStandalone={true} />
         </section>
 
+        {/* Hire Naveed Systems Engineering Callout */}
+        <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          <div className="p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white border border-indigo-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xl border border-emerald-500/40 shrink-0">
+                <i className="fa-solid fa-code"></i>
+              </div>
+              <div>
+                <h3 className="font-bold text-base sm:text-lg text-white">Need Custom Python, API Automations, or Full-Stack Systems?</h3>
+                <p className="text-xs sm:text-sm text-slate-300">Automate client workflows, scraper pipelines, or custom web apps with senior production engineering.</p>
+              </div>
+            </div>
+            <a
+              href="https://naveed-portfolio-kappa.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold transition-all shadow-md shrink-0 flex items-center gap-2"
+            >
+              Hire Muhammad Naveed &rarr;
+            </a>
+          </div>
+        </section>
+
         {/* Educational Content & Fee Reference Table */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <div className="bg-white dark:bg-slate-900/90 rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm space-y-8">
