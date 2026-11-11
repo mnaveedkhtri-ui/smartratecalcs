@@ -32,6 +32,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/square-fee-calculator`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/1099-tax-calculator`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/upwork-fee-calculator`,
       lastModified: new Date(),
       changeFrequency: 'daily',

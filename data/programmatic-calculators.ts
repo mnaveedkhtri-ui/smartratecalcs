@@ -2530,5 +2530,115 @@ export const PROGRAMMATIC_CALCULATORS: ProgrammaticCalculator[] = [
         "a": "Yes, customer deposits in Elevate Pay are held at Bangor Savings Bank (Member FDIC) insured up to $250,000."
       }
     ]
+  },
+  {
+    "slug": "stripe-vs-square-fee-calculator",
+    "title": "Stripe vs Square Fee & Net Payout Comparison Calculator (2026)",
+    "category": "ecommerce",
+    "sourceCurrency": "USD",
+    "targetCurrency": "USD",
+    "defaultAmount": 1000,
+    "fixedFee": 0.30,
+    "percentFee": 0.029,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 1.0,
+    "description": "Compare processing fees between Stripe and Square for online stores, in-person POS sales, and invoice payments.",
+    "metaTitle": "Stripe vs Square Calculator 2026 | Merchant Processing Comparison",
+    "metaDesc": "Compare Stripe vs Square transaction fees. See which processor saves your business more on in-person card swipes vs online eCommerce checkout.",
+    "primaryKeyword": "stripe vs square fee calculator",
+    "quickAnswer": "Square is significantly cheaper for in-person retail sales (2.6% + $0.10 vs Stripe 2.7% + $0.05). For online eCommerce checkout, both charge an identical 2.9% + $0.30, but Stripe provides superior developer APIs and international currency support.",
+    "formula": "Square In-Person = (Amount * 0.974) - $0.10 | Stripe Online = (Amount * 0.971) - $0.30",
+    "recommendation": {
+      "platform": "Square (In-Person) / Stripe (Online)",
+      "savingPct": "0.3%",
+      "ctaText": "Compare Detailed Processing Breakdown",
+      "badge": "US Merchant Standard"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q7624135",
+      "https://www.wikidata.org/wiki/Q110168345"
+    ],
+    "faqs": [
+      {
+        "q": "Is Square or Stripe cheaper for small business in 2026?",
+        "a": "If you sell in-person at a physical shop or market, Square is cheaper at 2.6% + $0.10. If you operate exclusively online or sell internationally, Stripe provides better developer tooling and multi-currency billing at 2.9% + $0.30."
+      },
+      {
+        "q": "Do Square or Stripe have monthly fees?",
+        "a": "Neither Square nor Stripe charges monthly account maintenance fees on their standard plans. You only pay processing fees when making a transaction."
+      }
+    ]
+  },
+  {
+    "slug": "wise-vs-revolut-fee-calculator",
+    "title": "Wise vs Revolut Transfer Fee & Exchange Rate Calculator (2026)",
+    "category": "payout",
+    "sourceCurrency": "GBP",
+    "targetCurrency": "EUR",
+    "defaultAmount": 1000,
+    "fixedFee": 0,
+    "percentFee": 0.0045,
+    "exchangeRateSpread": 0.0035,
+    "baseExchangeRate": 1.18,
+    "description": "Compare Wise vs Revolut international transfer fees, weekend currency markups, and net bank take-home in UK Pounds and Euros.",
+    "metaTitle": "Wise vs Revolut Calculator 2026 | UK & European Money Transfer",
+    "metaDesc": "Compare Wise and Revolut exchange rates and fees. Check weekday vs weekend markup differences and see exact take-home in GBP and EUR.",
+    "primaryKeyword": "wise vs revolut fee calculator",
+    "quickAnswer": "During standard weekday market hours, Revolut is often slightly cheaper for transfers under £1,000. However, on weekends Revolut adds a 1% fee, making Wise significantly cheaper and more transparent with its consistent ~0.45% mid-market pricing.",
+    "formula": "Wise Net = (GBP * (1 - 0.0045)) * 1.18 | Revolut Net = (GBP - WeekendMarkup) * 1.18",
+    "recommendation": {
+      "platform": "Wise",
+      "savingPct": "1.0%",
+      "ctaText": "Transfer with True Mid-Market Rate",
+      "badge": "No Weekend FX Markup"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q188289",
+      "https://www.wikidata.org/wiki/Q20744795"
+    ],
+    "faqs": [
+      {
+        "q": "Does Revolut charge extra on weekends?",
+        "a": "Yes. Revolut applies a 1.0% fee on foreign exchange transactions executed on weekends (Friday 5pm to Sunday 6pm NY time) when global forex markets are closed. Wise charges the same low fee 24/7."
+      },
+      {
+        "q": "Which is better for international business, Wise or Revolut?",
+        "a": "Wise is better for transparent international client invoicing with dedicated local bank details in 9 currencies. Revolut is superior for day-to-day corporate spending cards and automated crypto/stock investing."
+      }
+    ]
+  },
+  {
+    "slug": "shopify-payments-vs-stripe-fee-calculator",
+    "title": "Shopify Payments vs Stripe Fee & Merchant Margin Calculator (2026)",
+    "category": "ecommerce",
+    "sourceCurrency": "USD",
+    "targetCurrency": "USD",
+    "defaultAmount": 1000,
+    "fixedFee": 0.30,
+    "percentFee": 0.029,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 1.0,
+    "description": "Compare card processing costs between Shopify Payments and standalone Stripe for US & UK e-commerce stores.",
+    "metaTitle": "Shopify Payments vs Stripe Calculator 2026 | E-Commerce Fees",
+    "metaDesc": "Compare Shopify Payments against third-party Stripe. Avoid Shopify's 2.0% third-party gateway penalty fee and calculate exact net checkout margins.",
+    "primaryKeyword": "shopify payments vs stripe fee calculator",
+    "quickAnswer": "Shopify Payments is powered by Stripe under the hood. If you use standalone Stripe on Shopify, Shopify penalizes you with an extra 0.5% to 2.0% third-party transaction fee. Using native Shopify Payments saves you that fee completely.",
+    "formula": "Shopify Payments Net = (Sale * (1 - 0.029)) - $0.30 | Standalone Stripe Net = (Sale * (1 - 0.029 - 0.020)) - $0.30",
+    "recommendation": {
+      "platform": "Shopify Payments",
+      "savingPct": "2.0%",
+      "ctaText": "Enable Native Shopify Payments",
+      "badge": "Zero 3rd-Party Fee"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q7501141",
+      "https://www.wikidata.org/wiki/Q7624135"
+    ],
+    "faqs": [
+      {
+        "q": "Why does Shopify charge a fee to use Stripe?",
+        "a": "Shopify charges an additional 2.0% (Basic plan), 1.0% (Shopify plan), or 0.5% (Advanced plan) fee when merchants use third-party payment gateways like standalone Stripe instead of native Shopify Payments."
+      }
+    ]
   }
 ];

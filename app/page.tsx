@@ -273,7 +273,7 @@ export default function HomePage() {
             </div>
 
             {/* Flagship Engines Quick-Launcher */}
-            <div className="mt-8 max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-left">
+            <div className="mt-8 max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 text-left">
               <Link href="/upwork-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 hover:shadow-sm transition-all group">
                 <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 flex items-center gap-1.5">
                   <i className="fa-solid fa-briefcase text-emerald-500 text-[10px]"></i> Upwork
@@ -309,6 +309,18 @@ export default function HomePage() {
                   <i className="fa-brands fa-stripe text-indigo-500 text-[10px]"></i> Stripe
                 </div>
                 <div className="text-[9px] text-slate-400 font-mono mt-0.5">2.9% + $0.30</div>
+              </Link>
+              <Link href="/square-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-slate-900 dark:hover:border-white hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-slate-900 dark:group-hover:text-white flex items-center gap-1.5">
+                  <i className="fa-solid fa-square text-slate-700 dark:text-slate-300 text-[10px]"></i> Square POS
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">2.6% + $0.10</div>
+              </Link>
+              <Link href="/1099-tax-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-emerald-600 hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 flex items-center gap-1.5">
+                  <i className="fa-solid fa-file-invoice-dollar text-emerald-500 text-[10px]"></i> US 1099 Tax
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">15.3% SE Tax</div>
               </Link>
             </div>
           </section>
