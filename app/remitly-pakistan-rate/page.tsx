@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { PROGRAMMATIC_CALCULATORS } from '../../data/programmatic-calculators';
 import ProgrammaticCalculatorWidget from '../../components/ProgrammaticCalculatorWidget';
 import ThemeToggle from '../../components/ThemeToggle';
+import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
   title: 'Remitly Pakistan Rate Today (2026) | USD to PKR Fee & Exchange Rate Calculator',
@@ -213,6 +214,7 @@ export default function RemitlyPakistanRatePage() {
           </a>
         </div>
       </main>
+      <SiteLegalFooter />
     </div>
   );
 }

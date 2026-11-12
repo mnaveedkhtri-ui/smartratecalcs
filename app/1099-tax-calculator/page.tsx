@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Tax1099CalculatorWidget from '../../components/Tax1099CalculatorWidget';
 import ThemeToggle from '../../components/ThemeToggle';
+import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
   title: '1099 Tax Calculator (2026) | Self-Employment & Quarterly Tax Tool',
@@ -242,6 +243,7 @@ export default function Tax1099Page() {
             </div>
           </div>
         </section>
+        <SiteLegalFooter />
       </div>
     </>
   );

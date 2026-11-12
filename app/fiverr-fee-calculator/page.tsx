@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import FiverrCalculatorWidget from '../../components/FiverrCalculatorWidget';
 import ThemeToggle from '../../components/ThemeToggle';
+import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
   title: 'Fiverr Fee Calculator (2026) | Instant 20% Seller Cut & Reverse Pricing Tool',
@@ -320,6 +321,7 @@ export default function FiverrCalculatorPage() {
             </div>
           </div>
         </section>
+        <SiteLegalFooter />
       </div>
     </>
   );

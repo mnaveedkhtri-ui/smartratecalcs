@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import UpworkCalculatorWidget from '../../components/UpworkCalculatorWidget';
 import ThemeToggle from '../../components/ThemeToggle';
+import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
   title: 'Upwork Fee Calculator (2026) | Instant 10% Service Fee & Reverse Bid Tool',
@@ -343,6 +344,7 @@ export default function UpworkCalculatorPage() {
             </div>
           </div>
         </section>
+        <SiteLegalFooter />
       </div>
     </>
   );

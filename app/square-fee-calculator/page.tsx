@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import SquareCalculatorWidget from '../../components/SquareCalculatorWidget';
 import ThemeToggle from '../../components/ThemeToggle';
+import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
   title: 'Square Fee Calculator (2026) | In-Person POS & Online Merchant Rates',
@@ -253,6 +254,7 @@ export default function SquareCalculatorPage() {
             </div>
           </div>
         </section>
+        <SiteLegalFooter />
       </div>
     </>
   );

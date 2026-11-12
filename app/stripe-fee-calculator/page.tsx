@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import StripeCalculatorWidget from '../../components/StripeCalculatorWidget';
 import ThemeToggle from '../../components/ThemeToggle';
+import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
   title: 'Stripe Fee Calculator 2026 | Card Processing & Net Payout',
@@ -307,6 +308,7 @@ export default function StripeCalculatorPage() {
             </div>
           </div>
         </section>
+        <SiteLegalFooter />
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import PayPalCalculatorWidget from '../../components/PayPalCalculatorWidget';
 import ThemeToggle from '../../components/ThemeToggle';
+import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
   title: 'PayPal Fee Calculator (2026) | Instant Seller, Invoicing & International Fees',
@@ -306,6 +307,7 @@ export default function PayPalCalculatorPage() {
             </div>
           </div>
         </section>
+        <SiteLegalFooter />
       </div>
     </>
   );

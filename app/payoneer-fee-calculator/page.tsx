@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import PayoneerCalculatorWidget from '../../components/PayoneerCalculatorWidget';
 import ThemeToggle from '../../components/ThemeToggle';
+import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
   title: 'Payoneer USD Withdrawal Fee & Currency Conversion Calculator (2026)',
@@ -420,11 +421,7 @@ export default function PayoneerCalculatorPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400">
-        &copy; 2026 SmartRateCalcs. Built with mathematical precision by{' '}
-        <strong className="text-slate-700 dark:text-slate-200">Muhammad Naveed</strong>. All rights reserved.
-      </footer>
+      <SiteLegalFooter />
     </div>
   );
 }
