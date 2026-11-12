@@ -88,7 +88,9 @@ export default function BlogPostPage({ params }: Props) {
         url: 'https://www.smartratecalcs.com/icon.png',
       },
     },
-    image: post.slug === 'upwork-pakistan-lowest-withdrawal-fee-guide'
+    image: post.images && post.images.length > 0
+      ? post.images
+      : post.slug === 'upwork-pakistan-lowest-withdrawal-fee-guide'
       ? [
           `https://www.smartratecalcs.com/blog/${post.slug}.png`,
           'https://www.smartratecalcs.com/blog/images/upwork-withdrawal-routes-flowchart.png',
@@ -101,6 +103,26 @@ export default function BlogPostPage({ params }: Props) {
           'https://www.smartratecalcs.com/blog/images/pseb-registration-workflow-diagram.png',
           'https://www.smartratecalcs.com/blog/images/digital-prc-compliance-checklist.png',
         ],
+    inLanguage: 'en-US',
+    isAccessibleForFree: true,
+    keywords: [post.primaryKeyword, ...post.secondaryKeywords].join(', '),
+    ...(post.wikidataEntities && post.wikidataEntities.length > 0
+      ? {
+          about: post.wikidataEntities.map((uri) => ({
+            '@type': 'Thing',
+            sameAs: uri,
+          })),
+        }
+      : {}),
+    ...(post.externalSources && post.externalSources.length > 0
+      ? {
+          citation: post.externalSources.map((src) => ({
+            '@type': 'CreativeWork',
+            name: src.name,
+            url: src.url,
+          })),
+        }
+      : {}),
   };
 
   // 2. BreadcrumbList Schema
@@ -253,6 +275,180 @@ export default function BlogPostPage({ params }: Props) {
         </section>
 
         {/* HIGH-INTENT INTERNAL CALCULATOR LINKING CLUSTER */}
+        {post.slug === 'credit-card-surcharge-formula-invoice-square-fees-guide' && (
+          <div className="mb-10 p-6 rounded-3xl bg-slate-900 border border-slate-800 text-white shadow-xl">
+            <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-400">
+                  US Merchant Surcharge &amp; Reverse Fee Tools (2026)
+                </span>
+              </div>
+              <span className="text-[11px] text-slate-400 font-mono">Instant USD Math</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link
+                href="/square-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>Square Reverse Fee Calculator</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Compute exact invoice gross-up for 3.3% + $0.30 invoices and 2.6% + $0.10 POS swipes.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  Reverse Gross-Up Mode &bull; US 2026
+                </div>
+              </Link>
+
+              <Link
+                href="/calculators/stripe-vs-square-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>Stripe vs Square Fee Comparison</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Compare 2.9% + $0.30 online checkout vs 3.3% + $0.30 Square Invoices side-by-side.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  Merchant Margin Audit &bull; Free
+                </div>
+              </Link>
+
+              <Link
+                href="/stripe-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>Stripe Invoice Fee Calculator</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Calculate exact card processing deductions and international card markups on Stripe.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  Domestic &amp; International &bull; 2026
+                </div>
+              </Link>
+
+              <Link
+                href="/paypal-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>PayPal Business Fee Calculator</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Audit PayPal 3.49% + $0.49 commercial invoicing cost vs Square and ACH transfers.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  Zero Shortfall Formula &bull; Live
+                </div>
+              </Link>
+            </div>
+          </div>
+        )}
+
+        {post.slug === '1099-safe-harbor-rule-quarterly-estimated-taxes-guide' && (
+          <div className="mb-10 p-6 rounded-3xl bg-slate-900 border border-slate-800 text-white shadow-xl">
+            <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-400">
+                  US 1099 Contractor Tax &amp; Rate Calculators (2026 IRS)
+                </span>
+              </div>
+              <span className="text-[11px] text-slate-400 font-mono">Form 1040-ES &amp; Schedule C</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link
+                href="/1099-tax-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>1099 Tax &amp; Quarterly Voucher Calculator</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Calculate 15.3% SE tax (92.35% net profit), Social Security cap, and Form 1040-ES payments.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  IRS Safe Harbor Ready &bull; 2026
+                </div>
+              </Link>
+
+              <Link
+                href="/freelance-hourly-rate-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>1099 vs W-2 Hourly Rate Calculator</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Convert your target W-2 salary into an exact billable 1099 hourly consulting rate.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  Tax &amp; Overhead Adjusted &bull; Free
+                </div>
+              </Link>
+
+              <Link
+                href="/stripe-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>Stripe Client Invoice Deductions</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Track merchant processing fees eligible as 100% deductible Schedule C business expenses.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  Schedule C Write-Offs &bull; Live
+                </div>
+              </Link>
+
+              <Link
+                href="/calculators/wise-vs-revolut-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>Wise vs Revolut Business Transfers</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Eliminate FX markups when receiving cross-border USD, GBP, or EUR contractor retainers.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  International Contractors &bull; 2026
+                </div>
+              </Link>
+            </div>
+          </div>
+        )}
+
         {post.slug === 'upwork-pakistan-lowest-withdrawal-fee-guide' && (
           <div className="mb-10 p-6 rounded-3xl bg-slate-900 border border-slate-800 text-white shadow-xl">
             <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
@@ -375,7 +571,11 @@ export default function BlogPostPage({ params }: Props) {
             </p>
           </div>
           <Link
-            href={`/calculators/${post.relatedCalculatorSlug}`}
+            href={
+              post.relatedCalculatorSlug.startsWith('/')
+                ? post.relatedCalculatorSlug
+                : `/calculators/${post.relatedCalculatorSlug}`
+            }
             className="px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs transition-all shadow-md whitespace-nowrap"
           >
             Open Dedicated Calculator &rarr;

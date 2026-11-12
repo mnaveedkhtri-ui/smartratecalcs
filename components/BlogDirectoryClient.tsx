@@ -42,7 +42,7 @@ export default function BlogDirectoryClient({ posts }: Props) {
             </span>
             <input
               type="text"
-              placeholder="Search guides (e.g. Upwork, Meezan, FBR tax, SadaBiz)..."
+              placeholder="Search guides (e.g. Credit Card Surcharge, 1099 Taxes, Square, Stripe)..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-10 pr-4 py-3 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-emerald-500 focus:bg-white dark:focus:bg-slate-800 transition-all"
