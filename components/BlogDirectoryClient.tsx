@@ -175,9 +175,9 @@ export default function BlogDirectoryClient({ posts }: Props) {
       </div>
 
       {filteredPosts.length === 0 && (
-        <div className="p-12 text-center bg-white rounded-3xl border border-slate-200 mb-16">
-          <p className="text-sm text-slate-500">
-            No guides found matching &quot;{search}&quot;. Try searching for &quot;Upwork&quot;, &quot;Meezan&quot;, or &quot;Tax&quot;.
+        <div className="p-12 text-center bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 mb-16">
+          <p className="text-sm text-slate-500 dark:text-slate-400">
+            No guides found matching &quot;{search}&quot;. Try searching for &quot;Surcharge&quot;, &quot;1099&quot;, &quot;Upwork&quot;, or &quot;Tax&quot;.
           </p>
         </div>
       )}

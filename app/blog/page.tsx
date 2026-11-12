@@ -99,8 +99,9 @@ export default function BlogIndexPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200 py-8 text-center text-xs text-slate-500">
-        &copy; 2026 SmartRateCalcs. Built with mathematical precision by <strong>Muhammad Naveed</strong>. All rights reserved.
+      <footer className="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400">
+        &copy; 2026 SmartRateCalcs. Built with mathematical precision by{' '}
+        <strong className="text-slate-700 dark:text-slate-200">Muhammad Naveed</strong>. All rights reserved.
       </footer>
     </div>
   );

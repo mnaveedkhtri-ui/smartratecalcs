@@ -207,16 +207,16 @@ export default function BlogPostPage({ params }: Props) {
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 py-10">
         {/* Breadcrumb Trail */}
-        <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6 font-mono">
-          <Link href="/" className="hover:text-emerald-600">
+        <nav className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-6 font-mono">
+          <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400">
             Home
           </Link>
           <span>/</span>
-          <Link href="/blog" className="hover:text-emerald-600">
+          <Link href="/blog" className="hover:text-emerald-600 dark:hover:text-emerald-400">
             Guides
           </Link>
           <span>/</span>
-          <span className="text-slate-800 font-bold truncate max-w-[200px] sm:max-w-none">
+          <span className="text-slate-800 dark:text-slate-200 font-bold truncate max-w-[200px] sm:max-w-none">
             {post.category}
           </span>
         </nav>
@@ -224,31 +224,31 @@ export default function BlogPostPage({ params }: Props) {
         {/* Title & Metadata */}
         <div className="mb-8">
           <div className="flex flex-wrap items-center gap-2 mb-3">
-            <span className="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold font-mono">
+            <span className="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 text-emerald-800 dark:text-emerald-300 text-xs font-bold font-mono">
               {post.category}
             </span>
-            <span className="text-xs text-slate-400 font-mono">&bull;</span>
-            <span className="text-xs text-slate-500 font-mono">{post.readTime}</span>
-            <span className="text-xs text-slate-400 font-mono">&bull;</span>
-            <span className="text-xs text-slate-500 font-mono">Verified Nov 2026</span>
+            <span className="text-xs text-slate-400 dark:text-slate-500 font-mono">&bull;</span>
+            <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">{post.readTime}</span>
+            <span className="text-xs text-slate-400 dark:text-slate-500 font-mono">&bull;</span>
+            <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">Verified Nov 2026</span>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+          <h1 className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight leading-tight mb-4">
             {post.title}
           </h1>
 
-          <div className="flex items-center gap-3 pt-2 text-xs text-slate-600">
-            <div className="w-8 h-8 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-xs">
+          <div className="flex items-center gap-3 pt-2 text-xs text-slate-600 dark:text-slate-400">
+            <div className="w-8 h-8 rounded-full bg-slate-900 dark:bg-emerald-600 text-white font-bold flex items-center justify-center text-xs shadow-sm">
               MN
             </div>
             <div>
-              <span className="font-bold text-slate-900">Muhammad Naveed</span> &bull; Lead Systems Engineer
+              <span className="font-bold text-slate-900 dark:text-white">Muhammad Naveed</span> &bull; Lead Systems Engineer
             </div>
           </div>
         </div>
 
         {/* Featured Hero Banner Image */}
-        <div className="mb-10 rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-950 aspect-[1200/630]">
+        <div className="mb-10 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl bg-slate-950 aspect-[1200/630]">
           <img
             src={`/blog/${post.slug}.png`}
             alt={post.title}
@@ -260,17 +260,17 @@ export default function BlogPostPage({ params }: Props) {
         </div>
 
         {/* AI OVERVIEW DIRECT ANSWER BOX (For Google SGE / Gemini citation) */}
-        <section className="mb-10 p-6 sm:p-7 rounded-3xl bg-emerald-50/80 border-2 border-emerald-500/80 shadow-sm relative">
-          <div className="flex items-center gap-2 text-xs font-bold text-emerald-900 uppercase tracking-wider mb-2 font-mono">
-            <i className="fa-solid fa-sparkles text-emerald-600"></i>
+        <section className="mb-10 p-6 sm:p-7 rounded-3xl bg-emerald-50/80 dark:bg-emerald-950/35 border-2 border-emerald-500/80 dark:border-emerald-500/50 shadow-sm relative">
+          <div className="flex items-center gap-2 text-xs font-bold text-emerald-900 dark:text-emerald-300 uppercase tracking-wider mb-2 font-mono">
+            <i className="fa-solid fa-sparkles text-emerald-600 dark:text-emerald-400"></i>
             <span>Executive Summary &amp; Direct Answer</span>
           </div>
-          <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-medium mb-4">
+          <p className="text-sm sm:text-base text-slate-800 dark:text-slate-200 leading-relaxed font-medium mb-4">
             {post.quickSummary}
           </p>
-          <div className="pt-3 border-t border-emerald-200/80 flex items-center justify-between text-xs text-slate-600 font-mono">
+          <div className="pt-3 border-t border-emerald-200/80 dark:border-emerald-800/60 flex flex-wrap gap-2 items-center justify-between text-xs text-slate-600 dark:text-slate-400 font-mono">
             <span>Primary Focus: {post.primaryKeyword}</span>
-            <span className="text-emerald-700 font-bold">Verified Empirical Data</span>
+            <span className="text-emerald-700 dark:text-emerald-400 font-bold">Verified Empirical Data</span>
           </div>
         </section>
 
@@ -537,14 +537,18 @@ export default function BlogPostPage({ params }: Props) {
         )}
 
         {/* Table of Contents */}
-        <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm mb-10">
-          <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 mb-3">
+        <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm mb-10">
+          <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-4 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
             Table of Contents
           </h2>
-          <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
             {post.tableOfContents.map((item) => (
               <li key={item.id}>
-                <a href={`#${item.id}`} className="hover:text-emerald-600 hover:underline">
+                <a
+                  href={`#${item.id}`}
+                  className="hover:text-emerald-600 dark:hover:text-emerald-400 hover:underline transition-colors leading-snug inline-block"
+                >
                   {item.title}
                 </a>
               </li>
@@ -554,18 +558,18 @@ export default function BlogPostPage({ params }: Props) {
 
         {/* Article HTML Body */}
         <div
-          className="prose prose-slate max-w-none text-slate-800 leading-relaxed space-y-6"
+          className="blog-article max-w-none text-slate-800 dark:text-slate-200 leading-relaxed space-y-6"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
 
         {/* Embedded Calculator Callout Banner */}
-        <div className="p-8 rounded-3xl bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-xl my-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="p-8 rounded-3xl bg-gradient-to-r from-slate-900 to-slate-800 dark:from-slate-900 dark:to-emerald-950/60 border border-slate-800 dark:border-emerald-500/30 text-white shadow-xl my-12 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center sm:text-left">
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-mono font-bold">
               <i className="fa-solid fa-calculator text-emerald-400"></i>
               <span>Interactive Utility</span>
             </div>
-            <h3 className="text-xl font-bold">Run the Exact Live Calculation</h3>
+            <h3 className="text-xl font-bold text-white">Run the Exact Live Calculation</h3>
             <p className="text-xs text-slate-300 max-w-md">
               Calculate your personal invoice payout, compare platform deductions, and eliminate hidden currency conversion spreads.
             </p>
@@ -583,45 +587,51 @@ export default function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Knowledge Base FAQs */}
-        <div className="space-y-4 mb-12">
-          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">
-            Frequently Asked Questions
+        <section id="faqs" className="space-y-4 mb-12 scroll-mt-24 pt-4 border-t border-slate-200 dark:border-slate-800">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-4">
+            8. Frequently Asked Questions
           </h2>
           <div className="grid grid-cols-1 gap-4">
             {post.faqs.map((faq, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <h3 className="font-bold text-sm sm:text-base text-slate-900 mb-2">
-                  {faq.q}
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-emerald-500/40 transition-colors"
+              >
+                <h3 className="font-bold text-sm sm:text-base text-slate-900 dark:text-white mb-2 flex items-start gap-2.5">
+                  <span className="shrink-0 mt-0.5 px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-200 dark:border-emerald-800/60 text-emerald-700 dark:text-emerald-400 font-mono text-[11px]">
+                    Q{idx + 1}
+                  </span>
+                  <span>{faq.q}</span>
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed pl-9">
                   {faq.a}
                 </p>
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Author Bio Box */}
-        <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center gap-5 mb-12">
+        <div className="p-6 rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row items-center gap-5 mb-12">
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-700 text-white font-black text-2xl flex items-center justify-center shrink-0 shadow-md">
             MN
           </div>
           <div className="space-y-1 text-center sm:text-left">
-            <div className="text-xs font-bold text-emerald-600 uppercase font-mono">
+            <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase font-mono">
               Written by Chief Systems Engineer
             </div>
-            <h4 className="text-base font-extrabold text-slate-900">
+            <h4 className="text-base font-extrabold text-slate-900 dark:text-white">
               Muhammad Naveed
             </h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
+            <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
               Full-Stack and Automation Engineer specializing in cross-border fintech architectures, automated forex modeling, and developer payout infrastructure.
             </p>
-            <div className="pt-1 flex flex-wrap gap-3 justify-center sm:justify-start text-xs text-slate-500 font-mono">
+            <div className="pt-1 flex flex-wrap gap-3 justify-center sm:justify-start text-xs text-slate-500 dark:text-slate-400 font-mono">
               <a
                 href="https://naveed-portfolio-kappa.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-emerald-600 underline font-semibold"
+                className="hover:text-emerald-600 dark:hover:text-emerald-400 underline font-semibold"
               >
                 Portfolio &rarr;
               </a>
@@ -629,7 +639,7 @@ export default function BlogPostPage({ params }: Props) {
                 href="https://github.com/mnaveedkhtri-ui"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-emerald-600 underline"
+                className="hover:text-emerald-600 dark:hover:text-emerald-400 underline"
               >
                 GitHub
               </a>
@@ -640,23 +650,23 @@ export default function BlogPostPage({ params }: Props) {
         {/* Related Guides Grid */}
         {relatedPosts.length > 0 && (
           <div className="space-y-4 mb-12">
-            <h3 className="text-lg font-bold text-slate-900">Recommended Reading</h3>
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white">Recommended Reading</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {relatedPosts.map((rel) => (
                 <Link
                   key={rel.slug}
                   href={`/blog/${rel.slug}`}
-                  className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="p-4 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div>
-                    <div className="text-[10px] font-bold text-emerald-600 uppercase font-mono mb-1">
+                    <div className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase font-mono mb-1">
                       {rel.category}
                     </div>
-                    <div className="text-xs font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2">
+                    <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors line-clamp-2">
                       {rel.title}
                     </div>
                   </div>
-                  <div className="text-[11px] text-slate-400 mt-2 font-mono">
+                  <div className="text-[11px] text-slate-400 dark:text-slate-500 mt-2 font-mono">
                     {rel.readTime} &rarr;
                   </div>
                 </Link>
@@ -667,9 +677,9 @@ export default function BlogPostPage({ params }: Props) {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200 py-8 text-center text-xs text-slate-500">
+      <footer className="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400">
         &copy; 2026 SmartRateCalcs. Built with mathematical precision by{' '}
-        <strong className="text-slate-700">Muhammad Naveed</strong>. All rights reserved.
+        <strong className="text-slate-700 dark:text-slate-200">Muhammad Naveed</strong>. All rights reserved.
       </footer>
     </div>
   );

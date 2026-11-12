@@ -71,7 +71,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { id: 'debit-card-ban', title: '5. The Hidden Visa Compliance Trap: Never Surcharge Debit Cards' },
       { id: 'cash-ach-discount-workaround', title: '6. The Safer Alternative: Cash Discounting & 1% ACH Bank Transfers' },
       { id: 'how-to-apply-on-invoices', title: '7. Step-by-Step: Adding Compliant Fees to Square & Stripe Invoices' },
-      { id: 'surcharge-faqs', title: '8. Frequently Asked Questions' }
+      { id: 'faqs', title: '8. Frequently Asked Questions' }
     ],
     contentHtml: `
       <section id="the-naive-math-trap" class="space-y-4">
@@ -300,30 +300,6 @@ export const BLOG_POSTS: BlogPost[] = [
           <li><strong>Compare Processing Plans Monthly:</strong> If you process over $10,000/month in online Square Invoices, compare upgrading to Square Plus ($49/mo drops invoice rate from 3.3% to 2.9%) using our <a href="/calculators/stripe-vs-square-fee-calculator" class="text-emerald-700 font-bold underline">Stripe vs Square Comparison Tool</a>.</li>
         </ol>
       </section>
-
-      <section id="surcharge-faqs" class="space-y-4 pt-6">
-        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">8. Frequently Asked Questions</h2>
-        <div class="space-y-4">
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-2">What is the exact formula to pass a 3.3% + $0.30 Square invoice fee to a client?</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Use the reverse gross-up formula: Total Invoice = (Desired Net Amount + $0.30) / (1 - 0.033). For a $1,000 net payout, divide $1,000.30 by 0.967 to invoice $1,034.44. Square deducts $34.44 and deposits exactly $1,000.00.
-            </p>
-          </div>
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-2">Can I legally pass Square or Stripe fees to customers in all US states?</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              No. Credit card surcharging is prohibited in Connecticut and Massachusetts, capped at 2% in Colorado, and capped at 3.0% nationwide by Visa rules. However, offering a Cash or ACH Discount (Dual Pricing) is legal across all 50 states.
-            </p>
-          </div>
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-2">Are credit card processing fees charged on top of sales tax?</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Yes. Square and Stripe charge their percentage fee on the grand total captured on the card, including sales tax and tips. Always compute your reverse surcharge calculation on the post-tax invoice subtotal if recovering total fees.
-            </p>
-          </div>
-        </div>
-      </section>
     `,
     faqs: [
       {
@@ -399,7 +375,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { id: 'quarterly-deadlines', title: '5. Form 1040-ES Quarterly Due Dates & Safe Harbor Payment Schedule' },
       { id: 'schedule-c-writeoffs', title: '6. Top Schedule C Tax Deductions That Shrink Your 1099 Liability' },
       { id: 'w2-vs-1099-rate', title: '7. Converting a W-2 Salary to an Equivalent 1099 Hourly Consulting Rate' },
-      { id: '1099-faqs', title: '8. Frequently Asked Questions' }
+      { id: 'faqs', title: '8. Frequently Asked Questions' }
     ],
     contentHtml: `
       <section id="the-1099-shock" class="space-y-4">
@@ -640,30 +616,6 @@ export const BLOG_POSTS: BlogPost[] = [
         <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
           To reverse-engineer your exact break-even billing rate including 15.3% SE taxes and PTO overhead, use our interactive <a href="/freelance-hourly-rate-calculator" class="text-emerald-700 font-bold underline">Freelance &amp; 1099 Hourly Rate Calculator</a> alongside the <a href="/1099-tax-calculator" class="text-emerald-700 font-bold underline">1099 Safe Harbor Tax Calculator</a>.
         </p>
-      </section>
-
-      <section id="1099-faqs" class="space-y-4 pt-6">
-        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">8. Frequently Asked Questions</h2>
-        <div class="space-y-4">
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-2">How much should a 1099 contractor set aside for taxes under the safe harbor rule?</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Most US independent contractors should reserve 25% to 30% of net Schedule C profit (after business expenses) in a dedicated tax savings account, or 30% to 35% in high-tax states like California or New York. Under the IRS Safe Harbor Rule, dividing 100% of last year's tax bill (110% if AGI exceeded $150,000) into 4 equal Form 1040-ES payments prevents all underpayment penalties.
-            </p>
-          </div>
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-2">Do I still owe quarterly estimated taxes if I also have a W-2 day job?</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              You only need Form 1040-ES payments if your expected unpaid tax balance exceeds $1,000 after W-2 withholding. A popular pro tip is submitting an updated Form W-4 at your W-2 employer to withhold extra taxes directly from paychecks, which the IRS treats as evenly paid all year!
-            </p>
-          </div>
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-2">What happens if I did not owe any tax last year?</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              If you were a US citizen or resident for the full previous 12-month tax year and had $0 total tax liability on your prior return, the 100% prior-year safe harbor rule means you owe $0 required quarterly payments this year without penalty - though you still owe the full tax balance on April 15.
-            </p>
-          </div>
-        </div>
       </section>
     `,
     faqs: [
@@ -920,30 +872,6 @@ export const BLOG_POSTS: BlogPost[] = [
           Tagging these codes ensures that commercial banks deduct exactly <strong>0.25% final tax</strong> under FBR Section 154A rather than the standard 1.00% or normal salaried tax slabs. Always request an electronic Proceeds Realization Certificate (e-PRC) from your bank upon settlement.
         </p>
       </section>
-
-      <section id="faqs" class="space-y-4 pt-6">
-        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">8. Frequently Asked Questions</h2>
-        <div class="space-y-4">
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-2">Can Pakistani freelancers legally open a US checking account?</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Yes. Services like Elevate Pay and Wise partner with FDIC-insured US banks (such as Bangor Savings Bank or Evolve Bank &amp; Trust) to provide legitimate foreign national checking accounts compliant with US Patriot Act and FinCEN standards.
-            </p>
-          </div>
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-2">Why does Upwork show $0 fee for US Bank transfer?</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Upwork uses the standard United States Automated Clearing House (ACH) network for domestic transfers. Because ACH clearing costs pennies, Upwork absorbs the expense and waives all withdrawal fees for US bank accounts.
-            </p>
-          </div>
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-2">How fast do funds transfer from Upwork to Pakistan via ACH?</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Withdrawals requested before 12:00 PM EST clear into your US checking account within 1 to 2 business days. From there, instant Raast payouts to Meezan or HBL take under 60 seconds.
-            </p>
-          </div>
-        </div>
-      </section>
     `,
     faqs: [
       {
@@ -1001,7 +929,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { id: 'prc-audit', title: '5. Digital PRC Compliance & SBP Purpose Codes' },
       { id: 'iris-filing-steps', title: '6. How to File Freelancer Returns on FBR Iris (Code 7014)' },
       { id: 'common-mistakes', title: '7. Dangerous Pitfalls That Can Trigger FBR Audit Notices' },
-      { id: 'tax-faqs', title: '8. Frequently Asked Questions' }
+      { id: 'faqs', title: '8. Frequently Asked Questions' }
     ],
     contentHtml: `
       <section id="tax-landscape" class="space-y-4">
@@ -1155,30 +1083,6 @@ export const BLOG_POSTS: BlogPost[] = [
             <li><strong>Filing Under Normal Salaried Code:</strong> Entering your income under Section 149 (Salaried) forces Iris to compute high progressive tax slabs rather than the 0.25% final rate.</li>
             <li><strong>Failing to Reconcile Wealth Statement:</strong> Your annual bank deposits must equal your reported export earnings plus any opening balance. Always maintain a reconciled personal wealth statement.</li>
           </ul>
-        </div>
-      </section>
-
-      <section id="tax-faqs" class="space-y-4 pt-6">
-        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">8. Frequently Asked Questions</h2>
-        <div class="space-y-4">
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-2">Is the 0.25% tax deducted at source full and final?</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Yes. Under sub-section (2) of Section 154A, the tax deducted by the authorized banking dealer represents the final discharge of tax liability on that export income. No further income tax can be levied on those earnings.
-            </p>
-          </div>
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-2">Can students or part-time freelancers register with PSEB?</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Yes. Any Pakistani national with a valid CNIC, active NTN, and an online freelance profile (Upwork, Fiverr, LinkedIn, GitHub) is eligible to register under the Freelancer category.
-            </p>
-          </div>
-          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <h3 class="font-bold text-slate-900 text-sm sm:text-base mb-2">What if my bank deducted 1.00% instead of 0.25%?</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              If your bank deducted 1.00%, it means your PSEB certificate was not uploaded to their compliance system before the wire arrived. Provide your valid certificate to your branch to rectify the rate for future inflows. The 1.00% already deducted still qualifies as a full and final discharge.
-            </p>
-          </div>
         </div>
       </section>
     `,
