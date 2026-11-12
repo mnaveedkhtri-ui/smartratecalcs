@@ -2,7 +2,9 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { ProgrammaticCalculator } from '../data/programmatic-calculators';
+import { resolvePartnerDestination } from '../data/partner-links';
 
 interface Props {
   calc: ProgrammaticCalculator;
@@ -54,20 +56,31 @@ export default function ProgrammaticCalculatorWidget({ calc }: Props) {
   const spread = calc.exchangeRateSpread || 0;
 
   // 1. Payout Mode Calculations
+  const isDomesticUSD =
+    (calc.sourceCurrency || 'USD') === (calc.targetCurrency || 'USD') && spread === 0;
   const effectiveRate = baseRate * (1 - spread);
   const calculatedFee = (payoutAmount * percentFee) + fixedFee;
   const netBeforeConversion = Math.max(0, payoutAmount - calculatedFee);
-  const finalLocalAmount = Math.round(netBeforeConversion * effectiveRate);
+  const finalLocalAmount = isDomesticUSD
+    ? Number(netBeforeConversion.toFixed(2))
+    : Math.round(netBeforeConversion * effectiveRate);
+  const effectiveDragPct = payoutAmount > 0 ? (calculatedFee / payoutAmount) * 100 : 0;
 
   // Ideal baseline (Zero spread mid-market rate)
   const trueIdealLocal = Math.round((payoutAmount - (payoutAmount * 0.005)) * baseRate);
-  const hiddenSpreadLoss = Math.max(0, trueIdealLocal - finalLocalAmount);
+  const hiddenSpreadLoss = isDomesticUSD ? 0 : Math.max(0, trueIdealLocal - finalLocalAmount);
 
   // 2. Reverse Invoicing Calculations (How much USD to bill for exact Local Goal)
   const requiredNetUSD = effectiveRate > 0 ? reverseGoalAmount / effectiveRate : 0;
   const grossToInvoiceUSD = percentFee < 1 ? (requiredNetUSD + fixedFee) / (1 - percentFee) : requiredNetUSD;
   const totalPlatformCutUSD = Math.max(0, grossToInvoiceUSD - (reverseGoalAmount / baseRate));
-  const totalPlatformCutLocal = Math.round(totalPlatformCutUSD * baseRate);
+  const totalPlatformCutLocal = isDomesticUSD
+    ? Number(totalPlatformCutUSD.toFixed(2))
+    : Math.round(totalPlatformCutUSD * baseRate);
+
+  const partnerDest = calc.recommendation
+    ? resolvePartnerDestination(calc.recommendation.platform, calc.slug)
+    : null;
 
   const handleCopyBreakdown = () => {
     const text = `SmartRateCalcs Breakdown for ${calc.title}:
@@ -251,6 +264,8 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
                 <div className="text-[11px] text-amber-800 dark:text-amber-300/80 mt-1">
                   {hiddenSpreadLoss > 0
                     ? `You lose ~${targetSymbol}${hiddenSpreadLoss.toLocaleString()} below market rate`
+                    : isDomesticUSD
+                    ? 'Domestic USD settlement (0% FX conversion)'
                     : 'Mid-market interbank rate applied'}
                 </div>
               </div>
@@ -263,10 +278,14 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
                 </div>
                 <div className="text-2xl sm:text-3xl font-black text-emerald-800 dark:text-emerald-300">
                   {targetSymbol}
-                  {finalLocalAmount.toLocaleString()}
+                  {isDomesticUSD
+                    ? finalLocalAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+                    : finalLocalAmount.toLocaleString()}
                 </div>
                 <div className="text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold mt-1">
-                  Effective Net Rate: 1 USD = {effectiveRate.toFixed(2)} {calc.targetCurrency || 'USD'}
+                  {isDomesticUSD
+                    ? `Effective Total Deduction: ${effectiveDragPct.toFixed(2)}% of gross`
+                    : `Effective Net Rate: 1 USD = ${effectiveRate.toFixed(2)} ${calc.targetCurrency || 'USD'}`}
                 </div>
               </div>
             </div>
@@ -279,7 +298,7 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
             {/* Target Goal Input */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2 font-mono">
-                Enter Desired In-Hand Payout ({calc.targetCurrency || 'PKR'}):
+                Enter Desired In-Hand Payout ({calc.targetCurrency || 'USD'}):
               </label>
               <div className="relative">
                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-bold text-base">
@@ -375,7 +394,7 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
         )}
 
         {/* High-Converting Affiliate & Recommendation Card */}
-        {calc.recommendation && (
+        {calc.recommendation && partnerDest && (
           <div className="p-6 rounded-2xl bg-gradient-to-r from-emerald-900 to-slate-900 dark:from-emerald-950 dark:to-slate-950 text-white flex flex-col sm:flex-row items-center justify-between gap-4 border border-emerald-800/40">
             <div className="space-y-1 text-center sm:text-left">
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-bold font-mono">
@@ -383,20 +402,47 @@ Expected Net Payout: ${targetSymbol}${reverseGoalAmount.toLocaleString()}
                 <span>SmartRate Recommendation &bull; {calc.recommendation.badge}</span>
               </div>
               <h3 className="text-base font-bold">
-                Save up to {calc.recommendation.savingPct} on this transfer
+                Save up to {calc.recommendation.savingPct} with {calc.recommendation.platform}
               </h3>
               <p className="text-xs text-slate-300">
-                Eliminate hidden foreign exchange spreads by switching to verified zero-spread routes.
+                Optimize net take-home margin with verified low-fee processing and zero hidden spreads.
               </p>
             </div>
-            <a
-              href={`https://www.smartratecalcs.com/?ref=${calc.slug}`}
-              className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black transition-all shadow-md hover:shadow-lg whitespace-nowrap text-center"
-            >
-              {calc.recommendation.ctaText} &rarr;
-            </a>
+            {partnerDest.isExternal ? (
+              <a
+                href={partnerDest.href}
+                target="_blank"
+                rel="noopener sponsored noreferrer"
+                className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black transition-all shadow-md hover:shadow-lg whitespace-nowrap text-center"
+              >
+                {calc.recommendation.ctaText} &rarr;
+              </a>
+            ) : (
+              <Link
+                href={partnerDest.href}
+                className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black transition-all shadow-md hover:shadow-lg whitespace-nowrap text-center"
+              >
+                {calc.recommendation.ctaText} &rarr;
+              </Link>
+            )}
           </div>
         )}
+
+        {/* B2B Custom Calculator Lead Strip */}
+        <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500 dark:text-slate-400">
+          <div className="flex items-center gap-2 text-center sm:text-left">
+            <i className="fa-solid fa-laptop-code text-emerald-600 dark:text-emerald-400"></i>
+            <span>
+              Want a custom interactive ROI, pricing, or fee calculator built for your business website?
+            </span>
+          </div>
+          <a
+            href={`mailto:naveed@smartratecalcs.com?subject=${encodeURIComponent(`Custom Calculator Build Inquiry (${calc.title})`)}`}
+            className="font-mono font-bold text-emerald-600 dark:text-emerald-400 hover:underline whitespace-nowrap"
+          >
+            Hire SmartRateCalcs (naveed@smartratecalcs.com) &rarr;
+          </a>
+        </div>
       </div>
 
       {/* EMBED CODE MODAL */}

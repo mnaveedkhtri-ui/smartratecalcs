@@ -2640,5 +2640,303 @@ export const PROGRAMMATIC_CALCULATORS: ProgrammaticCalculator[] = [
         "a": "Shopify charges an additional 2.0% (Basic plan), 1.0% (Shopify plan), or 0.5% (Advanced plan) fee when merchants use third-party payment gateways like standalone Stripe instead of native Shopify Payments."
       }
     ]
+  },
+  {
+    "slug": "ebay-seller-fee-and-profit-calculator",
+    "title": "eBay Seller Fee & Net Profit Calculator (US 2026 Managed Payments)",
+    "category": "ecommerce",
+    "sourceCurrency": "USD",
+    "targetCurrency": "USD",
+    "defaultAmount": 100,
+    "fixedFee": 0.30,
+    "percentFee": 0.1325,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 1.0,
+    "description": "Calculate exact eBay US final value fees (13.25% + $0.30), managed payments deductions, and reverse break-even listing price.",
+    "metaTitle": "eBay Fee Calculator (2026) | US Seller Profit & Reverse Pricing",
+    "metaDesc": "Compute eBay Managed Payments final value fees (13.25% + $0.30) and net payout in USD. Use Reverse Mode to price listings for guaranteed profit.",
+    "primaryKeyword": "ebay seller fee calculator",
+    "quickAnswer": "For most eBay US categories under Managed Payments, standard final value fees equal 13.25% of the total sale amount (item price plus shipping and sales tax collected) plus $0.30 per order ($0.40 over $10 with updated 2026 tiers). Use Reverse Mode above to gross up your listing price.",
+    "formula": "eBay Net = Gross Order - ((Gross Order * 0.1325) + $0.30)",
+    "recommendation": {
+      "platform": "Shopify Payments",
+      "savingPct": "10.0%",
+      "ctaText": "Compare Direct Store Margins",
+      "badge": "Lower Marketplace Cut"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q58024"
+    ],
+    "faqs": [
+      {
+        "q": "Does eBay charge final value fees on shipping and sales tax?",
+        "a": "Yes. eBay calculates the 13.25% final value fee on the total transaction amount paid by the buyer, including item price, shipping charge, and state sales tax."
+      },
+      {
+        "q": "What is the eBay Store subscriber fee discount?",
+        "a": "eBay Store subscribers typically pay reduced final value fees ranging from 9.15% to 12.35% depending on the product category."
+      }
+    ]
+  },
+  {
+    "slug": "poshmark-seller-fee-calculator",
+    "title": "Poshmark Seller Fee & Earnings Calculator (2026 Flat 20% Commission)",
+    "category": "ecommerce",
+    "sourceCurrency": "USD",
+    "targetCurrency": "USD",
+    "defaultAmount": 100,
+    "fixedFee": 0,
+    "percentFee": 0.20,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 1.0,
+    "description": "Calculate exact Poshmark seller payouts after the 20% commission on sales of $15+ and reverse-price closet items to hit your target cash.",
+    "metaTitle": "Poshmark Fee Calculator (2026) | 20% Commission & Net Earnings",
+    "metaDesc": "Instantly calculate Poshmark selling fees (20% over $15 or $2.95 under $15) and reverse-price your closet listings to protect net profit margins.",
+    "primaryKeyword": "poshmark fee calculator",
+    "quickAnswer": "Poshmark charges a flat $2.95 commission on all sales under $15, and a flat 20% commission on any order of $15 or more. On a $100 sale, Poshmark retains $20.00 and deposits $80.00 into your seller balance.",
+    "formula": "Poshmark Net ($15+) = Sale Price * 0.80 | Net (<$15) = Sale Price - $2.95",
+    "recommendation": {
+      "platform": "Shopify Payments",
+      "savingPct": "17.0%",
+      "ctaText": "Compare Own-Store Processing Fees",
+      "badge": "Keep 97% of Sales"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q17051868"
+    ],
+    "faqs": [
+      {
+        "q": "How much does Poshmark take from a $100 sale?",
+        "a": "Poshmark deducts a flat 20% fee ($20.00) from a $100 sale, leaving you with $80.00 net profit unless you offered a shipping discount."
+      },
+      {
+        "q": "How do I reverse-calculate what to list on Poshmark?",
+        "a": "Switch to Reverse Invoicing Mode and enter your desired take-home payout. Dividing your desired net by 0.80 yields the exact listing price."
+      }
+    ]
+  },
+  {
+    "slug": "venmo-business-fee-calculator",
+    "title": "Venmo Business & Goods and Services Fee Calculator (US 2026)",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "USD",
+    "defaultAmount": 500,
+    "fixedFee": 0.10,
+    "percentFee": 0.019,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 1.0,
+    "description": "Calculate Venmo Business Profile and Purchase Protection transaction fees (1.9% + $0.10) plus reverse invoice gross-up amounts.",
+    "metaTitle": "Venmo Business Fee Calculator (2026) | 1.9% + $0.10 Net Payout",
+    "metaDesc": "Calculate exact Venmo Business Profile and Goods & Services fees (1.9% + $0.10). Reverse-calculate how much to request so you net 100%.",
+    "primaryKeyword": "venmo business fee calculator",
+    "quickAnswer": "Venmo charges Business Profile owners a seller transaction fee of 1.9% + $0.10 per payment (2.29% + $0.09 for Tap to Pay). On a $500 client payment, Venmo deducts $9.60 and leaves $490.40 net unless you reverse-calculate $509.79.",
+    "formula": "Venmo Business Net = Amount - ((Amount * 0.019) + $0.10)",
+    "recommendation": {
+      "platform": "Stripe",
+      "savingPct": "1.1%",
+      "ctaText": "Compare Stripe ACH & Card Tools",
+      "badge": "US Invoice Standard"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q24839341"
+    ],
+    "faqs": [
+      {
+        "q": "What is the Venmo Goods and Services fee rate in 2026?",
+        "a": "Payments tagged as Goods and Services or sent to a Venmo Business Profile carry a 1.9% + $0.10 seller fee paid by the recipient."
+      },
+      {
+        "q": "Does Venmo report Business payments on Form 1099-K?",
+        "a": "Yes. Venmo issues Form 1099-K for commercial and Business Profile transactions meeting IRS federal and state reporting thresholds."
+      }
+    ]
+  },
+  {
+    "slug": "cash-app-business-fee-calculator",
+    "title": "Cash App for Business Fee & Reverse Payout Calculator (2026)",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "USD",
+    "defaultAmount": 500,
+    "fixedFee": 0,
+    "percentFee": 0.0275,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 1.0,
+    "description": "Calculate Cash App for Business 2.75% processing deductions on client payments and reverse-bill the exact gross amount.",
+    "metaTitle": "Cash App Business Fee Calculator (2026) | 2.75% Payout & Reverse",
+    "metaDesc": "Calculate exact 2.75% Cash App for Business fees on every invoice or service payment and find the reverse gross total to protect margins.",
+    "primaryKeyword": "cash app business fee calculator",
+    "quickAnswer": "Cash App for Business accounts deduct a flat 2.75% fee from every incoming payment with no fixed cent surcharge. On a $500 service charge, Cash App deducts $13.75 and settles $486.25.",
+    "formula": "Cash App Business Net = Amount * (1 - 0.0275) | Reverse Total = Net / 0.9725",
+    "recommendation": {
+      "platform": "Square",
+      "savingPct": "0.15%",
+      "ctaText": "Run Full Square Surcharge Audit",
+      "badge": "Lower In-Person Rate"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q55633750"
+    ],
+    "faqs": [
+      {
+        "q": "How do I avoid losing the 2.75% fee on a Cash App Business invoice?",
+        "a": "Use Reverse Mode and divide your desired net payout by 0.9725. For $500 net, request $514.14 so after the 2.75% cut ($14.14) you net $500.00."
+      },
+      {
+        "q": "Does Cash App for Business charge extra for instant deposit?",
+        "a": "Standard bank transfers are free (1-3 business days), whereas Instant Deposit adds a 0.5% to 1.75% instant transfer fee."
+      }
+    ]
+  },
+  {
+    "slug": "zelle-vs-venmo-business-fee-calculator",
+    "title": "Zelle vs Venmo Business Fee & Net Payout Comparison Calculator (2026)",
+    "category": "payout",
+    "sourceCurrency": "USD",
+    "targetCurrency": "USD",
+    "defaultAmount": 1000,
+    "fixedFee": 0.10,
+    "percentFee": 0.019,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 1.0,
+    "description": "Compare 0% bank-to-bank Zelle business transfers against Venmo Business (1.9% + $0.10) deductions for US contractors and small businesses.",
+    "metaTitle": "Zelle vs Venmo Business Fee Calculator (2026) | US Contractor Payouts",
+    "metaDesc": "Calculate how much you save accepting client payments via Zelle (0% fee at major banks) vs Venmo Business (1.9% + $0.10) on $100 to $10,000 invoices.",
+    "primaryKeyword": "zelle vs venmo business fee",
+    "quickAnswer": "Zelle charges $0.00 transaction fees at participating US banks like Chase, Bank of America, and Wells Fargo for small-business transfers, whereas Venmo Business deducts 1.9% + $0.10 ($19.10 on $1,000). Switching $5,000 monthly invoices to Zelle saves over $1,140 annually.",
+    "formula": "Zelle Net = 100% Gross | Venmo Business Net = Gross - ((Gross * 0.019) + $0.10)",
+    "recommendation": {
+      "platform": "Stripe",
+      "savingPct": "1.1%",
+      "ctaText": "Compare Stripe Card vs ACH Fees",
+      "badge": "Automated Invoicing"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q24839341"
+    ],
+    "faqs": [
+      {
+        "q": "Does Zelle charge business accounts a fee?",
+        "a": "Most major US consumer and small-business checking accounts (including Chase and Bank of America) offer Zelle at $0.00 fee, though a few banks charge small commercial wire tiers."
+      },
+      {
+        "q": "Does Zelle report business payments on Form 1099-K?",
+        "a": "Unlike PayPal and Venmo, the Zelle network does not directly issue Form 1099-K because funds clear between member banks, though all business income remains 100% taxable to the IRS."
+      }
+    ]
+  },
+  {
+    "slug": "stripe-ach-vs-credit-card-fee-calculator",
+    "title": "Stripe ACH vs Credit Card Fee Savings Calculator (0.8% Capped at $5)",
+    "category": "ecommerce",
+    "sourceCurrency": "USD",
+    "targetCurrency": "USD",
+    "defaultAmount": 2500,
+    "fixedFee": 0.30,
+    "percentFee": 0.029,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 1.0,
+    "description": "Compare Stripe 2.9% + $0.30 credit card invoice fees against Stripe ACH Direct Debit (0.8% capped at $5.00 maximum fee).",
+    "metaTitle": "Stripe ACH vs Credit Card Fee Calculator (2026) | $5 Cap Savings",
+    "metaDesc": "See how much B2B businesses save switching high-ticket invoices from Stripe credit cards (2.9% + $0.30) to Stripe ACH Direct Debit (0.8%, max $5.00).",
+    "primaryKeyword": "stripe ach vs credit card fee calculator",
+    "quickAnswer": "Stripe credit card checkout costs 2.9% + $0.30 with no upper limit ($72.80 on a $2,500 invoice, or $290.30 on $10,000). Stripe ACH Direct Debit costs only 0.8% capped at $5.00 maximum for any invoice over $625, saving $285.30 on a single $10,000 retainer.",
+    "formula": "Stripe Card Fee = (Amount * 0.029) + $0.30 | Stripe ACH Fee = MIN(Amount * 0.008, $5.00)",
+    "recommendation": {
+      "platform": "Stripe",
+      "savingPct": "2.8%",
+      "ctaText": "Open Dedicated Stripe Fee Engine",
+      "badge": "ACH $5.00 Max Cap"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q7624104"
+    ],
+    "faqs": [
+      {
+        "q": "When does Stripe ACH hit the $5.00 maximum fee cap?",
+        "a": "At 0.8%, any invoice of $625.00 or higher reaches the $5.00 cap. Whether your client pays $1,000 or $50,000 via Stripe ACH Direct Debit, the total fee remains exactly $5.00."
+      },
+      {
+        "q": "Can I combine Stripe ACH with a credit card surcharge legally?",
+        "a": "Yes. Offering ACH bank transfer at $0 markup while disclosing a compliant credit card adjustment in legal US states preserves 100% of your invoice margin."
+      }
+    ]
+  },
+  {
+    "slug": "california-1099-quarterly-tax-calculator",
+    "title": "California 1099 Self-Employment & Quarterly Tax Reserve Calculator (2026)",
+    "category": "freelance",
+    "sourceCurrency": "USD",
+    "targetCurrency": "USD",
+    "defaultAmount": 25000,
+    "fixedFee": 0,
+    "percentFee": 0.305,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 1.0,
+    "description": "Estimate combined Federal IRS 15.3% SE tax, federal income bracket, and California FTB state income tax reserve for 1099 independent contractors.",
+    "metaTitle": "California 1099 Tax Calculator (2026) | IRS + FTB Quarterly Reserve",
+    "metaDesc": "Calculate how much California 1099 freelancers should set aside for IRS Form 1040-ES and California FTB Form 540-ES quarterly tax payments.",
+    "primaryKeyword": "california 1099 tax calculator",
+    "quickAnswer": "California 1099 contractors typically must reserve 30% to 35% of net Schedule C profit because they owe Federal 15.3% Self-Employment tax (on 92.35% net), Federal income tax, AND progressive California state income tax (up to 9.3% - 13.3%) via Form 540-ES.",
+    "formula": "Quarterly CA Reserve = (Net Quarterly Profit * Blended Federal + SE + CA FTB Rate ~30.5%)",
+    "recommendation": {
+      "platform": "1099 IRS Safe Harbor",
+      "savingPct": "0% Penalty",
+      "ctaText": "Open Full IRS 1099 Tax Engine",
+      "badge": "IRS + State Bracket"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q973587",
+      "https://www.wikidata.org/wiki/Q22905934"
+    ],
+    "faqs": [
+      {
+        "q": "What are California FTB 540-ES quarterly tax percentages?",
+        "a": "Unlike the equal 25/25/25/25 IRS federal split, California Franchise Tax Board Form 540-ES requires 30% in Q1 (April 15), 40% in Q2 (June 15), 0% in Q3, and 30% in Q4 (January 15)."
+      },
+      {
+        "q": "How do California 1099 contractors reverse-bill clients to cover taxes?",
+        "a": "Switch to Reverse Mode above and enter your desired net take-home pay to compute the exact gross retainer required before ~30.5% blended tax obligations."
+      }
+    ]
+  },
+  {
+    "slug": "texas-vs-california-1099-take-home-calculator",
+    "title": "Texas vs California 1099 Net Take-Home & Tax Savings Calculator (2026)",
+    "category": "freelance",
+    "sourceCurrency": "USD",
+    "targetCurrency": "USD",
+    "defaultAmount": 25000,
+    "fixedFee": 0,
+    "percentFee": 0.225,
+    "exchangeRateSpread": 0,
+    "baseExchangeRate": 1.0,
+    "description": "Compare net 1099 contractor take-home pay in 0% state income tax Texas vs California progressive state brackets.",
+    "metaTitle": "Texas vs California 1099 Tax Calculator (2026) | 0% State Tax Check",
+    "metaDesc": "Compare net quarterly 1099 contractor earnings in Texas (0% state tax) vs California after IRS 15.3% SE tax and federal safe harbor reserves.",
+    "primaryKeyword": "texas 1099 tax calculator",
+    "quickAnswer": "Texas levies 0% personal state income tax on 1099 Schedule C earnings, leaving an average ~22.5% blended federal SE + income reserve on $100,000 net profit, whereas California adds 6% to 9.3%+ state income tax ($6,000 to $10,000+ less take-home per $100k earned).",
+    "formula": "Texas 1099 Reserve = Federal Income + (Net * 0.9235 * 0.153) + $0 State Tax",
+    "recommendation": {
+      "platform": "1099 IRS Safe Harbor",
+      "savingPct": "8.0%",
+      "ctaText": "Run Full 2026 IRS Safe Harbor Check",
+      "badge": "Zero State Tax Baseline"
+    },
+    "wikidataEntities": [
+      "https://www.wikidata.org/wiki/Q973587",
+      "https://www.wikidata.org/wiki/Q22905934"
+    ],
+    "faqs": [
+      {
+        "q": "Does Texas have a self-employment or 1099 state income tax?",
+        "a": "No. Texas has 0% state personal income tax on sole-proprietor and single-member LLC 1099 earnings (franchise tax applies only to entities over high statutory revenue thresholds)."
+      },
+      {
+        "q": "How much should a Texas 1099 contractor set aside each quarter?",
+        "a": "Reserving 22% to 25% of net Schedule C profit covers the 15.3% federal Self-Employment tax and standard federal brackets under the IRS 100%/110% Safe Harbor Rule."
+      }
+    ]
   }
 ];

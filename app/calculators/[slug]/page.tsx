@@ -275,7 +275,27 @@ export default function CalculatorPage({ params }: Props) {
           <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
             Essential Contractor Fee Calculators
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            <Link
+              href="/square-fee-calculator"
+              className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-900 dark:hover:border-white hover:shadow-sm transition-all group flex flex-col justify-between"
+            >
+              <div className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                <i className="fa-solid fa-square text-slate-800 dark:text-slate-200 text-xs"></i> Square (US)
+              </div>
+              <div className="text-[10px] text-slate-400 dark:text-slate-500 font-mono mt-1">2.6% POS / 3.3% Inv</div>
+            </Link>
+
+            <Link
+              href="/1099-tax-calculator"
+              className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-600 hover:shadow-sm transition-all group flex flex-col justify-between"
+            >
+              <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 flex items-center gap-1.5">
+                <i className="fa-solid fa-file-invoice-dollar text-emerald-500 text-xs"></i> 1099 Tax (IRS)
+              </div>
+              <div className="text-[10px] text-slate-400 dark:text-slate-500 font-mono mt-1">15.3% SE Safe Harbor</div>
+            </Link>
+
             <Link
               href="/upwork-fee-calculator"
               className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 hover:shadow-sm transition-all group flex flex-col justify-between"
