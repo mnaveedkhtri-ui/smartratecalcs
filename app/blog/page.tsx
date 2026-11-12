@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 import { BLOG_POSTS } from '../../data/blog-posts';
 import BlogDirectoryClient from '../../components/BlogDirectoryClient';
 import ThemeToggle from '../../components/ThemeToggle';
@@ -98,11 +99,7 @@ export default function BlogIndexPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400">
-        &copy; 2026 SmartRateCalcs. Built with mathematical precision by{' '}
-        <strong className="text-slate-700 dark:text-slate-200">Muhammad Naveed</strong>. All rights reserved.
-      </footer>
+      <SiteLegalFooter />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { BLOG_POSTS } from '../data/blog-posts';
 import PayPalCalculatorWidget from '../components/PayPalCalculatorWidget';
 import StripeCalculatorWidget from '../components/StripeCalculatorWidget';
 import ThemeToggle from '../components/ThemeToggle';
+import { ContactFormClient } from '../components/ContactFormClient';
 
 interface RatesMap {
   [currency: string]: {
@@ -46,9 +47,6 @@ export default function HomePage() {
   const [flNet, setFlNet] = useState<number>(3500);
   const [flOverhead, setFlOverhead] = useState<number>(350);
   const [flHours, setFlHours] = useState<number>(25);
-
-  // Contact state
-  const [contactSubmitted, setContactSubmitted] = useState<boolean>(false);
 
   // Payout math
   const baseRate = (RATES[currency] && RATES[currency][country]) ? RATES[currency][country] : 278.4;
@@ -994,37 +992,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div>
-                {!contactSubmitted ? (
-                  <form onSubmit={(e) => { e.preventDefault(); setContactSubmitted(true); }} className="space-y-4">
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Your Full Name</label>
-                      <input type="text" required placeholder="John Doe" className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs font-medium text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500" />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Your Email</label>
-                      <input type="email" required placeholder="john@example.com" className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs font-medium text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500" />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Message</label>
-                      <textarea rows={4} required placeholder="Discuss custom features or calculators..." className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs font-medium text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500" />
-                    </div>
-                    <button type="submit" className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm transition-all">
-                      Send Direct Message
-                    </button>
-                  </form>
-                ) : (
-                  <div className="p-6 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 text-center space-y-2">
-                    <div className="w-12 h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xl mx-auto shadow-sm">
-                      <i className="fa-solid fa-check"></i>
-                    </div>
-                    <h4 className="font-heading font-bold text-base text-slate-900 dark:text-white">Message Dispatched!</h4>
-                    <p className="text-xs text-slate-600 dark:text-slate-400">
-                      Thank you! Your message has been routed directly to Muhammad Naveed. He will reply via email within 24 hours.
-                    </p>
-                  </div>
-                )}
-              </div>
+              <ContactFormClient />
             </div>
           </div>
         </div>
@@ -1040,12 +1008,12 @@ export default function HomePage() {
               <p className="text-xs text-slate-500 dark:text-slate-400">Effective Date: November 2026 &bull; SmartRateCalcs.com</p>
             </div>
             <div className="space-y-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-              <h3 className="font-heading font-bold text-sm text-slate-900 dark:text-white">1. Zero-Tracking Guarantee</h3>
-              <p>We do not use third-party tracking pixels, marketing cookies, or fingerprinting scripts. Your calculations remain strictly confidential.</p>
-              <h3 className="font-heading font-bold text-sm text-slate-900 dark:text-white">2. 100% Client-Side Processing</h3>
-              <p>All calculations execute locally inside your web browser. No financial amounts or inputs are transmitted to remote servers.</p>
+              <h3 className="font-heading font-bold text-sm text-slate-900 dark:text-white">1. 100% Client-Side Calculations</h3>
+              <p>All calculations execute locally inside your web browser. No financial amounts, salaries, or tax inputs are stored or sold to remote servers.</p>
+              <h3 className="font-heading font-bold text-sm text-slate-900 dark:text-white">2. Advertising &amp; Third-Party Vendors</h3>
+              <p>SmartRateCalcs displays or may display advertisements via Google AdSense and contain disclosed partner/affiliate links. Third-party vendors including Google use cookies to serve ads based on prior visits to this site or other sites. You may opt out of personalized advertising via Google Ads Settings or aboutads.info.</p>
               <h3 className="font-heading font-bold text-sm text-slate-900 dark:text-white">3. Data Controller Contact</h3>
-              <p>For inquiries, contact Muhammad Naveed directly at <a href="mailto:naveed@smartratecalcs.com" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">naveed@smartratecalcs.com</a> or via WhatsApp at +92 332 3219981.</p>
+              <p>For inquiries, contact Muhammad Naveed directly at <a href="mailto:naveed@smartratecalcs.com" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">naveed@smartratecalcs.com</a> or visit our <Link href="/privacy" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">full Privacy Policy page</Link>.</p>
             </div>
             <div className="pt-4 border-t border-slate-100 dark:border-slate-800">
               <button onClick={() => navigateTo('home')} className="px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-emerald-600 text-white text-xs font-bold">
@@ -1175,10 +1143,11 @@ export default function HomePage() {
                 <li><Link href="/blog" className="text-emerald-700 dark:text-emerald-400 font-bold hover:underline flex items-center gap-1.5"><i className="fa-solid fa-book-open text-xs text-emerald-600 dark:text-emerald-400"></i> Payout Guides &amp; Research</Link></li>
                 <li><button onClick={() => navigateTo('methodology')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Calculation Methodology</button></li>
                 <li><button onClick={() => navigateTo('matrix')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Interbank Fee Matrix 2026</button></li>
-                <li><button onClick={() => navigateTo('privacy')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Privacy Policy (0 Cookies)</button></li>
-                <li><button onClick={() => navigateTo('terms')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Terms of Service</button></li>
-                <li><button onClick={() => navigateTo('about')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">About Muhammad Naveed</button></li>
-                <li><button onClick={() => navigateTo('contact')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contact &amp; Bug Bounty</button></li>
+                <li><Link href="/privacy" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Terms of Service</Link></li>
+                <li><Link href="/disclaimer" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Financial Disclaimer</Link></li>
+                <li><Link href="/about" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">About Muhammad Naveed</Link></li>
+                <li><Link href="/contact" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contact &amp; Bug Bounty</Link></li>
               </ul>
             </div>
           </div>
