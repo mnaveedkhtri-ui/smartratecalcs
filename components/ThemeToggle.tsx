@@ -13,7 +13,12 @@ export default function ThemeToggle({ className = '', showLabel = false }: Props
 
   useEffect(() => {
     setMounted(true);
-    const saved = localStorage.getItem('smartrate_theme');
+    let saved: string | null = null;
+    try {
+      saved = localStorage.getItem('smartrate_theme');
+    } catch {
+      saved = null;
+    }
     const isDark =
       saved === 'dark' ||
       (!saved && document.documentElement.classList.contains('dark'));
@@ -38,7 +43,11 @@ export default function ThemeToggle({ className = '', showLabel = false }: Props
       document.documentElement.classList.remove('dark');
       document.documentElement.classList.add('light');
     }
-    localStorage.setItem('smartrate_theme', newTheme);
+    try {
+      localStorage.setItem('smartrate_theme', newTheme);
+    } catch {
+      // Ignore storage restrictions in private or sandboxed browser modes
+    }
     setTheme(newTheme);
   };
 
