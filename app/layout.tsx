@@ -85,6 +85,12 @@ export default function RootLayout({
         '@id': 'https://www.smartratecalcs.com/#organization',
         name: 'SmartRateCalcs',
         url: 'https://www.smartratecalcs.com/',
+        email: 'naveed@smartratecalcs.com',
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'customer support',
+          email: 'naveed@smartratecalcs.com',
+        },
         logo: {
           '@type': 'ImageObject',
           url: 'https://www.smartratecalcs.com/icon.png',
@@ -122,6 +128,7 @@ export default function RootLayout({
         '@id': 'https://www.smartratecalcs.com/#author',
         name: 'Muhammad Naveed',
         jobTitle: 'Lead Software & Automation Engineer',
+        email: 'naveed@smartratecalcs.com',
         url: 'https://naveed-portfolio-kappa.vercel.app/',
         sameAs: [
           'https://github.com/mnaveedkhtri-ui',

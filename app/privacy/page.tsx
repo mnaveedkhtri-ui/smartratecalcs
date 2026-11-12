@@ -38,7 +38,7 @@ export default function PrivacyPage() {
             <h2 className="text-sm font-bold text-slate-900">2. Client-Side Math</h2>
             <p>All calculations execute locally in your web browser. No financial data is sent to our servers.</p>
             <h2 className="text-sm font-bold text-slate-900">3. Contact</h2>
-            <p>For inquiries, contact Muhammad Naveed at naveedkhtri7@gmail.com.</p>
+            <p>For inquiries, contact Muhammad Naveed at <a href="mailto:naveed@smartratecalcs.com" className="text-emerald-600 font-semibold hover:underline">naveed@smartratecalcs.com</a>.</p>
           </div>
         </div>
       </main>

@@ -949,8 +949,8 @@ export default function HomePage() {
               </div>
               <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
                 <span className="text-xs text-slate-500 dark:text-slate-400 block mb-1">Primary Email Address:</span>
-                <a href="mailto:naveedkhtri7@gmail.com" className="font-mono font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-2">
-                  <i className="fa-solid fa-envelope text-base"></i> naveedkhtri7@gmail.com
+                <a href="mailto:naveed@smartratecalcs.com" className="font-mono font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-2">
+                  <i className="fa-solid fa-envelope text-base"></i> naveed@smartratecalcs.com
                 </a>
               </div>
             </div>
@@ -987,8 +987,8 @@ export default function HomePage() {
 
                 <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
                   <div className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Email Inquiries</div>
-                  <a href="mailto:naveedkhtri7@gmail.com" className="text-base font-bold font-mono text-slate-800 dark:text-slate-200 hover:underline flex items-center gap-2">
-                    <i className="fa-solid fa-envelope"></i> naveedkhtri7@gmail.com
+                  <a href="mailto:naveed@smartratecalcs.com" className="text-base font-bold font-mono text-slate-800 dark:text-slate-200 hover:underline flex items-center gap-2">
+                    <i className="fa-solid fa-envelope"></i> naveed@smartratecalcs.com
                   </a>
                   <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-1">Direct inbox of Muhammad Naveed</p>
                 </div>
@@ -1045,7 +1045,7 @@ export default function HomePage() {
               <h3 className="font-heading font-bold text-sm text-slate-900 dark:text-white">2. 100% Client-Side Processing</h3>
               <p>All calculations execute locally inside your web browser. No financial amounts or inputs are transmitted to remote servers.</p>
               <h3 className="font-heading font-bold text-sm text-slate-900 dark:text-white">3. Data Controller Contact</h3>
-              <p>For inquiries, contact Muhammad Naveed directly at naveedkhtri7@gmail.com or via WhatsApp at +92 332 3219981.</p>
+              <p>For inquiries, contact Muhammad Naveed directly at <a href="mailto:naveed@smartratecalcs.com" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">naveed@smartratecalcs.com</a> or via WhatsApp at +92 332 3219981.</p>
             </div>
             <div className="pt-4 border-t border-slate-100 dark:border-slate-800">
               <button onClick={() => navigateTo('home')} className="px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-emerald-600 text-white text-xs font-bold">
@@ -1128,7 +1128,7 @@ export default function HomePage() {
                 <a href="https://naveed-portfolio-kappa.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">
                   <i className="fa-solid fa-globe"></i>
                 </a>
-                <a href="mailto:naveedkhtri7@gmail.com" className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <a href="mailto:naveed@smartratecalcs.com" aria-label="Email Muhammad Naveed" className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">
                   <i className="fa-solid fa-envelope"></i>
                 </a>
                 <a href="https://wa.me/923323219981" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors">

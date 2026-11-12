@@ -55,8 +55,8 @@ export default function AboutPage() {
               GitHub Profile
             </a>
             <span>&bull;</span>
-            <a href="mailto:naveedkhtri7@gmail.com" className="hover:underline">
-              naveedkhtri7@gmail.com
+            <a href="mailto:naveed@smartratecalcs.com" className="hover:underline">
+              naveed@smartratecalcs.com
             </a>
           </div>
         </div>

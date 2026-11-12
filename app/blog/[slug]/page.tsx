@@ -643,6 +643,12 @@ export default function BlogPostPage({ params }: Props) {
               >
                 GitHub
               </a>
+              <a
+                href="mailto:naveed@smartratecalcs.com"
+                className="hover:text-emerald-600 dark:hover:text-emerald-400 underline"
+              >
+                naveed@smartratecalcs.com
+              </a>
             </div>
           </div>
         </div>
