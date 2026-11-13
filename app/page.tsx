@@ -112,6 +112,7 @@ export default function HomePage() {
       if (!matchesSearch) return false;
 
       if (calcFilter === 'all') return true;
+      if (calcFilter === 'us') return c.targetCurrency === 'USD';
       if (calcFilter === 'pk') return c.targetCurrency === 'PKR';
       if (calcFilter === 'in') return c.targetCurrency === 'INR';
       if (calcFilter === 'sea') return c.targetCurrency === 'BDT' || c.targetCurrency === 'PHP';
@@ -209,6 +210,15 @@ export default function HomePage() {
             <Link href="/freelance-hourly-rate-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-teal-700 dark:text-teal-300 bg-teal-50/50 dark:bg-teal-950/40 hover:bg-teal-50 flex items-center gap-2.5">
               <i className="fa-solid fa-business-time text-xs text-teal-600 dark:text-teal-400"></i> Freelance Hourly Rate Architect
             </Link>
+            <Link href="/depop-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-red-700 dark:text-red-300 bg-red-50/50 dark:bg-red-950/40 hover:bg-red-50 flex items-center gap-2.5">
+              <i className="fa-solid fa-shirt text-xs text-red-600 dark:text-red-400"></i> Depop Fee Calculator (2026)
+            </Link>
+            <Link href="/square-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-800 dark:text-slate-200 bg-slate-100/70 dark:bg-slate-800/60 hover:bg-slate-100 flex items-center gap-2.5">
+              <i className="fa-solid fa-square text-xs text-slate-600 dark:text-slate-400"></i> Square POS Calculator
+            </Link>
+            <Link href="/1099-tax-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-emerald-800 dark:text-emerald-200 bg-emerald-50/60 dark:bg-emerald-950/50 hover:bg-emerald-50 flex items-center gap-2.5">
+              <i className="fa-solid fa-file-invoice-dollar text-xs text-emerald-600 dark:text-emerald-400"></i> US 1099 Tax Calculator
+            </Link>
             <button onClick={() => navigateTo('matrix')} className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 flex items-center gap-2.5">
               <i className="fa-solid fa-table-cells text-xs text-slate-400"></i> Fee Matrix 2026
             </button>
@@ -270,8 +280,15 @@ export default function HomePage() {
               </button>
             </div>
 
-            {/* Flagship Engines Quick-Launcher */}
-            <div className="mt-8 max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 text-left">
+            {/* Flagship Engines Quick-Launcher (10 Dedicated Core Engines) */}
+            <div className="mt-8 max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5 text-left">
+              <Link href="/depop-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-red-500 hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-red-600 dark:group-hover:text-red-400 flex items-center gap-1.5">
+                  <i className="fa-solid fa-shirt text-red-500 text-[10px]"></i> Depop
+                  <span className="px-1 py-0.2 rounded bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-300 text-[8px] font-mono">NEW</span>
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">0% Sell &bull; 3.3% Proc</div>
+              </Link>
               <Link href="/upwork-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 hover:shadow-sm transition-all group">
                 <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 flex items-center gap-1.5">
                   <i className="fa-solid fa-briefcase text-emerald-500 text-[10px]"></i> Upwork
@@ -319,6 +336,12 @@ export default function HomePage() {
                   <i className="fa-solid fa-file-invoice-dollar text-emerald-500 text-[10px]"></i> US 1099 Tax
                 </div>
                 <div className="text-[9px] text-slate-400 font-mono mt-0.5">15.3% SE Tax</div>
+              </Link>
+              <Link href="/remitly-pakistan-rate" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-blue-600 hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-blue-600 flex items-center gap-1.5">
+                  <i className="fa-solid fa-paper-plane text-blue-500 text-[10px]"></i> Remitly PKR
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">Live FX &bull; Zero Fee</div>
               </Link>
             </div>
           </section>
@@ -655,13 +678,13 @@ export default function HomePage() {
             </section>
           )}
 
-          {/* ================= PROGRAMMATIC CALCULATORS DIRECTORY (53 Dedicated Engines) ================= */}
+          {/* ================= PROGRAMMATIC CALCULATORS DIRECTORY (80 Dedicated Corridor Engines) ================= */}
           <section id="calculators" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-12 border-t border-slate-200 dark:border-slate-800">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 text-emerald-800 dark:text-emerald-300 text-[11px] font-bold mb-2 font-mono">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  53 Programmatic Financial Tools &bull; Live 2026 Interbank Models
+                  90 Total Financial Engines &bull; 80 Dedicated Corridor Models
                 </div>
                 <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white">
                   Dedicated Corridors &amp; Platform Calculators
@@ -689,7 +712,8 @@ export default function HomePage() {
             {/* Category Filter Pills */}
             <div className="flex flex-wrap gap-2 mb-8">
               {[
-                { id: 'all', label: `All Calculators (${PROGRAMMATIC_CALCULATORS.length})` },
+                { id: 'all', label: `All Corridors (${PROGRAMMATIC_CALCULATORS.length})` },
+                { id: 'us', label: 'US Domestic & Reseller (USD)' },
                 { id: 'pk', label: 'Pakistan (PKR)' },
                 { id: 'in', label: 'India (INR)' },
                 { id: 'sea', label: 'Bangladesh & Philippines' },
