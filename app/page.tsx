@@ -1112,6 +1112,7 @@ export default function HomePage() {
             <div>
               <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white mb-4">Flagship Calculators</h4>
               <ul className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
+                <li><Link href="/depop-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-shirt text-rose-500 text-xs"></i> Depop Fee Calculator (0% Rule)</Link></li>
                 <li><Link href="/square-fee-calculator" className="hover:text-slate-900 dark:hover:text-white font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-square text-slate-800 dark:text-slate-200 text-xs"></i> Square Fee Calculator (US)</Link></li>
                 <li><Link href="/1099-tax-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-file-invoice-dollar text-emerald-500 text-xs"></i> 1099 Tax Calculator (IRS)</Link></li>
                 <li><Link href="/stripe-fee-calculator" className="hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-stripe text-indigo-500 text-xs"></i> Stripe Fee Calculator</Link></li>
