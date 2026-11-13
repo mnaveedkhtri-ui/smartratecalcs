@@ -316,6 +316,64 @@ export default function DepopCalculatorPage() {
                 to calculate your self-employment tax obligations accurately.
               </p>
             </section>
+
+            {/* Section 6: Frequently Asked Questions (FAQ) */}
+            <section className="bg-white dark:bg-slate-900/90 rounded-3xl p-6 sm:p-9 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+              <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-rose-500 uppercase tracking-wider">
+                <i className="fa-solid fa-circle-question"></i>
+                Frequently Asked Questions
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-slate-900 dark:text-white">
+                Depop Seller Fee &amp; Profit FAQs (2026)
+              </h2>
+
+              <div className="space-y-4 text-sm">
+                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/80">
+                  <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1.5">
+                    What are Depop seller fees in 2026?
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                    In 2026, Depop charges a <strong>0% selling fee</strong> for items listed in USD and GBP. Sellers only pay a standard payment processing fee of <strong>3.3% + $0.45</strong> in the United States (or <strong>2.9% + £0.30</strong> in the UK). If you choose to use Depop Boost, an optional 8% fee applies only if the item sells directly through a boosted search tile.
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/80">
+                  <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1.5">
+                    Does Depop still take a 10% selling fee?
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                    No. Depop officially eliminated its longstanding 10% seller marketplace fee in the US and UK. Depop introduced a buyer marketplace fee (up to 5% + $1) charged directly to shoppers at checkout, allowing sellers to keep 100% of their item sale price minus payment processing.
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/80">
+                  <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1.5">
+                    How does the Depop 8% boosting fee work?
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Boosting increases your listing visibility in search feeds. Depop charges the 8% fee only if a buyer purchases your item through a boosted search tile or within 28 days of clicking your boosted listing. If a buyer finds your item organically through your profile or standard search, the 8% fee is not charged.
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/80">
+                  <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1.5">
+                    Is Depop cheaper for sellers than Poshmark and eBay?
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Yes. On a standard $50 apparel sale, Depop fees total approximately $2.10 (3.3% + $0.45), compared to $10.00 on Poshmark (flat 20%) and approximately $7.03 on eBay (13.25% + $0.40). Selling on Depop saves sellers between $4.90 and $7.90 per $50 item.
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/80">
+                  <h3 className="font-bold text-slate-900 dark:text-white text-base mb-1.5">
+                    Will Depop send me a 1099-K tax form in 2026?
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Under current IRS transition guidance, Depop will issue Form 1099-K to US sellers who exceed $5,000 in gross annual sales. Even if you do not receive a 1099-K, you are legally required to report all net business profit on IRS Schedule C.
+                  </p>
+                </div>
+              </div>
+            </section>
           </article>
 
           {/* Related Tools Navigation */}
