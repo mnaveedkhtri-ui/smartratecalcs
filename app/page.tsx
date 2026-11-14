@@ -23,6 +23,104 @@ const RATES: RatesMap = {
   CAD: { PKR: 198.5, INR: 61.85, BDT: 86.5 },
 };
 
+const FLAGSHIP_DIRECTORY_ENTRIES = [
+  {
+    slug: 'tiktok-shop-fee-calculator',
+    title: 'TikTok Shop Fee & Profit Calculator (2026)',
+    category: 'ecommerce' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate official 6% US referral fee, UK 5% rates, creator affiliate cuts, FBT shipping, and net profit margins.',
+    primaryKeyword: 'tiktok shop fee calculator',
+  },
+  {
+    slug: 'depop-fee-calculator',
+    title: 'Depop Fee & Profit Calculator (0% Seller Fee 2026)',
+    category: 'ecommerce' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate exact take-home payout under 0% selling fee, 3.3% + $0.45 processing, and optional 8% boost cuts.',
+    primaryKeyword: 'depop fee calculator',
+  },
+  {
+    slug: 'square-fee-calculator',
+    title: 'Square POS & Invoicing Fee Calculator (US 2026)',
+    category: 'ecommerce' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Model Square standard 2.6% + 10¢ in-person, 2.9% + 30¢ invoice, and 3.5% + 15¢ keyed-in merchant fees.',
+    primaryKeyword: 'square fee calculator',
+  },
+  {
+    slug: '1099-tax-calculator',
+    title: 'US 1099-NEC & 1099-K Self-Employment Tax Calculator',
+    category: 'freelance' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate federal self-employment tax (15.3% Social Security & Medicare) and quarterly estimated tax safe harbor thresholds.',
+    primaryKeyword: '1099 tax calculator',
+  },
+  {
+    slug: 'paypal-fee-calculator',
+    title: 'PayPal Goods & Services and International Fee Calculator',
+    category: 'ecommerce' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate domestic 3.49% + $0.49 and international 4.99% PayPal transaction cuts for merchants and freelancers.',
+    primaryKeyword: 'paypal fee calculator',
+  },
+  {
+    slug: 'stripe-fee-calculator',
+    title: 'Stripe Payment Processing Fee Calculator (2026)',
+    category: 'ecommerce' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate standard 2.9% + 30¢ credit card processing, international currency conversion, and payout drag.',
+    primaryKeyword: 'stripe fee calculator',
+  },
+  {
+    slug: 'upwork-fee-calculator',
+    title: 'Upwork Freelancer Fee & Bid Cost Calculator (2026)',
+    category: 'freelance' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Model flat 10% freelancer service fee, connect bidding costs, and local withdrawal FX margins.',
+    primaryKeyword: 'upwork fee calculator',
+  },
+  {
+    slug: 'fiverr-fee-calculator',
+    title: 'Fiverr Seller Take-Home Fee Calculator (2026)',
+    category: 'freelance' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate Fiverr 20% platform cut, gig packaging margins, and net bank take-home earnings.',
+    primaryKeyword: 'fiverr fee calculator',
+  },
+  {
+    slug: 'payoneer-fee-calculator',
+    title: 'Payoneer Bank Withdrawal & FX Spread Calculator (2026)',
+    category: 'payout' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'PKR',
+    description: 'Calculate 2% hidden exchange rate spread, $1.50 fixed withdrawal fee, and net take-home bank deposit.',
+    primaryKeyword: 'payoneer fee calculator',
+  },
+  {
+    slug: 'freelance-hourly-rate-calculator',
+    title: 'Freelance Hourly Rate Architect & Target Pricing Tool',
+    category: 'freelance' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate sustainable hourly and day rates based on real personal expenses, non-billable overhead, and taxes.',
+    primaryKeyword: 'freelance hourly rate calculator',
+  },
+];
+
+const ALL_DIRECTORY_CALCULATORS = [
+  ...FLAGSHIP_DIRECTORY_ENTRIES,
+  ...PROGRAMMATIC_CALCULATORS,
+];
+
 export default function HomePage() {
   const [currentPage, setCurrentPage] = useState<'home' | 'matrix' | 'methodology' | 'faq' | 'about' | 'contact' | 'privacy' | 'terms'>('home');
   const [activeTab, setActiveTab] = useState<'payout' | 'gateway' | 'ecom' | 'freelance'>('payout');
@@ -102,7 +200,7 @@ export default function HomePage() {
   };
 
   const filteredCalculators = useMemo(() => {
-    return PROGRAMMATIC_CALCULATORS.filter((c) => {
+    return ALL_DIRECTORY_CALCULATORS.filter((c) => {
       const matchesSearch =
         calcSearch === '' ||
         c.title.toLowerCase().includes(calcSearch.toLowerCase()) ||
@@ -722,7 +820,7 @@ export default function HomePage() {
             {/* Category Filter Pills */}
             <div className="flex flex-wrap gap-2 mb-8">
               {[
-                { id: 'all', label: `All Corridors (${PROGRAMMATIC_CALCULATORS.length})` },
+                { id: 'all', label: `All Calculators (${ALL_DIRECTORY_CALCULATORS.length})` },
                 { id: 'us', label: 'US Domestic & Reseller (USD)' },
                 { id: 'pk', label: 'Pakistan (PKR)' },
                 { id: 'in', label: 'India (INR)' },
