@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import EtsyCalculatorWidget from '@/components/EtsyCalculatorWidget';
+import { SiteLegalFooter } from '@/components/SiteLegalFooter';
 
 export const metadata: Metadata = {
   title: 'Etsy Fee & Profit Calculator (2026) - Real Take-Home & Break-Even Tool',
@@ -410,6 +411,9 @@ export default function EtsyFeeCalculatorPage() {
             </section>
           </article>
         </div>
+
+        {/* Global Legal & Trust Footer */}
+        <SiteLegalFooter />
       </div>
     </>
   );
