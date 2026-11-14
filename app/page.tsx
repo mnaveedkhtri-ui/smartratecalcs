@@ -25,6 +25,15 @@ const RATES: RatesMap = {
 
 const FLAGSHIP_DIRECTORY_ENTRIES = [
   {
+    slug: 'cash-app-fee-calculator',
+    title: 'Cash App Fee & Payout Calculator (2026)',
+    category: 'payout' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate exact deductions for 1.75% instant debit card transfers, 2.75% Cash for Business merchant receipts, and 3% credit card sends.',
+    primaryKeyword: 'cash app fee calculator',
+  },
+  {
     slug: 'tiktok-shop-fee-calculator',
     title: 'TikTok Shop Fee & Profit Calculator (2026)',
     category: 'ecommerce' as const,
@@ -308,6 +317,9 @@ export default function HomePage() {
             <Link href="/freelance-hourly-rate-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-teal-700 dark:text-teal-300 bg-teal-50/50 dark:bg-teal-950/40 hover:bg-teal-50 flex items-center gap-2.5">
               <i className="fa-solid fa-business-time text-xs text-teal-600 dark:text-teal-400"></i> Freelance Hourly Rate Architect
             </Link>
+            <Link href="/calculators/cash-app-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-emerald-700 dark:text-emerald-300 bg-emerald-50/50 dark:bg-emerald-950/40 hover:bg-emerald-50 flex items-center gap-2.5">
+              <span className="w-4 h-4 rounded bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-[10px]">$</span> Cash App Fee Calculator (2026)
+            </Link>
             <Link href="/tiktok-shop-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-rose-700 dark:text-rose-300 bg-rose-50/50 dark:bg-rose-950/40 hover:bg-rose-50 flex items-center gap-2.5">
               <i className="fa-brands fa-tiktok text-xs text-[#fe2c55]"></i> TikTok Shop Fee Calculator (2026)
             </Link>
@@ -381,8 +393,15 @@ export default function HomePage() {
               </button>
             </div>
 
-            {/* Flagship Engines Quick-Launcher (11 Dedicated Core Engines) */}
+            {/* Flagship Engines Quick-Launcher (12 Dedicated Core Engines) */}
             <div className="mt-8 max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5 text-left">
+              <Link href="/calculators/cash-app-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 flex items-center gap-1.5">
+                  <span className="w-3.5 h-3.5 rounded bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-[9px]">$</span> Cash App
+                  <span className="px-1 py-0.2 rounded bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 text-[8px] font-mono">NEW</span>
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">1.75% Inst &bull; 2.75% Biz</div>
+              </Link>
               <Link href="/tiktok-shop-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-[#fe2c55] hover:shadow-sm transition-all group">
                 <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-[#fe2c55] flex items-center gap-1.5">
                   <i className="fa-brands fa-tiktok text-[#fe2c55] text-[10px]"></i> TikTok Shop
@@ -792,7 +811,7 @@ export default function HomePage() {
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 text-emerald-800 dark:text-emerald-300 text-[11px] font-bold mb-2 font-mono">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  91 Total Financial Engines &bull; 80 Dedicated Corridor Models
+                  92 Total Financial Engines &bull; 80 Dedicated Corridor Models
                 </div>
                 <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white">
                   Dedicated Corridors &amp; Platform Calculators
@@ -1244,6 +1263,7 @@ export default function HomePage() {
             <div>
               <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white mb-4">Flagship Calculators</h4>
               <ul className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
+                <li><Link href="/calculators/cash-app-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold transition-colors flex items-center gap-1.5"><span className="w-3.5 h-3.5 rounded bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-[9px]">$</span> Cash App Fee Calculator (2026)</Link></li>
                 <li><Link href="/tiktok-shop-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-tiktok text-[#fe2c55] text-xs"></i> TikTok Shop Fee Calculator (2026)</Link></li>
                 <li><Link href="/depop-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-shirt text-rose-500 text-xs"></i> Depop Fee Calculator (0% Rule)</Link></li>
                 <li><Link href="/square-fee-calculator" className="hover:text-slate-900 dark:hover:text-white font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-square text-slate-800 dark:text-slate-200 text-xs"></i> Square Fee Calculator (US)</Link></li>

@@ -48,6 +48,10 @@ const nextConfig = {
         source: '/calculators/freelance-hourly-rate-calculator',
         destination: '/freelance-hourly-rate-calculator',
       },
+      {
+        source: '/cash-app-fee-calculator',
+        destination: '/calculators/cash-app-fee-calculator',
+      },
     ];
   },
   async redirects() {
