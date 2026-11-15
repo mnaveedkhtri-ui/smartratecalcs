@@ -667,6 +667,21 @@ export default function HomePage() {
                       <div><span className="text-slate-400 dark:text-slate-500 block text-[10px]">Hidden FX Loss:</span><span className="font-mono font-bold text-emerald-600 dark:text-emerald-400">$0.00 (0%)</span></div>
                       <div><span className="text-slate-400 dark:text-slate-500 block text-[10px]">Settlement:</span><span className="font-bold text-slate-800 dark:text-slate-200">Same Day / 2h</span></div>
                     </div>
+                    <div className="mt-4 pt-3 border-t border-emerald-200/60 dark:border-emerald-800/40 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                      <div className="text-xs text-emerald-800 dark:text-emerald-300 font-semibold flex items-center gap-1.5">
+                        <i className="fa-solid fa-bolt text-emerald-600 dark:text-emerald-400" aria-hidden="true"></i>
+                        <span>Zero currency spread markup. Keep 100% of interbank value.</span>
+                      </div>
+                      <a
+                        href="/go/wise"
+                        target="_blank"
+                        rel="noopener sponsored noreferrer"
+                        className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all shrink-0 active:scale-95"
+                      >
+                        <span>Open Free Wise Account</span>
+                        <i className="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                      </a>
+                    </div>
                   </div>
 
                   {/* Payoneer Card */}
@@ -692,6 +707,21 @@ export default function HomePage() {
                       <div><span className="text-slate-400 dark:text-slate-500 block text-[10px]">Fixed Fee:</span><span className="font-mono font-bold text-slate-800 dark:text-slate-200">$1.50</span></div>
                       <div><span className="text-slate-400 dark:text-slate-500 block text-[10px]">Spread Loss:</span><span className="font-mono font-bold text-rose-600 dark:text-rose-400">${(netInvoiced * 0.02).toFixed(2)} (2.0%)</span></div>
                       <div><span className="text-slate-400 dark:text-slate-500 block text-[10px]">Settlement:</span><span className="font-bold text-slate-800 dark:text-slate-200">2 - 24 Hours</span></div>
+                    </div>
+                    <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                      <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold flex items-center gap-1.5">
+                        <i className="fa-solid fa-wallet text-orange-500" aria-hidden="true"></i>
+                        <span>Best for Upwork, Fiverr, and direct JazzCash local cashouts.</span>
+                      </div>
+                      <a
+                        href="/go/payoneer"
+                        target="_blank"
+                        rel="noopener sponsored noreferrer"
+                        className="px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all shrink-0 active:scale-95"
+                      >
+                        <span>Open Payoneer Account</span>
+                        <i className="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                      </a>
                     </div>
                   </div>
 
