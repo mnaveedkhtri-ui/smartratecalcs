@@ -154,42 +154,72 @@ export default function RootLayout({
         />
         <meta name="google-site-verification" content="FzC73kAndsqrqsza438VtUdn49KmQZfgQm61v9-ukls" />
         <meta name="msvalidate.01" content="7AE1E81DB909ABEB0E3E32E59E18A963" />
-        {/* Google AdSense Verification & Auto Ads */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8616861763785858"
-          crossOrigin="anonymous"
-        ></script>
-        <script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="ZdZs4yu2IJtVFUgGS0MKdg"
-          async
-        ></script>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          as="style"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
         />
         <link
-          rel="stylesheet"
+          rel="preload"
+          as="style"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+              function loadCSS(href){
+                var l=document.createElement('link');
+                l.rel='stylesheet';
+                l.href=href;
+                document.head.appendChild(l);
+              }
+              loadCSS('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+              loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+            })();`,
+          }}
+        />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+          />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="bg-[#f8fafc] dark:bg-[#070d17] text-slate-800 dark:text-slate-100 antialiased min-h-screen transition-colors duration-200">
+        {/* Google AdSense Verification & Auto Ads (deferred for 95+ Core Web Vitals) */}
+        <Script
+          id="google-adsense"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8616861763785858"
+          strategy="lazyOnload"
+          crossOrigin="anonymous"
+        />
+        {/* Ahrefs Web Analytics */}
+        <Script
+          id="ahrefs-analytics"
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="ZdZs4yu2IJtVFUgGS0MKdg"
+          strategy="lazyOnload"
+        />
         {/* Google Analytics 4 (GA4) */}
         <Script
+          id="google-analytics-gtag"
           src="https://www.googletagmanager.com/gtag/js?id=G-8JV66TTPEW"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics-init" strategy="afterInteractive">
+        <Script id="google-analytics-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
