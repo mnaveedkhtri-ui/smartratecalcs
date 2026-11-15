@@ -16,6 +16,10 @@ export function SiteLegalFooter() {
           Etsy Fee Calculator
         </Link>
         <span className="text-slate-300 dark:text-slate-700">&bull;</span>
+        <Link href="/calculators/whatnot-fee-calculator" className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+          Whatnot Fee Calculator
+        </Link>
+        <span className="text-slate-300 dark:text-slate-700">&bull;</span>
         <Link href="/calculators/cash-app-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
           Cash App Calculator
         </Link>

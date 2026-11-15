@@ -56,6 +56,10 @@ const nextConfig = {
         source: '/etsy-fee-calculator',
         destination: '/calculators/etsy-fee-calculator',
       },
+      {
+        source: '/whatnot-fee-calculator',
+        destination: '/calculators/whatnot-fee-calculator',
+      },
     ];
   },
   async redirects() {
