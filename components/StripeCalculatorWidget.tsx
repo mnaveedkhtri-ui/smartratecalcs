@@ -171,6 +171,8 @@ export default function StripeCalculatorWidget({ isStandalone = false }: { isSta
                 {currSym}
               </span>
               <input
+                id="stripe-amount-input"
+                aria-label="Stripe transaction amount"
                 type="number"
                 value={amount}
                 min={1}
@@ -180,6 +182,8 @@ export default function StripeCalculatorWidget({ isStandalone = false }: { isSta
                 className="w-full pl-9 pr-24 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xl font-bold font-mono text-slate-900 dark:text-white focus:outline-none focus:border-indigo-500 transition-colors"
               />
               <select
+                id="stripe-currency-select"
+                aria-label="Stripe transaction currency"
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value)}
                 className="absolute right-2 px-2.5 py-1.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-800 dark:text-slate-200 cursor-pointer focus:outline-none"
@@ -228,6 +232,7 @@ export default function StripeCalculatorWidget({ isStandalone = false }: { isSta
                   <input
                     type="radio"
                     name="stripeRateType"
+                    aria-label={item.name}
                     checked={rateType === key}
                     onChange={() => setRateType(key)}
                     className="mt-1 accent-indigo-600"

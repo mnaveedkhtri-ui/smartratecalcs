@@ -518,15 +518,17 @@ export default function HomePage() {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pb-8 border-b border-slate-100 dark:border-slate-800">
                   <div className="md:col-span-7 space-y-3">
                     <div className="flex items-center justify-between">
-                      <label className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
+                      <label htmlFor="gross-amount-input" className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
                         Gross Invoiced Amount
                       </label>
                       <span className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">${grossAmount.toLocaleString()} {currency}</span>
                     </div>
 
                     <div className="relative flex items-center">
-                      <span className="absolute left-3.5 text-lg sm:text-xl font-bold text-slate-400 dark:text-slate-500 font-mono">$</span>
+                      <span className="absolute left-3.5 text-lg sm:text-xl font-bold text-slate-400 dark:text-slate-500 font-mono" aria-hidden="true">$</span>
                       <input
+                        id="gross-amount-input"
+                        aria-label="Gross Invoiced Amount"
                         type="number"
                         value={grossAmount}
                         min={50}
@@ -536,6 +538,8 @@ export default function HomePage() {
                         className="w-full pl-8 sm:pl-10 pr-28 sm:pr-32 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xl sm:text-2xl font-bold font-mono text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 transition-colors"
                       />
                       <select
+                        id="invoice-currency-select"
+                        aria-label="Select invoice currency"
                         value={currency}
                         onChange={(e) => setCurrency(e.target.value)}
                         className="absolute right-2 px-3 py-2 rounded-xl bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-xs font-bold text-slate-800 dark:text-slate-200 cursor-pointer focus:outline-none"
@@ -550,6 +554,8 @@ export default function HomePage() {
 
                     <div className="pt-1">
                       <input
+                        id="gross-amount-slider"
+                        aria-label="Gross invoiced amount slider"
                         type="range"
                         min={100}
                         max={20000}
@@ -558,7 +564,7 @@ export default function HomePage() {
                         onChange={(e) => setGrossAmount(Number(e.target.value) || 0)}
                         className="w-full accent-emerald-600 cursor-pointer"
                       />
-                      <div className="flex justify-between text-[11px] text-slate-400 dark:text-slate-500 font-mono mt-1">
+                      <div className="flex justify-between text-[11px] text-slate-400 dark:text-slate-500 font-mono mt-1" aria-hidden="true">
                         <span>$100</span>
                         <span>$5,000</span>
                         <span>$10,000</span>
@@ -568,10 +574,12 @@ export default function HomePage() {
                   </div>
 
                   <div className="md:col-span-5 space-y-3">
-                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
+                    <label htmlFor="destination-country-select" className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
                       Receiving Bank Country
                     </label>
                     <select
+                      id="destination-country-select"
+                      aria-label="Select destination receiving country"
                       value={country}
                       onChange={(e) => setCountry(e.target.value)}
                       className="w-full px-4 py-3.5 rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 cursor-pointer"
@@ -622,11 +630,11 @@ export default function HomePage() {
                 <div className="pt-8 space-y-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="font-heading font-extrabold text-lg text-slate-900 dark:text-white">Comparative Take-Home Verdict</h3>
+                      <h2 className="font-heading font-extrabold text-lg text-slate-900 dark:text-white">Comparative Take-Home Verdict</h2>
                       <p className="text-xs text-slate-500 dark:text-slate-400">Live sequential mathematical deduction</p>
                     </div>
-                    <button onClick={handleCopy} className="px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
-                      <i className="fa-regular fa-copy mr-1"></i> {copied ? 'Copied!' : 'Copy Summary'}
+                    <button onClick={handleCopy} aria-label="Copy fee summary to clipboard" className="px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                      <i className="fa-regular fa-copy mr-1" aria-hidden="true"></i> {copied ? 'Copied!' : 'Copy Summary'}
                     </button>
                   </div>
 
@@ -642,7 +650,7 @@ export default function HomePage() {
                         </div>
                         <div>
                           <div className="flex items-center gap-2">
-                            <h4 className="font-heading font-extrabold text-base text-slate-900 dark:text-white">Wise (TransferWise)</h4>
+                            <h3 className="font-heading font-extrabold text-base text-slate-900 dark:text-white">Wise (TransferWise)</h3>
                             <span className="text-[10px] font-bold bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 px-2 py-0.5 rounded-full">Recommended</span>
                           </div>
                           <p className="text-xs text-slate-500 dark:text-slate-400">Zero currency markup &bull; 0.45% transparent transfer fee</p>
@@ -669,7 +677,7 @@ export default function HomePage() {
                           P
                         </div>
                         <div>
-                          <h4 className="font-heading font-extrabold text-base text-slate-900 dark:text-white">Payoneer to Bank / JazzCash</h4>
+                          <h3 className="font-heading font-extrabold text-base text-slate-900 dark:text-white">Payoneer to Bank / JazzCash</h3>
                           <p className="text-xs text-slate-500 dark:text-slate-400">$1.50 withdrawal fee + 2.0% currency spread</p>
                         </div>
                       </div>
@@ -695,7 +703,7 @@ export default function HomePage() {
                           <i className="fa-solid fa-building-columns"></i>
                         </div>
                         <div>
-                          <h4 className="font-heading font-extrabold text-base text-slate-900 dark:text-white">Commercial Bank SWIFT Wire</h4>
+                          <h3 className="font-heading font-extrabold text-base text-slate-900 dark:text-white">Commercial Bank SWIFT Wire</h3>
                           <p className="text-xs text-slate-500 dark:text-slate-400">Meezan, HBL intermediary fees + 2.8% bank margin</p>
                         </div>
                       </div>
@@ -767,21 +775,21 @@ export default function HomePage() {
           {activeTab === 'ecom' && (
             <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
               <div className="bg-white dark:bg-slate-900/90 rounded-3xl p-6 sm:p-9 border border-slate-200 dark:border-slate-800 shadow-md">
-                <h3 className="font-heading font-extrabold text-2xl text-slate-900 dark:text-white mb-2">E-Commerce Unit Economics &amp; ROAS</h3>
+                <h2 className="font-heading font-extrabold text-2xl text-slate-900 dark:text-white mb-2">E-Commerce Unit Economics &amp; ROAS</h2>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mb-8">Calculate true net profit after product cost, ad spend, and gateway cuts.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Retail Selling Price ($)</label>
-                      <input type="number" value={ecomPrice} onChange={(e) => setEcomPrice(Number(e.target.value) || 0)} className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-mono font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500" />
+                      <label htmlFor="ecom-price-input" className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Retail Selling Price ($)</label>
+                      <input id="ecom-price-input" aria-label="Retail Selling Price in USD" type="number" value={ecomPrice} onChange={(e) => setEcomPrice(Number(e.target.value) || 0)} className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-mono font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500" />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Product Cost + Shipping ($)</label>
-                      <input type="number" value={ecomCogs} onChange={(e) => setEcomCogs(Number(e.target.value) || 0)} className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-mono font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500" />
+                      <label htmlFor="ecom-cogs-input" className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Product Cost + Shipping ($)</label>
+                      <input id="ecom-cogs-input" aria-label="Product Cost and Shipping in USD" type="number" value={ecomCogs} onChange={(e) => setEcomCogs(Number(e.target.value) || 0)} className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-mono font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500" />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Marketing CPA / Ad Cost ($)</label>
-                      <input type="number" value={ecomCpa} onChange={(e) => setEcomCpa(Number(e.target.value) || 0)} className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-mono font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500" />
+                      <label htmlFor="ecom-cpa-input" className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Marketing CPA / Ad Cost ($)</label>
+                      <input id="ecom-cpa-input" aria-label="Marketing CPA and Ad Cost in USD" type="number" value={ecomCpa} onChange={(e) => setEcomCpa(Number(e.target.value) || 0)} className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-mono font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500" />
                     </div>
                   </div>
                   <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-4">
@@ -807,21 +815,21 @@ export default function HomePage() {
           {activeTab === 'freelance' && (
             <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
               <div className="bg-white dark:bg-slate-900/90 rounded-3xl p-6 sm:p-9 border border-slate-200 dark:border-slate-800 shadow-md">
-                <h3 className="font-heading font-extrabold text-2xl text-slate-900 dark:text-white mb-2">Freelance Rate Architect</h3>
+                <h2 className="font-heading font-extrabold text-2xl text-slate-900 dark:text-white mb-2">Freelance Rate Architect</h2>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mb-8">Calculate sustainable hourly and daily rates based on real personal overhead and taxes.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Target Net Monthly Take-Home ($)</label>
-                      <input type="number" value={flNet} onChange={(e) => setFlNet(Number(e.target.value) || 0)} className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-mono font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500" />
+                      <label htmlFor="fl-net-input" className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Target Net Monthly Take-Home ($)</label>
+                      <input id="fl-net-input" aria-label="Target Net Monthly Take-Home in USD" type="number" value={flNet} onChange={(e) => setFlNet(Number(e.target.value) || 0)} className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-mono font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500" />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Monthly Business Overhead ($)</label>
-                      <input type="number" value={flOverhead} onChange={(e) => setFlOverhead(Number(e.target.value) || 0)} className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-mono font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500" />
+                      <label htmlFor="fl-overhead-input" className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Monthly Business Overhead ($)</label>
+                      <input id="fl-overhead-input" aria-label="Monthly Business Overhead in USD" type="number" value={flOverhead} onChange={(e) => setFlOverhead(Number(e.target.value) || 0)} className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-mono font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500" />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Billable Hours Per Week</label>
-                      <input type="number" value={flHours} onChange={(e) => setFlHours(Number(e.target.value) || 0)} className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-mono font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500" />
+                      <label htmlFor="fl-hours-input" className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Billable Hours Per Week</label>
+                      <input id="fl-hours-input" aria-label="Billable Hours Per Week" type="number" value={flHours} onChange={(e) => setFlHours(Number(e.target.value) || 0)} className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 font-mono font-bold text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500" />
                     </div>
                   </div>
                   <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-4">
@@ -861,10 +869,12 @@ export default function HomePage() {
 
               {/* Instant Search Box */}
               <div className="w-full md:w-72 relative">
-                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs">
+                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs" aria-hidden="true">
                   <i className="fa-solid fa-magnifying-glass"></i>
                 </span>
                 <input
+                  id="calc-search-input"
+                  aria-label="Search payment and fee calculators"
                   type="text"
                   placeholder="Search JazzCash, Meezan, Upwork..."
                   value={calcSearch}
@@ -1244,9 +1254,9 @@ export default function HomePage() {
         <div className="rounded-3xl bg-slate-900 text-white p-8 sm:p-12 border border-slate-800 shadow-xl relative overflow-hidden">
           <div className="relative z-10 max-w-2xl">
             <span className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider block mb-2">Enterprise Programmatic Engines</span>
-            <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white mb-3">
+            <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white mb-3">
               Need a custom financial calculator or API integration?
-            </h3>
+            </h2>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
               We build specialized programmatic payout engines for SaaS platforms, freelance marketplaces, and e-commerce aggregators worldwide.
             </p>
@@ -1269,7 +1279,7 @@ export default function HomePage() {
             <div className="lg:col-span-2 space-y-4">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-slate-900 dark:bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">
-                  <i className="fa-solid fa-calculator text-emerald-400 dark:text-white"></i>
+                  <i className="fa-solid fa-calculator text-emerald-400 dark:text-white" aria-hidden="true"></i>
                 </div>
                 <span className="font-heading font-extrabold text-xl text-slate-900 dark:text-white">
                   SmartRate<span className="text-emerald-600 dark:text-emerald-400">Calcs</span>
@@ -1279,17 +1289,39 @@ export default function HomePage() {
                 The independent mathematical benchmark for global contractors, remote software engineers, and e-commerce founders. Built for radical fee transparency with live interbank exchange modeling.
               </p>
               <div className="flex items-center gap-3 text-slate-400 dark:text-slate-400 text-sm">
-                <a href="https://github.com/mnaveedkhtri-ui" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">
-                  <i className="fa-brands fa-github"></i>
+                <a
+                  href="https://github.com/mnaveedkhtri-ui"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub Profile of Muhammad Naveed"
+                  className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+                >
+                  <i className="fa-brands fa-github" aria-hidden="true"></i>
                 </a>
-                <a href="https://naveed-portfolio-kappa.vercel.app/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">
-                  <i className="fa-solid fa-globe"></i>
+                <a
+                  href="https://naveed-portfolio-kappa.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Personal Portfolio of Muhammad Naveed"
+                  className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+                >
+                  <i className="fa-solid fa-globe" aria-hidden="true"></i>
                 </a>
-                <a href="mailto:naveed@smartratecalcs.com" aria-label="Email Muhammad Naveed" className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">
-                  <i className="fa-solid fa-envelope"></i>
+                <a
+                  href="mailto:naveed@smartratecalcs.com"
+                  aria-label="Email Muhammad Naveed directly"
+                  className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+                >
+                  <i className="fa-solid fa-envelope" aria-hidden="true"></i>
                 </a>
-                <a href="https://wa.me/923323219981" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors">
-                  <i className="fa-brands fa-whatsapp"></i>
+                <a
+                  href="https://wa.me/923323219981"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp Direct Support"
+                  className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
+                >
+                  <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
                 </a>
               </div>
               <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 text-[11px] font-mono text-emerald-700 dark:text-emerald-300">
@@ -1299,7 +1331,7 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white mb-4">Flagship Calculators</h4>
+              <h3 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white mb-4">Flagship Calculators</h3>
               <ul className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
                 <li><Link href="/calculators/cash-app-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold transition-colors flex items-center gap-1.5"><span className="w-3.5 h-3.5 rounded bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-[9px]">$</span> Cash App Fee Calculator (2026)</Link></li>
                 <li><Link href="/tiktok-shop-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-tiktok text-[#fe2c55] text-xs"></i> TikTok Shop Fee Calculator (2026)</Link></li>
@@ -1318,7 +1350,7 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white mb-4">Comparisons &amp; Corridors</h4>
+              <h3 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white mb-4">Comparisons &amp; Corridors</h3>
               <ul className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
                 <li><Link href="/calculators/stripe-vs-square-fee-calculator" className="hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold transition-colors flex items-center gap-1.5"><span className="text-[10px] px-1 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300 font-mono font-bold">US</span> Stripe vs Square Calculator</Link></li>
                 <li><Link href="/calculators/wise-vs-revolut-fee-calculator" className="hover:text-sky-600 dark:hover:text-sky-400 font-semibold transition-colors flex items-center gap-1.5"><span className="text-[10px] px-1 py-0.5 rounded bg-sky-50 dark:bg-sky-950 text-sky-600 dark:text-sky-300 font-mono font-bold">UK</span> Wise vs Revolut Calculator</Link></li>
@@ -1332,7 +1364,7 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white mb-4">Legal &amp; Trust</h4>
+              <h3 className="font-heading font-bold text-xs uppercase tracking-wider text-slate-900 dark:text-white mb-4">Legal &amp; Trust</h3>
               <ul className="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
                 <li><Link href="/blog" className="text-emerald-700 dark:text-emerald-400 font-bold hover:underline flex items-center gap-1.5"><i className="fa-solid fa-book-open text-xs text-emerald-600 dark:text-emerald-400"></i> Payout Guides &amp; Research</Link></li>
                 <li><button onClick={() => navigateTo('methodology')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Calculation Methodology</button></li>

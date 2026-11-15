@@ -181,6 +181,8 @@ export default function PayPalCalculatorWidget({ isStandalone = false }: { isSta
                 {currSym}
               </span>
               <input
+                id="paypal-amount-input"
+                aria-label="PayPal transaction amount"
                 type="number"
                 value={amount}
                 min={1}
@@ -190,6 +192,8 @@ export default function PayPalCalculatorWidget({ isStandalone = false }: { isSta
                 className="w-full pl-9 pr-24 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xl font-bold font-mono text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors"
               />
               <select
+                id="paypal-currency-select"
+                aria-label="PayPal transaction currency"
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value)}
                 className="absolute right-2 px-2.5 py-1.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-800 dark:text-slate-200 cursor-pointer focus:outline-none"
@@ -238,6 +242,7 @@ export default function PayPalCalculatorWidget({ isStandalone = false }: { isSta
                   <input
                     type="radio"
                     name="rateType"
+                    aria-label={item.name}
                     checked={rateType === key}
                     onChange={() => setRateType(key)}
                     className="mt-1 accent-blue-600"
