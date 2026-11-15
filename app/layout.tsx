@@ -69,6 +69,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'FzC73kAndsqrqsza438VtUdn49KmQZfgQm61v9-ukls',
+    other: {
+      'msvalidate.01': '7AE1E81DB909ABEB0E3E32E59E18A963',
+    },
   },
 };
 
@@ -150,6 +153,7 @@ export default function RootLayout({
           }}
         />
         <meta name="google-site-verification" content="FzC73kAndsqrqsza438VtUdn49KmQZfgQm61v9-ukls" />
+        <meta name="msvalidate.01" content="7AE1E81DB909ABEB0E3E32E59E18A963" />
         {/* Google AdSense Verification & Auto Ads */}
         <script
           async
