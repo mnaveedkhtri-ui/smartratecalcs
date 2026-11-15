@@ -1,0 +1,58 @@
+<svg width="1000" height="520" viewBox="0 0 1000 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgCanvas3" x1="0" y1="0" x2="1000" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070d1e" />
+      <stop offset="100%" stop-color="#0f1f44" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="520" fill="url(#bgCanvas3)" />
+
+  <!-- Header -->
+  <g transform="translate(50, 40)">
+    <rect width="36" height="36" rx="10" fill="#0070ba" />
+    <text x="18" y="24" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" text-anchor="middle">SC</text>
+    <text x="48" y="22" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800">SmartRateCalcs <tspan fill="#38bdf8" font-size="13" font-weight="600">| Surcharge Mathematical Blueprint</tspan></text>
+    <text x="0" y="58" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900">How to Receive Exactly $100 Net via PayPal (Reverse Solver)</text>
+    <text x="0" y="80" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">SOLVING FOR THE COMMON SELLER MISTAKE OF ADDING RAW 2.99%</text>
+  </g>
+
+  <!-- Side-by-Side Comparison of Math -->
+  <!-- Card Left: The Amateur Trap -->
+  <g transform="translate(50, 140)">
+    <rect width="430" height="260" rx="20" fill="#450a0a" fill-opacity="0.4" stroke="#dc2626" stroke-width="2" />
+    <text x="25" y="40" fill="#fca5a5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800">&#10007; THE AMATEUR ERROR: RAW ADDITION</text>
+    
+    <text x="25" y="75" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">Seller thinks: $100 + 2.99% + $0.49 =</text>
+    <text x="25" y="110" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="900">Invoices $103.48</text>
+
+    <rect x="25" y="135" width="380" height="90" rx="14" fill="#7f1d1d" fill-opacity="0.5" />
+    <text x="40" y="162" fill="#fecaca" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">PayPal takes 2.99% of $103.48 + $0.49 = $3.58</text>
+    <text x="40" y="188" fill="#fecaca" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">Seller Net Received: <tspan fill="#ffffff" font-weight="800">$99.90</tspan></text>
+    <text x="40" y="210" fill="#f87171" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800">&#10007; Result: Underpaid by $0.10 every single sale!</text>
+  </g>
+
+  <!-- Card Right: The Top 1% Reverse Formula -->
+  <g transform="translate(520, 140)">
+    <rect width="430" height="260" rx="20" fill="#064e3b" fill-opacity="0.5" stroke="#10b981" stroke-width="2" />
+    <text x="25" y="40" fill="#86efac" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800">&#10003; THE TOP 1% MATHEMATICAL FORMULA</text>
+    
+    <text x="25" y="75" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">Gross = (Desired Net + $0.49) / (1 - 0.0299)</text>
+    <text x="25" y="110" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="900">Invoices Exactly $103.59</text>
+
+    <rect x="25" y="135" width="380" height="90" rx="14" fill="#065f46" />
+    <text x="40" y="162" fill="#a7f3d0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">PayPal takes 2.99% of $103.59 + $0.49 = $3.59</text>
+    <text x="40" y="188" fill="#a7f3d0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">Seller Net Received: <tspan fill="#ffffff" font-weight="800">$100.00 EXACT</tspan></text>
+    <text x="40" y="210" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800">&#10003; Result: 100% margin protection guaranteed!</text>
+  </g>
+
+  <!-- Bottom Interactive CTA -->
+  <g transform="translate(50, 425)">
+    <rect width="900" height="55" rx="14" fill="#182c5c" stroke="#25468d" stroke-width="1.5" />
+    <circle cx="30" cy="27" r="10" fill="#10b981" />
+    <text x="30" y="32" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="900" text-anchor="middle">&#10003;</text>
+    <text x="50" y="32" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">
+      Need instant numbers? Use our <tspan fill="#38bdf8" font-weight="800">SmartRateCalcs PayPal Fee Calculator</tspan> to solve round amounts instantly.
+    </text>
+  </g>
+</svg>

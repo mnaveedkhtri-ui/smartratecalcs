@@ -255,6 +255,29 @@ export default function PayPalCalculatorPage() {
               </p>
             </div>
 
+            {/* Deep-Dive Blog Guide Cross-Link */}
+            <div className="p-5 rounded-2xl bg-gradient-to-r from-blue-900/10 via-slate-900/5 to-emerald-900/10 dark:from-blue-950/40 dark:to-emerald-950/40 border border-blue-500/20 dark:border-blue-500/30">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 mb-1.5">
+                    DEFINITIVE EDITORIAL GUIDE
+                  </span>
+                  <h3 className="font-heading font-bold text-base text-slate-900 dark:text-white">
+                    PayPal Goods and Services Fee (2026): Who Pays, Rates &amp; Net Math
+                  </h3>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 max-w-xl">
+                    Understand seller vs buyer fee deductions, the 2.99% + $0.49 checkout cut, reverse invoicing formulas, and IRS 1099-K reporting rules.
+                  </p>
+                </div>
+                <Link
+                  href="/blog/paypal-goods-and-services-fee-who-pays-calculator-guide"
+                  className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition-all shadow-md hover:shadow-blue-500/25 whitespace-nowrap"
+                >
+                  Read Master Guide &rarr;
+                </Link>
+              </div>
+            </div>
+
             {/* Related Tools */}
             <div>
               <h3 className="font-heading font-bold text-base text-slate-900 dark:text-white mb-3">
