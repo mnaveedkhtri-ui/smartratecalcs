@@ -5,14 +5,14 @@ import ThemeToggle from '../../components/ThemeToggle';
 import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
-  title: 'TikTok Shop Fee Calculator (2026) | Referral Fees, Affiliate & Net Profit Tool',
+  title: 'TikTok Shop Fee Calculator [2026 Official] Free Profit & 6% Fee Math',
   description:
-    'Free 2026 TikTok Shop fee calculator. Calculate exact seller payouts under the updated 6% US referral rate, 5% UK fees, creator affiliate commissions, FBT fulfillment, and net profit margins.',
+    'Free 2026 TikTok Shop fee calculator. Calculate exact seller payouts under the official 6% US referral rate, creator affiliate commissions, FBT fulfillment, and net profit margins.',
   alternates: {
     canonical: 'https://www.smartratecalcs.com/tiktok-shop-fee-calculator',
   },
   openGraph: {
-    title: 'TikTok Shop Fee Calculator 2026 | Referral Fees & Creator Affiliate Payouts',
+    title: 'TikTok Shop Fee Calculator [2026 Official] Free Profit & 6% Fee Math',
     description:
       'Calculate exact net take-home earnings on TikTok Shop. Factor in the official 6% US seller commission, affiliate creator cuts, packaging, shipping, and ad spend.',
     url: 'https://www.smartratecalcs.com/tiktok-shop-fee-calculator',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TikTok Shop Fee Calculator 2026 (Live 6% Referral & Profit Engine)',
+    title: 'TikTok Shop Fee Calculator [2026 Official] Free Profit & 6% Fee Math',
     description:
       'Calculate your exact payout from TikTok Shop sales after platform referral fees, creator affiliate splits, and shipping.',
     images: ['https://www.smartratecalcs.com/og-image.png'],

@@ -219,6 +219,23 @@ export default function CalculatorPage({ params }: Props) {
           </p>
         </div>
 
+        {calc.slug === 'tiktok-shop-seller-fee-calculator' && (
+          <div className="mb-6 p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+            <div className="flex items-center gap-2.5">
+              <i className="fa-brands fa-tiktok text-rose-600 text-lg"></i>
+              <span className="text-slate-700 dark:text-slate-200">
+                Need to calculate <strong>Creator Affiliate Commissions (10-20%)</strong> and <strong>FBT Shipping</strong>?
+              </span>
+            </div>
+            <Link
+              href="/tiktok-shop-fee-calculator"
+              className="px-3.5 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-center transition-colors shrink-0"
+            >
+              Launch Flagship TikTok Engine &rarr;
+            </Link>
+          </div>
+        )}
+
         {/* INTERACTIVE CLIENT CALCULATOR WIDGET */}
         <ProgrammaticCalculatorWidget calc={calc} />
 

@@ -5,14 +5,14 @@ import ThemeToggle from '../../components/ThemeToggle';
 import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
-  title: '1099 Tax Calculator (2026) | Self-Employment & Quarterly Tax Tool',
+  title: '1099 Tax Calculator [2026 IRS Rules] Free Self-Employment & Take-Home Math',
   description:
-    'Free 2026 US 1099 tax calculator. Estimate exact self-employment tax (15.3%), federal income tax deductions, IRS Form 1040-ES quarterly payments, and W-2 equivalents.',
+    'Free 2026 IRS 1099 tax calculator. Calculate exact 15.3% self-employment tax, federal income tax brackets, Form 1040-ES quarterly vouchers, and net contractor pay.',
   alternates: {
     canonical: 'https://www.smartratecalcs.com/1099-tax-calculator',
   },
   openGraph: {
-    title: '1099 Tax Calculator 2026 | Self-Employment & Quarterly Estimator',
+    title: '1099 Tax Calculator [2026 IRS Rules] Free Self-Employment & Take-Home Math',
     description:
       'Calculate exact US 1099 contractor deductions. Factor in Schedule C expenses, Social Security wage caps, and federal tax brackets.',
     url: 'https://www.smartratecalcs.com/1099-tax-calculator',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '1099 Tax Calculator 2026 (Live IRS Schedule C & SE Tax Formula)',
+    title: '1099 Tax Calculator [2026 IRS Rules] Free Self-Employment & Take-Home Math',
     description:
       'Instantly calculate US 1099 self-employment taxes, quarterly vouchers, and W-2 salary equivalents.',
     images: ['https://www.smartratecalcs.com/og-image.png'],

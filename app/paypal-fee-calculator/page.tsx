@@ -5,13 +5,13 @@ import ThemeToggle from '../../components/ThemeToggle';
 import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
-  title: 'PayPal Fee Calculator (2026) | Instant Seller, Invoicing & International Fees',
-  description: 'Free 2026 PayPal fee calculator. Calculate exact deductions on Goods and Services (2.99% + $0.49), international transactions (4.49%), and reverse invoice totals.',
+  title: 'PayPal Fee Calculator [2026 Official] Free Goods & Services + Invoice Math',
+  description: 'Free 2026 PayPal fee calculator. Calculate exact 2.99% + $0.49 Goods and Services cuts, 1.75% instant debit card transfers, international surcharges, and reverse invoice totals.',
   alternates: {
     canonical: 'https://www.smartratecalcs.com/paypal-fee-calculator',
   },
   openGraph: {
-    title: 'PayPal Fee Calculator 2026 | Goods & Services & Reverse Calculator',
+    title: 'PayPal Fee Calculator [2026 Official] Free Goods & Services + Invoice Math',
     description:
       'Calculate exact deductions on PayPal Goods & Services transactions. Reverse calculate invoice totals and compare savings against Stripe.',
     url: 'https://www.smartratecalcs.com/paypal-fee-calculator',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PayPal Fee Calculator 2026 (Live Rates & Reverse Formula)',
+    title: 'PayPal Fee Calculator [2026 Official] Free Goods & Services + Invoice Math',
     description:
       'Instantly calculate PayPal merchant fees, international surcharges, and reverse invoice requirements.',
     images: ['https://www.smartratecalcs.com/og-image.png'],
