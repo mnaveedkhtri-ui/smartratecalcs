@@ -150,6 +150,12 @@ export default function RootLayout({
           }}
         />
         <meta name="google-site-verification" content="FzC73kAndsqrqsza438VtUdn49KmQZfgQm61v9-ukls" />
+        {/* Google AdSense Verification & Auto Ads */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8616861763785858"
+          crossOrigin="anonymous"
+        ></script>
         <script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="ZdZs4yu2IJtVFUgGS0MKdg"
