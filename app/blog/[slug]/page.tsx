@@ -612,6 +612,34 @@ export default function BlogPostPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Official Regulatory Sources & Primary Citations Box */}
+        {post.externalSources && post.externalSources.length > 0 && (
+          <div className="p-6 rounded-3xl bg-slate-100/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-sm mb-12">
+            <div className="font-mono font-bold uppercase text-[11px] text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-2 tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Official Regulatory Sources &amp; Primary Documentation</span>
+            </div>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              {post.externalSources.map((source, idx) => (
+                <li key={idx} className="flex items-start gap-2.5">
+                  <span className="text-emerald-600 dark:text-emerald-400 font-bold shrink-0 mt-0.5">&bull;</span>
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-emerald-600 dark:hover:text-emerald-400 font-medium underline underline-offset-2 decoration-slate-300 dark:decoration-slate-700 hover:decoration-emerald-500 transition-colors"
+                  >
+                    {source.name}
+                  </a>
+                  <span className="text-[10px] text-slate-400 dark:text-slate-500 font-mono shrink-0 pt-0.5">
+                    [External Verified &rarr;]
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {/* Author Bio Box */}
         <div className="p-6 rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row items-center gap-5 mb-12">
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-700 text-white font-black text-2xl flex items-center justify-center shrink-0 shadow-md">

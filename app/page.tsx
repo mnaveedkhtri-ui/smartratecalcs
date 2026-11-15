@@ -960,7 +960,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {BLOG_POSTS.slice(0, 3).map((post) => (
+              {[...BLOG_POSTS].sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()).slice(0, 4).map((post) => (
                 <article
                   key={post.slug}
                   className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-lg transition-all group flex flex-col justify-between"

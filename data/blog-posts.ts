@@ -1188,7 +1188,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <section id="fee-structure-2026" class="space-y-4 pt-6">
         <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">2. 2026 PayPal Fee Schedule: Standard vs. Invoicing Rates</h2>
         <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
-          PayPal does not charge one universal fee. Depending on whether you accept payment through an online checkout integration, send a direct digital invoice, or process an international buyer, the percentage rate and fixed fee fluctuate significantly:
+          PayPal does not charge one universal fee. Depending on whether you accept payment through an online checkout integration, send a direct digital invoice, or process an international buyer, the percentage rate and fixed fee fluctuate significantly according to the <a href="https://www.paypal.com/us/webapps/mpp/merchant-fees" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 font-bold underline hover:text-blue-700 dark:hover:text-blue-300">official PayPal Merchant Fees schedule</a>:
         </p>
 
         <div class="overflow-x-auto my-4 rounded-xl border border-slate-200 dark:border-slate-800">
@@ -1461,7 +1461,7 @@ export const BLOG_POSTS: BlogPost[] = [
         </p>
 
         <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300 text-sm sm:text-base">
-          <li><strong class="text-slate-900 dark:text-white">Federal Threshold Restored:</strong> Following congressional revisions, the widely contested $600 reporting mandate was repealed. For federal tax filings in 2026, PayPal is legally mandated to issue a Form 1099-K only if you exceed <strong class="text-slate-900 dark:text-white">both $20,000 in gross commercial payments AND 200 separate transactions</strong> within the calendar year.</li>
+          <li><strong class="text-slate-900 dark:text-white">Federal Threshold Restored:</strong> Following congressional revisions, the widely contested $600 reporting mandate was repealed. Under <a href="https://www.irs.gov/businesses/understanding-your-form-1099-k" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 font-bold underline hover:text-blue-700 dark:hover:text-blue-300">official IRS Form 1099-K reporting guidelines</a> for federal tax filings in 2026, PayPal is legally mandated to issue a Form 1099-K only if you exceed <strong class="text-slate-900 dark:text-white">both $20,000 in gross commercial payments AND 200 separate transactions</strong> within the calendar year.</li>
           <li><strong class="text-slate-900 dark:text-white">State-Level Exceptions:</strong> Certain states maintain independent, lower reporting thresholds. If you reside in states such as Massachusetts ($600), Maryland ($600), Vermont ($600), Virginia ($600), or Illinois ($1,000 and 4+ transactions), PayPal will file a state-level 1099-K even if you do not hit the federal $20,000 limit.</li>
           <li><strong class="text-slate-900 dark:text-white">Personal Payments Are Never Reported:</strong> Funds received through Friends &amp; Family for personal reimbursements are legally exempt and never included on Form 1099-K.</li>
           <li><strong class="text-slate-900 dark:text-white">Taxability vs. Form Issuance:</strong> Receiving or not receiving a 1099-K does not determine whether your income is taxable. Under IRS tax law, all earned net business profit must be reported on your Form 1040 Schedule C, regardless of whether a third-party settlement organization sends a formal form.</li>
@@ -1495,7 +1495,7 @@ export const BLOG_POSTS: BlogPost[] = [
             <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-300">Strategy 3</span>
             <h4 class="font-bold text-slate-900 dark:text-white text-base">Deduct PayPal Fees as Business Expenses</h4>
             <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-              Every penny PayPal deducts is a 100% tax-deductible ordinary and necessary business expense. Record all merchant processing fees on IRS Schedule C (Line 10: Commissions and fees) to reduce your taxable net income dollar-for-dollar.
+              Every penny PayPal deducts is a 100% tax-deductible ordinary and necessary business expense. Record all merchant processing fees on <a href="https://www.irs.gov/forms-pubs/about-schedule-c-form-1040" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 font-bold underline hover:text-blue-700 dark:hover:text-blue-300">IRS Schedule C (Line 10: Commissions and fees)</a> to reduce your taxable net income dollar-for-dollar.
             </p>
           </div>
 
