@@ -114,7 +114,7 @@ export default function UpworkToJazzCashWidget() {
 - 2. Upwork Direct to Bank: Rs. ${Math.round(calculations.upworkDirect.netPkr).toLocaleString()}
 - 3. SadaPay / Nayapay: Rs. ${Math.round(calculations.sadaPay.netPkr).toLocaleString()}
 - 4. Payoneer to JazzCash: Rs. ${Math.round(calculations.payoneer.netPkr).toLocaleString()} (Instant)
-Calculated via SmartRateCalcs: https://www.smartratecalcs.com/upwork-to-jazzcash-calculator`;
+Calculated via SmartRateCalcs: https://www.smartratecalcs.com/calculators/upwork-to-jazzcash-calculator`;
 
     navigator.clipboard.writeText(text);
     setCopied(true);
@@ -122,7 +122,7 @@ Calculated via SmartRateCalcs: https://www.smartratecalcs.com/upwork-to-jazzcash
   };
 
   const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(
-    `Check your exact Upwork payout in PKR! On $${calculations.amount} USD, Wise gives Rs. ${Math.round(calculations.wise.netPkr).toLocaleString()} vs Payoneer Rs. ${Math.round(calculations.payoneer.netPkr).toLocaleString()}. Compare fees here: https://www.smartratecalcs.com/upwork-to-jazzcash-calculator`
+    `Check your exact Upwork payout in PKR! On $${calculations.amount} USD, Wise gives Rs. ${Math.round(calculations.wise.netPkr).toLocaleString()} vs Payoneer Rs. ${Math.round(calculations.payoneer.netPkr).toLocaleString()}. Compare fees here: https://www.smartratecalcs.com/calculators/upwork-to-jazzcash-calculator`
   )}`;
 
   return (

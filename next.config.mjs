@@ -65,6 +65,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/upwork-to-jazzcash-calculator',
+        destination: '/calculators/upwork-to-jazzcash-calculator',
+        permanent: true,
+      },
+      {
         source: '/calculators/sadabiz-vs-payoneer-calculator',
         destination: '/calculators/sadabiz-vs-payoneer-fee-calculator',
         permanent: true,

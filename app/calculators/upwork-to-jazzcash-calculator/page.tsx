@@ -1,21 +1,21 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import UpworkToJazzCashWidget from '../../components/UpworkToJazzCashWidget';
-import ThemeToggle from '../../components/ThemeToggle';
-import { SiteLegalFooter } from '../../components/SiteLegalFooter';
+import UpworkToJazzCashWidget from '../../../components/UpworkToJazzCashWidget';
+import ThemeToggle from '../../../components/ThemeToggle';
+import { SiteLegalFooter } from '../../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
   title: 'Upwork to JazzCash & SadaPay Fee Calculator (2026) | Real PKR Net Payout',
   description:
     'Calculate exact PKR received when withdrawing from Upwork to JazzCash, SadaPay, Nayapay, or Pakistani banks. Compare Upwork Direct ($0.99 fee) vs Payoneer (2% spread) vs Wise with live conversion rates.',
   alternates: {
-    canonical: 'https://www.smartratecalcs.com/upwork-to-jazzcash-calculator',
+    canonical: 'https://www.smartratecalcs.com/calculators/upwork-to-jazzcash-calculator',
   },
   openGraph: {
     title: 'Upwork to JazzCash & SadaPay Fee Calculator (2026) | Real PKR Net Payout',
     description:
       'Calculate exact net PKR bank deposits for Upwork withdrawals. Compare Upwork Direct, Payoneer to JazzCash, SadaPay, and Wise with zero hidden spreads.',
-    url: 'https://www.smartratecalcs.com/upwork-to-jazzcash-calculator',
+    url: 'https://www.smartratecalcs.com/calculators/upwork-to-jazzcash-calculator',
     type: 'website',
     images: [
       {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 export default function UpworkToJazzCashPage() {
-  const pageUrl = 'https://www.smartratecalcs.com/upwork-to-jazzcash-calculator';
+  const pageUrl = 'https://www.smartratecalcs.com/calculators/upwork-to-jazzcash-calculator';
 
   const faqSchema = {
     '@context': 'https://schema.org',

@@ -36,7 +36,7 @@ export function SiteLegalFooter() {
           1099 Tax Calculator
         </Link>
         <span className="text-slate-300 dark:text-slate-700">&bull;</span>
-        <Link href="/upwork-to-jazzcash-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+        <Link href="/calculators/upwork-to-jazzcash-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
           Upwork to JazzCash &amp; SadaPay
         </Link>
         <span className="text-slate-300 dark:text-slate-700">&bull;</span>
