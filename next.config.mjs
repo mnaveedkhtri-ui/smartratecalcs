@@ -60,6 +60,10 @@ const nextConfig = {
         source: '/whatnot-fee-calculator',
         destination: '/calculators/whatnot-fee-calculator',
       },
+      {
+        source: '/ebay-fee-calculator',
+        destination: '/calculators/ebay-fee-calculator',
+      },
     ];
   },
   async redirects() {

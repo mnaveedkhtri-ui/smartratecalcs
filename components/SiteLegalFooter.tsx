@@ -12,6 +12,10 @@ export function SiteLegalFooter() {
           Home
         </Link>
         <span className="text-slate-300 dark:text-slate-700">&bull;</span>
+        <Link href="/calculators/ebay-fee-calculator" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+          eBay Fee Calculator
+        </Link>
+        <span className="text-slate-300 dark:text-slate-700">&bull;</span>
         <Link href="/calculators/etsy-fee-calculator" className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
           Etsy Fee Calculator
         </Link>

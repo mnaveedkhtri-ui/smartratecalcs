@@ -52,6 +52,15 @@ const FLAGSHIP_DIRECTORY_ENTRIES = [
     primaryKeyword: 'depop fee calculator',
   },
   {
+    slug: 'ebay-fee-calculator',
+    title: 'eBay Fee & Profit Calculator (2026)',
+    category: 'ecommerce' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate 13.25% Managed Payments final value fees, $0.30 fixed cut, Top Rated Plus discounts, and net seller take-home.',
+    primaryKeyword: 'ebay fee calculator',
+  },
+  {
     slug: 'etsy-fee-calculator',
     title: 'Etsy Fee & Profit Calculator (2026)',
     category: 'ecommerce' as const,
@@ -344,6 +353,9 @@ export default function HomePage() {
             <Link href="/depop-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-red-700 dark:text-red-300 bg-red-50/50 dark:bg-red-950/40 hover:bg-red-50 flex items-center gap-2.5">
               <i className="fa-solid fa-shirt text-xs text-red-600 dark:text-red-400"></i> Depop Fee Calculator (2026)
             </Link>
+            <Link href="/calculators/ebay-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-blue-700 dark:text-blue-300 bg-blue-50/50 dark:bg-blue-950/40 hover:bg-blue-50 flex items-center gap-2.5">
+              <i className="fa-solid fa-cart-shopping text-xs text-blue-600 dark:text-blue-400"></i> eBay Fee Calculator (2026)
+            </Link>
             <Link href="/calculators/etsy-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-orange-700 dark:text-orange-300 bg-orange-50/50 dark:bg-orange-950/40 hover:bg-orange-50 flex items-center gap-2.5">
               <i className="fa-brands fa-etsy text-xs text-orange-600 dark:text-orange-400"></i> Etsy Fee Calculator (2026)
             </Link>
@@ -425,6 +437,13 @@ export default function HomePage() {
                   <span className="px-1 py-0.2 rounded bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 text-[8px] font-mono">NEW</span>
                 </div>
                 <div className="text-[9px] text-slate-400 font-mono mt-0.5">1.75% Inst &bull; 2.75% Biz</div>
+              </Link>
+              <Link href="/calculators/ebay-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-blue-500 hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 flex items-center gap-1.5">
+                  <i className="fa-solid fa-cart-shopping text-blue-600 text-[10px]"></i> eBay
+                  <span className="px-1 py-0.2 rounded bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 text-[8px] font-mono">NEW</span>
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">13.25% + $0.30 &bull; US/UK</div>
               </Link>
               <Link href="/calculators/etsy-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-orange-500 hover:shadow-sm transition-all group">
                 <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-orange-600 dark:group-hover:text-orange-400 flex items-center gap-1.5">
@@ -1366,6 +1385,7 @@ export default function HomePage() {
                 <li><Link href="/calculators/cash-app-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold transition-colors flex items-center gap-1.5"><span className="w-3.5 h-3.5 rounded bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-[9px]">$</span> Cash App Fee Calculator (2026)</Link></li>
                 <li><Link href="/tiktok-shop-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-tiktok text-[#fe2c55] text-xs"></i> TikTok Shop Fee Calculator (2026)</Link></li>
                 <li><Link href="/depop-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-shirt text-rose-500 text-xs"></i> Depop Fee Calculator (0% Rule)</Link></li>
+                <li><Link href="/calculators/ebay-fee-calculator" className="hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-cart-shopping text-blue-500 text-xs"></i> eBay Fee Calculator (2026)</Link></li>
                 <li><Link href="/calculators/etsy-fee-calculator" className="hover:text-orange-600 dark:hover:text-orange-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-etsy text-orange-600 text-xs"></i> Etsy Fee Calculator (2026)</Link></li>
                 <li><Link href="/calculators/whatnot-fee-calculator" className="hover:text-amber-600 dark:hover:text-amber-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-video text-amber-500 text-xs"></i> Whatnot Fee Calculator (2026)</Link></li>
                 <li><Link href="/square-fee-calculator" className="hover:text-slate-900 dark:hover:text-white font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-square text-slate-800 dark:text-slate-200 text-xs"></i> Square Fee Calculator (US)</Link></li>
