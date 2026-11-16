@@ -276,6 +276,93 @@ export default function BlogPostPage({ params }: Props) {
         </section>
 
         {/* HIGH-INTENT INTERNAL CALCULATOR LINKING CLUSTER */}
+        {post.slug === 'ebay-seller-fees-2026-complete-managed-payments-schedule-guide' && (
+          <div className="mb-10 p-6 rounded-3xl bg-slate-900 border border-slate-800 text-white shadow-xl">
+            <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse"></span>
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-400">
+                  Reseller Profit &amp; Fee Intelligence Tools (2026)
+                </span>
+              </div>
+              <span className="text-[11px] text-slate-400 font-mono">Live Empirical Models</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link
+                href="/calculators/ebay-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-blue-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-blue-400 flex items-center justify-between">
+                    <span>eBay Fee &amp; Profit Calculator</span>
+                    <span className="text-blue-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Model official Managed Payments 13.25% + $0.30, Top Rated Plus discounts, and reverse profit.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-blue-300 font-semibold">
+                  Managed Payments Engine &bull; US &amp; UK
+                </div>
+              </Link>
+
+              <Link
+                href="/calculators/etsy-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-orange-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-orange-400 flex items-center justify-between">
+                    <span>Etsy Fee &amp; Profit Calculator</span>
+                    <span className="text-orange-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Compare eBay cuts against Etsy 6.5% transaction fees, 3% processing, and Offsite Ads.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-orange-300 font-semibold">
+                  Multi-Marketplace Compare &bull; Free
+                </div>
+              </Link>
+
+              <Link
+                href="/depop-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-rose-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-rose-400 flex items-center justify-between">
+                    <span>Depop Fee &amp; Profit Calculator</span>
+                    <span className="text-rose-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Audit take-home proceeds under Depop 0% selling fee rule vs eBay fashion categories.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-rose-300 font-semibold">
+                  Apparel Reselling &bull; 0% Seller Fee
+                </div>
+              </Link>
+
+              <Link
+                href="/1099-tax-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>1099-K Reseller Tax Calculator</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Calculate 15.3% self-employment tax, IRS $5,000 thresholds, and Schedule C deductions.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  IRS Schedule C &bull; 2026 Ready
+                </div>
+              </Link>
+            </div>
+          </div>
+        )}
+
         {post.slug === 'credit-card-surcharge-formula-invoice-square-fees-guide' && (
           <div className="mb-10 p-6 rounded-3xl bg-slate-900 border border-slate-800 text-white shadow-xl">
             <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">

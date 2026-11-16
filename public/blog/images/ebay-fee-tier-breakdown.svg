@@ -1,0 +1,52 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#0b1329" rx="20" />
+  <rect x="20" y="20" width="760" height="460" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="2" />
+  
+  <text x="50" y="60" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="900">eBay 2026 Category Take Rates vs Store Rates</text>
+  <text x="50" y="85" fill="#94a3b8" font-family="sans-serif" font-size="12" font-weight="600">Standard sellers vs Basic Store subscribers under Managed Payments</text>
+
+  <!-- Item 1: Standard Categories -->
+  <g transform="translate(50, 110)">
+    <rect width="700" height="60" rx="12" fill="#1e293b" />
+    <text x="20" y="35" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700">Most Categories (Clothing, Toys, Home)</text>
+    <rect x="420" y="16" width="120" height="28" rx="8" fill="#ef4444" fill-opacity="0.2" />
+    <text x="480" y="35" fill="#f87171" font-family="sans-serif" font-size="12" font-weight="800" text-anchor="middle">Standard: 13.25%</text>
+    <rect x="560" y="16" width="120" height="28" rx="8" fill="#10b981" fill-opacity="0.2" />
+    <text x="620" y="35" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="800" text-anchor="middle">Store: 12.35%</text>
+  </g>
+
+  <!-- Item 2: Electronics -->
+  <g transform="translate(50, 185)">
+    <rect width="700" height="60" rx="12" fill="#1e293b" />
+    <text x="20" y="35" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700">Computers, Tablets &amp; Hardware</text>
+    <rect x="420" y="16" width="120" height="28" rx="8" fill="#ef4444" fill-opacity="0.2" />
+    <text x="480" y="35" fill="#f87171" font-family="sans-serif" font-size="12" font-weight="800" text-anchor="middle">Standard: 13.25%</text>
+    <rect x="560" y="16" width="120" height="28" rx="8" fill="#10b981" fill-opacity="0.2" />
+    <text x="620" y="35" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="800" text-anchor="middle">Store: 9.00%</text>
+  </g>
+
+  <!-- Item 3: Guitars -->
+  <g transform="translate(50, 260)">
+    <rect width="700" height="60" rx="12" fill="#1e293b" />
+    <text x="20" y="35" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700">Musical Instruments (Guitars &amp; Basses)</text>
+    <rect x="420" y="16" width="120" height="28" rx="8" fill="#10b981" fill-opacity="0.2" />
+    <text x="480" y="35" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="800" text-anchor="middle">Standard: 6.35%</text>
+    <rect x="560" y="16" width="120" height="28" rx="8" fill="#10b981" fill-opacity="0.2" />
+    <text x="620" y="35" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="800" text-anchor="middle">Store: 6.35%</text>
+  </g>
+
+  <!-- Item 4: Sneakers $150+ -->
+  <g transform="translate(50, 335)">
+    <rect width="700" height="60" rx="12" fill="#1e293b" />
+    <text x="20" y="35" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="700">Athletic Sneakers ($150+ USD)</text>
+    <rect x="420" y="16" width="120" height="28" rx="8" fill="#10b981" fill-opacity="0.2" />
+    <text x="480" y="35" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="800" text-anchor="middle">Standard: 8.00%</text>
+    <rect x="560" y="16" width="120" height="28" rx="8" fill="#10b981" fill-opacity="0.2" />
+    <text x="620" y="35" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="800" text-anchor="middle">Store: 7.00%</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="400" y="440" fill="#64748b" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle">
+    Data verified from official eBay 2026 fee policies &bull; SmartRateCalcs Research
+  </text>
+</svg>
