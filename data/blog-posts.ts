@@ -1531,6 +1531,344 @@ export const BLOG_POSTS: BlogPost[] = [
         a: 'The buyer loses all purchase protection and dispute recourse, while the seller risks permanent account termination and 180-day fund freezes for violating PayPal User Agreement.'
       }
     ]
+  },
+
+  // ==========================================
+  // US & GLOBAL E-COMMERCE PILLAR 6: EBAY SELLER FEES (2026)
+  // ==========================================
+  {
+    slug: 'ebay-seller-fees-2026-complete-managed-payments-schedule-guide',
+    title: 'eBay Seller Fees in 2026: Complete Managed Payments Schedule & Margin Protection Guide',
+    metaTitle: 'eBay Seller Fees (2026): Managed Payments Schedule & Calculator',
+    metaDesc: 'Official 2026 eBay fee guide: 13.25% + $0.30 Managed Payments, category tiers, Top Rated Plus 10% discount, UK 0% rule, and break-even math.',
+    category: 'E-Commerce',
+    readTime: '12 min read',
+    publishedDate: '2026-11-16',
+    updatedDate: '2026-11-16',
+    primaryKeyword: 'ebay seller fees 2026',
+    secondaryKeywords: [
+      'ebay managed payments fee schedule 2026',
+      'how much does ebay take in fees 2026',
+      'ebay final value fee category breakdown',
+      'top rated plus 10 percent fee discount',
+      'ebay break even calculator formula',
+      'ebay uk 0 percent private selling fees',
+      'ebay store subscription fee rates'
+    ],
+    quickSummary:
+      'In 2026 under eBay Managed Payments, most US categories charge a Final Value Fee of 13.25% on the gross transaction (item price + shipping + sales tax) up to $7,500, plus 2.35% on the excess, alongside a fixed $0.30 per-order fee ($0.40 if $10 or less). Sellers can slash fees through Top Rated Plus (10% FVF discount) and Basic Store subscriptions (down to 12.35% standard or 9.0% tech). In the UK, private individual sellers enjoy 0% basic selling fees, while UK businesses pay 12.9% + £0.30 + 0.42% regulatory fee.',
+    relatedCalculatorSlug: '/calculators/ebay-fee-calculator',
+    images: [
+      'https://www.smartratecalcs.com/blog/ebay-seller-fees-2026-complete-managed-payments-schedule-guide.png',
+      'https://www.smartratecalcs.com/blog/images/ebay-fee-tier-breakdown.png',
+      'https://www.smartratecalcs.com/blog/images/ebay-managed-payments-flow.png'
+    ],
+    wikidataEntities: [
+      'https://www.wikidata.org/wiki/Q58052', // eBay
+      'https://www.wikidata.org/wiki/Q484876', // E-commerce
+      'https://www.wikidata.org/wiki/Q818780'  // Sales tax
+    ],
+    externalSources: [
+      { name: 'eBay US Official Selling Fees Schedule (2026)', url: 'https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees?id=4822' },
+      { name: 'eBay UK Private Seller Fee Updates', url: 'https://www.ebay.co.uk/help/selling/fees-credits-invoices/selling-fees?id=4364' },
+      { name: 'IRS Form 1099-K Guidance for Online Marketplace Sellers', url: 'https://www.irs.gov/businesses/understanding-your-form-1099-k' }
+    ],
+    tableOfContents: [
+      { id: 'how-ebay-managed-payments-works', title: '1. How eBay Managed Payments Works in 2026' },
+      { id: 'the-four-core-fee-components', title: '2. The 4 Core eBay Fee Components (FVF, Fixed, Ads, Insertion)' },
+      { id: 'category-fee-table-2026', title: '3. Complete 2026 Category Fee Matrix (Standard vs Store)' },
+      { id: 'the-sales-tax-shipping-drag', title: '4. The Hidden Profit Leaks: Fees on Shipping and Sales Tax' },
+      { id: 'how-to-slash-fees', title: '5. How to Slash eBay Fees: Top Rated Plus & Store Subscriptions' },
+      { id: 'ebay-uk-zero-percent-rule', title: '6. The UK Policy Revolution: 0% Selling Fees for Private Sellers' },
+      { id: 'break-even-math-formula', title: '7. The Exact Reverse Pricing & Break-Even Formula' },
+      { id: 'irs-1099k-reporting-rules', title: '8. IRS Form 1099-K Tax Compliance for US Resellers' },
+      { id: 'faqs', title: '9. Frequently Asked Questions' }
+    ],
+    contentHtml: `
+      <section id="how-ebay-managed-payments-works" class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">1. How eBay Managed Payments Works in 2026</h2>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          For more than two decades, selling on eBay required navigating a dual-fee ecosystem: eBay charged a Final Value Fee on the item price, while PayPal extracted a separate 2.9% + $0.30 merchant processing fee. Under the modern <strong>eBay Managed Payments</strong> framework in 2026, PayPal has been completely eliminated as an intermediary billing rail. All buyer payments (including Apple Pay, Google Pay, credit cards, debit cards, and PayPal) are processed directly by eBay.
+        </p>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          While this unified billing simplifies bookkeeping into a single daily or weekly bank payout, it introduced a significant structural change that catches thousands of new and veteran sellers off guard: <strong>eBay now assesses its Final Value Fee on the entire gross transaction amount</strong>. This gross total includes not only your item listing price, but also the shipping fee you charge the buyer, packaging handling fees, and even state or local sales tax collected automatically by eBay at checkout.
+        </p>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          To model your exact take-home payout before creating a listing, you can use our live interactive <a href="/calculators/ebay-fee-calculator" class="text-blue-700 font-bold underline hover:text-blue-800">eBay Fee and Profit Calculator (2026)</a> or compare your margins against other top resale platforms with our <a href="/calculators/etsy-fee-calculator" class="text-blue-700 font-bold underline hover:text-blue-800">Etsy Fee Calculator</a> and <a href="/depop-fee-calculator" class="text-blue-700 font-bold underline hover:text-blue-800">Depop Fee Calculator</a>.
+        </p>
+      </section>
+
+      <section id="the-four-core-fee-components" class="space-y-4 pt-6">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">2. The 4 Core eBay Fee Components (FVF, Fixed, Ads, Insertion)</h2>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          Every eBay transaction invoice consists of up to four distinct fee layers. Understanding where each penny goes is vital to pricing your inventory profitably:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+              A. Variable Final Value Fee (FVF)
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              The primary platform commission. For standard merchandise categories (clothing, home goods, toys, sporting equipment), the base rate is <strong>13.25%</strong> on the first $7,500 of the transaction, and <strong>2.35%</strong> on the portion exceeding $7,500. Certain categories like books and music carry higher rates (14.95%), while musical instruments and guitars enjoy lower rates (6.35%).
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+              B. Fixed Per-Order Fee
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Every completed order incurs a flat per-order processing deduction. For orders where the gross total is over $10.00, the fee is <strong>$0.30 per order</strong>. For low-ticket micro-orders of $10.00 or less, the fixed fee increases to <strong>$0.40</strong>. If a buyer purchases multiple items in a single combined cart checkout, only one per-order fee is charged.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-600"></span>
+              C. Promoted Listings Standard (Ad Rates)
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              An optional advertising service where you select an ad rate percentage (from 2% to 20%+). Unlike pay-per-click models, eBay Promoted Listings Standard is purely performance-based: you only pay the selected ad percentage on the gross sale if a buyer clicks your promoted ad and purchases your item within 30 days of the click.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+              D. Insertion Fees (Listing Allocations)
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Every active eBay seller receives <strong>250 zero-insertion-fee listing allotments</strong> per calendar month. Once you exceed 250 active or renewed listings without an eBay Store subscription, eBay charges a non-refundable <strong>$0.35 insertion fee</strong> per listing per 30-day cycle.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="category-fee-table-2026" class="space-y-4 pt-6">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">3. Complete 2026 Category Fee Matrix (Standard vs Store)</h2>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          Because eBay adjusts its commission rates to match industry margins across different retail sectors, knowing your specific category tier is essential. Below is the comprehensive 2026 Managed Payments category schedule for US sellers:
+        </p>
+
+        <div class="overflow-x-auto my-4 border border-slate-200 rounded-2xl shadow-sm">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-900 text-white font-bold">
+                <th class="p-3.5">Product Category</th>
+                <th class="p-3.5">Standard FVF Rate</th>
+                <th class="p-3.5">Basic Store Rate</th>
+                <th class="p-3.5">Tier 2 Threshold</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 font-medium bg-white">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Most Categories (Apparel, Toys, Home, Sports)</td>
+                <td class="p-3 text-blue-700 font-bold">13.25% up to $7,500</td>
+                <td class="p-3">12.35% up to $2,500</td>
+                <td class="p-3 font-mono text-slate-600">2.35% on balance</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Books, DVDs, Movies & Music (excl Vinyl)</td>
+                <td class="p-3 text-blue-700 font-bold">14.95% up to $7,500</td>
+                <td class="p-3">13.25% up to $2,500</td>
+                <td class="p-3 font-mono text-slate-600">2.35% on balance</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Musical Instruments & Guitars / Basses</td>
+                <td class="p-3 text-emerald-700 font-bold">6.35% up to $7,500</td>
+                <td class="p-3">6.35% up to $7,500</td>
+                <td class="p-3 font-mono text-slate-600">2.35% on balance</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Athletic Shoes & Sneakers ($150.00 or more)</td>
+                <td class="p-3 text-emerald-700 font-bold">8.00% flat (0% insertion)</td>
+                <td class="p-3">7.00% flat</td>
+                <td class="p-3 font-mono text-slate-600">8.00% flat</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Sneakers under $150.00</td>
+                <td class="p-3 text-blue-700 font-bold">13.25% up to $7,500</td>
+                <td class="p-3">12.35% up to $2,500</td>
+                <td class="p-3 font-mono text-slate-600">2.35% on balance</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Computers, Tablets & Consumer Electronics</td>
+                <td class="p-3 text-blue-700 font-bold">13.25% up to $7,500</td>
+                <td class="p-3 text-emerald-700 font-bold">9.00% up to $2,500</td>
+                <td class="p-3 font-mono text-slate-600">2.35% on balance</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Jewelry & Luxury Watches</td>
+                <td class="p-3 text-blue-700 font-bold">15.00% up to $1,000</td>
+                <td class="p-3">12.50% up to $1,000</td>
+                <td class="p-3 font-mono text-slate-600">9% to $7.5k / 2.35%</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Coins, Bullion & Paper Money</td>
+                <td class="p-3 text-blue-700 font-bold">13.25% up to $7,500</td>
+                <td class="p-3">9.00% up to $4,000</td>
+                <td class="p-3 font-mono text-slate-600">7.00% on balance</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Heavy Equipment & Commercial Printing</td>
+                <td class="p-3 text-emerald-700 font-bold">3.00% (Capped at $250)</td>
+                <td class="p-3">3.00% (Capped $250)</td>
+                <td class="p-3 font-mono text-slate-600">Max fee $250.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="the-sales-tax-shipping-drag" class="space-y-4 pt-6">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">4. The Hidden Profit Leaks: Fees on Shipping and Sales Tax</h2>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          The single biggest mistake made by beginner resellers is assuming that eBay only takes a cut of the item sale price. Consider this real-world example:
+        </p>
+        <div class="p-6 rounded-2xl bg-rose-50 border border-rose-200 space-y-3 my-4">
+          <div class="text-xs font-mono uppercase tracking-wider text-rose-800 font-bold">Real Reselling Case Study: The $50 Item Trap</div>
+          <ul class="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-700">
+            <li>You list a vintage jacket for <strong>$50.00</strong>.</li>
+            <li>You charge the buyer <strong>$12.00</strong> for USPS Priority Mail shipping.</li>
+            <li>The buyer lives in California, where eBay automatically collects <strong>9.5% state sales tax ($5.89)</strong>.</li>
+            <li>The gross payment collected by eBay is <strong>$67.89</strong> ($50.00 + $12.00 + $5.89).</li>
+            <li>eBay calculates its 13.25% FVF on <strong>$67.89</strong> = <strong>$9.00</strong>, plus the <strong>$0.30 fixed fee</strong> = <strong>$9.30 total eBay fee</strong>.</li>
+          </ul>
+          <p class="text-xs sm:text-sm text-slate-800 font-bold pt-1 border-t border-rose-200">
+            Notice that your effective fee on the $50 item is not 13.25%; it is <strong>18.6% of your item price</strong> ($9.30 / $50.00)! If your inventory cost was $20.00 and the actual shipping label cost $12.00, your net profit is only $18.70 instead of the $23.00 you might have projected.
+          </p>
+        </div>
+      </section>
+
+      <section id="how-to-slash-fees" class="space-y-4 pt-6">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">5. How to Slash eBay Fees: Top Rated Plus & Store Subscriptions</h2>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          Professional sellers operating with five-figure monthly volume utilize two proven mechanics to defend their margins against fee compression:
+        </p>
+
+        <div class="space-y-4 my-4">
+          <div class="p-5 rounded-2xl bg-blue-50 border border-blue-200 space-y-2">
+            <h3 class="font-bold text-blue-950 text-base">Strategy 1: Qualifying for Top Rated Plus (10% FVF Rebate)</h3>
+            <p class="text-xs sm:text-sm text-blue-900 leading-relaxed">
+              When you earn Top Rated Seller status (by maintaining a defect rate below 0.5%, tracking uploaded on time for 95%+ of orders, and completing 100+ transactions worth $1,000+ in a trailing 12-month period), you unlock the <strong>Top Rated Plus (TRS+) seal</strong> on any listing offering:
+            </p>
+            <ul class="list-disc pl-5 text-xs sm:text-sm text-blue-900 space-y-1">
+              <li>Same-day or 1-business-day handling time</li>
+              <li>30-day or longer free returns</li>
+            </ul>
+            <p class="text-xs sm:text-sm text-blue-900 leading-relaxed">
+              Qualifying listings receive an immediate <strong>10% discount on the variable Final Value Fee</strong>. On standard 13.25% merchandise, your effective rate drops to <strong>11.925%</strong>. On $10,000 in monthly sales, this rebate deposits an extra $132.50 straight into your checking account every single month.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-indigo-50 border border-indigo-200 space-y-2">
+            <h3 class="font-bold text-indigo-950 text-base">Strategy 2: The eBay Store Subscription Breakeven Math</h3>
+            <p class="text-xs sm:text-sm text-indigo-900 leading-relaxed">
+              An eBay Basic Store subscription costs <strong>$21.95 per month</strong> (annual commitment) or $27.95 month-to-month. It provides 1,000 free zero-insertion-fee listings per month and reduces category rates (for instance, dropping Computers & Tablets from 13.25% to 9.0%, and standard categories from 13.25% to 12.35%).
+            </p>
+            <p class="text-xs sm:text-sm text-indigo-900 leading-relaxed">
+              <strong>The Math:</strong> In the electronics category, a Basic Store saves you 4.25% in Final Value Fees (13.25% minus 9.0%). Dividing the $21.95 monthly subscription cost by 0.0425 reveals that selling just <strong>$516.47 in electronics per month</strong> completely pays for the subscription. Every dollar sold above $516.47 represents pure additional profit margin.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="ebay-uk-zero-percent-rule" class="space-y-4 pt-6">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">6. The UK Policy Revolution: 0% Selling Fees for Private Sellers</h2>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          In one of the most radical marketplace pivots in e-commerce history, eBay UK announced the elimination of basic selling fees for private individual sellers across almost all consumer categories (excluding vehicles and motors). This policy overhaul was engineered to neutralize competition from fee-free secondhand apps like Vinted and Depop.
+        </p>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          Here is how the UK marketplace is divided in 2026:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h4 class="font-bold text-slate-900 text-sm mb-1">UK Private Individual Sellers</h4>
+            <p class="text-xs text-slate-600">
+              Pay <strong>0% basic final value fees</strong> and <strong>£0 listing insertion fees</strong>. eBay monetizes these transactions by adding a small buyer-side protection charge at checkout.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h4 class="font-bold text-slate-900 text-sm mb-1">UK Registered Business Sellers</h4>
+            <p class="text-xs text-slate-600">
+              Continue paying standard commercial fees: typically <strong>12.9% + £0.30</strong> per order, alongside the mandatory <strong>0.42% UK Regulatory Operating Fee</strong> introduced to offset digital services taxes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="break-even-math-formula" class="space-y-4 pt-6">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">7. The Exact Reverse Pricing & Break-Even Formula</h2>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          To ensure you never accept an offer or price an item below cost, use our algebraic break-even formula. It calculates the exact minimum sold price required to cover all eBay fees, item cost, and postage with $0.00 loss:
+        </p>
+
+        <div class="p-6 rounded-2xl bg-slate-900 text-white border border-slate-800 shadow-lg my-4 space-y-3 font-mono text-xs sm:text-sm">
+          <div class="text-xs uppercase tracking-wider text-blue-400 font-bold">// Linear Break-Even Sale Formula (Tier 1)</div>
+          <p class="text-slate-300">EffectiveRate = (CategoryRate * (IsTRS ? 0.90 : 1.0)) + AdRate + IntlFeeRate</p>
+          <p class="text-slate-300">FixedOutflows = ItemCost + ActualShippingCost + FixedOrderFee ($0.30) + InsertionFee</p>
+          <p class="text-emerald-400 font-bold">RequiredGrossRevenue = FixedOutflows / (1 - EffectiveRate)</p>
+          <p class="text-blue-300">MinimumListingPrice = RequiredGrossRevenue - ShippingChargedToBuyer</p>
+        </div>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          Our built-in <a href="/calculators/ebay-fee-calculator" class="text-blue-700 font-bold underline hover:text-blue-800">Reverse Mode Calculator</a> runs this calculation dynamically in real-time, allowing you to set a desired profit target (e.g., $40.00 net) and immediately view the exact listing price required on eBay.
+        </p>
+      </section>
+
+      <section id="irs-1099k-reporting-rules" class="space-y-4 pt-6">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">8. IRS Form 1099-K Tax Compliance for US Resellers</h2>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          If you sell goods on eBay within the United States, understanding IRS reporting thresholds is critical. Under current IRS guidelines for 2026, third-party settlement organizations (including eBay Managed Payments) are required to issue an <strong>IRS Form 1099-K</strong> if your gross processing volume exceeds <strong>$5,000 across any number of transactions</strong> during the calendar year (following IRS phased transition rules).
+        </p>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          Important nuances to remember:
+        </p>
+        <ul class="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-600">
+          <li><strong>Gross Reporting:</strong> The amount reported in Box 1a of Form 1099-K is your gross sales volume before any eBay fees, refunds, shipping label expenses, or inventory costs are deducted.</li>
+          <li><strong>Deductions:</strong> You do not pay income tax on the gross 1099-K figure. You report gross receipts on Schedule C (Form 1040) and subtract your documented Cost of Goods Sold (COGS), eBay Final Value Fees, shipping label purchases, packaging supplies, and mileage.</li>
+          <li><strong>State-Specific Thresholds:</strong> Several US states (such as Massachusetts, Maryland, Vermont, and Virginia) enforce lower reporting thresholds of $600.00 regardless of federal phase-in timelines.</li>
+        </ul>
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">
+          To model your federal self-employment tax burden and estimated quarterly safe harbor payments, use our dedicated <a href="/1099-tax-calculator" class="text-blue-700 font-bold underline hover:text-blue-800">1099 Tax Calculator</a>.
+        </p>
+      </section>
+
+      <section id="faqs" class="space-y-4 pt-6 border-t border-slate-200">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">9. Frequently Asked Questions (eBay Seller Fees 2026)</h2>
+        <p class="text-slate-600 text-sm">
+          Below are authoritative answers to the most common financial inquiries regarding eBay selling costs:
+        </p>
+      </section>
+    `,
+    faqs: [
+      {
+        q: 'What percentage does eBay take from sellers in 2026?',
+        a: 'For most standard merchandise categories in the US, eBay takes 13.25% of the total order value up to $7,500, plus 2.35% on any portion over $7,500, along with a fixed $0.30 per order fee ($0.40 if total is $10 or less).'
+      },
+      {
+        q: 'Does eBay charge Final Value Fees on shipping and sales tax?',
+        a: 'Yes. eBay calculates the percentage Final Value Fee on the entire gross transaction amount paid by the buyer, which includes the item price, shipping fees charged, handling costs, and state sales taxes.'
+      },
+      {
+        q: 'How does the Top Rated Plus 10% fee discount work?',
+        a: 'Sellers with Top Rated status who list items offering 1-day or same-day handling and 30-day or longer free returns earn the Top Rated Plus badge, unlocking a 10% discount on the variable Final Value Fee portion of qualifying sales.'
+      },
+      {
+        q: 'Is selling on eBay UK free for private sellers in 2026?',
+        a: 'Yes. eBay UK eliminated basic selling fees for private individual sellers across almost all categories (excluding motors), charging buyers a small buyer protection fee instead. UK business sellers continue to pay standard category fees (typically 12.9% + £0.30 + 0.42% regulatory fee).'
+      },
+      {
+        q: 'How many free listings do eBay sellers get each month?',
+        a: 'Every standard eBay seller without a store subscription receives 250 free insertion fee listings per calendar month. Additional listings cost $0.35 each unless upgraded to an eBay Store subscription.'
+      },
+      {
+        q: 'When does eBay issue Form 1099-K to sellers?',
+        a: 'Under current IRS transition rules for 2026, eBay issues Form 1099-K to US sellers who exceed $5,000 in gross sales during the calendar year, though specific states like MA, MD, VA, and VT enforce lower $600 thresholds.'
+      }
+    ]
   }
 
 ];
