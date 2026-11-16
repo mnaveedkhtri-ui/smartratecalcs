@@ -1722,7 +1722,6 @@ export const BLOG_POSTS: BlogPost[] = [
           </table>
         </div>
 
-        {/* Embedded Infographic Figure 1 */}
         <figure class="my-8 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl bg-slate-900">
           <img src="/blog/images/ebay-fee-tier-breakdown.png" alt="eBay 2026 Category Take Rates Breakdown" class="w-full h-auto object-cover" loading="lazy" />
           <figcaption class="p-3.5 text-center text-xs font-mono text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-950/80 border-t border-slate-200 dark:border-slate-800">
@@ -1754,7 +1753,6 @@ export const BLOG_POSTS: BlogPost[] = [
           </p>
         </div>
 
-        {/* Embedded Infographic Figure 2 */}
         <figure class="my-8 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl bg-slate-900">
           <img src="/blog/images/ebay-managed-payments-flow.png" alt="eBay Managed Payments Deduction Flow" class="w-full h-auto object-cover" loading="lazy" />
           <figcaption class="p-3.5 text-center text-xs font-mono text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-950/80 border-t border-slate-200 dark:border-slate-800">
