@@ -438,6 +438,16 @@ export default function EbayCalculatorPage() {
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs">
               <Link
+                href="/calculators/amazon-fba-fee-calculator"
+                className="p-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 hover:border-amber-500 transition-all group"
+              >
+                <div className="font-bold text-white group-hover:text-amber-400 flex items-center gap-1.5">
+                  <span className="w-4 h-4 rounded bg-amber-500 text-white flex items-center justify-center font-bold text-[10px]">a</span> Amazon FBA
+                </div>
+                <div className="text-[10px] text-slate-400 mt-1">8%-15% &bull; FBA vs FBM</div>
+              </Link>
+
+              <Link
                 href="/calculators/etsy-fee-calculator"
                 className="p-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 hover:border-orange-500 transition-all group"
               >

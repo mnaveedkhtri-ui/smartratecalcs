@@ -12,6 +12,10 @@ export function SiteLegalFooter() {
           Home
         </Link>
         <span className="text-slate-300 dark:text-slate-700">&bull;</span>
+        <Link href="/calculators/amazon-fba-fee-calculator" className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+          Amazon FBA Calculator
+        </Link>
+        <span className="text-slate-300 dark:text-slate-700">&bull;</span>
         <Link href="/calculators/ebay-fee-calculator" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
           eBay Fee Calculator
         </Link>

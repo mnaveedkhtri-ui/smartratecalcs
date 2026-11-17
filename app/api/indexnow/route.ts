@@ -24,6 +24,16 @@ export async function GET(request: Request) {
 
   const staticUrls = [
     baseUrl,
+    `${baseUrl}/calculators/amazon-fba-fee-calculator`,
+    `${baseUrl}/calculators/ebay-fee-calculator`,
+    `${baseUrl}/calculators/etsy-fee-calculator`,
+    `${baseUrl}/calculators/cash-app-fee-calculator`,
+    `${baseUrl}/calculators/whatnot-fee-calculator`,
+    `${baseUrl}/calculators/upwork-to-jazzcash-calculator`,
+    `${baseUrl}/tiktok-shop-fee-calculator`,
+    `${baseUrl}/depop-fee-calculator`,
+    `${baseUrl}/1099-tax-calculator`,
+    `${baseUrl}/square-fee-calculator`,
     `${baseUrl}/paypal-fee-calculator`,
     `${baseUrl}/stripe-fee-calculator`,
     `${baseUrl}/upwork-fee-calculator`,

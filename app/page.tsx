@@ -52,6 +52,15 @@ const FLAGSHIP_DIRECTORY_ENTRIES = [
     primaryKeyword: 'depop fee calculator',
   },
   {
+    slug: 'amazon-fba-fee-calculator',
+    title: 'Amazon FBA & Seller Fee Calculator (2026)',
+    category: 'ecommerce' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate 8% to 15% category referral fees, FBA Pick & Pack, inbound placement costs, and FBA vs FBM net profit margins.',
+    primaryKeyword: 'amazon fba fee calculator',
+  },
+  {
     slug: 'ebay-fee-calculator',
     title: 'eBay Fee & Profit Calculator (2026)',
     category: 'ecommerce' as const,
@@ -353,6 +362,9 @@ export default function HomePage() {
             <Link href="/depop-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-red-700 dark:text-red-300 bg-red-50/50 dark:bg-red-950/40 hover:bg-red-50 flex items-center gap-2.5">
               <i className="fa-solid fa-shirt text-xs text-red-600 dark:text-red-400"></i> Depop Fee Calculator (2026)
             </Link>
+            <Link href="/calculators/amazon-fba-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-amber-700 dark:text-amber-300 bg-amber-50/50 dark:bg-amber-950/40 hover:bg-amber-50 flex items-center gap-2.5">
+              <span className="w-4 h-4 rounded bg-amber-500 text-white flex items-center justify-center font-bold text-[10px]">a</span> Amazon FBA &amp; Seller Calculator (2026)
+            </Link>
             <Link href="/calculators/ebay-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-blue-700 dark:text-blue-300 bg-blue-50/50 dark:bg-blue-950/40 hover:bg-blue-50 flex items-center gap-2.5">
               <i className="fa-solid fa-cart-shopping text-xs text-blue-600 dark:text-blue-400"></i> eBay Fee Calculator (2026)
             </Link>
@@ -437,6 +449,13 @@ export default function HomePage() {
                   <span className="px-1 py-0.2 rounded bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 text-[8px] font-mono">NEW</span>
                 </div>
                 <div className="text-[9px] text-slate-400 font-mono mt-0.5">1.75% Inst &bull; 2.75% Biz</div>
+              </Link>
+              <Link href="/calculators/amazon-fba-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-amber-500 hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-amber-600 dark:group-hover:text-amber-400 flex items-center gap-1.5">
+                  <span className="w-3.5 h-3.5 rounded bg-amber-500 text-white flex items-center justify-center font-bold text-[9px]">a</span> Amazon FBA
+                  <span className="px-1 py-0.2 rounded bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 text-[8px] font-mono">NEW</span>
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">8%-15% &bull; FBA vs FBM</div>
               </Link>
               <Link href="/calculators/ebay-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-blue-500 hover:shadow-sm transition-all group">
                 <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 flex items-center gap-1.5">
@@ -1385,6 +1404,7 @@ export default function HomePage() {
                 <li><Link href="/calculators/cash-app-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold transition-colors flex items-center gap-1.5"><span className="w-3.5 h-3.5 rounded bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-[9px]">$</span> Cash App Fee Calculator (2026)</Link></li>
                 <li><Link href="/tiktok-shop-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-tiktok text-[#fe2c55] text-xs"></i> TikTok Shop Fee Calculator (2026)</Link></li>
                 <li><Link href="/depop-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-shirt text-rose-500 text-xs"></i> Depop Fee Calculator (0% Rule)</Link></li>
+                <li><Link href="/calculators/amazon-fba-fee-calculator" className="hover:text-amber-600 dark:hover:text-amber-400 font-semibold transition-colors flex items-center gap-1.5"><span className="w-3.5 h-3.5 rounded bg-amber-500 text-white flex items-center justify-center font-bold text-[9px]">a</span> Amazon FBA Fee Calculator (2026)</Link></li>
                 <li><Link href="/calculators/ebay-fee-calculator" className="hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-cart-shopping text-blue-500 text-xs"></i> eBay Fee Calculator (2026)</Link></li>
                 <li><Link href="/calculators/etsy-fee-calculator" className="hover:text-orange-600 dark:hover:text-orange-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-etsy text-orange-600 text-xs"></i> Etsy Fee Calculator (2026)</Link></li>
                 <li><Link href="/calculators/whatnot-fee-calculator" className="hover:text-amber-600 dark:hover:text-amber-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-video text-amber-500 text-xs"></i> Whatnot Fee Calculator (2026)</Link></li>

@@ -64,6 +64,14 @@ const nextConfig = {
         source: '/ebay-fee-calculator',
         destination: '/calculators/ebay-fee-calculator',
       },
+      {
+        source: '/amazon-fee-calculator',
+        destination: '/calculators/amazon-fba-fee-calculator',
+      },
+      {
+        source: '/amazon-fba-fee-calculator',
+        destination: '/calculators/amazon-fba-fee-calculator',
+      },
     ];
   },
   async redirects() {
