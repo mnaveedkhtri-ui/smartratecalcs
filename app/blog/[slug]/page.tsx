@@ -637,7 +637,7 @@ export default function BlogPostPage({ params }: Props) {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Link
-                href="/calculators/upwork-to-jazzcash-payout-calculator"
+                href="/calculators/upwork-to-jazzcash-calculator"
                 className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
               >
                 <div>

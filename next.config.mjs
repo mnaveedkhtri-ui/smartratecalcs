@@ -80,15 +80,38 @@ const nextConfig = {
         source: '/poshmark-calculator',
         destination: '/calculators/poshmark-fee-calculator',
       },
+      {
+        source: '/upwork-to-jazzcash-calculator',
+        destination: '/calculators/upwork-to-jazzcash-calculator',
+      },
+      {
+        source: '/calculators/upwork-to-jazzcash-payout-calculator',
+        destination: '/calculators/upwork-to-jazzcash-calculator',
+      },
+      {
+        source: '/calculators/ebay-seller-fee-and-profit-calculator',
+        destination: '/calculators/ebay-fee-calculator',
+      },
+      {
+        source: '/calculators/amazon-fba-profit-margin-calculator',
+        destination: '/calculators/amazon-fba-fee-calculator',
+      },
+      {
+        source: '/calculators/etsy-seller-fee-and-profit-calculator',
+        destination: '/calculators/etsy-fee-calculator',
+      },
+      {
+        source: '/calculators/poshmark-seller-fee-calculator',
+        destination: '/calculators/poshmark-fee-calculator',
+      },
+      {
+        source: '/calculators/cash-app-business-fee-calculator',
+        destination: '/calculators/cash-app-fee-calculator',
+      },
     ];
   },
   async redirects() {
     return [
-      {
-        source: '/upwork-to-jazzcash-calculator',
-        destination: '/calculators/upwork-to-jazzcash-calculator',
-        permanent: true,
-      },
       {
         source: '/calculators/sadabiz-vs-payoneer-calculator',
         destination: '/calculators/sadabiz-vs-payoneer-fee-calculator',
