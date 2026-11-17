@@ -1,0 +1,78 @@
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="480" rx="16" fill="#090e1d" />
+  <rect width="798" height="478" x="1" y="1" rx="15" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Title Header -->
+  <text x="40" y="45" fill="#ffffff" font-size="20" font-weight="800">Figure 2: Amazon FBA vs FBM Strategic Decision Matrix</text>
+  <text x="40" y="70" fill="#94a3b8" font-size="12" font-weight="500">Choosing the optimal fulfillment method based on unit weight, margins, and sales velocity</text>
+
+  <!-- Column 1: FBA Prime Path -->
+  <g transform="translate(40, 100)">
+    <rect width="340" height="340" rx="14" fill="#0f172a" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1" />
+    <rect width="340" height="45" rx="14" fill="#f59e0b" fill-opacity="0.15" />
+    <text x="20" y="28" fill="#fbbf24" font-size="14" font-weight="800">PATH A: FBA (Fulfilled by Amazon)</text>
+
+    <!-- Checklist items -->
+    <g transform="translate(20, 65)">
+      <circle cx="10" cy="10" r="8" fill="#10b981" />
+      <text x="28" y="15" fill="#ffffff" font-size="12" font-weight="700">Prime Badge: 2x to 4x Higher Conversion</text>
+      <text x="28" y="32" fill="#94a3b8" font-size="11">Algorithm prioritizes Prime for Buy Box dominance</text>
+    </g>
+
+    <g transform="translate(20, 120)">
+      <circle cx="10" cy="10" r="8" fill="#10b981" />
+      <text x="28" y="15" fill="#ffffff" font-size="12" font-weight="700">Zero Customer Support Overhead</text>
+      <text x="28" y="32" fill="#94a3b8" font-size="11">Amazon manages packing, shipping, 24/7 returns</text>
+    </g>
+
+    <g transform="translate(20, 175)">
+      <circle cx="10" cy="10" r="8" fill="#f59e0b" />
+      <text x="28" y="15" fill="#ffffff" font-size="12" font-weight="700">Best For: Lightweight Products (&lt; 2 lbs)</text>
+      <text x="28" y="32" fill="#94a3b8" font-size="11">Standard sizes keep Pick &amp; Pack under $5.40</text>
+    </g>
+
+    <g transform="translate(20, 230)">
+      <circle cx="10" cy="10" r="8" fill="#e11d48" />
+      <text x="28" y="15" fill="#ffffff" font-size="12" font-weight="700">Warning: Inbound &amp; Storage Fees</text>
+      <text x="28" y="32" fill="#94a3b8" font-size="11">Q4 storage jumps 3.1x; requires 30-day inventory turns</text>
+    </g>
+
+    <rect x="20" y="280" width="300" height="36" rx="8" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1" />
+    <text x="170" y="303" fill="#fbbf24" font-size="11" font-weight="800" text-anchor="middle">VERDICT: Best for Scale &amp; Fast-Turnover Goods</text>
+  </g>
+
+  <!-- Column 2: FBM Merchant Path -->
+  <g transform="translate(420, 100)">
+    <rect width="340" height="340" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+    <rect width="340" height="45" rx="14" fill="#38bdf8" fill-opacity="0.15" />
+    <text x="20" y="28" fill="#38bdf8" font-size="14" font-weight="800">PATH B: FBM (Fulfilled by Merchant)</text>
+
+    <!-- Checklist items -->
+    <g transform="translate(20, 65)">
+      <circle cx="10" cy="10" r="8" fill="#10b981" />
+      <text x="28" y="15" fill="#ffffff" font-size="12" font-weight="700">Zero Amazon Storage or Inbound Fees</text>
+      <text x="28" y="32" fill="#94a3b8" font-size="11">Store goods in own garage, office, or local 3PL</text>
+    </g>
+
+    <g transform="translate(20, 120)">
+      <circle cx="10" cy="10" r="8" fill="#10b981" />
+      <text x="28" y="15" fill="#ffffff" font-size="12" font-weight="700">Best For: Heavy, Oversize, or Custom</text>
+      <text x="28" y="32" fill="#94a3b8" font-size="11">Furniture, commercial gear, custom engravings</text>
+    </g>
+
+    <g transform="translate(20, 175)">
+      <circle cx="10" cy="10" r="8" fill="#f59e0b" />
+      <text x="28" y="15" fill="#ffffff" font-size="12" font-weight="700">Complete Brand Control Over Packaging</text>
+      <text x="28" y="32" fill="#94a3b8" font-size="11">Insert promotional cards, stickers, and branded boxes</text>
+    </g>
+
+    <g transform="translate(20, 230)">
+      <circle cx="10" cy="10" r="8" fill="#e11d48" />
+      <text x="28" y="15" fill="#ffffff" font-size="12" font-weight="700">Warning: Lower Buy Box Win Rate</text>
+      <text x="28" y="32" fill="#94a3b8" font-size="11">Must price 5% to 10% below FBA to win Buy Box</text>
+    </g>
+
+    <rect x="20" y="280" width="300" height="36" rx="8" fill="#38bdf8" fill-opacity="0.1" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" />
+    <text x="170" y="303" fill="#38bdf8" font-size="11" font-weight="800" text-anchor="middle">VERDICT: Best for Bulky, Heavy &amp; Low-Velocity Items</text>
+  </g>
+</svg>

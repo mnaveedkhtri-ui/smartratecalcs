@@ -276,6 +276,93 @@ export default function BlogPostPage({ params }: Props) {
         </section>
 
         {/* HIGH-INTENT INTERNAL CALCULATOR LINKING CLUSTER */}
+        {post.slug === 'amazon-fba-fees-2026-complete-seller-schedule-guide' && (
+          <div className="mb-10 p-6 rounded-3xl bg-slate-900 border border-slate-800 text-white shadow-xl">
+            <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">
+                  Amazon FBA &amp; E-Commerce Intelligence Tools (2026)
+                </span>
+              </div>
+              <span className="text-[11px] text-slate-400 font-mono">Live Empirical Models</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link
+                href="/calculators/amazon-fba-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-amber-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-amber-400 flex items-center justify-between">
+                    <span>Amazon FBA &amp; Seller Fee Calculator</span>
+                    <span className="text-amber-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Model FBA Pick &amp; Pack, 8% to 15% referral rates, inbound placement, and net margins.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-amber-300 font-semibold">
+                  FBA vs FBM &bull; 2026 Policy
+                </div>
+              </Link>
+
+              <Link
+                href="/calculators/ebay-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-blue-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-blue-400 flex items-center justify-between">
+                    <span>eBay Fee &amp; Profit Calculator</span>
+                    <span className="text-blue-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Compare Amazon take rates against eBay 13.25% + $0.30 Managed Payments.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-blue-300 font-semibold">
+                  Managed Payments &bull; Multi-Marketplace
+                </div>
+              </Link>
+
+              <Link
+                href="/calculators/etsy-fee-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-orange-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-orange-400 flex items-center justify-between">
+                    <span>Etsy Fee &amp; Profit Calculator</span>
+                    <span className="text-orange-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Audit handmade and vintage margins against Amazon Handmade 15% fee structure.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-orange-300 font-semibold">
+                  Handmade &amp; Retail &bull; Free
+                </div>
+              </Link>
+
+              <Link
+                href="/1099-tax-calculator"
+                className="p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 hover:border-emerald-500/80 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="text-xs font-bold text-white group-hover:text-emerald-400 flex items-center justify-between">
+                    <span>1099-K Amazon Seller Tax Calculator</span>
+                    <span className="text-emerald-400 text-sm">&rarr;</span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-1">
+                    Calculate 15.3% self-employment tax, Schedule C COGS write-offs, and estimated taxes.
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-mono text-emerald-300 font-semibold">
+                  IRS Schedule C &bull; 2026 Ready
+                </div>
+              </Link>
+            </div>
+          </div>
+        )}
+
         {post.slug === 'ebay-seller-fees-2026-complete-managed-payments-schedule-guide' && (
           <div className="mb-10 p-6 rounded-3xl bg-slate-900 border border-slate-800 text-white shadow-xl">
             <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
