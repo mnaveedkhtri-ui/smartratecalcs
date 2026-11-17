@@ -72,6 +72,14 @@ const nextConfig = {
         source: '/amazon-fba-fee-calculator',
         destination: '/calculators/amazon-fba-fee-calculator',
       },
+      {
+        source: '/poshmark-fee-calculator',
+        destination: '/calculators/poshmark-fee-calculator',
+      },
+      {
+        source: '/poshmark-calculator',
+        destination: '/calculators/poshmark-fee-calculator',
+      },
     ];
   },
   async redirects() {

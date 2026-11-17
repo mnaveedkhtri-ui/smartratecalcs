@@ -24,6 +24,7 @@ export async function GET(request: Request) {
 
   const staticUrls = [
     baseUrl,
+    `${baseUrl}/calculators/poshmark-fee-calculator`,
     `${baseUrl}/calculators/amazon-fba-fee-calculator`,
     `${baseUrl}/calculators/ebay-fee-calculator`,
     `${baseUrl}/calculators/etsy-fee-calculator`,

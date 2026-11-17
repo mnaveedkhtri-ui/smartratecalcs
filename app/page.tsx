@@ -52,6 +52,15 @@ const FLAGSHIP_DIRECTORY_ENTRIES = [
     primaryKeyword: 'depop fee calculator',
   },
   {
+    slug: 'poshmark-fee-calculator',
+    title: 'Poshmark Fee & Profit Calculator (2026)',
+    category: 'ecommerce' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate official 20% commission, $2.95 sub-$15 flat tiers, Offer to Likers shipping discounts, and reverse target pricing.',
+    primaryKeyword: 'poshmark fee calculator',
+  },
+  {
     slug: 'amazon-fba-fee-calculator',
     title: 'Amazon FBA & Seller Fee Calculator (2026)',
     category: 'ecommerce' as const,
@@ -362,6 +371,9 @@ export default function HomePage() {
             <Link href="/depop-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-red-700 dark:text-red-300 bg-red-50/50 dark:bg-red-950/40 hover:bg-red-50 flex items-center gap-2.5">
               <i className="fa-solid fa-shirt text-xs text-red-600 dark:text-red-400"></i> Depop Fee Calculator (2026)
             </Link>
+            <Link href="/calculators/poshmark-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-rose-700 dark:text-rose-300 bg-rose-50/50 dark:bg-rose-950/40 hover:bg-rose-50 flex items-center gap-2.5">
+              <span className="w-4 h-4 rounded bg-rose-600 text-white flex items-center justify-center font-bold text-[10px]">P</span> Poshmark Fee Calculator (2026)
+            </Link>
             <Link href="/calculators/amazon-fba-fee-calculator" className="w-full text-left px-3.5 py-2.5 rounded-xl font-bold text-xs text-amber-700 dark:text-amber-300 bg-amber-50/50 dark:bg-amber-950/40 hover:bg-amber-50 flex items-center gap-2.5">
               <span className="w-4 h-4 rounded bg-amber-500 text-white flex items-center justify-center font-bold text-[10px]">a</span> Amazon FBA &amp; Seller Calculator (2026)
             </Link>
@@ -491,6 +503,13 @@ export default function HomePage() {
                   <span className="px-1 py-0.2 rounded bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-300 text-[8px] font-mono">NEW</span>
                 </div>
                 <div className="text-[9px] text-slate-400 font-mono mt-0.5">0% Sell &bull; 3.3% Proc</div>
+              </Link>
+              <Link href="/calculators/poshmark-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-rose-500 hover:shadow-sm transition-all group">
+                <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-rose-600 dark:group-hover:text-rose-400 flex items-center gap-1.5">
+                  <span className="w-3.5 h-3.5 rounded bg-rose-600 text-white flex items-center justify-center font-bold text-[9px]">P</span> Poshmark
+                  <span className="px-1 py-0.2 rounded bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 text-[8px] font-mono">NEW</span>
+                </div>
+                <div className="text-[9px] text-slate-400 font-mono mt-0.5">20% or $2.95 &bull; OTL</div>
               </Link>
               <Link href="/upwork-fee-calculator" className="p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 hover:shadow-sm transition-all group">
                 <div className="text-[11px] font-bold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 flex items-center gap-1.5">
@@ -1404,6 +1423,7 @@ export default function HomePage() {
                 <li><Link href="/calculators/cash-app-fee-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold transition-colors flex items-center gap-1.5"><span className="w-3.5 h-3.5 rounded bg-emerald-500 text-slate-950 flex items-center justify-center font-black text-[9px]">$</span> Cash App Fee Calculator (2026)</Link></li>
                 <li><Link href="/tiktok-shop-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-tiktok text-[#fe2c55] text-xs"></i> TikTok Shop Fee Calculator (2026)</Link></li>
                 <li><Link href="/depop-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-shirt text-rose-500 text-xs"></i> Depop Fee Calculator (0% Rule)</Link></li>
+                <li><Link href="/calculators/poshmark-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 font-semibold transition-colors flex items-center gap-1.5"><span className="w-3.5 h-3.5 rounded bg-rose-600 text-white flex items-center justify-center font-bold text-[9px]">P</span> Poshmark Fee Calculator (2026)</Link></li>
                 <li><Link href="/calculators/amazon-fba-fee-calculator" className="hover:text-amber-600 dark:hover:text-amber-400 font-semibold transition-colors flex items-center gap-1.5"><span className="w-3.5 h-3.5 rounded bg-amber-500 text-white flex items-center justify-center font-bold text-[9px]">a</span> Amazon FBA Fee Calculator (2026)</Link></li>
                 <li><Link href="/calculators/ebay-fee-calculator" className="hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-solid fa-cart-shopping text-blue-500 text-xs"></i> eBay Fee Calculator (2026)</Link></li>
                 <li><Link href="/calculators/etsy-fee-calculator" className="hover:text-orange-600 dark:hover:text-orange-400 font-semibold transition-colors flex items-center gap-1.5"><i className="fa-brands fa-etsy text-orange-600 text-xs"></i> Etsy Fee Calculator (2026)</Link></li>

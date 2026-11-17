@@ -40,6 +40,10 @@ export function SiteLegalFooter() {
           Depop Calculator
         </Link>
         <span className="text-slate-300 dark:text-slate-700">&bull;</span>
+        <Link href="/calculators/poshmark-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 transition-colors">
+          Poshmark Calculator
+        </Link>
+        <span className="text-slate-300 dark:text-slate-700">&bull;</span>
         <Link href="/1099-tax-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
           1099 Tax Calculator
         </Link>
