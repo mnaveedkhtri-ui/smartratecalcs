@@ -1,0 +1,96 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#140308" />
+      <stop offset="50%" stop-color="#2a0614" />
+      <stop offset="100%" stop-color="#0d0205" />
+    </linearGradient>
+    <radialGradient id="glowRose" cx="20%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#e11d48" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#e11d48" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowPink" cx="80%" cy="75%" r="50%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#glowRose)" />
+  <rect width="1200" height="630" fill="url(#glowPink)" />
+
+  <!-- Subtle Grid lines -->
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="126" x2="1200" y2="126" />
+    <line x1="0" y1="252" x2="1200" y2="252" />
+    <line x1="0" y1="378" x2="1200" y2="378" />
+    <line x1="0" y1="504" x2="1200" y2="504" />
+    <line x1="240" y1="0" x2="240" y2="630" />
+    <line x1="480" y1="0" x2="480" y2="630" />
+    <line x1="720" y1="0" x2="720" y2="630" />
+    <line x1="960" y1="0" x2="960" y2="630" />
+  </g>
+
+  <!-- Brand Pill -->
+  <g transform="translate(80, 70)">
+    <rect width="320" height="38" rx="19" fill="rgba(225, 29, 72, 0.15)" stroke="rgba(225, 29, 72, 0.4)" stroke-width="1" />
+    <circle cx="20" cy="19" r="6" fill="#e11d48" />
+    <text x="36" y="24" fill="#fda4af" font-size="13" font-family="-apple-system, sans-serif" font-weight="700" letter-spacing="1.2">SMARTRATECALCS RESELLER HUB</text>
+  </g>
+
+  <!-- Year Badge -->
+  <g transform="translate(1010, 70)">
+    <rect width="110" height="38" rx="19" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+    <text x="55" y="24" text-anchor="middle" fill="#ffffff" font-size="14" font-family="-apple-system, sans-serif" font-weight="800">2026 GUIDE</text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="80" y="180" fill="#ffffff" font-size="52" font-family="-apple-system, sans-serif" font-weight="900" letter-spacing="-1.5">
+    Poshmark Fees in 2026:
+  </text>
+  <text x="80" y="242" fill="#fb7185" font-size="44" font-family="-apple-system, sans-serif" font-weight="800" letter-spacing="-1">
+    Complete Seller Schedule &amp; Profit Guide
+  </text>
+
+  <!-- Subhead -->
+  <text x="80" y="295" fill="#e2e8f0" font-size="19" font-family="-apple-system, sans-serif" font-weight="500">
+    $2.95 Flat vs 20% Fee Tiers | Offer to Likers Math | USPS Priority Labels | Reverse Solver
+  </text>
+
+  <!-- 3 Pillar Stat Cards -->
+  <g transform="translate(80, 345)">
+    <!-- Card 1: Sub-$15 Tier -->
+    <rect width="320" height="195" rx="20" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(251, 113, 133, 0.3)" stroke-width="1.5" />
+    <text x="24" y="40" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="1">SALES UNDER $15.00</text>
+    <text x="24" y="92" fill="#fda4af" font-size="38" font-weight="900" font-family="monospace">$2.95</text>
+    <text x="24" y="125" fill="#f43f5e" font-size="14" font-weight="700">Flat Platform Fee</text>
+    <text x="24" y="152" fill="#cbd5e1" font-size="13">High effective cut (up to 37%)</text>
+    <text x="24" y="172" fill="#64748b" font-size="11">Group low items into bundles</text>
+
+    <!-- Card 2: Standard 20% Tier -->
+    <g transform="translate(345, 0)">
+      <rect width="330" height="195" rx="20" fill="rgba(225, 29, 72, 0.08)" stroke="rgba(225, 29, 72, 0.45)" stroke-width="1.5" />
+      <text x="24" y="40" fill="#fda4af" font-size="12" font-weight="700" letter-spacing="1">SALES $15.00 AND ABOVE</text>
+      <text x="24" y="92" fill="#ffffff" font-size="38" font-weight="900" font-family="monospace">20.0%</text>
+      <text x="24" y="125" fill="#fb7185" font-size="14" font-weight="700">Flat Commission</text>
+      <text x="24" y="152" fill="#e2e8f0" font-size="13">Zero separate payment cuts</text>
+      <text x="24" y="172" fill="#94a3b8" font-size="11">Keep 80% of listing gross</text>
+    </g>
+
+    <!-- Card 3: Shipping Subsidies -->
+    <g transform="translate(700, 0)">
+      <rect width="340" height="195" rx="20" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5" />
+      <text x="24" y="40" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="1">OFFER TO LIKERS (OTL)</text>
+      <text x="24" y="92" fill="#38bdf8" font-size="38" font-weight="900" font-family="monospace">-$2.02</text>
+      <text x="24" y="125" fill="#7dd3fc" font-size="14" font-weight="700">Seller Shipping Deduction</text>
+      <text x="24" y="152" fill="#cbd5e1" font-size="13">Covers buyer $5.95 promo</text>
+      <text x="24" y="172" fill="#64748b" font-size="11">Prepaid USPS Priority up to 5 lbs</text>
+    </g>
+  </g>
+
+  <!-- Bottom Authority Bar -->
+  <g transform="translate(80, 575)">
+    <text x="0" y="18" fill="#64748b" font-size="12" font-weight="600">SMARTRATECALCS.COM / RESEARCH &amp; VALUATION ENGINEERING</text>
+    <text x="1040" y="18" text-anchor="end" fill="#94a3b8" font-size="12" font-weight="700">AUTHORED BY MUHAMMAD NAVEED</text>
+  </g>
+</svg>

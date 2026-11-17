@@ -1,0 +1,65 @@
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="480" rx="20" fill="#140308" />
+  <rect width="800" height="480" rx="20" stroke="rgba(225, 29, 72, 0.3)" stroke-width="2" />
+
+  <!-- Title -->
+  <text x="40" y="45" fill="#38bdf8" font-size="12" font-weight="800" letter-spacing="1.5">OFFER TO LIKERS (OTL) CASHFLOW</text>
+  <text x="40" y="80" fill="#ffffff" font-size="24" font-weight="800">Where Does Your Sale Money Actually Go?</text>
+
+  <!-- Step-by-Step Flowchart -->
+  <g transform="translate(40, 115)">
+    <!-- Box 1: Listing Price -->
+    <rect width="150" height="110" rx="12" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" />
+    <text x="15" y="30" fill="#94a3b8" font-size="11" font-weight="700">LISTING PRICE</text>
+    <text x="15" y="65" fill="#ffffff" font-size="22" font-weight="900" font-family="monospace">$50.00</text>
+    <text x="15" y="90" fill="#64748b" font-size="10">Initial listing</text>
+
+    <!-- Arrow 1 -->
+    <text x="165" y="65" fill="#fb7185" font-size="18" font-weight="900">→</text>
+
+    <!-- Box 2: 10% Drop Offer -->
+    <g transform="translate(190, 0)">
+      <rect width="165" height="110" rx="12" fill="rgba(251, 113, 133, 0.08)" stroke="rgba(251, 113, 133, 0.4)" />
+      <text x="15" y="30" fill="#fda4af" font-size="11" font-weight="700">10% OTL DROP</text>
+      <text x="15" y="65" fill="#fb7185" font-size="22" font-weight="900" font-family="monospace">$45.00</text>
+      <text x="15" y="90" fill="#fda4af" font-size="10">Mandatory 10%+ cut</text>
+    </g>
+
+    <!-- Arrow 2 -->
+    <text x="370" y="65" fill="#fb7185" font-size="18" font-weight="900">→</text>
+
+    <!-- Box 3: Poshmark 20% -->
+    <g transform="translate(395, 0)">
+      <rect width="165" height="110" rx="12" fill="rgba(244, 63, 94, 0.12)" stroke="rgba(244, 63, 94, 0.5)" />
+      <text x="15" y="30" fill="#f43f5e" font-size="11" font-weight="700">POSHMARK 20%</text>
+      <text x="15" y="65" fill="#f43f5e" font-size="22" font-weight="900" font-family="monospace">-$9.00</text>
+      <text x="15" y="90" fill="#fca5a5" font-size="10">20% of $45 offer</text>
+    </g>
+
+    <!-- Arrow 3 -->
+    <text x="575" y="65" fill="#38bdf8" font-size="18" font-weight="900">→</text>
+
+    <!-- Box 4: Shipping Subsidy -->
+    <g transform="translate(600, 0)">
+      <rect width="120" height="110" rx="12" fill="rgba(56, 189, 248, 0.1)" stroke="rgba(56, 189, 248, 0.4)" />
+      <text x="12" y="30" fill="#38bdf8" font-size="11" font-weight="700">SHIP PROMO</text>
+      <text x="12" y="65" fill="#38bdf8" font-size="22" font-weight="900" font-family="monospace">-$2.02</text>
+      <text x="12" y="90" fill="#7dd3fc" font-size="10">$5.95 buyer rate</text>
+    </g>
+  </g>
+
+  <!-- Payout Summary Bar -->
+  <g transform="translate(40, 255)">
+    <rect width="720" height="175" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" />
+    
+    <text x="25" y="35" fill="#94a3b8" font-size="12" font-weight="700">NET CASH BREAKDOWN ON $45 ACCEPTED OFFER:</text>
+
+    <g transform="translate(25, 60)" font-size="13" font-family="monospace">
+      <text y="0" fill="#e2e8f0">Poshmark Net Deposit: <tspan fill="#38bdf8" font-weight="700">$33.98</tspan> ($45.00 - $9.00 - $2.02)</text>
+      <text y="28" fill="#e2e8f0">Minus Thrift Cost (COGS): <tspan fill="#fbbf24" font-weight="700">-$8.00</tspan></text>
+      <text y="56" fill="#e2e8f0">Minus Polymailer &amp; Supplies: <tspan fill="#94a3b8">-$1.20</tspan></text>
+      <line x1="0" y1="70" x2="670" y2="70" stroke="rgba(255,255,255,0.15)" />
+      <text y="95" fill="#4ade80" font-size="16" font-weight="900">REAL NET CASH IN POCKET: $24.78 (55.1% Real Profit Margin)</text>
+    </g>
+  </g>
+</svg>
