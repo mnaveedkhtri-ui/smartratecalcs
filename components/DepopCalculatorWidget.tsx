@@ -340,13 +340,13 @@ Calculated on: https://www.smartratecalcs.com/depop-fee-calculator`;
 
                 <div className="flex items-center gap-3 shrink-0">
                   <Link
-                    href="/calculators/poshmark-seller-fee-calculator"
+                    href="/calculators/poshmark-fee-calculator"
                     className="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 border border-slate-700 transition-colors"
                   >
                     Poshmark Calc &rarr;
                   </Link>
                   <Link
-                    href="/calculators/ebay-seller-fee-and-profit-calculator"
+                    href="/calculators/ebay-fee-calculator"
                     className="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 border border-slate-700 transition-colors"
                   >
                     eBay Calc &rarr;

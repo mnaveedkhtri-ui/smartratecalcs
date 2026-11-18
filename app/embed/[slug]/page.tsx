@@ -9,13 +9,25 @@ interface Props {
   };
 }
 
+const EXCLUDED_SLUGS = new Set([
+  'upwork-to-jazzcash-payout-calculator',
+  'ebay-seller-fee-and-profit-calculator',
+  'amazon-fba-profit-margin-calculator',
+  'etsy-seller-fee-and-profit-calculator',
+  'poshmark-seller-fee-calculator',
+  'cash-app-business-fee-calculator',
+]);
+
 export async function generateStaticParams() {
-  return PROGRAMMATIC_CALCULATORS.map((calc) => ({
-    slug: calc.slug,
-  }));
+  return PROGRAMMATIC_CALCULATORS
+    .filter((calc) => !EXCLUDED_SLUGS.has(calc.slug))
+    .map((calc) => ({
+      slug: calc.slug,
+    }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (EXCLUDED_SLUGS.has(params.slug)) return {};
   const calc = PROGRAMMATIC_CALCULATORS.find((c) => c.slug === params.slug);
   if (!calc) return {};
 
@@ -35,6 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function EmbedCalculatorPage({ params }: Props) {
+  if (EXCLUDED_SLUGS.has(params.slug)) notFound();
   const calc = PROGRAMMATIC_CALCULATORS.find((c) => c.slug === params.slug);
 
   if (!calc) {

@@ -49,6 +49,10 @@ const nextConfig = {
         destination: '/freelance-hourly-rate-calculator',
       },
       {
+        source: '/calculators/remitly-pakistan-rate',
+        destination: '/remitly-pakistan-rate',
+      },
+      {
         source: '/cash-app-fee-calculator',
         destination: '/calculators/cash-app-fee-calculator',
       },

@@ -159,13 +159,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic Programmatic SEO Calculator Pages (53 URLs)
-  const dynamicCalculatorPages: MetadataRoute.Sitemap = PROGRAMMATIC_CALCULATORS.map((calc) => ({
-    url: `${baseUrl}/calculators/${calc.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.9,
-  }));
+  // Filter out duplicate programmatic slugs that are canonicalized to dedicated flagship calculators
+  const REWRITTEN_OR_FLAGSHIP_DUPLICATES = new Set([
+    'upwork-to-jazzcash-payout-calculator',
+    'ebay-seller-fee-and-profit-calculator',
+    'amazon-fba-profit-margin-calculator',
+    'etsy-seller-fee-and-profit-calculator',
+    'poshmark-seller-fee-calculator',
+    'cash-app-business-fee-calculator',
+  ]);
+
+  // Dynamic Programmatic SEO Calculator Pages
+  const dynamicCalculatorPages: MetadataRoute.Sitemap = PROGRAMMATIC_CALCULATORS
+    .filter((calc) => !REWRITTEN_OR_FLAGSHIP_DUPLICATES.has(calc.slug))
+    .map((calc) => ({
+      url: `${baseUrl}/calculators/${calc.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    }));
 
   // Dynamic High-Authority Blog Guides (6 URLs)
   const dynamicBlogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({

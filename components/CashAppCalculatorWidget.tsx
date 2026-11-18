@@ -508,16 +508,16 @@ Calculated on: https://www.smartratecalcs.com/calculators/cash-app-fee-calculato
       <div className="px-6 py-4 bg-slate-50 dark:bg-slate-950/40 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs">
         <span className="text-slate-500 font-mono">Related Payment &amp; POS Calculators:</span>
         <div className="flex flex-wrap gap-2">
-          <Link href="/calculators/square-fee-calculator" className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-slate-900 font-semibold text-slate-700 dark:text-slate-200 transition-colors">
+          <Link href="/square-fee-calculator" className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-slate-900 font-semibold text-slate-700 dark:text-slate-200 transition-colors">
             Square Fee Calculator
           </Link>
-          <Link href="/calculators/paypal-fee-calculator" className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-500 font-semibold text-slate-700 dark:text-slate-200 transition-colors">
+          <Link href="/paypal-fee-calculator" className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-500 font-semibold text-slate-700 dark:text-slate-200 transition-colors">
             PayPal Fee Calculator
           </Link>
-          <Link href="/calculators/stripe-fee-calculator" className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-indigo-600 font-semibold text-slate-700 dark:text-slate-200 transition-colors">
+          <Link href="/stripe-fee-calculator" className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-indigo-600 font-semibold text-slate-700 dark:text-slate-200 transition-colors">
             Stripe Fee Calculator
           </Link>
-          <Link href="/calculators/1099-tax-calculator" className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-600 font-semibold text-slate-700 dark:text-slate-200 transition-colors">
+          <Link href="/1099-tax-calculator" className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-600 font-semibold text-slate-700 dark:text-slate-200 transition-colors">
             1099 Tax Calculator
           </Link>
         </div>

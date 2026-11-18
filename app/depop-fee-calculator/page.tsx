@@ -383,14 +383,14 @@ export default function DepopCalculatorPage() {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <Link
-                href="/calculators/poshmark-seller-fee-calculator"
+                href="/calculators/poshmark-fee-calculator"
                 className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-colors"
               >
                 <div className="text-xs font-bold text-slate-900 dark:text-white">Poshmark Fee Calculator &rarr;</div>
                 <div className="text-[11px] text-slate-500 mt-1">Compare against flat 20% commission.</div>
               </Link>
               <Link
-                href="/calculators/ebay-seller-fee-and-profit-calculator"
+                href="/calculators/ebay-fee-calculator"
                 className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition-colors"
               >
                 <div className="text-xs font-bold text-slate-900 dark:text-white">eBay Seller Fee Calculator &rarr;</div>

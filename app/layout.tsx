@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     creator: '@naveed_engineer',
   },
   alternates: {
-    canonical: 'https://www.smartratecalcs.com/',
+    canonical: 'https://www.smartratecalcs.com',
   },
   verification: {
     google: 'FzC73kAndsqrqsza438VtUdn49KmQZfgQm61v9-ukls',
