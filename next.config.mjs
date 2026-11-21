@@ -9,10 +9,6 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/calculators/tiktok-shop-fee-calculator',
-        destination: '/tiktok-shop-fee-calculator',
-      },
-      {
         source: '/calculators/depop-fee-calculator',
         destination: '/depop-fee-calculator',
       },
@@ -116,6 +112,21 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: '/tiktok-shop-fee-calculator',
+        destination: '/calculators/tiktok-shop-fee-calculator',
+        permanent: true,
+      },
+      {
+        source: '/calculators/tiktok-shop-seller-fee-calculator',
+        destination: '/calculators/tiktok-shop-fee-calculator',
+        permanent: true,
+      },
+      {
+        source: '/tiktok-shop-seller-fee-calculator',
+        destination: '/calculators/tiktok-shop-fee-calculator',
+        permanent: true,
+      },
       {
         source: '/calculators/sadabiz-vs-payoneer-calculator',
         destination: '/calculators/sadabiz-vs-payoneer-fee-calculator',

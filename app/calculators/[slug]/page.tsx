@@ -241,7 +241,7 @@ export default function CalculatorPage({ params }: Props) {
               </span>
             </div>
             <Link
-              href="/tiktok-shop-fee-calculator"
+              href="/calculators/tiktok-shop-fee-calculator"
               className="px-3.5 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-center transition-colors shrink-0"
             >
               Launch Flagship TikTok Engine &rarr;

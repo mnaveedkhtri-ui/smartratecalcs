@@ -102,7 +102,7 @@ TikTok Referral Fee (${(baseReferralRate * 100).toFixed(0)}%): ${currSym}${forwa
 Creator Affiliate Cut (${affiliateRate}%): ${currSym}${forwardCalc.affiliateCut.toFixed(2)}
 COGS & Shipping: ${currSym}${(cogs + actualShipping).toFixed(2)}
 ${adSpend > 0 ? `Ad Spend per Order: ${currSym}${adSpend.toFixed(2)}\n` : ''}Net Take-Home Profit: ${currSym}${forwardCalc.netProfit.toFixed(2)} (Margin: ${forwardCalc.profitMargin.toFixed(1)}%)
-Calculated on: https://www.smartratecalcs.com/tiktok-shop-fee-calculator`;
+Calculated on: https://www.smartratecalcs.com/calculators/tiktok-shop-fee-calculator`;
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);

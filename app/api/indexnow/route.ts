@@ -31,7 +31,7 @@ export async function GET(request: Request) {
     `${baseUrl}/calculators/cash-app-fee-calculator`,
     `${baseUrl}/calculators/whatnot-fee-calculator`,
     `${baseUrl}/calculators/upwork-to-jazzcash-calculator`,
-    `${baseUrl}/tiktok-shop-fee-calculator`,
+    `${baseUrl}/calculators/tiktok-shop-fee-calculator`,
     `${baseUrl}/depop-fee-calculator`,
     `${baseUrl}/1099-tax-calculator`,
     `${baseUrl}/square-fee-calculator`,

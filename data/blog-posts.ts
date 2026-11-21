@@ -2842,7 +2842,7 @@ export const BLOG_POSTS: BlogPost[] = [
           </div>
         </div>
         <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed">
-          To run live calculations on your exact product numbers, use our companion <a href="/tiktok-shop-fee-calculator" class="text-rose-500 font-bold underline hover:text-rose-400">TikTok Shop Fee &amp; Profit Calculator</a> with instant forward and reverse pricing capabilities.
+          To run live calculations on your exact product numbers, use our companion <a href="/calculators/tiktok-shop-fee-calculator" class="text-rose-500 font-bold underline hover:text-rose-400">TikTok Shop Fee &amp; Profit Calculator</a> with instant forward and reverse pricing capabilities.
         </p>
       </section>
 
@@ -2967,11 +2967,11 @@ export const BLOG_POSTS: BlogPost[] = [
           <li><strong>Audit Return Rates:</strong> Apparel and footwear return rates on TikTok Shop frequently exceed 12% to 18%. Model reverse logistics and restocking costs into your baseline pricing formula.</li>
           <li><strong>Keep Delivery Under 5 Days:</strong> TikTok penalizes late dispatch severely. Maintain a Late Dispatch Rate (LDR) below 4.0% to maintain your shop health score and affiliate discoverability.</li>
           <li><strong>Track Landed COGS in Real Time:</strong> Update your packaging, polymailer, and USPS/UPS postage costs monthly so your net profit calculation remains accurate.</li>
-          <li><strong>Bookmark the SmartRateCalcs Engine:</strong> Before listing any new SKU or agreeing to a creator collaboration, run the numbers through our <a href="/tiktok-shop-fee-calculator" class="text-rose-500 font-bold underline hover:text-rose-400">TikTok Shop Fee Calculator</a> to guarantee positive cashflow on every order.</li>
+          <li><strong>Bookmark the SmartRateCalcs Engine:</strong> Before listing any new SKU or agreeing to a creator collaboration, run the numbers through our <a href="/calculators/tiktok-shop-fee-calculator" class="text-rose-500 font-bold underline hover:text-rose-400">TikTok Shop Fee Calculator</a> to guarantee positive cashflow on every order.</li>
         </ol>
       </section>
     `,
-    relatedCalculatorSlug: '/tiktok-shop-fee-calculator',
+    relatedCalculatorSlug: '/calculators/tiktok-shop-fee-calculator',
     images: [
       'https://www.smartratecalcs.com/blog/tiktok-shop-seller-fees-2026-complete-profit-margin-guide.svg',
       'https://www.smartratecalcs.com/blog/tiktok-shop-seller-fees-2026-complete-profit-margin-guide.png'

@@ -470,7 +470,7 @@ export default function PoshmarkCalculatorPage() {
                 Etsy Fee Calculator
               </Link>
               <Link
-                href="/tiktok-shop-fee-calculator"
+                href="/calculators/tiktok-shop-fee-calculator"
                 className="px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-800 dark:text-white hover:border-rose-500 transition-colors shadow-sm"
               >
                 TikTok Shop Fee Calculator

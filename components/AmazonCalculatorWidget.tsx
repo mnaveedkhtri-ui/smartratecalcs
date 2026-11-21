@@ -1025,7 +1025,7 @@ export default function AmazonCalculatorWidget({ isStandalone = false }: { isSta
                 Depop Calculator
               </Link>
               <Link
-                href="/tiktok-shop-fee-calculator"
+                href="/calculators/tiktok-shop-fee-calculator"
                 className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-amber-500 font-semibold text-slate-700 dark:text-slate-200 transition-colors"
               >
                 TikTok Shop

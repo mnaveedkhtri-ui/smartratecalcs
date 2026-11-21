@@ -32,7 +32,7 @@ export function SiteLegalFooter() {
           Cash App Calculator
         </Link>
         <span className="text-slate-300 dark:text-slate-700">&bull;</span>
-        <Link href="/tiktok-shop-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 transition-colors">
+        <Link href="/calculators/tiktok-shop-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 transition-colors">
           TikTok Shop Calculator
         </Link>
         <span className="text-slate-300 dark:text-slate-700">&bull;</span>

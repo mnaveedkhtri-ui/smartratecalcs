@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/tiktok-shop-fee-calculator`,
+      url: `${baseUrl}/calculators/tiktok-shop-fee-calculator`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.95,
@@ -167,6 +167,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'etsy-seller-fee-and-profit-calculator',
     'poshmark-seller-fee-calculator',
     'cash-app-business-fee-calculator',
+    'tiktok-shop-seller-fee-calculator',
   ]);
 
   // Dynamic Programmatic SEO Calculator Pages

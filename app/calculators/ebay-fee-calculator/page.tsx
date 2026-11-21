@@ -478,7 +478,7 @@ export default function EbayCalculatorPage() {
               </Link>
 
               <Link
-                href="/tiktok-shop-fee-calculator"
+                href="/calculators/tiktok-shop-fee-calculator"
                 className="p-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 hover:border-pink-500 transition-all group"
               >
                 <div className="font-bold text-white group-hover:text-pink-400 flex items-center gap-1.5">

@@ -325,7 +325,7 @@ export default function EtsyFeeCalculatorPage() {
                     </tr>
                     <tr>
                       <td className="py-2.5 px-3 font-sans">
-                        <Link href="/tiktok-shop-fee-calculator" className="text-rose-600 hover:underline">TikTok Shop</Link>
+                        <Link href="/calculators/tiktok-shop-fee-calculator" className="text-rose-600 hover:underline">TikTok Shop</Link>
                       </td>
                       <td className="py-2.5 px-3">$0.00</td>
                       <td className="py-2.5 px-3">6.00%</td>
