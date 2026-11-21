@@ -1,0 +1,66 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#05070d" />
+      <stop offset="50%" stop-color="#0c101d" />
+      <stop offset="100%" stop-color="#04060a" />
+    </linearGradient>
+    <linearGradient id="tiktokGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fe2c55" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Ambient Glows -->
+  <circle cx="200" cy="150" r="250" fill="#fe2c55" opacity="0.12" filter="blur(90px)" />
+  <circle cx="1000" cy="450" r="280" fill="#00f2fe" opacity="0.10" filter="blur(100px)" />
+
+  <!-- Top Badge -->
+  <rect x="80" y="70" width="380" height="40" rx="20" fill="rgba(254,44,85,0.15)" stroke="rgba(254,44,85,0.4)" stroke-width="1.5" />
+  <circle cx="105" cy="90" r="5" fill="#fe2c55" />
+  <text x="122" y="96" fill="#fe2c55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" letter-spacing="1.5">OFFICIAL 2026 SELLER GUIDE</text>
+
+  <!-- Brand Title -->
+  <text x="80" y="175" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900" letter-spacing="-1">
+    TikTok Shop Seller Fees
+  </text>
+  <text x="80" y="235" fill="url(#tiktokGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="50" font-weight="900" letter-spacing="-1">
+    Complete Profit Margin &amp; Formula Guide
+  </text>
+
+  <!-- Subtitle -->
+  <text x="80" y="285" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400">
+    Master the 6% US referral rate, creator affiliate splits, FBT fulfillment, and net profit math.
+  </text>
+
+  <!-- 3 Metric Cards -->
+  <!-- Card 1 -->
+  <rect x="80" y="340" width="320" height="180" rx="20" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" />
+  <text x="110" y="380" fill="#fe2c55" font-family="monospace" font-size="14" font-weight="700">US STANDARD RATE</text>
+  <text x="110" y="440" fill="#ffffff" font-family="monospace" font-size="48" font-weight="900">6.0%</text>
+  <text x="110" y="480" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Includes CC Processing ($0.30 min)</text>
+
+  <!-- Card 2 -->
+  <rect x="440" y="340" width="320" height="180" rx="20" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" />
+  <text x="470" y="380" fill="#00f2fe" font-family="monospace" font-size="14" font-weight="700">CREATOR AFFILIATE</text>
+  <text x="470" y="440" fill="#ffffff" font-family="monospace" font-size="48" font-weight="900">10-20%</text>
+  <text x="470" y="480" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Open &amp; Target Collab Commission</text>
+
+  <!-- Card 3 -->
+  <rect x="800" y="340" width="320" height="180" rx="20" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" />
+  <text x="830" y="380" fill="#10b981" font-family="monospace" font-size="14" font-weight="700">IRS 1099-K THRESHOLD</text>
+  <text x="830" y="440" fill="#ffffff" font-family="monospace" font-size="48" font-weight="900">$5,000</text>
+  <text x="830" y="480" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Annual US Gross Transaction Limit</text>
+
+  <!-- Footer Branding -->
+  <text x="80" y="575" fill="#64748b" font-family="monospace" font-size="14">
+    SmartRateCalcs.com &bull; Independent E-Commerce &amp; Payout Intelligence
+  </text>
+</svg>
