@@ -71,6 +71,7 @@ export const metadata: Metadata = {
     google: 'FzC73kAndsqrqsza438VtUdn49KmQZfgQm61v9-ukls',
     other: {
       'msvalidate.01': '7AE1E81DB909ABEB0E3E32E59E18A963',
+      'p:domain_verify': 'a8d45f72fc74186b14b460995c711d27',
     },
   },
 };
