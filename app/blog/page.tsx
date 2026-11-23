@@ -79,7 +79,7 @@ export default function BlogIndexPage() {
             </p>
             <div className="pt-2 flex flex-wrap gap-4 justify-center sm:justify-start text-xs text-slate-400 font-mono">
               <a
-                href="https://naveed-portfolio-kappa.vercel.app/"
+                href="https://www.smartratecalcs.com/about"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-emerald-400 underline font-semibold"

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'international wire fee comparison',
     'usd to pkr real exchange rate',
   ],
-  authors: [{ name: 'Muhammad Naveed', url: 'https://naveed-portfolio-kappa.vercel.app/' }],
+  authors: [{ name: 'Muhammad Naveed', url: 'https://www.smartratecalcs.com/about' }],
   creator: 'Muhammad Naveed',
   publisher: 'SmartRateCalcs',
   robots: {
@@ -132,10 +132,10 @@ export default function RootLayout({
         name: 'Muhammad Naveed',
         jobTitle: 'Lead Software & Automation Engineer',
         email: 'naveed@smartratecalcs.com',
-        url: 'https://naveed-portfolio-kappa.vercel.app/',
+        url: 'https://www.smartratecalcs.com/about',
         sameAs: [
           'https://github.com/mnaveedkhtri-ui',
-          'https://naveed-portfolio-kappa.vercel.app/',
+          'https://www.smartratecalcs.com/about',
         ],
         worksFor: {
           '@id': 'https://www.smartratecalcs.com/#organization',

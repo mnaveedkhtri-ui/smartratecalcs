@@ -13,6 +13,7 @@ interface Props {
 }
 
 const EXCLUDED_SLUGS = new Set([
+  'tiktok-shop-seller-fee-calculator',
   'upwork-to-jazzcash-payout-calculator',
   'ebay-seller-fee-and-profit-calculator',
   'amazon-fba-profit-margin-calculator',
@@ -131,7 +132,7 @@ export default function CalculatorPage({ params }: Props) {
       '@type': 'Person',
       name: 'Muhammad Naveed',
       jobTitle: 'Lead Software & Financial Systems Engineer',
-      url: 'https://naveed-portfolio-kappa.vercel.app/',
+      url: 'https://www.smartratecalcs.com/about',
     },
     dateModified: '2026-11-02',
   };
@@ -152,7 +153,7 @@ export default function CalculatorPage({ params }: Props) {
     author: {
       '@type': 'Person',
       name: 'Muhammad Naveed',
-      url: 'https://naveed-portfolio-kappa.vercel.app/',
+      url: 'https://www.smartratecalcs.com/about',
     },
   };
 
@@ -440,7 +441,7 @@ export default function CalculatorPage({ params }: Props) {
             </p>
             <div className="pt-1 flex flex-wrap gap-3 justify-center sm:justify-start text-xs text-slate-500 dark:text-slate-400 font-mono">
               <a
-                href="https://naveed-portfolio-kappa.vercel.app/"
+                href="https://www.smartratecalcs.com/about"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-emerald-600 dark:hover:text-emerald-400 underline font-semibold"

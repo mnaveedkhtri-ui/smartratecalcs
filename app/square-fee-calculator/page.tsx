@@ -92,7 +92,7 @@ export default function SquareCalculatorPage() {
     author: {
       '@type': 'Person',
       name: 'Muhammad Naveed',
-      url: 'https://naveed-portfolio-kappa.vercel.app/',
+      url: 'https://www.smartratecalcs.com/about',
     },
   };
 
@@ -168,7 +168,7 @@ export default function SquareCalculatorPage() {
               </div>
             </div>
             <a
-              href="https://naveed-portfolio-kappa.vercel.app/"
+              href="https://www.smartratecalcs.com/about"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-900 text-xs sm:text-sm font-bold transition-all shadow-md shrink-0 flex items-center gap-2"

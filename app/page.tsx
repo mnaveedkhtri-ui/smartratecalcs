@@ -1240,7 +1240,7 @@ export default function HomePage() {
             </div>
 
             <div className="flex items-center gap-4 mt-6 text-xs font-bold text-emerald-600 dark:text-emerald-400">
-              <a href="https://naveed-portfolio-kappa.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1.5">
+              <a href="https://www.smartratecalcs.com/about" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1.5">
                 <i className="fa-solid fa-arrow-up-right-from-square"></i> Verified Portfolio
               </a>
               <span className="text-slate-300 dark:text-slate-600">&bull;</span>
@@ -1351,7 +1351,7 @@ export default function HomePage() {
               <button onClick={() => navigateTo('contact')} className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all">
                 Contact Engineering Team
               </button>
-              <a href="https://naveed-portfolio-kappa.vercel.app/" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold border border-slate-700">
+              <a href="https://www.smartratecalcs.com/about" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold border border-slate-700">
                 View Portfolio
               </a>
             </div>
@@ -1386,7 +1386,7 @@ export default function HomePage() {
                   <i className="fa-brands fa-github" aria-hidden="true"></i>
                 </a>
                 <a
-                  href="https://naveed-portfolio-kappa.vercel.app/"
+                  href="https://www.smartratecalcs.com/about"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Personal Portfolio of Muhammad Naveed"

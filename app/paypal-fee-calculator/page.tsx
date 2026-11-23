@@ -99,7 +99,7 @@ export default function PayPalCalculatorPage() {
     author: {
       '@type': 'Person',
       name: 'Muhammad Naveed',
-      url: 'https://naveed-portfolio-kappa.vercel.app/',
+      url: 'https://www.smartratecalcs.com/about',
     },
   };
 
@@ -176,7 +176,7 @@ export default function PayPalCalculatorPage() {
               </div>
             </div>
             <a
-              href="https://naveed-portfolio-kappa.vercel.app/"
+              href="https://www.smartratecalcs.com/about"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-bold transition-all shadow-md shrink-0 flex items-center gap-2"

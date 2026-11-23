@@ -5,14 +5,14 @@ import ThemeToggle from '../../components/ThemeToggle';
 import { SiteLegalFooter } from '../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
-  title: 'Depop Fee Calculator (2026) | Free Profit & Reverse Pricing Tool',
+  title: 'Depop Fee Calculator 2026 [0% Seller Fee & Take-Home Profit Math]',
   description:
-    'Free 2026 Depop fee calculator. Calculate exact seller payouts under Depop 0% selling fee policy, 3.3% + $0.45 payment processing, 8% boosting cuts, and net profit margins.',
+    'Free 2026 Depop fee calculator. Calculate exact seller payouts under Depop 0% selling fee policy, 3.3% + $0.45 US payment processing, optional 8% boosting cuts, and net profit margins.',
   alternates: {
     canonical: 'https://www.smartratecalcs.com/depop-fee-calculator',
   },
   openGraph: {
-    title: 'Depop Fee Calculator 2026 | 0% Seller Fee & Net Profit Estimator',
+    title: 'Depop Fee Calculator 2026 [0% Seller Fee & Take-Home Profit Math]',
     description:
       'Calculate exact net take-home earnings on Depop. Factor in 0% seller commission, 3.3% + $0.45 payment processing, optional 8% boost cuts, and shipping labels.',
     url: 'https://www.smartratecalcs.com/depop-fee-calculator',
@@ -113,9 +113,9 @@ export default function DepopCalculatorPage() {
   const softwareAppSchema = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'Depop Fee & Profit Calculator (2026)',
+    name: 'Depop Fee & Profit Calculator [2026 Engine]',
     applicationCategory: 'FinanceApplication',
-    operatingSystem: 'All',
+    operatingSystem: 'All, Web, iOS, Android',
     url: pageUrl,
     offers: {
       '@type': 'Offer',
@@ -125,8 +125,42 @@ export default function DepopCalculatorPage() {
     author: {
       '@type': 'Person',
       name: 'Muhammad Naveed',
-      url: 'https://naveed-portfolio-kappa.vercel.app/',
+      url: 'https://www.smartratecalcs.com/about',
     },
+  };
+
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Calculate Depop Seller Payouts with 0% Selling Fees (2026)',
+    description:
+      'Step-by-step mathematical guide to calculating net take-home earnings on Depop after the 0% seller fee update, payment processing, and optional boost fees.',
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Enter Sale Price and Buyer Shipping',
+        text: 'Enter your retail listing price and the shipping amount charged to the buyer to establish total transaction gross value.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Calculate 0% Marketplace Selling Fee',
+        text: 'In the US and UK, standard selling fee is $0.00 (0%). Marketplace fees are now paid by buyers at checkout.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Calculate Payment Processing Fee',
+        text: 'In the US, multiply total transaction value by 0.033 (3.3%) and add $0.45 (or 2.9% + £0.30 in the UK).',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Apply Optional Boost and Shipping Costs',
+        text: 'If listing is boosted, deduct 8% of the item sale price. Then subtract your actual shipping label cost to calculate final net profit.',
+      },
+    ],
   };
 
   return (
@@ -142,6 +176,10 @@ export default function DepopCalculatorPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       <div className="min-h-screen bg-[#f8fafc] dark:bg-[#070d17] text-slate-800 dark:text-slate-100 transition-colors duration-200">

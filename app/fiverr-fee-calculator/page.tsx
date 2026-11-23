@@ -100,7 +100,7 @@ export default function FiverrCalculatorPage() {
     author: {
       '@type': 'Person',
       name: 'Muhammad Naveed',
-      url: 'https://naveed-portfolio-kappa.vercel.app/',
+      url: 'https://www.smartratecalcs.com/about',
     },
   };
 

@@ -86,7 +86,7 @@ export default function RemitlyPakistanRatePage() {
     author: {
       '@type': 'Person',
       name: 'Muhammad Naveed',
-      url: 'https://naveed-portfolio-kappa.vercel.app/',
+      url: 'https://www.smartratecalcs.com/about',
     },
   };
 
@@ -205,7 +205,7 @@ export default function RemitlyPakistanRatePage() {
             </div>
           </div>
           <a
-            href="https://naveed-portfolio-kappa.vercel.app/"
+            href="https://www.smartratecalcs.com/about"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs sm:text-sm font-bold transition-all shadow-md shrink-0 flex items-center gap-2"

@@ -5,14 +5,14 @@ import ThemeToggle from '../../../components/ThemeToggle';
 import { SiteLegalFooter } from '../../../components/SiteLegalFooter';
 
 export const metadata: Metadata = {
-  title: 'TikTok Shop Fee Calculator [2026 Official] Free Profit & 6% Fee Math',
+  title: 'TikTok Shop Fee Calculator 2026 [Official 6% Rate & Seller Profit Math]',
   description:
     'Free 2026 TikTok Shop fee calculator. Calculate exact seller payouts under the official 6% US referral rate, creator affiliate commissions, FBT fulfillment, and net profit margins.',
   alternates: {
     canonical: 'https://www.smartratecalcs.com/calculators/tiktok-shop-fee-calculator',
   },
   openGraph: {
-    title: 'TikTok Shop Fee Calculator [2026 Official] Free Profit & 6% Fee Math',
+    title: 'TikTok Shop Fee Calculator 2026 [Official 6% Rate & Seller Profit Math]',
     description:
       'Calculate exact net take-home earnings on TikTok Shop. Factor in the official 6% US seller commission, affiliate creator cuts, packaging, shipping, and ad spend.',
     url: 'https://www.smartratecalcs.com/calculators/tiktok-shop-fee-calculator',
@@ -166,7 +166,7 @@ export default function TikTokShopCalculatorPage() {
     author: {
       '@type': 'Person',
       name: 'Muhammad Naveed',
-      url: 'https://naveed-portfolio-kappa.vercel.app/',
+      url: 'https://www.smartratecalcs.com/about',
     },
   };
 

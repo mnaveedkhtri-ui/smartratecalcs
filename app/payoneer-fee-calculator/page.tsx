@@ -108,7 +108,7 @@ export default function PayoneerCalculatorPage() {
     author: {
       '@type': 'Person',
       name: 'Muhammad Naveed',
-      url: 'https://naveed-portfolio-kappa.vercel.app/',
+      url: 'https://www.smartratecalcs.com/about',
     },
   };
 
@@ -228,7 +228,7 @@ export default function PayoneerCalculatorPage() {
             </div>
           </div>
           <a
-            href="https://naveed-portfolio-kappa.vercel.app/"
+            href="https://www.smartratecalcs.com/about"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs sm:text-sm font-bold transition-all shadow-md shrink-0 flex items-center gap-2"
@@ -401,7 +401,7 @@ export default function PayoneerCalculatorPage() {
             </p>
             <div className="pt-1 flex flex-wrap gap-3 justify-center sm:justify-start text-xs text-slate-500 dark:text-slate-400 font-mono">
               <a
-                href="https://naveed-portfolio-kappa.vercel.app/"
+                href="https://www.smartratecalcs.com/about"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-orange-600 dark:hover:text-orange-400 underline font-semibold"

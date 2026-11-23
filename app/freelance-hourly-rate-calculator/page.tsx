@@ -100,7 +100,7 @@ export default function FreelanceRateCalculatorPage() {
     author: {
       '@type': 'Person',
       name: 'Muhammad Naveed',
-      url: 'https://naveed-portfolio-kappa.vercel.app/',
+      url: 'https://www.smartratecalcs.com/about',
     },
   };
 
@@ -359,7 +359,7 @@ export default function FreelanceRateCalculatorPage() {
             </p>
             <div className="pt-1 flex flex-wrap gap-3 justify-center sm:justify-start text-xs text-slate-500 dark:text-slate-400 font-mono">
               <a
-                href="https://naveed-portfolio-kappa.vercel.app/"
+                href="https://www.smartratecalcs.com/about"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-teal-600 dark:hover:text-teal-400 underline font-semibold"

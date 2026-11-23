@@ -74,7 +74,7 @@ export default function AboutPage() {
           </section>
 
           <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center gap-4 text-xs font-bold text-emerald-600 dark:text-emerald-400">
-            <a href="https://naveed-portfolio-kappa.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+            <a href="https://www.smartratecalcs.com/about" target="_blank" rel="noopener noreferrer" className="hover:underline">
               Engineering Portfolio
             </a>
             <span className="text-slate-300 dark:text-slate-700">&bull;</span>
