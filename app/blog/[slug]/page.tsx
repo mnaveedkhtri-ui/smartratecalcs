@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       authors: ['Muhammad Naveed'],
       images: [
         {
-          url: `https://www.smartratecalcs.com/blog/${post.slug}.png`,
+          url: (post.images && post.images.length > 0) ? post.images[0] : `https://www.smartratecalcs.com/blog/${post.slug}.png`,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: post.metaTitle,
       description: post.metaDesc,
-      images: [`https://www.smartratecalcs.com/blog/${post.slug}.png`],
+      images: [(post.images && post.images.length > 0) ? post.images[0] : `https://www.smartratecalcs.com/blog/${post.slug}.png`],
     },
   };
 }
@@ -251,7 +251,7 @@ export default function BlogPostPage({ params }: Props) {
         {/* Featured Hero Banner Image */}
         <div className="mb-10 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl bg-slate-950 aspect-[1200/630]">
           <img
-            src={`/blog/${post.slug}.png`}
+            src={(post.images && post.images.length > 0) ? post.images[0] : `/blog/${post.slug}.png`}
             alt={post.title}
             width={1200}
             height={630}
