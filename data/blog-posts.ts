@@ -251,6 +251,12 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     "quickSummary": "The cheapest way to withdraw from Upwork to Pakistan in 2026 is routing funds to an FDIC-insured US checking account (such as Elevate Pay or Wise US details) via ACH for a $0.00 withdrawal fee, followed by local transfer at 0.5% interbank spreads. Direct to Local Bank costs $0.99 plus a hidden 2.75% exchange rate spread, while Payoneer costs $2.00 plus a 2.0% currency markup.",
     "relatedCalculatorSlug": "upwork-direct-to-local-bank-pakistan-calculator",
+    "images": [
+      "/blog/upwork-pakistan-lowest-withdrawal-fee-guide.png",
+      "/blog/images/upwork-withdrawal-routes-flowchart.png",
+      "/blog/images/upwork-annual-leakage-chart.png",
+      "/blog/images/upwork-setup-checklist.png"
+    ],
     "wikidataEntities": [
       "https://www.wikidata.org/wiki/Q2007833",
       "https://www.wikidata.org/wiki/Q188289",
@@ -338,6 +344,12 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     "quickSummary": "Under FBR Income Tax Ordinance Section 154A, registered Pakistani IT and IT-enabled services exporters qualify for a concessional 0.25% final withholding tax on foreign currency remittances. To qualify, contractors must hold active PSEB registration, remit funds through formal banking channels tagged with SBP IT Purpose Codes, and submit annual tax returns on FBR Iris.",
     "relatedCalculatorSlug": "wise-to-meezan-bank-fee-calculator",
+    "images": [
+      "/blog/pakistan-freelancer-tax-section-154a-pseb-guide.png",
+      "/blog/images/fbr-section-154a-tax-brackets.png",
+      "/blog/images/pseb-registration-workflow-diagram.png",
+      "/blog/images/digital-prc-compliance-checklist.png"
+    ],
     "wikidataEntities": [
       "https://www.wikidata.org/wiki/Q5424855",
       "https://www.wikidata.org/wiki/Q7125712",
