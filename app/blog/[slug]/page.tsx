@@ -764,7 +764,7 @@ export default function BlogPostPage({ params }: Props) {
         {/* Knowledge Base FAQs */}
         <section id="faqs" className="space-y-4 mb-12 scroll-mt-24 pt-4 border-t border-slate-200 dark:border-slate-800">
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-4">
-            8. Frequently Asked Questions
+            Frequently Asked Questions
           </h2>
           <div className="grid grid-cols-1 gap-4">
             {post.faqs.map((faq, idx) => (
