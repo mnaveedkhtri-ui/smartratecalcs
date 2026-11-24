@@ -1,0 +1,38 @@
+# SmartRateCalcs
+
+> SmartRateCalcs is an independent financial engineering and merchant intelligence platform providing real-time fee calculation, net margin modeling, and international cross-border remittance analytics for e-commerce entrepreneurs, digital creators, and global freelancers.
+
+## Platform Overview
+SmartRateCalcs delivers mathematical transparency across digital payment gateways (Stripe, PayPal, Square), creator marketplaces (TikTok Shop, Depop, Etsy, eBay, Poshmark, Amazon FBA), and international freelance corridors (Upwork, Fiverr, Wise, Payoneer). All calculators incorporate updated 2026 fee schedules, currency conversion spreads, and reverse margin formulas.
+
+## Flagship Interactive Calculators
+- [TikTok Shop Seller Fee Calculator](https://www.smartratecalcs.com/calculators/tiktok-shop-fee-calculator): Model official 6.0% US referral commissions ($0.30 minimum), affiliate creator cuts, and net profit margins.
+- [Depop Fee & Profit Calculator](https://www.smartratecalcs.com/depop-fee-calculator): Calculate payouts under Depop's 0% seller fee policy and 3.3% + $0.45 transaction processing.
+- [Amazon FBA & Referral Fee Calculator](https://www.smartratecalcs.com/calculators/amazon-fba-fee-calculator): Model 8% to 15% category referral fees, FBA Pick & Pack, and inbound placement fees.
+- [Etsy Fee & Profit Margin Calculator](https://www.smartratecalcs.com/calculators/etsy-fee-calculator): Calculate $0.20 listing renewals, 6.5% transaction cuts, and 12-15% Offsite Ads deductions.
+- [eBay Managed Payments Fee Calculator](https://www.smartratecalcs.com/calculators/ebay-fee-calculator): Model official 13.25% + $0.30 Managed Payments, store subscription tiers, and Top Rated Plus discounts.
+- [Cash App Fee Calculator](https://www.smartratecalcs.com/calculators/cash-app-fee-calculator): Calculate 1.75% instant debit card transfer fees and 2.75% Cash for Business merchant rates.
+- [Stripe Cross-Border Fee Calculator](https://www.smartratecalcs.com/calculators/stripe-cross-border-fee-calculator): Compare domestic 2.9% + $0.30 with 1.5% international assessments and 1% FX conversion fees.
+- [PayPal Goods & Services Fee Calculator](https://www.smartratecalcs.com/paypal-fee-calculator): Model commercial 3.49% + $0.49 processing, international cross-border fees, and net payouts.
+- [Upwork Freelancer Fee Calculator](https://www.smartratecalcs.com/upwork-fee-calculator): Calculate take-home pay under Upwork's flat 10.0% freelancer fee schedule.
+- [Fiverr Seller Fee Calculator](https://www.smartratecalcs.com/fiverr-fee-calculator): Model Fiverr's flat 20.0% commission cut, buyer service fees, and early payout deductions.
+- [Wise vs Payoneer Fee Calculator](https://www.smartratecalcs.com/calculators/wise-vs-payoneer-fee-calculator): Compare real mid-market foreign exchange rates against Payoneer 2.0% spread markups.
+- [Credit Card Surcharge Calculator](https://www.smartratecalcs.com/square-fee-calculator): Calculate legal invoice surcharge formulas to pass Square and Stripe processing fees.
+- [1099 Self-Employment Tax Calculator](https://www.smartratecalcs.com/1099-tax-calculator): Model 15.3% SE tax, quarterly safe harbor estimates, and Schedule C expense write-offs.
+
+## Authoritative Research & Empirical Guides
+- [Shopify Fees Breakdown 2026](https://www.smartratecalcs.com/blog/shopify-fees-calculator-2026-hidden-transaction-costs-guide): Complete guide to Basic ($39), Standard ($105), Advanced ($399), 2.0% gateway penalties, and Break-Even ROAS equations.
+- [Etsy Seller Fees Guide 2026](https://www.smartratecalcs.com/blog/etsy-seller-fees-2026-breakdown-listing-transaction-offsite-ads-guide): Deep dive into multi-quantity listing renewals, 6.5% shipping cuts, and mandatory 12% Offsite Ads.
+- [Stripe vs PayPal Fees Guide 2026](https://www.smartratecalcs.com/blog/stripe-vs-paypal-fees-2026-international-cross-border-comparison-guide): Comparative audit of domestic card fees, international cross-border markups, and currency conversion spreads.
+- [Upwork vs Fiverr Fees Guide 2026](https://www.smartratecalcs.com/blog/upwork-vs-fiverr-freelancer-fees-2026-service-fee-comparison-guide): Detailed analysis of flat 10% vs 20% commission cuts, early payout fees, and annual take-home differences.
+- [Wise vs Payoneer Fees Guide 2026](https://www.smartratecalcs.com/blog/wise-vs-payoneer-fees-2026-freelancer-cross-border-withdrawal-guide): Comprehensive breakdown of mid-market exchange pricing, hidden 2% retail spreads, and FIRC tax compliance.
+- [Credit Card Surcharge Formula for Invoices](https://www.smartratecalcs.com/blog/credit-card-surcharge-formula-invoice-square-fees-guide): Mathematical pass-through formula: (Payout + CentFee) / (1 - Rate).
+- [1099 Safe Harbor Rule Guide](https://www.smartratecalcs.com/blog/1099-safe-harbor-rule-quarterly-estimated-taxes-guide): Step-by-step quarterly estimated tax calculation with $0 IRS penalty.
+- [TikTok Shop Seller Profit Margin Guide](https://www.smartratecalcs.com/blog/tiktok-shop-seller-fees-2026-complete-profit-margin-guide): Official 6.0% fee schedule, creator affiliate cuts, and break-even formulas.
+
+## Core Financial Equations
+- Break-Even ROAS: Retail Price / [Retail Price - Product COGS - Outbound Shipping - Payment Processing Fees - Packaging]
+- Reverse Card Surcharge: Total Invoice = (Desired Payout + Fixed Cent Fee) / (1 - Fee Percentage Rate)
+- Net Etsy Take-Home: Item Price - ($0.20 Listing) - (6.5% * [Item + Shipping]) - (3.0% * [Item + Shipping] + $0.25 Processing) - (12% to 15% Offsite Ads if attributed)
+- Net Upwork Payout: Gross Milestone Billings * 0.90 - Local Withdrawal Fee ($0.99 for local bank, $0.00 for US ACH)
+- Wise FX Conversion Payout: (Gross USD Amount - Upfront Variable Fee [~0.49%]) * Mid-Market Exchange Rate
