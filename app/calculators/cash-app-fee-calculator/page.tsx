@@ -167,16 +167,16 @@ export default function CashAppCalculatorPage() {
               <Link href="/" className="hover:text-slate-900 dark:hover:text-white transition-colors">
                 All Calculators
               </Link>
-              <Link href="/calculators/square-fee-calculator" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+              <Link href="/square-fee-calculator" className="hover:text-slate-900 dark:hover:text-white transition-colors">
                 Square POS
               </Link>
               <Link href="/calculators/tiktok-shop-fee-calculator" className="hover:text-rose-500 transition-colors">
                 TikTok Shop
               </Link>
-              <Link href="/calculators/depop-fee-calculator" className="hover:text-red-500 transition-colors">
+              <Link href="/depop-fee-calculator" className="hover:text-red-500 transition-colors">
                 Depop 0%
               </Link>
-              <Link href="/calculators/1099-tax-calculator" className="hover:text-emerald-600 transition-colors">
+              <Link href="/1099-tax-calculator" className="hover:text-emerald-600 transition-colors">
                 1099 Tax
               </Link>
               <Link href="/blog" className="hover:text-emerald-600 transition-colors">
@@ -415,7 +415,7 @@ export default function CashAppCalculatorPage() {
               </p>
               <p className="text-sm sm:text-base leading-relaxed text-slate-600 dark:text-slate-300">
                 Personal peer-to-peer accounts used exclusively for reimbursing friends, splitting meals, or gifts are exempt from 1099-K reporting. If you operate as a sole proprietor or 1099 contractor, use our companion{' '}
-                <Link href="/calculators/1099-tax-calculator" className="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">
+                <Link href="/1099-tax-calculator" className="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">
                   1099 Tax Calculator
                 </Link>{' '}
                 to calculate self-employment tax deductions accurately.

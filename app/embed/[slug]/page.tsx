@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     description: calc.metaDesc,
     robots: {
-      index: true,
+      index: false,
       follow: true,
     },
     alternates: {
