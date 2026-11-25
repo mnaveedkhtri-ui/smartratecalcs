@@ -16,6 +16,7 @@ const EXCLUDED_SLUGS = new Set([
   'etsy-seller-fee-and-profit-calculator',
   'poshmark-seller-fee-calculator',
   'cash-app-business-fee-calculator',
+  'venmo-business-fee-calculator',
 ]);
 
 export async function generateStaticParams() {

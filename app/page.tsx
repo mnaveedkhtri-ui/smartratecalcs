@@ -177,6 +177,33 @@ const FLAGSHIP_DIRECTORY_ENTRIES = [
     description: 'Calculate exact PKR payout from Upwork to JazzCash, SadaPay, NayaPay, and Meezan Bank after $0.99 fee and FX spreads.',
     primaryKeyword: 'upwork to jazzcash calculator',
   },
+  {
+    slug: 'reverb-fee-calculator',
+    title: 'Reverb Seller Fee Calculator (2026): 5% Cap & Processing Math',
+    category: 'ecommerce' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate Reverb 5% selling fee ($500 cap), 3.19% + $0.49 Payments processing on tax-included totals, Bump ads, and reverse target pricing.',
+    primaryKeyword: 'reverb fee calculator',
+  },
+  {
+    slug: 'mercari-fee-calculator',
+    title: 'Mercari Seller Fee Calculator (2026): 10% Flat & $0 Processing',
+    category: 'ecommerce' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate Mercari 10% flat seller fee on item + buyer shipping, $0 payment processing, 3.6% buyer checkout total, and $3 Instant Pay net payout.',
+    primaryKeyword: 'mercari fee calculator',
+  },
+  {
+    slug: 'venmo-business-fee-calculator',
+    title: 'Venmo Business Fee Calculator (2026): 1.9% & Tap to Pay Rates',
+    category: 'payout' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'USD',
+    description: 'Calculate Venmo Business Profile (1.9% + $0.10), Tap to Pay (2.29% + $0.10), Online Checkout (3.49% + $0.49), and Instant Transfer 1.75% fees.',
+    primaryKeyword: 'venmo business fee calculator',
+  },
 ];
 
 const EXCLUDED_DUPLICATE_SLUGS = new Set([
@@ -187,6 +214,7 @@ const EXCLUDED_DUPLICATE_SLUGS = new Set([
   'poshmark-seller-fee-calculator',
   'cash-app-business-fee-calculator',
   'tiktok-shop-seller-fee-calculator',
+  'venmo-business-fee-calculator',
 ]);
 
 const ROOT_CANONICAL_SLUGS = new Set([

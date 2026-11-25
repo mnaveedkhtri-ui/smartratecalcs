@@ -25,6 +25,9 @@ export async function GET(request: Request) {
   const staticUrls = [
     baseUrl,
     `${baseUrl}/calculators/poshmark-fee-calculator`,
+    `${baseUrl}/calculators/reverb-fee-calculator`,
+    `${baseUrl}/calculators/mercari-fee-calculator`,
+    `${baseUrl}/calculators/venmo-business-fee-calculator`,
     `${baseUrl}/calculators/amazon-fba-fee-calculator`,
     `${baseUrl}/calculators/ebay-fee-calculator`,
     `${baseUrl}/calculators/etsy-fee-calculator`,
@@ -48,9 +51,21 @@ export async function GET(request: Request) {
     `${baseUrl}/disclaimer`,
   ];
 
-  const calcUrls = PROGRAMMATIC_CALCULATORS.map((c) => `${baseUrl}/calculators/${c.slug}`);
+  const excludedDuplicates = new Set([
+    'upwork-to-jazzcash-payout-calculator',
+    'ebay-seller-fee-and-profit-calculator',
+    'amazon-fba-profit-margin-calculator',
+    'etsy-seller-fee-and-profit-calculator',
+    'poshmark-seller-fee-calculator',
+    'cash-app-business-fee-calculator',
+    'tiktok-shop-seller-fee-calculator',
+    'venmo-business-fee-calculator',
+  ]);
+  const calcUrls = PROGRAMMATIC_CALCULATORS.filter((c) => !excludedDuplicates.has(c.slug)).map(
+    (c) => `${baseUrl}/calculators/${c.slug}`
+  );
   const blogUrls = BLOG_POSTS.map((b) => `${baseUrl}/blog/${b.slug}`);
-  const allUrls = [...staticUrls, ...calcUrls, ...blogUrls];
+  const allUrls = Array.from(new Set([...staticUrls, ...calcUrls, ...blogUrls]));
 
   const payload = {
     host: HOST,

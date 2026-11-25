@@ -43,6 +43,15 @@ export function SiteLegalFooter() {
         <Link href="/calculators/poshmark-fee-calculator" className="hover:text-rose-600 dark:hover:text-rose-400 transition-colors">
           Poshmark Calculator
         </Link>
+        <Link href="/calculators/reverb-fee-calculator" className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
+          Reverb Calculator
+        </Link>
+        <Link href="/calculators/mercari-fee-calculator" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+          Mercari Calculator
+        </Link>
+        <Link href="/calculators/venmo-business-fee-calculator" className="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
+          Venmo Business Calculator
+        </Link>
         <span className="text-slate-300 dark:text-slate-700">&bull;</span>
         <Link href="/1099-tax-calculator" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
           1099 Tax Calculator

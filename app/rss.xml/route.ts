@@ -27,7 +27,28 @@ export async function GET() {
   const baseTimestamp = new Date('2026-11-25T12:00:00Z').getTime();
 
   // 1. Flagship Core Calculators
-  const flagshipCalculators = [
+  const flagshipCalculators: { title: string; url: string; desc: string; category: string; img?: string }[] = [
+    {
+      title: 'Reverb Seller Fee Calculator 2026: 5% Cap & 3.19% Processing Math',
+      url: `${baseUrl}/calculators/reverb-fee-calculator`,
+      desc: 'Free 2026 Reverb fee calculator. Calculate exact 5% selling fee ($500 cap), 3.19% + $0.49 tax-inclusive payments processing, Preferred Seller 2.99%, Bump ads, and reverse target pricing.',
+      category: 'Music Gear Marketplace',
+      img: `${baseUrl}/blog/reverb-seller-fees-2026-complete-gear-profit-margin-guide.png`,
+    },
+    {
+      title: 'Mercari Seller Fee Calculator 2026: Flat 10% & $0 Processing Math',
+      url: `${baseUrl}/calculators/mercari-fee-calculator`,
+      desc: 'Calculate exact Mercari payouts under the 10% flat seller fee (Item + Buyer Shipping), $0 payment processing, 3.6% buyer fee totals, and $3 Instant Pay vs $0 ACH.',
+      category: 'Reseller Marketplace',
+      img: `${baseUrl}/blog/mercari-seller-fees-2026-flat-10-percent-buyer-fee-margin-guide.png`,
+    },
+    {
+      title: 'Venmo Business Fee Calculator 2026: 1.9% QR, Tap to Pay & 1.75% Instant',
+      url: `${baseUrl}/calculators/venmo-business-fee-calculator`,
+      desc: 'Calculate Venmo Business Profile (1.9% + $0.10), Tap to Pay contactless (2.29% + $0.10), Online Checkout (3.49% + $0.49), Instant Transfer 1.75% ($25 cap), and exact reverse invoices.',
+      category: 'Fintech Payments',
+      img: `${baseUrl}/blog/venmo-business-profile-fees-2026-tap-to-pay-goods-services-guide.png`,
+    },
     {
       title: 'TikTok Shop Fee Calculator 2026: Official 6% Rate & Profit Math',
       url: `${baseUrl}/calculators/tiktok-shop-fee-calculator`,
@@ -80,6 +101,7 @@ export async function GET() {
 
   const flagshipXml = flagshipCalculators.map((calc, i) => {
     const pubDate = new Date(baseTimestamp - i * 3600 * 1000 * 6).toUTCString();
+    const imgUrl = calc.img || defaultOg;
     return `    <item>
       <title><![CDATA[${calc.title}]]></title>
       <link>${calc.url}</link>
@@ -87,8 +109,8 @@ export async function GET() {
       <pubDate>${pubDate}</pubDate>
       <category>${calc.category}</category>
       <description><![CDATA[${calc.desc} Free instant calculation tool with complete 2026 fee breakdowns.]]></description>
-      <enclosure url="${defaultOg}" length="0" type="image/png" />
-      <media:content url="${defaultOg}" medium="image" />
+      <enclosure url="${imgUrl}" length="0" type="image/png" />
+      <media:content url="${imgUrl}" medium="image" />
     </item>`;
   }).join('\n');
 
@@ -116,6 +138,7 @@ export async function GET() {
     'etsy-seller-fee-and-profit-calculator',
     'poshmark-seller-fee-calculator',
     'cash-app-business-fee-calculator',
+    'venmo-business-fee-calculator',
   ]);
 
   const programmaticXml = PROGRAMMATIC_CALCULATORS

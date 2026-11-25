@@ -6,6 +6,9 @@
 SmartRateCalcs delivers mathematical transparency across digital payment gateways (Stripe, PayPal, Square), creator marketplaces (TikTok Shop, Depop, Etsy, eBay, Poshmark, Amazon FBA), and international freelance corridors (Upwork, Fiverr, Wise, Payoneer). All calculators incorporate updated 2026 fee schedules, currency conversion spreads, and reverse margin formulas.
 
 ## Flagship Interactive Calculators
+- [Reverb Seller Fee Calculator](https://www.smartratecalcs.com/calculators/reverb-fee-calculator): Calculate Reverb 5.0% selling fee ($500 max cap), 3.19% + $0.49 Payments processing (or 2.99% Preferred) on tax-included totals, Bump ads, and reverse target pricing.
+- [Mercari Seller Fee Calculator](https://www.smartratecalcs.com/calculators/mercari-fee-calculator): Model Mercari 10.0% flat seller fee on Item + Buyer Shipping, $0 payment processing, 3.6% buyer fee totals, and $3 Instant Pay vs $0 ACH.
+- [Venmo Business Fee Calculator](https://www.smartratecalcs.com/calculators/venmo-business-fee-calculator): Calculate Venmo Business Profile (1.9% + $0.10), Tap to Pay contactless (2.29% + $0.10), Online Checkout (3.49% + $0.49), and Instant Transfer 1.75% ($25 max cap).
 - [TikTok Shop Seller Fee Calculator](https://www.smartratecalcs.com/calculators/tiktok-shop-fee-calculator): Model official 6.0% US referral commissions ($0.30 minimum), affiliate creator cuts, and net profit margins.
 - [Depop Fee & Profit Calculator](https://www.smartratecalcs.com/depop-fee-calculator): Calculate payouts under Depop's 0% seller fee policy and 3.3% + $0.45 transaction processing.
 - [Amazon FBA & Referral Fee Calculator](https://www.smartratecalcs.com/calculators/amazon-fba-fee-calculator): Model 8% to 15% category referral fees, FBA Pick & Pack, and inbound placement fees.
@@ -21,6 +24,9 @@ SmartRateCalcs delivers mathematical transparency across digital payment gateway
 - [1099 Self-Employment Tax Calculator](https://www.smartratecalcs.com/1099-tax-calculator): Model 15.3% SE tax, quarterly safe harbor estimates, and Schedule C expense write-offs.
 
 ## Authoritative Research & Empirical Guides
+- [Reverb Seller Fees Guide 2026](https://www.smartratecalcs.com/blog/reverb-seller-fees-2026-complete-gear-profit-margin-guide): Complete 5.0% ($500 cap) selling fee math, 3.19% + $0.49 tax-inclusive card processing, Preferred Seller 2.99%, Bump ad ROI, and eBay music gear benchmarks.
+- [Mercari Seller Fees Guide 2026](https://www.smartratecalcs.com/blog/mercari-seller-fees-2026-flat-10-percent-buyer-fee-margin-guide): Flat 10.0% seller fee across item + buyer shipping, $0.00 payment processing, 3.6% buyer fee checkout impact, and $3 Instant Pay vs $0 ACH.
+- [Venmo Business Profile Fees Guide 2026](https://www.smartratecalcs.com/blog/venmo-business-profile-fees-2026-tap-to-pay-goods-services-guide): Business QR/G&S (1.9% + $0.10), Tap to Pay (2.29% + $0.10), Online Checkout (3.49% + $0.49), Instant Transfer 1.75% ($25 cap), and exact reverse gross-up equations.
 - [Poshmark Seller Fees Guide 2026](https://www.smartratecalcs.com/blog/poshmark-fees-2026-complete-seller-guide-shipping-margins): Flat $2.95 (under $15) vs 20% commission (above $15), mandatory shipping discount deductions, and Closet Clear Out net profit formulas.
 - [Amazon FBA Seller Fee Schedule 2026](https://www.smartratecalcs.com/blog/amazon-fba-fees-2026-complete-seller-schedule-guide): Complete guide to 8% to 15% category referral fees, Pick & Pack weight tiers, inbound placement fees, and aged inventory surcharges.
 - [eBay Managed Payments Fee Schedule 2026](https://www.smartratecalcs.com/blog/ebay-seller-fees-2026-complete-managed-payments-schedule-guide): Official 13.25% + $0.30 category fee schedule, store subscription discount tiers, and Promoted Listings standard vs advanced.
@@ -42,3 +48,6 @@ SmartRateCalcs delivers mathematical transparency across digital payment gateway
 - Net Etsy Take-Home: Item Price - ($0.20 Listing) - (6.5% * [Item + Shipping]) - (3.0% * [Item + Shipping] + $0.25 Processing) - (12% to 15% Offsite Ads if attributed)
 - Net Upwork Payout: Gross Milestone Billings * 0.90 - Local Withdrawal Fee ($0.99 for local bank, $0.00 for US ACH)
 - Wise FX Conversion Payout: (Gross USD Amount - Upfront Variable Fee [~0.49%]) * Mid-Market Exchange Rate
+- Reverb Net Take-Home: ItemPrice - min($500, max($0.50, 0.05 * (ItemPrice + BuyerShipping))) - ((ItemPrice + BuyerShipping) * (1 + SalesTaxRate) * PaymentRate + $0.49) - BumpFee
+- Mercari Net Take-Home: ItemPrice - (0.10 * (ItemPrice + BuyerShipping)) - ($3.00 if InstantPay else $0.00) - LabelCostIfFreeShip
+- Venmo Business Reverse Invoice (1.9% + $0.10): RequestAmount = (DesiredNet + $0.10) / (1 - 0.019)

@@ -70,6 +70,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/calculators/reverb-fee-calculator`,
+      lastModified: coreUpdateDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/calculators/mercari-fee-calculator`,
+      lastModified: coreUpdateDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/calculators/venmo-business-fee-calculator`,
+      lastModified: coreUpdateDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/paypal-fee-calculator`,
       lastModified: coreUpdateDate,
       changeFrequency: 'weekly',
@@ -170,6 +188,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'poshmark-seller-fee-calculator',
     'cash-app-business-fee-calculator',
     'tiktok-shop-seller-fee-calculator',
+    'venmo-business-fee-calculator',
   ]);
 
   // Dynamic Programmatic SEO Calculator Pages
