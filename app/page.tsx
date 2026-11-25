@@ -168,11 +168,43 @@ const FLAGSHIP_DIRECTORY_ENTRIES = [
     description: 'Calculate sustainable hourly and day rates based on real personal expenses, non-billable overhead, and taxes.',
     primaryKeyword: 'freelance hourly rate calculator',
   },
+  {
+    slug: 'upwork-to-jazzcash-calculator',
+    title: 'Upwork to JazzCash & SadaPay Fee Calculator (2026)',
+    category: 'payout' as const,
+    sourceCurrency: 'USD',
+    targetCurrency: 'PKR',
+    description: 'Calculate exact PKR payout from Upwork to JazzCash, SadaPay, NayaPay, and Meezan Bank after $0.99 fee and FX spreads.',
+    primaryKeyword: 'upwork to jazzcash calculator',
+  },
 ];
+
+const EXCLUDED_DUPLICATE_SLUGS = new Set([
+  'upwork-to-jazzcash-payout-calculator',
+  'ebay-seller-fee-and-profit-calculator',
+  'amazon-fba-profit-margin-calculator',
+  'etsy-seller-fee-and-profit-calculator',
+  'poshmark-seller-fee-calculator',
+  'cash-app-business-fee-calculator',
+  'tiktok-shop-seller-fee-calculator',
+]);
+
+const ROOT_CANONICAL_SLUGS = new Set([
+  'depop-fee-calculator',
+  'square-fee-calculator',
+  '1099-tax-calculator',
+  'paypal-fee-calculator',
+  'stripe-fee-calculator',
+  'upwork-fee-calculator',
+  'fiverr-fee-calculator',
+  'payoneer-fee-calculator',
+  'freelance-hourly-rate-calculator',
+  'remitly-pakistan-rate',
+]);
 
 const ALL_DIRECTORY_CALCULATORS = [
   ...FLAGSHIP_DIRECTORY_ENTRIES,
-  ...PROGRAMMATIC_CALCULATORS,
+  ...PROGRAMMATIC_CALCULATORS.filter((c) => !EXCLUDED_DUPLICATE_SLUGS.has(c.slug)),
 ];
 
 export default function HomePage() {
@@ -944,7 +976,7 @@ export default function HomePage() {
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 text-emerald-800 dark:text-emerald-300 text-[11px] font-bold mb-2 font-mono">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  94 Total Financial Engines &bull; 80 Dedicated Corridor Models
+                  {ALL_DIRECTORY_CALCULATORS.length} Total Financial Engines &bull; Verified 2026 Models
                 </div>
                 <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white">
                   Dedicated Corridors &amp; Platform Calculators
@@ -1001,7 +1033,7 @@ export default function HomePage() {
               {filteredCalculators.map((calc) => (
                 <Link
                   key={calc.slug}
-                  href={`/calculators/${calc.slug}`}
+                  href={ROOT_CANONICAL_SLUGS.has(calc.slug) ? `/${calc.slug}` : `/calculators/${calc.slug}`}
                   className="p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-lg transition-all group flex flex-col justify-between"
                 >
                   <div>
@@ -1065,7 +1097,7 @@ export default function HomePage() {
                   <div>
                     <Link href={`/blog/${post.slug}`} className="block mb-3.5 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 bg-slate-950 aspect-[1200/630]">
                       <img
-                        src={`/blog/${post.slug}.png`}
+                        src={(post.images && post.images.length > 0) ? post.images[0] : `/blog/${post.slug}.png`}
                         alt={post.title}
                         width={1200}
                         height={630}
