@@ -121,13 +121,6 @@ export default function PoshmarkCalculatorPage() {
       price: '0',
       priceCurrency: 'USD',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.98',
-      ratingCount: '1420',
-      bestRating: '5',
-      worstRating: '1',
-    },
     description:
       'High-precision 2026 Poshmark fee calculator for apparel, shoe, and luxury resellers. Models $2.95 flat fees, 20% commissions, shipping discounts, bundle earnings, and target profit pricing.',
   };
