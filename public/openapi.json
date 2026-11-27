@@ -1,0 +1,64 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "SmartRateCalcs 2026 Open Fee & Payout Benchmarks API",
+    "version": "1.0.0",
+    "description": "Free zero-auth public REST API returning verified 2026 marketplace, payment gateway, and freelance payout fee schedules plus reverse gross-up equations.",
+    "contact": {
+      "name": "Muhammad Naveed",
+      "url": "https://www.smartratecalcs.com/about",
+      "email": "naveed@smartratecalcs.com"
+    },
+    "license": {
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://www.smartratecalcs.com",
+      "description": "Production Edge API"
+    }
+  ],
+  "paths": {
+    "/api/v1/rates": {
+      "get": {
+        "operationId": "getMarketplaceFeeBenchmarks",
+        "summary": "Retrieve 2026 fee schedules and net payout simulations",
+        "parameters": [
+          {
+            "name": "platform",
+            "in": "query",
+            "required": false,
+            "schema": { "type": "string" },
+            "description": "Filter by platform id or name (e.g., reverb, mercari, venmo, ebay, wise)."
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": false,
+            "schema": { "type": "string" },
+            "description": "Filter by Marketplaces, Payment Gateways, or Freelance & Cross-Border."
+          },
+          {
+            "name": "amount",
+            "in": "query",
+            "required": false,
+            "schema": { "type": "number", "default": 100 },
+            "description": "Sample gross USD sale or invoice amount to simulate net payout and reverse gross-up target."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Verified 2026 fee schedule array and simulated payout metrics.",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

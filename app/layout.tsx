@@ -100,6 +100,16 @@ export default function RootLayout({
           url: 'https://www.smartratecalcs.com/icon.png',
         },
         description: 'Independent Financial Calculation & Payout Engine',
+        sameAs: [
+          'https://github.com/mnaveedkhtri-ui',
+          'https://github.com/mnaveedkhtri-ui/2026-fee-and-ergonomics-formulas',
+          'https://mnaveedkhtri-ui.github.io/2026-fee-and-ergonomics-formulas/',
+          'https://peerlist.io/naveedkhtri7',
+          'https://smartrate-notes.hashnode.dev',
+          'https://dev.to/naveed_khatri_a387d7fe997',
+          'https://www.linkedin.com/pulse/how-freelancers-e-commerce-sellers-can-stop-losing-12-naveed-khatri-fnzuf/',
+          'https://www.smartratecalcs.com/research/2026-marketplace-fee-index',
+        ],
       },
       {
         '@type': 'WebSite',
@@ -131,11 +141,20 @@ export default function RootLayout({
         '@type': 'Person',
         '@id': 'https://www.smartratecalcs.com/#author',
         name: 'Muhammad Naveed',
+        alternateName: 'Naveed Khatri',
         jobTitle: 'Lead Software & Automation Engineer',
         email: 'naveed@smartratecalcs.com',
         url: 'https://www.smartratecalcs.com/about',
         sameAs: [
           'https://github.com/mnaveedkhtri-ui',
+          'https://github.com/mnaveedkhtri-ui/2026-fee-and-ergonomics-formulas',
+          'https://mnaveedkhtri-ui.github.io/2026-fee-and-ergonomics-formulas/',
+          'https://peerlist.io/naveedkhtri7',
+          'https://smartrate-notes.hashnode.dev',
+          'https://dev.to/naveed_khatri_a387d7fe997',
+          'https://naveedkhtri.medium.com',
+          'https://www.linkedin.com/pulse/how-freelancers-e-commerce-sellers-can-stop-losing-12-naveed-khatri-fnzuf/',
+          'https://www.moderntrendsnow.store/about',
           'https://www.smartratecalcs.com/about',
         ],
         worksFor: {
@@ -158,6 +177,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="me" href="https://github.com/mnaveedkhtri-ui" />
+        <link rel="me" href="https://peerlist.io/naveedkhtri7" />
+        <link rel="me" href="https://smartrate-notes.hashnode.dev" />
+        <link rel="me" href="https://dev.to/naveed_khatri_a387d7fe997" />
+        <link rel="me" href="https://naveedkhtri.medium.com" />
+        <link rel="alternate" type="application/json" title="SmartRateCalcs 2026 Fee Rates API" href="https://www.smartratecalcs.com/api/v1/rates" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

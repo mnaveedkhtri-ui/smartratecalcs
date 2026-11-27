@@ -45,6 +45,7 @@ export async function GET(request: Request) {
     `${baseUrl}/payoneer-fee-calculator`,
     `${baseUrl}/freelance-hourly-rate-calculator`,
     `${baseUrl}/blog`,
+    `${baseUrl}/research/2026-marketplace-fee-index`,
     `${baseUrl}/about`,
     `${baseUrl}/privacy`,
     `${baseUrl}/terms`,

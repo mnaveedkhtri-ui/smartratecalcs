@@ -5,8 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/admin/', '/go/'],
+        allow: ['/', '/api/v1/', '/data/'],
+        disallow: ['/api/indexnow', '/admin/', '/go/'],
       },
     ],
     sitemap: 'https://www.smartratecalcs.com/sitemap.xml',

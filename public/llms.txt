@@ -24,6 +24,7 @@ SmartRateCalcs delivers mathematical transparency across digital payment gateway
 - [1099 Self-Employment Tax Calculator](https://www.smartratecalcs.com/1099-tax-calculator): Model 15.3% SE tax, quarterly safe harbor estimates, and Schedule C expense write-offs.
 
 ## Authoritative Research & Empirical Guides
+- [2026 Marketplace Fee & Freelance Payout Benchmark Index (Open CC BY 4.0 Dataset + JSON API)](https://www.smartratecalcs.com/research/2026-marketplace-fee-index): Comparative open benchmark of 18 platforms with downloadable CSV/JSON datasets and CORS JSON REST endpoint (`GET https://www.smartratecalcs.com/api/v1/rates`, OpenAPI spec at `/openapi.json`).
 - [Reverb Seller Fees Guide 2026](https://www.smartratecalcs.com/blog/reverb-seller-fees-2026-complete-gear-profit-margin-guide): Complete 5.0% ($500 cap) selling fee math, 3.19% + $0.49 tax-inclusive card processing, Preferred Seller 2.99%, Bump ad ROI, and eBay music gear benchmarks.
 - [Mercari Seller Fees Guide 2026](https://www.smartratecalcs.com/blog/mercari-seller-fees-2026-flat-10-percent-buyer-fee-margin-guide): Flat 10.0% seller fee across item + buyer shipping, $0.00 payment processing, 3.6% buyer fee checkout impact, and $3 Instant Pay vs $0 ACH.
 - [Venmo Business Profile Fees Guide 2026](https://www.smartratecalcs.com/blog/venmo-business-profile-fees-2026-tap-to-pay-goods-services-guide): Business QR/G&S (1.9% + $0.10), Tap to Pay (2.29% + $0.10), Online Checkout (3.49% + $0.49), Instant Transfer 1.75% ($25 cap), and exact reverse gross-up equations.

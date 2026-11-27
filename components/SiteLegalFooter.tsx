@@ -64,6 +64,10 @@ export function SiteLegalFooter() {
         <Link href="/blog" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
           Payout Guides &amp; Research
         </Link>
+        <span className="text-slate-300 dark:text-slate-700">&bull;</span>
+        <Link href="/research/2026-marketplace-fee-index" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors font-bold text-emerald-700 dark:text-emerald-400">
+          2026 Fee Benchmark Index &amp; API
+        </Link>
       </div>
 
       {/* Legal & Trust Navigation */}

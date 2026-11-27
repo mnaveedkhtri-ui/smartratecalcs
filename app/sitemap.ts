@@ -22,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/research/2026-marketplace-fee-index`,
+      lastModified: new Date('2026-11-27T00:00:00Z'),
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/depop-fee-calculator`,
       lastModified: coreUpdateDate,
       changeFrequency: 'weekly',
