@@ -73,6 +73,42 @@ export default function AboutPage() {
             </ul>
           </section>
 
+          <section className="space-y-3">
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white">Published Research &amp; Open-Source Formulas</h2>
+            <ul className="list-disc pl-5 space-y-1.5 text-sm text-slate-600 dark:text-slate-300">
+              <li>
+                <a href="https://github.com/mnaveedkhtri-ui/2026-fee-and-ergonomics-formulas" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">
+                  GitHub Open-Source 2026 Marketplace Fee Formulas
+                </a>
+              </li>
+              <li>
+                <a href="https://mnaveedkhtri-ui.github.io/2026-fee-and-ergonomics-formulas/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">
+                  Live Formula Reference Docs (GitHub Pages)
+                </a>
+              </li>
+              <li>
+                <a href="https://smartrate-notes.hashnode.dev/the-hidden-math-behind-marketplace-seller-fees-reverse-pricing-formulas-2026-open-notes" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">
+                  Hashnode Engineering Notes: Reverse Pricing &amp; Sales Tax Fee Math
+                </a>
+              </li>
+              <li>
+                <a href="https://dev.to/naveed_khatri_a387d7fe997/the-hidden-math-behind-marketplace-seller-fees-reverse-pricing-formulas-2026-open-notes-3ee1" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">
+                  Dev.to: Marketplace Fee Schedules &amp; Edge Cases
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/pulse/how-freelancers-e-commerce-sellers-can-stop-losing-12-naveed-khatri-fnzuf/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">
+                  LinkedIn Pulse: Avoiding Hidden 2026 Platform Fees
+                </a>
+              </li>
+              <li>
+                <a href="https://peerlist.io/naveedkhtri7" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">
+                  Peerlist Verified Maker Profile
+                </a>
+              </li>
+            </ul>
+          </section>
+
           <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center gap-4 text-xs font-bold text-emerald-600 dark:text-emerald-400">
             <a href="https://www.smartratecalcs.com/about" target="_blank" rel="noopener noreferrer" className="hover:underline">
               Engineering Portfolio
