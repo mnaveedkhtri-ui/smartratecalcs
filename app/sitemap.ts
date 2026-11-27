@@ -189,6 +189,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'cash-app-business-fee-calculator',
     'tiktok-shop-seller-fee-calculator',
     'venmo-business-fee-calculator',
+    'fiverr-commission-fee-calculator',
+    'paypal-goods-and-services-fee-calculator',
+    'remitly-to-pakistan-fee-calculator',
+    'upwork-service-fee-payout-calculator',
+    'wise-to-bdo-bank-php-calculator',
+    'payoneer-to-gcash-philippines-calculator',
   ]);
 
   // Dynamic Programmatic SEO Calculator Pages

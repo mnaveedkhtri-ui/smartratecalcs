@@ -21,6 +21,12 @@ const EXCLUDED_SLUGS = new Set([
   'poshmark-seller-fee-calculator',
   'cash-app-business-fee-calculator',
   'venmo-business-fee-calculator',
+  'fiverr-commission-fee-calculator',
+  'paypal-goods-and-services-fee-calculator',
+  'remitly-to-pakistan-fee-calculator',
+  'upwork-service-fee-payout-calculator',
+  'wise-to-bdo-bank-php-calculator',
+  'payoneer-to-gcash-philippines-calculator',
 ]);
 
 export async function generateStaticParams() {
